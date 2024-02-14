@@ -20,9 +20,17 @@ namespace ClashGame
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ArmyManager armyManager;
         public MainWindow()
         {
             InitializeComponent();
+
+            armyManager = new ArmyManager(outputTextBox);
+        }
+
+        private void CreateArmy_Click(object sender, RoutedEventArgs e)
+        {
+            armyManager.CreateArmy();
         }
     }
 
@@ -74,6 +82,13 @@ namespace ClashGame
         public int MaxCost { get; set; }
         int maxCost = 100;
 
+        private TextBox outputTextBox;
+
+        public ArmyManager(TextBox textBox)
+        {
+            outputTextBox = textBox;
+        }
+
 
         LightWarrior lightWarrior = new LightWarrior();
         HeavyWarrior heavyWarrior = new HeavyWarrior();
@@ -84,26 +99,29 @@ namespace ClashGame
         public void CreateArmy()
         {
             int costSum = 0;
-            do
+            while (costSum < maxCost)
             {
-                if (rand.Next(0, 2) == 0)
+                if (rand.Next(0, 2) == 0 && costSum + lightWarrior.Cost <= maxCost)
                 {
                     warriorList.Add(new LightWarrior());
                     costSum += lightWarrior.Cost;
                 }
-
-                if (rand.Next(0, 2) == 1)
+                else if (costSum + heavyWarrior.Cost <= maxCost)
                 {
                     warriorList.Add(new HeavyWarrior());
                     costSum += heavyWarrior.Cost;
                 }
+                else
+                {
+                    break; // Если ни легкий, ни тяжелый воин не может быть добавлен, прерываем цикл
+                }
 
-                Console.WriteLine(costSum);
-            } while (maxCost > costSum + lightWarrior.Cost && maxCost > costSum + heavyWarrior.Cost);
+                outputTextBox.AppendText(costSum.ToString() + Environment.NewLine); // Добавление информации в TextBox
+            } 
 
             foreach (var x in warriorList)
             {
-                Console.WriteLine(x.ToString());
+                outputTextBox.AppendText(x.ToString() + Environment.NewLine); // Добавление информации в TextBox
             }
         }
 
@@ -111,7 +129,7 @@ namespace ClashGame
 
     class GameManager
     {
-
+    
     }
 
     class BattleManager
@@ -123,17 +141,4 @@ namespace ClashGame
     {
 
     }
-
-
-
-    //class Game
-    //{
-    //    static void Main()
-    //    {
-    //        ArmyManager gameManager = new ArmyManager();
-
-    //        gameManager.CreateArmy();
-    //    }
-
-    //}
 }

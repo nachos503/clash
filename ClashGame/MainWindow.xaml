@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <TextBox x:Name="outputTextBox"  IsReadOnly="True" HorizontalAlignment="Left" Margin="243,141,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="251" Height="158"/>
+        <Button Click="CreateArmy_Click" Content="Создать армию" HorizontalAlignment="Left" Height="26" Margin="243,304,0,0" VerticalAlignment="Top" Width="87"/>
 
     </Grid>
 </Window>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ClashGame
 {
@@ -25,13 +27,13 @@ namespace ClashGame
         {
             InitializeComponent();
 
-            armyManager = new ArmyManager(outputTextBox);
+            //armyManager = new ArmyManager(outputTextBox);
         }
 
-        private void CreateArmy_Click(object sender, RoutedEventArgs e)
-        {
-            armyManager.CreateArmy();
-        }
+        //private void CreateArmy_Click(object sender, RoutedEventArgs e)
+        //{
+        //    armyManager.CreateArmy();
+        //}
     }
 
     abstract class Warrior
@@ -46,10 +48,7 @@ namespace ClashGame
         {
         }
 
-        public void Attack()
-        {
-            Console.WriteLine($"Атака с силой {Damage}");
-        }
+
     }
     class LightWarrior : Warrior
     {
@@ -84,20 +83,18 @@ namespace ClashGame
 
         private TextBox outputTextBox;
 
-        public ArmyManager(TextBox textBox)
+        //public ArmyManager(TextBox textBox)
+        //{
+        //    outputTextBox = textBox;
+        //}
+
+        public List<Warrior> CreateArmy(List<Warrior> warriorList)
         {
-            outputTextBox = textBox;
-        }
+            LightWarrior lightWarrior = new LightWarrior();
+            HeavyWarrior heavyWarrior = new HeavyWarrior();
 
+            Random rand = new Random();
 
-        LightWarrior lightWarrior = new LightWarrior();
-        HeavyWarrior heavyWarrior = new HeavyWarrior();
-
-        Random rand = new Random();
-        List<Warrior> warriorList = new List<Warrior>();
-
-        public void CreateArmy()
-        {
             int costSum = 0;
             while (costSum < maxCost)
             {
@@ -123,17 +120,103 @@ namespace ClashGame
             {
                 outputTextBox.AppendText(x.ToString() + Environment.NewLine); // Добавление информации в TextBox
             }
+            //тут ссылка на лист :)
+            return warriorList;
         }
 
     }
 
-    class GameManager
+    //GameManager делаем singleton, чтобы не запускать в параллель несколько игр
+    sealed class GameManager
     {
-    
+        private static GameManager? _instance;
+        public static GameManager Instance
+        {
+            get
+            {
+                _instance = new GameManager();
+                return _instance;
+            }
+        }
+
+        public static GameManager GetInstance() { return null; }
+
+        //запуск игры
+        public void StartGame()
+        {
+            //создать две армии
+
+            ArmyManager armyManager = new ArmyManager();
+            BattleManager battleManager = new BattleManager();
+
+            List <Warrior> firstArmy = new List <Warrior>();
+            List <Warrior> secondArmy = new List <Warrior>();
+
+            armyManager.CreateArmy(firstArmy);
+            armyManager.CreateArmy(secondArmy);
+
+            //выбор стороны
+            battleManager.StartBattle(firstArmy, secondArmy);
+        }
     }
 
     class BattleManager
     {
+        //метод для пиздиловки
+        public void StartBattle(List<Warrior> firstArmy, List<Warrior> secondArmy)
+        {
+            while (firstArmy.Count != 0)
+            {
+                Turn(firstArmy, secondArmy);
+
+                if  (secondArmy.Count != 0)
+                {
+                    Turn(secondArmy, firstArmy);
+                }
+                else
+                {
+                    Console.WriteLine("Первые победили!!");
+                    break;
+                }
+            }
+            Console.WriteLine("Вторые победили!!");
+        }
+
+        //метод реализации атаки
+        public void Turn(List<Warrior> firstArmy, List<Warrior> secondArmy)
+        {
+                Attack(firstArmy[0], secondArmy[0]);
+                IsDead(secondArmy[0], secondArmy);         
+        }
+
+        public void Attack(Warrior warrior1, Warrior warrior2)
+        {
+            Console.WriteLine($"Атака с силой {warrior1.Damage}");
+            DefencePlease(warrior1, warrior2);
+        }
+
+        public void DefencePlease(Warrior warrior1, Warrior warrior2)
+        {
+            Random random = new Random();
+
+            if (random.Next(0, 101) > warrior2.Dodge)
+            {
+                warrior2.Healthpoints -= warrior1.Damage;
+            }
+
+            else
+            {
+                Console.WriteLine("Dodge cool");
+            }
+        }
+
+        public void IsDead(Warrior warrior, List<Warrior> army)
+        {
+            if (warrior.Healthpoints <= 0)
+            {
+                army.Remove(warrior);
+            }
+        }
 
     }
 

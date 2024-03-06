@@ -1,19 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace ClashGame
 {
@@ -22,18 +10,17 @@ namespace ClashGame
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ArmyManager armyManager;
+        private GameManager gameManager = GameManager.Instance;
+
         public MainWindow()
         {
             InitializeComponent();
-
-            //armyManager = new ArmyManager(outputTextBox);
         }
 
-        //private void CreateArmy_Click(object sender, RoutedEventArgs e)
-        //{
-        //    armyManager.CreateArmy();
-        //}
+        private void StartGame_Click(object sender, RoutedEventArgs e)
+        {
+            gameManager.StartGame(outputTextBox);
+        }
     }
 
     abstract class Warrior
@@ -47,9 +34,8 @@ namespace ClashGame
         protected Warrior()
         {
         }
-
-
     }
+
     class LightWarrior : Warrior
     {
         public LightWarrior() : base()
@@ -61,6 +47,10 @@ namespace ClashGame
             Cost = 10;
         }
 
+        public override string ToString()
+        {
+            return "LightWarrior";
+        }
     }
 
     class HeavyWarrior : Warrior
@@ -74,31 +64,101 @@ namespace ClashGame
             Cost = 25;
         }
 
+        public override string ToString()
+        {
+            return "HeavyWarrior";
+        }
+    }
+
+    class Archer : Warrior, IRangedUnit
+    {
+        public Archer() : base()
+        {
+            Healthpoints = 75;
+            Damage = 15;
+            Defence = 5;
+            Dodge = 25;
+            Cost = 30;
+        }
+
+        public int Range()
+        {
+            // Расчет дальности атаки арчера
+            return 3;
+        }
+
+        public double RangedDamage(int index)
+        {
+            if (index == 0)
+            {
+                // Ближний бой
+               return  15;
+            }
+            else
+            {
+                //Дальный бой
+                // Расчет урона от атаки арчера
+                return 20;
+            }
+        }
+
+        public double RangedAttack(List<Warrior> enemies, int targetIndex, int attackerIndex)
+        {
+            Archer archer = new Archer();
+
+            // Реализация дальней атаки
+            var enemy = enemies[targetIndex];
+
+            // Определение расстояния до цели
+            int distance = Math.Abs(attackerIndex - targetIndex);
+
+            if (distance == 0) // Ближний бой
+            {
+                enemy.Healthpoints -= archer.RangedDamage(attackerIndex);
+                return archer.RangedDamage(attackerIndex);
+            }
+            else // Дальний бой
+            {
+                enemy.Healthpoints -= archer.RangedDamage(attackerIndex);
+                return archer.RangedDamage(attackerIndex);
+            }
+        }
+    }
+
+    interface IRangedUnit
+    {
+        int Range();
+        double RangedDamage(int index); // Добавлен индекс атакующего лучника
+        double RangedAttack(List<Warrior> enemies, int targetIndex, int attackerIndex); // Добавлен индекс атакующего лучника
     }
 
     class ArmyManager
     {
         public int MaxCost { get; set; }
         int maxCost = 100;
-
         private TextBox outputTextBox;
 
-        //public ArmyManager(TextBox textBox)
-        //{
-        //    outputTextBox = textBox;
-        //}
+        public ArmyManager(TextBox textBox)
+        {
+            outputTextBox = textBox;
+        }
 
         public List<Warrior> CreateArmy(List<Warrior> warriorList)
         {
             LightWarrior lightWarrior = new LightWarrior();
             HeavyWarrior heavyWarrior = new HeavyWarrior();
-
+            Archer archer = new Archer(); // Создаем арчера
             Random rand = new Random();
 
             int costSum = 0;
             while (costSum < maxCost)
             {
-                if (rand.Next(0, 2) == 0 && costSum + lightWarrior.Cost <= maxCost)
+                if (rand.Next(0, 3) == 0 && costSum + archer.Cost <= maxCost)
+                {
+                    warriorList.Add(archer);
+                    costSum += archer.Cost;
+                }
+                else if (rand.Next(0, 2) == 0 && costSum + lightWarrior.Cost <= maxCost)
                 {
                     warriorList.Add(new LightWarrior());
                     costSum += lightWarrior.Cost;
@@ -110,23 +170,21 @@ namespace ClashGame
                 }
                 else
                 {
-                    break; // Если ни легкий, ни тяжелый воин не может быть добавлен, прерываем цикл
+                    break;
                 }
 
                 outputTextBox.AppendText(costSum.ToString() + Environment.NewLine); // Добавление информации в TextBox
-            } 
+            }
 
             foreach (var x in warriorList)
             {
                 outputTextBox.AppendText(x.ToString() + Environment.NewLine); // Добавление информации в TextBox
             }
-            //тут ссылка на лист :)
+
             return warriorList;
         }
-
     }
 
-    //GameManager делаем singleton, чтобы не запускать в параллель несколько игр
     sealed class GameManager
     {
         private static GameManager? _instance;
@@ -134,79 +192,94 @@ namespace ClashGame
         {
             get
             {
-                _instance = new GameManager();
+                _instance ??= new GameManager();
                 return _instance;
             }
         }
 
-        public static GameManager GetInstance() { return null; }
-
-        //запуск игры
-        public void StartGame()
+        public void StartGame(TextBox outputTextBox)
         {
-            //создать две армии
-
-            ArmyManager armyManager = new ArmyManager();
+            ArmyManager armyManager = new ArmyManager(outputTextBox);
             BattleManager battleManager = new BattleManager();
 
-            List <Warrior> firstArmy = new List <Warrior>();
-            List <Warrior> secondArmy = new List <Warrior>();
+            List<Warrior> firstArmy = new List<Warrior>();
+            List<Warrior> secondArmy = new List<Warrior>();
 
             armyManager.CreateArmy(firstArmy);
             armyManager.CreateArmy(secondArmy);
 
-            //выбор стороны
-            battleManager.StartBattle(firstArmy, secondArmy);
+            battleManager.StartBattle(firstArmy, secondArmy, outputTextBox);
         }
     }
 
     class BattleManager
     {
-        //метод для пиздиловки
-        public void StartBattle(List<Warrior> firstArmy, List<Warrior> secondArmy)
+        public void StartBattle(List<Warrior> firstArmy, List<Warrior> secondArmy, TextBox outputTextBox)
         {
             while (firstArmy.Count != 0)
             {
-                Turn(firstArmy, secondArmy);
+                Turn(firstArmy, secondArmy, outputTextBox);
 
-                if  (secondArmy.Count != 0)
+                if (secondArmy.Count != 0)
                 {
-                    Turn(secondArmy, firstArmy);
+                    Turn(secondArmy, firstArmy, outputTextBox);
                 }
                 else
                 {
-                    Console.WriteLine("Первые победили!!");
+                    outputTextBox.AppendText("Первые победили!!" + Environment.NewLine);
                     break;
                 }
             }
-            Console.WriteLine("Вторые победили!!");
+            outputTextBox.AppendText("Вторые победили!!" + Environment.NewLine);
         }
 
-        //метод реализации атаки
-        public void Turn(List<Warrior> firstArmy, List<Warrior> secondArmy)
+        public void Turn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
-                Attack(firstArmy[0], secondArmy[0]);
-                IsDead(secondArmy[0], secondArmy);         
+            Warrior attacker = attackers[0];
+            Warrior defender = defenders[0];
+
+            Attack(attacker, defender, outputTextBox);
+
+            // После обычной атаки, ищем арчера в оставшемся списке воинов
+            foreach (var warrior in attackers)
+            {
+                if (warrior is Archer)
+                {
+                    Archer archer = (Archer)warrior;
+                    var targetIndex = new Random().Next(0, defenders.Count); // Выбор случайного защищающегося воина
+                    var target = defenders[targetIndex]; // Выбранный защищающийся воин
+
+                    // Передача индекса атакующего лучника
+                    archer.RangedAttack(defenders, targetIndex, attackers.IndexOf(warrior));
+                    outputTextBox.AppendText($"Атака {archer} с силой {archer.RangedDamage(attackers.IndexOf(warrior))} по {target}" + Environment.NewLine);
+                    outputTextBox.AppendText($"HP у  {target} осталось {target.Healthpoints}" + Environment.NewLine);
+
+                    break; // Выходим после того как нашли первого арчера
+                }
+            }
+
+            IsDead(defender, defenders);
         }
 
-        public void Attack(Warrior warrior1, Warrior warrior2)
+        public void Attack(Warrior warrior1, Warrior warrior2, TextBox outputTextBox)
         {
-            Console.WriteLine($"Атака с силой {warrior1.Damage}");
-            DefencePlease(warrior1, warrior2);
+            outputTextBox.AppendText($"Атака {warrior1} с силой {warrior1.Damage} по {warrior2}" + Environment.NewLine);
+            DefencePlease(warrior1, warrior2, outputTextBox);
         }
 
-        public void DefencePlease(Warrior warrior1, Warrior warrior2)
+        public void DefencePlease(Warrior warrior1, Warrior warrior2, TextBox outputTextBox)
         {
             Random random = new Random();
 
             if (random.Next(0, 101) > warrior2.Dodge)
             {
                 warrior2.Healthpoints -= warrior1.Damage;
+                outputTextBox.AppendText($"HP у  {warrior2} осталось {warrior2.Healthpoints}" + Environment.NewLine);
             }
 
             else
             {
-                Console.WriteLine("Dodge cool");
+                outputTextBox.AppendText("Dodge cool" + Environment.NewLine);
             }
         }
 
@@ -217,11 +290,5 @@ namespace ClashGame
                 army.Remove(warrior);
             }
         }
-
-    }
-
-    class UIManager
-    {
-
     }
 }

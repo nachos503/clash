@@ -31,6 +31,8 @@ namespace ClashGame
         public double Dodge { get; set; }
         public int Cost { get; set; }
 
+        public string Side { get; set; }
+
         protected Warrior()
         {
         }
@@ -38,13 +40,14 @@ namespace ClashGame
 
     class LightWarrior : Warrior
     {
-        public LightWarrior() : base()
+        public LightWarrior(string side) : base()
         {
             Healthpoints = 100;
             Damage = 15;
             Defence = 10;
             Dodge = 10;
             Cost = 10;
+            Side = side;
         }
 
         public override string ToString()
@@ -55,13 +58,14 @@ namespace ClashGame
 
     class HeavyWarrior : Warrior
     {
-        public HeavyWarrior() : base()
+        public HeavyWarrior(string side) : base()
         {
             Healthpoints = 250;
             Damage = 20;
             Defence = 30;
             Dodge = 5;
             Cost = 25;
+            Side = side;
         }
 
         public override string ToString()
@@ -72,13 +76,17 @@ namespace ClashGame
 
     class Archer : Warrior, IRangedUnit
     {
-        public Archer() : base()
+
+        public string attackerSide { get; set; }
+        public string defenderSide { get; set; }
+        public Archer(string side) : base()
         {
             Healthpoints = 75;
             Damage = 15;
             Defence = 5;
             Dodge = 25;
             Cost = 30;
+            Side = side;
         }
 
         public int Range()
@@ -104,23 +112,26 @@ namespace ClashGame
 
         public double RangedAttack(List<Warrior> enemies, int targetIndex, int attackerIndex)
         {
-            Archer archer = new Archer();
-
-            // Реализация дальней атаки
             var enemy = enemies[targetIndex];
-
-            // Определение расстояния до цели
             int distance = Math.Abs(attackerIndex - targetIndex);
 
             if (distance == 0) // Ближний бой
             {
-                enemy.Healthpoints -= archer.RangedDamage(attackerIndex);
-                return archer.RangedDamage(attackerIndex);
+                if (attackerSide != defenderSide) // Проверяем, находятся ли воины на разных сторонах
+                {
+                    enemy.Healthpoints -= RangedDamage(attackerIndex);
+                    return RangedDamage(attackerIndex);
+                }
+                else
+                {
+                    // Воины находятся на одной стороне, ближняя атака невозможна
+                    return 0;
+                }
             }
             else // Дальний бой
             {
-                enemy.Healthpoints -= archer.RangedDamage(attackerIndex);
-                return archer.RangedDamage(attackerIndex);
+                enemy.Healthpoints -= RangedDamage(attackerIndex);
+                return RangedDamage(attackerIndex);
             }
         }
     }
@@ -143,11 +154,11 @@ namespace ClashGame
             outputTextBox = textBox;
         }
 
-        public List<Warrior> CreateArmy(List<Warrior> warriorList)
+        public List<Warrior> CreateArmy(List<Warrior> warriorList, string side)
         {
-            LightWarrior lightWarrior = new LightWarrior();
-            HeavyWarrior heavyWarrior = new HeavyWarrior();
-            Archer archer = new Archer(); // Создаем арчера
+            LightWarrior lightWarrior = new LightWarrior(side);
+            HeavyWarrior heavyWarrior = new HeavyWarrior(side);
+            Archer archer = new Archer(side); // Создаем арчера
             Random rand = new Random();
 
             int costSum = 0;
@@ -160,12 +171,12 @@ namespace ClashGame
                 }
                 else if (rand.Next(0, 2) == 0 && costSum + lightWarrior.Cost <= maxCost)
                 {
-                    warriorList.Add(new LightWarrior());
+                    warriorList.Add(new LightWarrior(side));
                     costSum += lightWarrior.Cost;
                 }
                 else if (costSum + heavyWarrior.Cost <= maxCost)
                 {
-                    warriorList.Add(new HeavyWarrior());
+                    warriorList.Add(new HeavyWarrior(side));
                     costSum += heavyWarrior.Cost;
                 }
                 else
@@ -205,8 +216,8 @@ namespace ClashGame
             List<Warrior> firstArmy = new List<Warrior>();
             List<Warrior> secondArmy = new List<Warrior>();
 
-            armyManager.CreateArmy(firstArmy);
-            armyManager.CreateArmy(secondArmy);
+            armyManager.CreateArmy(firstArmy, "Blue");
+            armyManager.CreateArmy(secondArmy, "Red");
 
             battleManager.StartBattle(firstArmy, secondArmy, outputTextBox);
         }
@@ -251,8 +262,8 @@ namespace ClashGame
 
                     // Передача индекса атакующего лучника
                     archer.RangedAttack(defenders, targetIndex, attackers.IndexOf(warrior));
-                    outputTextBox.AppendText($"Атака {archer} с силой {archer.RangedDamage(attackers.IndexOf(warrior))} по {target}" + Environment.NewLine);
-                    outputTextBox.AppendText($"HP у  {target} осталось {target.Healthpoints}" + Environment.NewLine);
+                    outputTextBox.AppendText($"Атака {archer.Side} {archer} с силой {archer.RangedDamage(attackers.IndexOf(warrior))} по {target}" + Environment.NewLine);
+                    outputTextBox.AppendText($"HP у  {target.Side} {target} осталось {target.Healthpoints}" + Environment.NewLine);
 
                     break; // Выходим после того как нашли первого арчера
                 }
@@ -263,7 +274,7 @@ namespace ClashGame
 
         public void Attack(Warrior warrior1, Warrior warrior2, TextBox outputTextBox)
         {
-            outputTextBox.AppendText($"Атака {warrior1} с силой {warrior1.Damage} по {warrior2}" + Environment.NewLine);
+            outputTextBox.AppendText($"Атака {warrior1.Side} {warrior1} с силой {warrior1.Damage} по {warrior2.Side} {warrior2}" + Environment.NewLine);
             DefencePlease(warrior1, warrior2, outputTextBox);
         }
 
@@ -274,7 +285,7 @@ namespace ClashGame
             if (random.Next(0, 101) > warrior2.Dodge)
             {
                 warrior2.Healthpoints -= warrior1.Damage;
-                outputTextBox.AppendText($"HP у  {warrior2} осталось {warrior2.Healthpoints}" + Environment.NewLine);
+                outputTextBox.AppendText($"HP у {warrior2.Side} {warrior2} осталось {warrior2.Healthpoints}" + Environment.NewLine);
             }
 
             else

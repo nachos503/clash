@@ -23,6 +23,36 @@ namespace ClashGame
         }
     }
 
+   //Создаем интерфейс объектов и Абстрактные фабрики
+    interface IWarriorFactory
+    {
+        Warrior CreateWarrior(string side);
+    }
+
+    class LightWarriorFactory : IWarriorFactory
+    {
+        public Warrior CreateWarrior(string side)
+        {
+            return new LightWarrior(side);
+        }
+    }
+
+    class HeavyWarriorFactory : IWarriorFactory
+    {
+        public Warrior CreateWarrior(string side)
+        {
+            return new HeavyWarrior(side);
+        }
+    }
+
+    class ArcherFactory : IWarriorFactory
+    {
+        public Warrior CreateWarrior(string side)
+        {
+            return new Archer(side);
+        }
+    }
+
     abstract class Warrior
     {
         public double Healthpoints { get; set; }
@@ -136,6 +166,7 @@ namespace ClashGame
         }
     }
 
+    //дополнительные методы для дальних юнитов
     interface IRangedUnit
     {
         int Range();
@@ -156,40 +187,32 @@ namespace ClashGame
 
         public List<Warrior> CreateArmy(List<Warrior> warriorList, string side)
         {
-            LightWarrior lightWarrior = new LightWarrior(side);
-            HeavyWarrior heavyWarrior = new HeavyWarrior(side);
-            Archer archer = new Archer(side); // Создаем арчера
-            Random rand = new Random();
+            List<IWarriorFactory> factories = new List<IWarriorFactory>
+            {
+                new LightWarriorFactory(),
+                new HeavyWarriorFactory(),
+                new ArcherFactory()
+            };
 
+            Random rand = new Random();
             int costSum = 0;
+
             while (costSum < maxCost)
             {
-                if (rand.Next(0, 3) == 0 && costSum + archer.Cost <= maxCost)
+                var factory = factories[rand.Next(factories.Count)];
+                var warrior = factory.CreateWarrior(side);
+
+                if (costSum + warrior.Cost <= maxCost)
                 {
-                    warriorList.Add(archer);
-                    costSum += archer.Cost;
-                }
-                else if (rand.Next(0, 2) == 0 && costSum + lightWarrior.Cost <= maxCost)
-                {
-                    warriorList.Add(new LightWarrior(side));
-                    costSum += lightWarrior.Cost;
-                }
-                else if (costSum + heavyWarrior.Cost <= maxCost)
-                {
-                    warriorList.Add(new HeavyWarrior(side));
-                    costSum += heavyWarrior.Cost;
+                    warriorList.Add(warrior);
+                    costSum += warrior.Cost;
+                    outputTextBox.AppendText(costSum.ToString() + Environment.NewLine);
+                    outputTextBox.AppendText(warrior.ToString() + Environment.NewLine);
                 }
                 else
                 {
                     break;
                 }
-
-                outputTextBox.AppendText(costSum.ToString() + Environment.NewLine); // Добавление информации в TextBox
-            }
-
-            foreach (var x in warriorList)
-            {
-                outputTextBox.AppendText(x.ToString() + Environment.NewLine); // Добавление информации в TextBox
             }
 
             return warriorList;
@@ -241,7 +264,8 @@ namespace ClashGame
                     break;
                 }
             }
-            outputTextBox.AppendText("Вторые победили!!" + Environment.NewLine);
+            if (firstArmy.Count == 0) 
+                outputTextBox.AppendText("Вторые победили!!" + Environment.NewLine);
         }
 
         public void Turn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)

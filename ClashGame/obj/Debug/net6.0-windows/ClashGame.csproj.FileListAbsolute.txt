@@ -45,7 +45,6 @@ C:\Users\Варвара\Source\Repos\nachos503\clash\ClashGame\bin\Debug\net6.0-
 C:\Users\Варвара\Source\Repos\nachos503\clash\ClashGame\bin\Debug\net6.0-windows\ClashGame.runtimeconfig.json
 C:\Users\Варвара\Source\Repos\nachos503\clash\ClashGame\bin\Debug\net6.0-windows\ClashGame.dll
 C:\Users\Варвара\Source\Repos\nachos503\clash\ClashGame\bin\Debug\net6.0-windows\ClashGame.pdb
-C:\Users\Варвара\Source\Repos\nachos503\clash\ClashGame\obj\Debug\net6.0-windows\ClashGame.csproj.AssemblyReference.cache
 C:\Users\Варвара\Source\Repos\nachos503\clash\ClashGame\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\Варвара\Source\Repos\nachos503\clash\ClashGame\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\Варвара\Source\Repos\nachos503\clash\ClashGame\obj\Debug\net6.0-windows\ClashGame_MarkupCompile.cache

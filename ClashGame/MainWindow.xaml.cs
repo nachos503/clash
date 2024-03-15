@@ -23,34 +23,19 @@ namespace ClashGame
         }
     }
 
-   //Создаем интерфейс объектов и Абстрактные фабрики
-    interface IWarriorFactory
+    interface IRangedUnit
     {
-        Warrior CreateWarrior(string side);
+        int Range();
+        double RangedDamage(int index); // Добавлен индекс атакующего лучника
+        double RangedAttack(List<Warrior> enemies, int targetIndex, int attackerIndex); // Добавлен индекс атакующего лучника
     }
 
-    class LightWarriorFactory : IWarriorFactory
+    //Абстрактная фабрика
+    interface IUnitFactory
     {
-        public Warrior CreateWarrior(string side)
-        {
-            return new LightWarrior(side);
-        }
-    }
-
-    class HeavyWarriorFactory : IWarriorFactory
-    {
-        public Warrior CreateWarrior(string side)
-        {
-            return new HeavyWarrior(side);
-        }
-    }
-
-    class ArcherFactory : IWarriorFactory
-    {
-        public Warrior CreateWarrior(string side)
-        {
-            return new Archer(side);
-        }
+        Warrior CreateLightWarrior(string side);
+        Warrior CreateHeavyWarrior(string side);
+        Warrior CreateArcher(string side);
     }
 
     abstract class Warrior
@@ -130,7 +115,7 @@ namespace ClashGame
             if (index == 0)
             {
                 // Ближний бой
-               return  15;
+                return 15;
             }
             else
             {
@@ -166,53 +151,72 @@ namespace ClashGame
         }
     }
 
-    //дополнительные методы для дальних юнитов
-    interface IRangedUnit
+  
+    //Реализация интерфейса (абстрактной фабрики)
+    class ArmyUnitFactory : IUnitFactory
     {
-        int Range();
-        double RangedDamage(int index); // Добавлен индекс атакующего лучника
-        double RangedAttack(List<Warrior> enemies, int targetIndex, int attackerIndex); // Добавлен индекс атакующего лучника
+        public Warrior CreateLightWarrior(string side)
+        {
+            return new LightWarrior(side);
+        }
+
+
+        public Warrior CreateHeavyWarrior(string side)
+        {
+            return new HeavyWarrior(side);
+        }
+
+        public Warrior CreateArcher(string side)
+        {
+            return new Archer(side);
+        }
     }
 
     class ArmyManager
     {
-        public int MaxCost { get; set; }
-        int maxCost = 100;
+        private readonly IUnitFactory unitFactory;
         private TextBox outputTextBox;
+        private const int maxCost = 100;
 
-        public ArmyManager(TextBox textBox)
+        public ArmyManager(TextBox textBox, IUnitFactory factory)
         {
             outputTextBox = textBox;
+            unitFactory = factory;
         }
 
         public List<Warrior> CreateArmy(List<Warrior> warriorList, string side)
         {
-            List<IWarriorFactory> factories = new List<IWarriorFactory>
-            {
-                new LightWarriorFactory(),
-                new HeavyWarriorFactory(),
-                new ArcherFactory()
-            };
-
             Random rand = new Random();
-            int costSum = 0;
 
+            int costSum = 0;
             while (costSum < maxCost)
             {
-                var factory = factories[rand.Next(factories.Count)];
-                var warrior = factory.CreateWarrior(side);
-
-                if (costSum + warrior.Cost <= maxCost)
+                if (rand.Next(0, 3) == 0 && costSum + unitFactory.CreateArcher(side).Cost <= maxCost)
                 {
-                    warriorList.Add(warrior);
-                    costSum += warrior.Cost;
-                    outputTextBox.AppendText(costSum.ToString() + Environment.NewLine);
-                    outputTextBox.AppendText(warrior.ToString() + Environment.NewLine);
+                    warriorList.Add(unitFactory.CreateArcher(side));
+                    costSum += unitFactory.CreateArcher(side).Cost;
+                }
+                else if (rand.Next(0, 2) == 0 && costSum + unitFactory.CreateLightWarrior(side).Cost <= maxCost)
+                {
+                    warriorList.Add(unitFactory.CreateLightWarrior(side));
+                    costSum += unitFactory.CreateLightWarrior(side).Cost;
+                }
+                else if (costSum + unitFactory.CreateHeavyWarrior(side).Cost <= maxCost)
+                {
+                    warriorList.Add(unitFactory.CreateHeavyWarrior(side));
+                    costSum += unitFactory.CreateHeavyWarrior(side).Cost;
                 }
                 else
                 {
                     break;
                 }
+
+                outputTextBox.AppendText(costSum.ToString() + Environment.NewLine); // Добавление информации в TextBox
+            }
+
+            foreach (var x in warriorList)
+            {
+                outputTextBox.AppendText(x.ToString() + Environment.NewLine); // Добавление информации в TextBox
             }
 
             return warriorList;
@@ -231,9 +235,16 @@ namespace ClashGame
             }
         }
 
+        private readonly IUnitFactory unitFactory;
+
+        private GameManager()
+        {
+            unitFactory = new ArmyUnitFactory();
+        }
+
         public void StartGame(TextBox outputTextBox)
         {
-            ArmyManager armyManager = new ArmyManager(outputTextBox);
+            ArmyManager armyManager = new ArmyManager(outputTextBox, unitFactory);
             BattleManager battleManager = new BattleManager();
 
             List<Warrior> firstArmy = new List<Warrior>();
@@ -264,8 +275,7 @@ namespace ClashGame
                     break;
                 }
             }
-            if (firstArmy.Count == 0) 
-                outputTextBox.AppendText("Вторые победили!!" + Environment.NewLine);
+            if (firstArmy.Count == 0)outputTextBox.AppendText("Вторые победили!!" + Environment.NewLine);
         }
 
         public void Turn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
@@ -274,6 +284,7 @@ namespace ClashGame
             Warrior defender = defenders[0];
 
             Attack(attacker, defender, outputTextBox);
+
 
             // После обычной атаки, ищем арчера в оставшемся списке воинов
             foreach (var warrior in attackers)

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Варвара\\Source\\Repos\\nachos503\\clash\\ClashGame\\ClashGame.csproj": {}
+    "C:\\Users\\Варвара\\source\\repos\\nachos503\\clash\\ClashGame\\ClashGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Варвара\\Source\\Repos\\nachos503\\clash\\ClashGame\\ClashGame.csproj": {
+    "C:\\Users\\Варвара\\source\\repos\\nachos503\\clash\\ClashGame\\ClashGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Варвара\\Source\\Repos\\nachos503\\clash\\ClashGame\\ClashGame.csproj",
+        "projectUniqueName": "C:\\Users\\Варвара\\source\\repos\\nachos503\\clash\\ClashGame\\ClashGame.csproj",
         "projectName": "ClashGame",
-        "projectPath": "C:\\Users\\Варвара\\Source\\Repos\\nachos503\\clash\\ClashGame\\ClashGame.csproj",
+        "projectPath": "C:\\Users\\Варвара\\source\\repos\\nachos503\\clash\\ClashGame\\ClashGame.csproj",
         "packagesPath": "C:\\Users\\Варвара\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Варвара\\Source\\Repos\\nachos503\\clash\\ClashGame\\obj\\",
+        "outputPath": "C:\\Users\\Варвара\\source\\repos\\nachos503\\clash\\ClashGame\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

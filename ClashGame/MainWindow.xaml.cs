@@ -23,6 +23,13 @@ namespace ClashGame
         }
     }
 
+    // Интерфейс для лечения
+    interface IHealable
+    {
+        void Heal(Warrior target);
+    }
+
+
     interface IRangedUnit
     {
         int Range();
@@ -36,6 +43,7 @@ namespace ClashGame
         Warrior CreateLightWarrior(string side);
         Warrior CreateHeavyWarrior(string side);
         Warrior CreateArcher(string side);
+        Warrior CreateHealer(string side);
     }
 
     abstract class Warrior
@@ -151,7 +159,36 @@ namespace ClashGame
         }
     }
 
-  
+    // Класс лекаря
+    class Healer : Warrior, IHealable
+    {
+        public Healer(string side) : base()
+        {
+            Healthpoints = 50;
+            Damage = 5;
+            Defence = 5;
+            Dodge = 10;
+            Cost = 20;
+            Side = side;
+        }
+
+        public void Heal(Warrior target)
+        {
+
+            double maxHealableHealthpoints = target.Healthpoints * 0.8;
+            double healAmount = 20;
+            
+            if (maxHealableHealthpoints > target.Healthpoints) 
+                if (target.Healthpoints + healAmount > maxHealableHealthpoints)
+                    target.Healthpoints = maxHealableHealthpoints; // Восстанавливаем до максимально возможного
+                else
+                    target.Healthpoints += healAmount; // Восстанавливаем 20 единиц здоровья
+
+        }
+    }
+
+
+
     //Реализация интерфейса (абстрактной фабрики)
     class ArmyUnitFactory : IUnitFactory
     {
@@ -169,6 +206,11 @@ namespace ClashGame
         public Warrior CreateArcher(string side)
         {
             return new Archer(side);
+        }
+
+        public Warrior CreateHealer(string side)
+        {
+            return new Healer(side);
         }
     }
 
@@ -191,10 +233,15 @@ namespace ClashGame
             int costSum = 0;
             while (costSum < maxCost)
             {
-                if (rand.Next(0, 3) == 0 && costSum + unitFactory.CreateArcher(side).Cost <= maxCost)
+                if (rand.Next(0, 4) == 0 && costSum + unitFactory.CreateArcher(side).Cost <= maxCost)
                 {
                     warriorList.Add(unitFactory.CreateArcher(side));
                     costSum += unitFactory.CreateArcher(side).Cost;
+                }
+                else if (rand.Next(0, 3) == 0 && costSum + unitFactory.CreateHealer(side).Cost <= maxCost)
+                {
+                    warriorList.Add(unitFactory.CreateHealer(side));
+                    costSum += unitFactory.CreateHealer(side).Cost;
                 }
                 else if (rand.Next(0, 2) == 0 && costSum + unitFactory.CreateLightWarrior(side).Cost <= maxCost)
                 {
@@ -280,6 +327,37 @@ namespace ClashGame
 
         public void Turn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
+            // Проверка на наличие лекаря в списке атакующих и его позиции
+            Healer healer = null;
+            int healerIndex = -1;
+            for (int i = 0; i < attackers.Count; i++)
+            {
+                if (attackers[i] is Healer)
+                {
+                    healer = (Healer)attackers[i];
+                    healerIndex = i;
+                    break;
+                }
+            }
+
+            if (healer != null && healerIndex != 0)
+            {
+                // Проверка на выполнение условий для лечения
+                if (new Random().Next(0, 10) == 0)
+                {
+                    // Вызов лечения у случайного союзника
+                    List<Warrior> alliesInRange = GetAlliesInRange(attackers, healerIndex);
+                    if (alliesInRange.Count > 0)
+                    {
+                        int targetIndex = new Random().Next(0, alliesInRange.Count);
+                        Warrior targetAlly = alliesInRange[targetIndex];
+                        healer.Heal(targetAlly);
+                        outputTextBox.AppendText($"Лекарь из команды {healer.Side} вылечил {targetAlly.Side} {targetAlly}" + Environment.NewLine);
+                        outputTextBox.AppendText($"Теперь у {targetAlly.Side} {targetAlly} {targetAlly.Healthpoints} HP" + Environment.NewLine);
+                    }
+                }
+            }
+
             Warrior attacker = attackers[0];
             Warrior defender = defenders[0];
 
@@ -304,7 +382,22 @@ namespace ClashGame
                 }
             }
 
+
+
             IsDead(defender, defenders);
+        }
+
+        private List<Warrior> GetAlliesInRange(List<Warrior> attackers, int healerIndex)
+        {
+            List<Warrior> alliesInRange = new List<Warrior>();
+            for (int i = Math.Max(0, healerIndex - 3); i < Math.Min(attackers.Count, healerIndex + 4); i++)
+            {
+                if (i != healerIndex && attackers[i].Side == attackers[healerIndex].Side)
+                {
+                    alliesInRange.Add(attackers[i]);
+                }
+            }
+            return alliesInRange;
         }
 
         public void Attack(Warrior warrior1, Warrior warrior2, TextBox outputTextBox)

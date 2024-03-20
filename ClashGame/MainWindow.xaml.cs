@@ -29,6 +29,12 @@ namespace ClashGame
         void Heal(Warrior target);
     }
 
+    // Интерфейс для клонирования юнитов
+    interface IClonableUnit
+    {
+        Warrior Clone();
+    }
+
 
     interface IRangedUnit
     {
@@ -44,9 +50,11 @@ namespace ClashGame
         Warrior CreateHeavyWarrior(string side);
         Warrior CreateArcher(string side);
         Warrior CreateHealer(string side);
+        Warrior CreateWizard(string side);
+
     }
 
-    abstract class Warrior
+    abstract class Warrior : IClonableUnit
     {
         public double Healthpoints { get; set; }
         public double Damage { get; set; }
@@ -58,6 +66,13 @@ namespace ClashGame
 
         protected Warrior()
         {
+        }
+
+        // Реализация метода Clone в базовом классе Warrior
+        public virtual Warrior Clone()
+        {
+            // Возвращаем клон текущего воина
+            return (Warrior)this.MemberwiseClone();
         }
     }
 
@@ -76,6 +91,19 @@ namespace ClashGame
         public override string ToString()
         {
             return "LightWarrior";
+        }
+
+        public Warrior Clone()
+        {
+            // Создаем клон с текущими показателями
+            return new LightWarrior(Side)
+            {
+                Healthpoints = this.Healthpoints,
+                Damage = this.Damage,
+                Defence = this.Defence,
+                Dodge = this.Dodge,
+                Cost = this.Cost
+            };
         }
     }
 
@@ -177,8 +205,8 @@ namespace ClashGame
 
             double maxHealableHealthpoints = target.Healthpoints * 0.8;
             double healAmount = 20;
-            
-            if (maxHealableHealthpoints > target.Healthpoints) 
+
+            if (maxHealableHealthpoints > target.Healthpoints)
                 if (target.Healthpoints + healAmount > maxHealableHealthpoints)
                     target.Healthpoints = maxHealableHealthpoints; // Восстанавливаем до максимально возможного
                 else
@@ -187,8 +215,36 @@ namespace ClashGame
         }
     }
 
+    class Wizard : Warrior 
+    {
+        public Wizard(string side) : base()
+        {
+            Healthpoints = 50;
+            Damage = 10;
+            Defence = 5;
+            Dodge = 20;
+            Cost = 25;
+            Side = side;
+        }
 
+        public Warrior CloneLightWarrior(List<Warrior> warriors)
+        {
+            if (new Random().Next(0, 2) == 0)
+            {
+                // Ищем LightWarrior в списке воинов
+                foreach (var warrior in warriors)
+                {
+                    if (warrior is LightWarrior)
+                    {
+                        // Клонируем LightWarrior
+                        return warrior.Clone();
+                    }
+                }
+            }
+            return null;
+        }
 
+    }
     //Реализация интерфейса (абстрактной фабрики)
     class ArmyUnitFactory : IUnitFactory
     {
@@ -211,6 +267,10 @@ namespace ClashGame
         public Warrior CreateHealer(string side)
         {
             return new Healer(side);
+        }        
+        public Warrior CreateWizard(string side)
+        {
+            return new Wizard(side);
         }
     }
 
@@ -233,6 +293,11 @@ namespace ClashGame
             int costSum = 0;
             while (costSum < maxCost)
             {
+                if (rand.Next(0, 5) == 0 && costSum + unitFactory.CreateWizard(side).Cost <= maxCost)
+                {
+                    warriorList.Add(unitFactory.CreateWizard(side));
+                    costSum += unitFactory.CreateWizard(side).Cost;
+                }
                 if (rand.Next(0, 4) == 0 && costSum + unitFactory.CreateArcher(side).Cost <= maxCost)
                 {
                     warriorList.Add(unitFactory.CreateArcher(side));
@@ -327,6 +392,32 @@ namespace ClashGame
 
         public void Turn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
+
+            Warrior attacker = attackers[0];
+            Warrior defender = defenders[0];
+
+            // Проверка наличия мага в списке атакующих
+            Wizard wizard = null;
+            foreach (var attacker1 in attackers)
+            {
+                if (attacker1 is Wizard)
+                {
+                    wizard = (Wizard)attacker1;
+                    break;
+                }
+            }
+
+            // Попытка клонирования LightWarrior
+            if (wizard != null)
+            {
+                Warrior clonedWarrior = wizard.CloneLightWarrior(attackers);
+                if (clonedWarrior != null)
+                {
+                    attackers.Insert(1, clonedWarrior); // Вставляем клонированного LightWarrior перед магом (на вторую позицию)
+                    outputTextBox.AppendText($"Маг из команды {wizard.Side} клонировал LightWarrior с {clonedWarrior.Healthpoints} HP" + Environment.NewLine);
+                }
+            }
+
             // Проверка на наличие лекаря в списке атакующих и его позиции
             Healer healer = null;
             int healerIndex = -1;
@@ -351,15 +442,16 @@ namespace ClashGame
                     {
                         int targetIndex = new Random().Next(0, alliesInRange.Count);
                         Warrior targetAlly = alliesInRange[targetIndex];
-                        healer.Heal(targetAlly);
-                        outputTextBox.AppendText($"Лекарь из команды {healer.Side} вылечил {targetAlly.Side} {targetAlly}" + Environment.NewLine);
-                        outputTextBox.AppendText($"Теперь у {targetAlly.Side} {targetAlly} {targetAlly.Healthpoints} HP" + Environment.NewLine);
+                        if (!(targetAlly is LightWarrior))
+                        {
+                            healer.Heal(targetAlly);
+                            outputTextBox.AppendText($"Лекарь из команды {healer.Side} вылечил {targetAlly.Side} {targetAlly}" + Environment.NewLine);
+                            outputTextBox.AppendText($"Теперь у {targetAlly.Side} {targetAlly} {targetAlly.Healthpoints} HP" + Environment.NewLine);
+                        }
                     }
                 }
             }
 
-            Warrior attacker = attackers[0];
-            Warrior defender = defenders[0];
 
             Attack(attacker, defender, outputTextBox);
 

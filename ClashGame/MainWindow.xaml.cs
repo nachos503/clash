@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
 namespace ClashGame
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
-        private GameManager gameManager = GameManager.Instance;
-
         public MainWindow()
         {
             InitializeComponent();
@@ -19,10 +16,9 @@ namespace ClashGame
 
         private void StartGame_Click(object sender, RoutedEventArgs e)
         {
-            gameManager.StartGame(outputTextBox);
+            GameManager.Instance.StartGame(outputTextBox);
         }
     }
-
     // Интерфейс для лечения
     interface IHealable
     {
@@ -125,6 +121,60 @@ namespace ClashGame
         }
     }
 
+    class ImprovedHeavyWarrior : Warrior
+    {
+        private HeavyWarrior heavyWarrior;
+        private bool isUpgraded;
+        public double MaxHealthpoints { get; }
+
+        public ImprovedHeavyWarrior(HeavyWarrior heavyWarrior)
+        {
+            this.heavyWarrior = heavyWarrior;
+            Healthpoints = heavyWarrior.Healthpoints;
+            MaxHealthpoints = 250;
+            Damage = heavyWarrior.Damage + 20; // Увеличиваем атаку на 20
+            Defence = heavyWarrior.Defence + 20; // Увеличиваем защиту на 20
+            Dodge = heavyWarrior.Dodge;
+            Cost = heavyWarrior.Cost;
+            Side = heavyWarrior.Side;
+            isUpgraded = true;
+        }
+
+        public override string ToString()
+        {
+            return "ImprovedHeavyWarrior";
+        }
+
+        // Метод для проверки, должно ли улучшение быть отменено
+        public bool ShouldCancelUpgrade(List<Warrior> allies)
+        {
+            // Проверяем, есть ли рядом LightWarrior
+            foreach (var ally in allies)
+            {
+                if (ally is LightWarrior && ally.Healthpoints > 0)
+                    return false;
+            }
+
+            // Проверяем, не мало ли у нас HP
+            if (Healthpoints < 0.4 * heavyWarrior.Healthpoints)
+                return true;
+
+            return false;
+        }
+
+        // Метод для получения базового тяжёлого воина
+        public HeavyWarrior GetBaseHeavyWarrior()
+        {
+            return heavyWarrior;
+        }
+
+        // Метод для проверки, улучшён ли воин
+        public bool IsUpgraded()
+        {
+            return isUpgraded;
+        }
+    }
+
     class Archer : Warrior, IRangedUnit
     {
 
@@ -155,7 +205,7 @@ namespace ClashGame
             }
             else
             {
-                //Дальный бой
+                //Дальний бой
                 // Расчет урона от атаки арчера
                 return 20;
             }
@@ -215,7 +265,7 @@ namespace ClashGame
         }
     }
 
-    class Wizard : Warrior 
+    class Wizard : Warrior
     {
         public Wizard(string side) : base()
         {
@@ -267,7 +317,7 @@ namespace ClashGame
         public Warrior CreateHealer(string side)
         {
             return new Healer(side);
-        }        
+        }
         public Warrior CreateWizard(string side)
         {
             return new Wizard(side);
@@ -326,9 +376,28 @@ namespace ClashGame
                 outputTextBox.AppendText(costSum.ToString() + Environment.NewLine); // Добавление информации в TextBox
             }
 
-            foreach (var x in warriorList)
+            for (int i = 0; i < warriorList.Count; i++)
             {
-                outputTextBox.AppendText(x.ToString() + Environment.NewLine); // Добавление информации в TextBox
+                // Проверяем, является ли текущий воин HeavyWarrior
+                if (warriorList[i] is HeavyWarrior)
+                {
+                    // Проверяем, есть ли рядом LightWarrior
+                    if ((i > 0 && warriorList[i - 1] is LightWarrior) || (i < warriorList.Count - 1 && warriorList[i + 1] is LightWarrior))
+                    {
+                        ImprovedHeavyWarrior improvedHeavyWarrior = new ImprovedHeavyWarrior((HeavyWarrior)warriorList[i]);
+
+                        // Проверяем, должно ли улучшение быть отменено
+                        if (improvedHeavyWarrior.ShouldCancelUpgrade(warriorList))
+                        {
+                            warriorList[i] = improvedHeavyWarrior.GetBaseHeavyWarrior(); // Возвращаем базового тяжёлого воина
+                        }
+                        else
+                        {
+                            warriorList[i] = improvedHeavyWarrior; // Заменяем текущего воина на улучшенного
+                        }
+                    }
+                }
+                outputTextBox.AppendText(warriorList[i].ToString() + Environment.NewLine); // Добавление информации в TextBox
             }
 
             return warriorList;
@@ -387,12 +456,11 @@ namespace ClashGame
                     break;
                 }
             }
-            if (firstArmy.Count == 0)outputTextBox.AppendText("Вторые победили!!" + Environment.NewLine);
+            if (firstArmy.Count == 0) outputTextBox.AppendText("Вторые победили!!" + Environment.NewLine);
         }
 
         public void Turn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
-
             Warrior attacker = attackers[0];
             Warrior defender = defenders[0];
 
@@ -452,9 +520,55 @@ namespace ClashGame
                 }
             }
 
+            // Проверка на наличие ImprovedHeavyWarrior в списке атакующих и его позиции
+            ImprovedHeavyWarrior improvedHeavyWarrior = null;
+            int improvedHeavyWarriorIndex = -1;
+            for (int i = 0; i < attackers.Count; i++)
+            {
+                if (attackers[i] is ImprovedHeavyWarrior)
+                {
+                    improvedHeavyWarrior = (ImprovedHeavyWarrior)attackers[i];
+                    improvedHeavyWarriorIndex = i;
+                    break;
+                }
+            }
+
+            // Проверяем, есть ли рядом с ImprovedHeavyWarrior LightWarrior
+            bool lightWarriorNearby = false;
+            if (improvedHeavyWarrior != null)
+            {
+                // Проверяем наличие LightWarrior на расстоянии 1 от ImprovedHeavyWarrior
+                for (int i = Math.Max(0, improvedHeavyWarriorIndex - 1); i < Math.Min(attackers.Count, improvedHeavyWarriorIndex + 2); i++)
+                {
+                    if (attackers[i] is LightWarrior)
+                    {
+                        lightWarriorNearby = true;
+                        break;
+                    }
+                }
+
+                if (!lightWarriorNearby)
+                {
+                    // Если рядом с ImprovedHeavyWarrior нет LightWarrior, отменяем улучшение
+                    attackers[improvedHeavyWarriorIndex] = new HeavyWarrior(improvedHeavyWarrior.Side)
+                    {
+                        Healthpoints = improvedHeavyWarrior.Healthpoints // сохраняем текущее здоровье
+                    };
+                    outputTextBox.AppendText($"Улучшение у ImprovedHeavyWarrior отменено, так как рядом нет LightWarrior." + Environment.NewLine);
+                    attacker = attackers[0];
+                }
+            }
+
+            // Проверяем здоровье ImprovedHeavyWarrior
+            if (improvedHeavyWarrior != null && improvedHeavyWarrior.Healthpoints < 0.4 * improvedHeavyWarrior.MaxHealthpoints)
+            {
+                // Если здоровье упало ниже 40%, отменяем улучшение
+                attackers[improvedHeavyWarriorIndex] = new HeavyWarrior(improvedHeavyWarrior.Side);
+                outputTextBox.AppendText($"Улучшение у ImprovedHeavyWarrior отменено, так как его здоровье упало ниже 40%." + Environment.NewLine);
+                attacker = attackers[0];
+            }
 
             Attack(attacker, defender, outputTextBox);
-
 
             // После обычной атаки, ищем арчера в оставшемся списке воинов
             foreach (var warrior in attackers)
@@ -473,8 +587,6 @@ namespace ClashGame
                     break; // Выходим после того как нашли первого арчера
                 }
             }
-
-
 
             IsDead(defender, defenders);
         }

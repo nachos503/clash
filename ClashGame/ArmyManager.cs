@@ -1,29 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Controls;
 
 namespace ClashGame
 {
-    class ArmyManager
+    sealed class ArmyManager
     {
+        private readonly TextBox outputTextBox;
         private readonly IUnitFactory unitFactory;
-        private TextBox outputTextBox;
-        private const int maxCost = 100;
+        private readonly Dictionary<string, List<Warrior>> armies;
 
-        public ArmyManager(TextBox textBox, IUnitFactory factory)
+        public ArmyManager(TextBox outputTextBox, IUnitFactory unitFactory)
         {
-            outputTextBox = textBox;
-            unitFactory = factory;
+            this.outputTextBox = outputTextBox;
+            this.unitFactory = unitFactory;
+            armies = new Dictionary<string, List<Warrior>>();
         }
 
         public List<Warrior> CreateArmy(List<Warrior> warriorList, string side)
         {
             Random rand = new Random();
-
+            int maxCost = 100;
             int costSum = 0;
+
             while (costSum < maxCost)
             {
                 if (rand.Next(0, 5) == 0 && costSum + unitFactory.CreateWizard(side).Cost <= maxCost)
@@ -61,29 +60,31 @@ namespace ClashGame
 
             for (int i = 0; i < warriorList.Count; i++)
             {
-                // Проверяем, является ли текущий воин HeavyWarrior
                 if (warriorList[i] is HeavyWarrior)
                 {
-                    // Проверяем, есть ли рядом LightWarrior
                     if ((i > 0 && warriorList[i - 1] is LightWarrior) || (i < warriorList.Count - 1 && warriorList[i + 1] is LightWarrior))
                     {
                         ImprovedHeavyWarrior improvedHeavyWarrior = new ImprovedHeavyWarrior((HeavyWarrior)warriorList[i]);
-
-                        // Проверяем, должно ли улучшение быть отменено
                         if (improvedHeavyWarrior.ShouldCancelUpgrade(warriorList))
                         {
-                            warriorList[i] = improvedHeavyWarrior.GetBaseHeavyWarrior(); // Возвращаем базового тяжёлого воина
+                            warriorList[i] = improvedHeavyWarrior.GetBaseHeavyWarrior();
                         }
                         else
                         {
-                            warriorList[i] = improvedHeavyWarrior; // Заменяем текущего воина на улучшенного
+                            warriorList[i] = improvedHeavyWarrior;
                         }
                     }
                 }
                 outputTextBox.AppendText(warriorList[i].ToString() + Environment.NewLine); // Добавление информации в TextBox
             }
 
+            armies[side] = warriorList;
             return warriorList;
+        }
+
+        public List<Warrior> GetArmyByColor(string side)
+        {
+            return armies.ContainsKey(side) ? armies[side] : new List<Warrior>();
         }
     }
 }

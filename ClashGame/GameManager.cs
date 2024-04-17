@@ -1,8 +1,6 @@
-﻿using System;
+﻿// GameManager.cs
+
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Controls;
 
 namespace ClashGame
@@ -26,18 +24,11 @@ namespace ClashGame
             unitFactory = new ArmyUnitFactory();
         }
 
-        public void StartGame(TextBox outputTextBox)
+        public void StartGame(TextBox outputTextBox, List<Warrior> firstArmy, List<Warrior> secondArmy)
         {
-            ArmyManager armyManager = new ArmyManager(outputTextBox, unitFactory);
             BattleManager battleManager = new BattleManager();
-
-            List<Warrior> firstArmy = new List<Warrior>();
-            List<Warrior> secondArmy = new List<Warrior>();
-
-            armyManager.CreateArmy(firstArmy, "Blue");
-            armyManager.CreateArmy(secondArmy, "Red");
-
             battleManager.StartBattle(firstArmy, secondArmy, outputTextBox);
         }
+
     }
 }

@@ -1,6 +1,4 @@
-﻿// GameManager.cs
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Windows.Controls;
 
 namespace ClashGame
@@ -17,17 +15,18 @@ namespace ClashGame
             }
         }
 
-        private readonly IUnitFactory unitFactory;
-
         private GameManager()
         {
-            unitFactory = new ArmyUnitFactory();
         }
 
         public void StartGame(TextBox outputTextBox, List<Warrior> firstArmy, List<Warrior> secondArmy)
         {
-            BattleManager battleManager = new BattleManager();
-            battleManager.StartBattle(firstArmy, secondArmy, outputTextBox);
+            string logFilePath = "battle_logs.txt";
+            ILogger fileLogger = new FileLogger(logFilePath);
+
+           // BattleManager battleManager = new BattleManager();
+            BattleManagerProxy proxy = new BattleManagerProxy(fileLogger);
+            proxy.StartBattle(firstArmy, secondArmy, outputTextBox);
         }
 
     }

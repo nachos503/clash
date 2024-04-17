@@ -1,0 +1,1787 @@
+17.04.2024 18:39:21: Битва началась!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue ImprovedHeavyWarrior с силой 40 по Red Healer
+17.04.2024 18:39:21: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red Healer
+17.04.2024 18:39:21: Воин Red Healer умер!
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red LightWarrior с силой 15 по Blue ImprovedHeavyWarrior
+17.04.2024 18:39:21: Получена атака Red LightWarrior с силой 15 от Blue ImprovedHeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue ImprovedHeavyWarrior с силой 40 по Red LightWarrior
+17.04.2024 18:39:21: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red LightWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red LightWarrior с силой 15 по Blue ImprovedHeavyWarrior
+17.04.2024 18:39:21: Получена атака Red LightWarrior с силой 15 от Blue ImprovedHeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue ImprovedHeavyWarrior с силой 40 по Red LightWarrior
+17.04.2024 18:39:21: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red LightWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red LightWarrior с силой 15 по Blue ImprovedHeavyWarrior
+17.04.2024 18:39:21: Получена атака Red LightWarrior с силой 15 от Blue ImprovedHeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue ImprovedHeavyWarrior с силой 40 по Red LightWarrior
+17.04.2024 18:39:21: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red LightWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red LightWarrior с силой 15 по Blue ImprovedHeavyWarrior
+17.04.2024 18:39:21: Получена атака Red LightWarrior с силой 15 от Blue ImprovedHeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue ImprovedHeavyWarrior с силой 40 по Red LightWarrior
+17.04.2024 18:39:21: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red LightWarrior
+17.04.2024 18:39:21: Воин Red LightWarrior умер!
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red ImprovedHeavyWarrior с силой 40 по Blue ImprovedHeavyWarrior
+17.04.2024 18:39:21: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue ImprovedHeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue ImprovedHeavyWarrior с силой 40 по Red ImprovedHeavyWarrior
+17.04.2024 18:39:21: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red ImprovedHeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red ImprovedHeavyWarrior с силой 40 по Blue ImprovedHeavyWarrior
+17.04.2024 18:39:21: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue ImprovedHeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue ImprovedHeavyWarrior с силой 40 по Red ImprovedHeavyWarrior
+17.04.2024 18:39:21: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red ImprovedHeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red ImprovedHeavyWarrior с силой 40 по Blue ImprovedHeavyWarrior
+17.04.2024 18:39:21: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue ImprovedHeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue ImprovedHeavyWarrior с силой 40 по Red ImprovedHeavyWarrior
+17.04.2024 18:39:21: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red ImprovedHeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red ImprovedHeavyWarrior с силой 40 по Blue ImprovedHeavyWarrior
+17.04.2024 18:39:21: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue ImprovedHeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue HeavyWarrior с силой 20 по Red ImprovedHeavyWarrior
+17.04.2024 18:39:21: Получена атака Blue HeavyWarrior с силой 20 от Red ImprovedHeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red ImprovedHeavyWarrior с силой 40 по Blue HeavyWarrior
+17.04.2024 18:39:21: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue HeavyWarrior с силой 20 по Red ImprovedHeavyWarrior
+17.04.2024 18:39:21: Получена атака Blue HeavyWarrior с силой 20 от Red ImprovedHeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red ImprovedHeavyWarrior с силой 40 по Blue HeavyWarrior
+17.04.2024 18:39:21: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue HeavyWarrior с силой 20 по Red ImprovedHeavyWarrior
+17.04.2024 18:39:21: Получена атака Blue HeavyWarrior с силой 20 от Red ImprovedHeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 18:39:21: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 18:39:21: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 18:39:21: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 18:39:21: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 18:39:21: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 18:39:21: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 18:39:21: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 18:39:21: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 18:39:21: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 18:39:21: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 18:39:21: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 18:39:21: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 18:39:21: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 18:39:21: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 18:39:21: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 18:39:21: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 18:39:21: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 18:39:21: Воин Blue HeavyWarrior умер!
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue LightWarrior с силой 15 по Red HeavyWarrior
+17.04.2024 18:39:21: Получена атака Blue LightWarrior с силой 15 от Red HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red HeavyWarrior с силой 20 по Blue LightWarrior
+17.04.2024 18:39:21: Получена атака Red HeavyWarrior с силой 20 от Blue LightWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue LightWarrior с силой 15 по Red HeavyWarrior
+17.04.2024 18:39:21: Получена атака Blue LightWarrior с силой 15 от Red HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red HeavyWarrior с силой 20 по Blue LightWarrior
+17.04.2024 18:39:21: Получена атака Red HeavyWarrior с силой 20 от Blue LightWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue LightWarrior с силой 15 по Red HeavyWarrior
+17.04.2024 18:39:21: Получена атака Blue LightWarrior с силой 15 от Red HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red HeavyWarrior с силой 20 по Blue LightWarrior
+17.04.2024 18:39:21: Получена атака Red HeavyWarrior с силой 20 от Blue LightWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue LightWarrior с силой 15 по Red HeavyWarrior
+17.04.2024 18:39:21: Получена атака Blue LightWarrior с силой 15 от Red HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red HeavyWarrior с силой 20 по Blue LightWarrior
+17.04.2024 18:39:21: Получена атака Red HeavyWarrior с силой 20 от Blue LightWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue LightWarrior с силой 15 по Red HeavyWarrior
+17.04.2024 18:39:21: Получена атака Blue LightWarrior с силой 15 от Red HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red HeavyWarrior с силой 20 по Blue LightWarrior
+17.04.2024 18:39:21: Получена атака Red HeavyWarrior с силой 20 от Blue LightWarrior
+17.04.2024 18:39:21: Воин Blue LightWarrior умер!
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 18:39:21: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 18:39:21: Воин Red HeavyWarrior умер!
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red LightWarrior с силой 15 по Blue HeavyWarrior
+17.04.2024 18:39:21: Получена атака Red LightWarrior с силой 15 от Blue HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue HeavyWarrior с силой 20 по Red LightWarrior
+17.04.2024 18:39:21: Получена атака Blue HeavyWarrior с силой 20 от Red LightWarrior
+17.04.2024 18:39:21: Воин Red LightWarrior умер!
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red LightWarrior с силой 15 по Blue HeavyWarrior
+17.04.2024 18:39:21: Получена атака Red LightWarrior с силой 15 от Blue HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue HeavyWarrior с силой 20 по Red LightWarrior
+17.04.2024 18:39:21: Получена атака Blue HeavyWarrior с силой 20 от Red LightWarrior
+17.04.2024 18:39:21: Воин Red LightWarrior умер!
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Red LightWarrior с силой 15 по Blue HeavyWarrior
+17.04.2024 18:39:21: Получена атака Red LightWarrior с силой 15 от Blue HeavyWarrior
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Ход начат!
+17.04.2024 18:39:21: Атака Blue HeavyWarrior с силой 20 по Red LightWarrior
+17.04.2024 18:39:21: Получена атака Blue HeavyWarrior с силой 20 от Red LightWarrior
+17.04.2024 18:39:21: Воин Red LightWarrior умер!
+17.04.2024 18:39:21: Ход завершен!
+17.04.2024 18:39:21: Битва завершилась!
+17.04.2024 18:59:31: Битва началась!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue Healer с силой 5 по Red ImprovedHeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue Healer с силой 5 от Red ImprovedHeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red ImprovedHeavyWarrior с силой 40 по Blue Healer
+17.04.2024 18:59:31: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue Healer
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue Healer с силой 5 по Red ImprovedHeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue Healer с силой 5 от Red ImprovedHeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red ImprovedHeavyWarrior с силой 40 по Blue Healer
+17.04.2024 18:59:31: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue Healer
+17.04.2024 18:59:31: Воин Blue Healer умер!
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red ImprovedHeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red ImprovedHeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red ImprovedHeavyWarrior с силой 40 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red ImprovedHeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red ImprovedHeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red ImprovedHeavyWarrior с силой 40 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red ImprovedHeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red ImprovedHeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red ImprovedHeavyWarrior с силой 40 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red ImprovedHeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red ImprovedHeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red ImprovedHeavyWarrior с силой 40 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red ImprovedHeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red ImprovedHeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red ImprovedHeavyWarrior с силой 40 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red ImprovedHeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red ImprovedHeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red ImprovedHeavyWarrior с силой 40 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red ImprovedHeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red ImprovedHeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 18:59:31: Воин Blue HeavyWarrior умер!
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue Archer с силой 15 по Red HeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue Archer с силой 15 от Red HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red HeavyWarrior с силой 20 по Blue Archer
+17.04.2024 18:59:31: Получена атака Red HeavyWarrior с силой 20 от Blue Archer
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue Archer с силой 15 по Red HeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue Archer с силой 15 от Red HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red HeavyWarrior с силой 20 по Blue Archer
+17.04.2024 18:59:31: Получена атака Red HeavyWarrior с силой 20 от Blue Archer
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue Archer с силой 15 по Red HeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue Archer с силой 15 от Red HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red HeavyWarrior с силой 20 по Blue Archer
+17.04.2024 18:59:31: Получена атака Red HeavyWarrior с силой 20 от Blue Archer
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue Archer с силой 15 по Red HeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue Archer с силой 15 от Red HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red HeavyWarrior с силой 20 по Blue Archer
+17.04.2024 18:59:31: Получена атака Red HeavyWarrior с силой 20 от Blue Archer
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue Archer с силой 15 по Red HeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue Archer с силой 15 от Red HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red HeavyWarrior с силой 20 по Blue Archer
+17.04.2024 18:59:31: Получена атака Red HeavyWarrior с силой 20 от Blue Archer
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue Archer с силой 15 по Red HeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue Archer с силой 15 от Red HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red HeavyWarrior с силой 20 по Blue Archer
+17.04.2024 18:59:31: Получена атака Red HeavyWarrior с силой 20 от Blue Archer
+17.04.2024 18:59:31: Воин Blue Archer умер!
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 18:59:31: Воин Red HeavyWarrior умер!
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red LightWarrior с силой 15 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red LightWarrior с силой 15 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red LightWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red LightWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red LightWarrior с силой 15 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red LightWarrior с силой 15 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red LightWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red LightWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red LightWarrior с силой 15 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red LightWarrior с силой 15 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red LightWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red LightWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red LightWarrior с силой 15 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red LightWarrior с силой 15 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red LightWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red LightWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red LightWarrior с силой 15 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red LightWarrior с силой 15 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red LightWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red LightWarrior
+17.04.2024 18:59:31: Воин Red LightWarrior умер!
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red LightWarrior с силой 15 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red LightWarrior с силой 15 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red LightWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red LightWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red LightWarrior с силой 15 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red LightWarrior с силой 15 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red LightWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red LightWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red LightWarrior с силой 15 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red LightWarrior с силой 15 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red LightWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red LightWarrior
+17.04.2024 18:59:31: Воин Red LightWarrior умер!
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red LightWarrior с силой 15 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red LightWarrior с силой 15 от Blue HeavyWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Blue HeavyWarrior с силой 20 по Red LightWarrior
+17.04.2024 18:59:31: Получена атака Blue HeavyWarrior с силой 20 от Red LightWarrior
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Ход начат!
+17.04.2024 18:59:31: Атака Red LightWarrior с силой 15 по Blue HeavyWarrior
+17.04.2024 18:59:31: Получена атака Red LightWarrior с силой 15 от Blue HeavyWarrior
+17.04.2024 18:59:31: Воин Blue HeavyWarrior умер!
+17.04.2024 18:59:31: Ход завершен!
+17.04.2024 18:59:31: Битва завершилась!
+17.04.2024 19:26:27: Битва началась!
+17.04.2024 19:26:27: Ход начат!
+17.04.2024 19:26:38: Битва началась!
+17.04.2024 19:26:38: Ход начат!
+17.04.2024 19:26:53: Битва началась!
+17.04.2024 19:26:53: Ход начат!
+17.04.2024 19:27:10: Битва началась!
+17.04.2024 19:27:10: Ход начат!
+17.04.2024 19:27:10: Атака Blue LightWarrior с силой 15 по Red Wizard
+17.04.2024 19:27:10: Получена атака Blue LightWarrior с силой 15 от Red Wizard
+17.04.2024 19:27:10: Ход завершен!
+17.04.2024 19:27:10: Ход начат!
+17.04.2024 19:27:10: Атака Red Wizard с силой 10 по Blue LightWarrior
+17.04.2024 19:27:10: Получена атака Red Wizard с силой 10 от Blue LightWarrior
+17.04.2024 19:27:10: Ход завершен!
+17.04.2024 19:27:10: Ход начат!
+17.04.2024 19:27:10: Атака Blue LightWarrior с силой 15 по Red Wizard
+17.04.2024 19:27:10: Получена атака Blue LightWarrior с силой 15 от Red Wizard
+17.04.2024 19:27:10: Воин Red Wizard умер!
+17.04.2024 19:27:10: Ход завершен!
+17.04.2024 19:27:10: Ход начат!
+17.04.2024 19:27:10: Атака Red Archer с силой 15 по Blue LightWarrior
+17.04.2024 19:27:10: Получена атака Red Archer с силой 15 от Blue LightWarrior
+17.04.2024 19:27:10: Ход завершен!
+17.04.2024 19:27:10: Ход начат!
+17.04.2024 19:27:10: Атака Blue LightWarrior с силой 15 по Red Archer
+17.04.2024 19:27:10: Получена атака Blue LightWarrior с силой 15 от Red Archer
+17.04.2024 19:27:10: Ход завершен!
+17.04.2024 19:27:10: Ход начат!
+17.04.2024 19:27:10: Атака Red Archer с силой 15 по Blue LightWarrior
+17.04.2024 19:27:10: Получена атака Red Archer с силой 15 от Blue LightWarrior
+17.04.2024 19:27:10: Ход завершен!
+17.04.2024 19:27:10: Ход начат!
+17.04.2024 19:27:10: Атака Blue LightWarrior с силой 15 по Red Archer
+17.04.2024 19:27:10: Получена атака Blue LightWarrior с силой 15 от Red Archer
+17.04.2024 19:27:10: Ход завершен!
+17.04.2024 19:27:10: Ход начат!
+17.04.2024 19:27:10: Атака Red Archer с силой 15 по Blue LightWarrior
+17.04.2024 19:27:10: Получена атака Red Archer с силой 15 от Blue LightWarrior
+17.04.2024 19:27:10: Ход завершен!
+17.04.2024 19:27:10: Ход начат!
+17.04.2024 19:27:10: Атака Blue LightWarrior с силой 15 по Red Archer
+17.04.2024 19:27:10: Получена атака Blue LightWarrior с силой 15 от Red Archer
+17.04.2024 19:27:10: Ход завершен!
+17.04.2024 19:27:10: Ход начат!
+17.04.2024 19:27:10: Атака Red Archer с силой 15 по Blue LightWarrior
+17.04.2024 19:27:10: Получена атака Red Archer с силой 15 от Blue LightWarrior
+17.04.2024 19:27:10: Ход завершен!
+17.04.2024 19:27:10: Ход начат!
+17.04.2024 19:27:10: Атака Blue LightWarrior с силой 15 по Red Archer
+17.04.2024 19:27:10: Получена атака Blue LightWarrior с силой 15 от Red Archer
+17.04.2024 19:27:10: Ход завершен!
+17.04.2024 19:27:10: Ход начат!
+17.04.2024 19:27:10: Атака Red Archer с силой 15 по Blue LightWarrior
+17.04.2024 19:27:10: Получена атака Red Archer с силой 15 от Blue LightWarrior
+17.04.2024 19:27:10: Ход завершен!
+17.04.2024 19:27:10: Ход начат!
+17.04.2024 19:27:10: Атака Blue LightWarrior с силой 15 по Red Archer
+17.04.2024 19:27:10: Получена атака Blue LightWarrior с силой 15 от Red Archer
+17.04.2024 19:27:10: Ход завершен!
+17.04.2024 19:27:10: Ход начат!
+17.04.2024 19:27:10: Атака Red Archer с силой 15 по Blue LightWarrior
+17.04.2024 19:27:10: Получена атака Red Archer с силой 15 от Blue LightWarrior
+17.04.2024 19:27:10: Ход завершен!
+17.04.2024 19:27:10: Ход начат!
+17.04.2024 19:27:10: Атака Blue LightWarrior с силой 15 по Red Archer
+17.04.2024 19:27:10: Получена атака Blue LightWarrior с силой 15 от Red Archer
+17.04.2024 19:27:10: Воин Red Archer умер!
+17.04.2024 19:27:10: Ход завершен!
+17.04.2024 19:27:10: Ход начат!
+17.04.2024 19:27:10: Атака Red Archer с силой 15 по Blue LightWarrior
+17.04.2024 19:27:10: Получена атака Red Archer с силой 15 от Blue LightWarrior
+17.04.2024 19:27:10: Воин Blue LightWarrior умер!
+17.04.2024 19:27:10: Ход завершен!
+17.04.2024 19:27:10: Ход начат!
+17.04.2024 19:27:10: Атака Blue LightWarrior с силой 15 по Red Archer
+17.04.2024 19:27:10: Получена атака Blue LightWarrior с силой 15 от Red Archer
+17.04.2024 19:27:10: Воин Red Archer умер!
+17.04.2024 19:27:10: Ход завершен!
+17.04.2024 19:27:10: Битва завершилась!
+17.04.2024 19:31:49: Битва началась!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Применение лечения воином Blue Healer
+17.04.2024 19:31:49: Атака Blue Wizard с силой 10 по Red Wizard
+17.04.2024 19:31:49: Получена атака Blue Wizard с силой 10 от Red Wizard
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Red Wizard
+17.04.2024 19:31:49: Атака Red Wizard с силой 10 по Blue Wizard
+17.04.2024 19:31:49: Получена атака Red Wizard с силой 10 от Blue Wizard
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue Wizard с силой 10 по Red Wizard
+17.04.2024 19:31:49: Получена атака Blue Wizard с силой 10 от Red Wizard
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Red Wizard
+17.04.2024 19:31:49: Атака Red Wizard с силой 10 по Blue Wizard
+17.04.2024 19:31:49: Получена атака Red Wizard с силой 10 от Blue Wizard
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue Wizard с силой 10 по Red Wizard
+17.04.2024 19:31:49: Получена атака Blue Wizard с силой 10 от Red Wizard
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Red Wizard
+17.04.2024 19:31:49: Атака Red Wizard с силой 10 по Blue Wizard
+17.04.2024 19:31:49: Получена атака Red Wizard с силой 10 от Blue Wizard
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue Wizard с силой 10 по Red Wizard
+17.04.2024 19:31:49: Получена атака Blue Wizard с силой 10 от Red Wizard
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Red Wizard
+17.04.2024 19:31:49: Атака Red Wizard с силой 10 по Blue Wizard
+17.04.2024 19:31:49: Получена атака Red Wizard с силой 10 от Blue Wizard
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue Wizard с силой 10 по Red Wizard
+17.04.2024 19:31:49: Получена атака Blue Wizard с силой 10 от Red Wizard
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Red Wizard
+17.04.2024 19:31:49: Атака Red Wizard с силой 10 по Blue Wizard
+17.04.2024 19:31:49: Получена атака Red Wizard с силой 10 от Blue Wizard
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue Wizard с силой 10 по Red Wizard
+17.04.2024 19:31:49: Получена атака Blue Wizard с силой 10 от Red Wizard
+17.04.2024 19:31:49: Воин Red Wizard умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue Wizard
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue Wizard
+17.04.2024 19:31:49: Воин Blue Wizard умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Воин Blue LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Воин Red LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Воин Blue LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Воин Blue LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Воин Blue LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Воин Blue LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Воин Red LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red Healer с силой 5 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red Healer с силой 5 от Blue LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red Healer
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red Healer
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red Healer с силой 5 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red Healer с силой 5 от Blue LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red Healer
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red Healer
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red Healer с силой 5 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red Healer с силой 5 от Blue LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red Healer
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red Healer
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red Healer с силой 5 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red Healer с силой 5 от Blue LightWarrior
+17.04.2024 19:31:49: Воин Blue LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red Healer
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red Healer
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red Healer с силой 5 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red Healer с силой 5 от Blue LightWarrior
+17.04.2024 19:31:49: Воин Blue LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red Healer
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red Healer
+17.04.2024 19:31:49: Воин Red Healer умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Воин Blue LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Воин Blue LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Воин Blue LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Применение лечения воином Blue Healer
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Воин Blue LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Воин Blue LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Воин Blue LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Воин Red LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red Healer с силой 5 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red Healer с силой 5 от Blue LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red Healer
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red Healer
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red Healer с силой 5 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red Healer с силой 5 от Blue LightWarrior
+17.04.2024 19:31:49: Воин Blue LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red Healer
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red Healer
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red Healer с силой 5 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red Healer с силой 5 от Blue LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red Healer
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red Healer
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red Healer с силой 5 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red Healer с силой 5 от Blue LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red Healer
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red Healer
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red Healer с силой 5 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red Healer с силой 5 от Blue LightWarrior
+17.04.2024 19:31:49: Воин Blue LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red Healer
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red Healer
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red Healer с силой 5 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red Healer с силой 5 от Blue LightWarrior
+17.04.2024 19:31:49: Воин Blue LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red Healer
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red Healer
+17.04.2024 19:31:49: Воин Red Healer умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Воин Blue LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Воин Blue LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Воин Blue LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Применение лечения воином Blue Healer
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:31:49: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:31:49: Воин Blue LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Ход начат!
+17.04.2024 19:31:49: Клонирование воина Blue Wizard
+17.04.2024 19:31:49: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:31:49: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:31:49: Воин Red LightWarrior умер!
+17.04.2024 19:31:49: Ход завершен!
+17.04.2024 19:31:49: Битва завершилась!
+17.04.2024 19:35:44: Битва началась!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue LightWarrior с силой 15 по Red Healer
+17.04.2024 19:35:44: Получена атака Blue LightWarrior с силой 15 от Red Healer
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red Healer с силой 5 по Blue LightWarrior
+17.04.2024 19:35:44: Получена атака Red Healer с силой 5 от Blue LightWarrior
+17.04.2024 19:35:44: Применение дальней атаки воина Red Archer
+17.04.2024 19:35:44: Урон от дальней атаки: 20
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue LightWarrior с силой 15 по Red Healer
+17.04.2024 19:35:44: Получена атака Blue LightWarrior с силой 15 от Red Healer
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red Healer с силой 5 по Blue LightWarrior
+17.04.2024 19:35:44: Получена атака Red Healer с силой 5 от Blue LightWarrior
+17.04.2024 19:35:44: Применение дальней атаки воина Red Archer
+17.04.2024 19:35:44: Урон от дальней атаки: 20
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue LightWarrior с силой 15 по Red Healer
+17.04.2024 19:35:44: Получена атака Blue LightWarrior с силой 15 от Red Healer
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red Healer с силой 5 по Blue LightWarrior
+17.04.2024 19:35:44: Получена атака Red Healer с силой 5 от Blue LightWarrior
+17.04.2024 19:35:44: Применение дальней атаки воина Red Archer
+17.04.2024 19:35:44: Урон от дальней атаки: 20
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue LightWarrior с силой 15 по Red Healer
+17.04.2024 19:35:44: Получена атака Blue LightWarrior с силой 15 от Red Healer
+17.04.2024 19:35:44: Воин Red Healer умер!
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:35:44: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:35:44: Применение дальней атаки воина Red Archer
+17.04.2024 19:35:44: Урон от дальней атаки: 20
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:35:44: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:35:44: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:35:44: Применение дальней атаки воина Red Archer
+17.04.2024 19:35:44: Урон от дальней атаки: 20
+17.04.2024 19:35:44: Воин Blue LightWarrior умер!
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:35:44: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:35:44: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:35:44: Применение дальней атаки воина Red Archer
+17.04.2024 19:35:44: Урон от дальней атаки: 20
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:35:44: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:35:44: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:35:44: Применение дальней атаки воина Red Archer
+17.04.2024 19:35:44: Урон от дальней атаки: 20
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:35:44: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:35:44: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:35:44: Применение дальней атаки воина Red Archer
+17.04.2024 19:35:44: Урон от дальней атаки: 0
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:35:44: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:35:44: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:35:44: Применение дальней атаки воина Red Archer
+17.04.2024 19:35:44: Урон от дальней атаки: 0
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:35:44: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:35:44: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:35:44: Применение дальней атаки воина Red Archer
+17.04.2024 19:35:44: Урон от дальней атаки: 20
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+17.04.2024 19:35:44: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+17.04.2024 19:35:44: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+17.04.2024 19:35:44: Применение дальней атаки воина Red Archer
+17.04.2024 19:35:44: Урон от дальней атаки: 20
+17.04.2024 19:35:44: Воин Blue LightWarrior умер!
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue HeavyWarrior с силой 20 по Red LightWarrior
+17.04.2024 19:35:44: Получена атака Blue HeavyWarrior с силой 20 от Red LightWarrior
+17.04.2024 19:35:44: Воин Red LightWarrior умер!
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red Archer с силой 15 по Blue HeavyWarrior
+17.04.2024 19:35:44: Получена атака Red Archer с силой 15 от Blue HeavyWarrior
+17.04.2024 19:35:44: Применение дальней атаки воина Red Archer
+17.04.2024 19:35:44: Урон от дальней атаки: 15
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue HeavyWarrior с силой 20 по Red Archer
+17.04.2024 19:35:44: Получена атака Blue HeavyWarrior с силой 20 от Red Archer
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red Archer с силой 15 по Blue HeavyWarrior
+17.04.2024 19:35:44: Получена атака Red Archer с силой 15 от Blue HeavyWarrior
+17.04.2024 19:35:44: Применение дальней атаки воина Red Archer
+17.04.2024 19:35:44: Урон от дальней атаки: 15
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue HeavyWarrior с силой 20 по Red Archer
+17.04.2024 19:35:44: Получена атака Blue HeavyWarrior с силой 20 от Red Archer
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red Archer с силой 15 по Blue HeavyWarrior
+17.04.2024 19:35:44: Получена атака Red Archer с силой 15 от Blue HeavyWarrior
+17.04.2024 19:35:44: Применение дальней атаки воина Red Archer
+17.04.2024 19:35:44: Урон от дальней атаки: 15
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue HeavyWarrior с силой 20 по Red Archer
+17.04.2024 19:35:44: Получена атака Blue HeavyWarrior с силой 20 от Red Archer
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red Archer с силой 15 по Blue HeavyWarrior
+17.04.2024 19:35:44: Получена атака Red Archer с силой 15 от Blue HeavyWarrior
+17.04.2024 19:35:44: Применение дальней атаки воина Red Archer
+17.04.2024 19:35:44: Урон от дальней атаки: 15
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue HeavyWarrior с силой 20 по Red Archer
+17.04.2024 19:35:44: Получена атака Blue HeavyWarrior с силой 20 от Red Archer
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red Archer с силой 15 по Blue HeavyWarrior
+17.04.2024 19:35:44: Получена атака Red Archer с силой 15 от Blue HeavyWarrior
+17.04.2024 19:35:44: Применение дальней атаки воина Red Archer
+17.04.2024 19:35:44: Урон от дальней атаки: 15
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue HeavyWarrior с силой 20 по Red Archer
+17.04.2024 19:35:44: Получена атака Blue HeavyWarrior с силой 20 от Red Archer
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red Archer с силой 15 по Blue HeavyWarrior
+17.04.2024 19:35:44: Получена атака Red Archer с силой 15 от Blue HeavyWarrior
+17.04.2024 19:35:44: Применение дальней атаки воина Red Archer
+17.04.2024 19:35:44: Урон от дальней атаки: 15
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue HeavyWarrior с силой 20 по Red Archer
+17.04.2024 19:35:44: Получена атака Blue HeavyWarrior с силой 20 от Red Archer
+17.04.2024 19:35:44: Воин Red Archer умер!
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:35:44: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:35:44: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:35:44: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:35:44: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:35:44: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:35:44: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:35:44: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:35:44: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:35:44: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:35:44: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:35:44: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:35:44: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:35:44: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:35:44: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:35:44: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:35:44: Воин Blue HeavyWarrior умер!
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:35:44: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:35:44: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:35:44: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:35:44: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:35:44: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:35:44: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:35:44: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:35:44: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:35:44: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:35:44: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Ход начат!
+17.04.2024 19:35:44: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:35:44: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:35:44: Воин Red HeavyWarrior умер!
+17.04.2024 19:35:44: Ход завершен!
+17.04.2024 19:35:44: Битва завершилась!
+17.04.2024 19:40:13: Битва началась!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Атака Blue Archer с силой 15 по Red HeavyWarrior
+17.04.2024 19:40:13: Получена атака Blue Archer с силой 15 от Red HeavyWarrior
+17.04.2024 19:40:13: Применение дальней атаки воина Blue Archer к воину System.Func`1[System.String] Red
+17.04.2024 19:40:13: Урон от дальней атаки: 15
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Клонирование воина Red Wizard
+17.04.2024 19:40:13: Атака Red HeavyWarrior с силой 20 по Blue Archer
+17.04.2024 19:40:13: Получена атака Red HeavyWarrior с силой 20 от Blue Archer
+17.04.2024 19:40:13: Применение дальней атаки воина Red Archer к воину System.Func`1[System.String] Blue
+17.04.2024 19:40:13: Урон от дальней атаки: 20
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Атака Blue Archer с силой 15 по Red HeavyWarrior
+17.04.2024 19:40:13: Получена атака Blue Archer с силой 15 от Red HeavyWarrior
+17.04.2024 19:40:13: Применение дальней атаки воина Blue Archer к воину System.Func`1[System.String] Red
+17.04.2024 19:40:13: Урон от дальней атаки: 0
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Клонирование воина Red Wizard
+17.04.2024 19:40:13: Атака Red HeavyWarrior с силой 20 по Blue Archer
+17.04.2024 19:40:13: Получена атака Red HeavyWarrior с силой 20 от Blue Archer
+17.04.2024 19:40:13: Применение дальней атаки воина Red Archer к воину System.Func`1[System.String] Blue
+17.04.2024 19:40:13: Урон от дальней атаки: 20
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Атака Blue Archer с силой 15 по Red HeavyWarrior
+17.04.2024 19:40:13: Получена атака Blue Archer с силой 15 от Red HeavyWarrior
+17.04.2024 19:40:13: Применение дальней атаки воина Blue Archer к воину System.Func`1[System.String] Red
+17.04.2024 19:40:13: Урон от дальней атаки: 15
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Клонирование воина Red Wizard
+17.04.2024 19:40:13: Атака Red HeavyWarrior с силой 20 по Blue Archer
+17.04.2024 19:40:13: Получена атака Red HeavyWarrior с силой 20 от Blue Archer
+17.04.2024 19:40:13: Применение дальней атаки воина Red Archer к воину System.Func`1[System.String] Blue
+17.04.2024 19:40:13: Урон от дальней атаки: 20
+17.04.2024 19:40:13: Воин Blue Archer умер!
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Атака Blue Archer с силой 15 по Red HeavyWarrior
+17.04.2024 19:40:13: Получена атака Blue Archer с силой 15 от Red HeavyWarrior
+17.04.2024 19:40:13: Применение дальней атаки воина Blue Archer к воину System.Func`1[System.String] Red
+17.04.2024 19:40:13: Урон от дальней атаки: 15
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Клонирование воина Red Wizard
+17.04.2024 19:40:13: Атака Red HeavyWarrior с силой 20 по Blue Archer
+17.04.2024 19:40:13: Получена атака Red HeavyWarrior с силой 20 от Blue Archer
+17.04.2024 19:40:13: Применение дальней атаки воина Red Archer к воину System.Func`1[System.String] Blue
+17.04.2024 19:40:13: Урон от дальней атаки: 20
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Атака Blue Archer с силой 15 по Red HeavyWarrior
+17.04.2024 19:40:13: Получена атака Blue Archer с силой 15 от Red HeavyWarrior
+17.04.2024 19:40:13: Применение дальней атаки воина Blue Archer к воину System.Func`1[System.String] Red
+17.04.2024 19:40:13: Урон от дальней атаки: 15
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Клонирование воина Red Wizard
+17.04.2024 19:40:13: Атака Red HeavyWarrior с силой 20 по Blue Archer
+17.04.2024 19:40:13: Получена атака Red HeavyWarrior с силой 20 от Blue Archer
+17.04.2024 19:40:13: Применение дальней атаки воина Red Archer к воину System.Func`1[System.String] Blue
+17.04.2024 19:40:13: Урон от дальней атаки: 20
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Атака Blue Archer с силой 15 по Red HeavyWarrior
+17.04.2024 19:40:13: Получена атака Blue Archer с силой 15 от Red HeavyWarrior
+17.04.2024 19:40:13: Применение дальней атаки воина Blue Archer к воину System.Func`1[System.String] Red
+17.04.2024 19:40:13: Урон от дальней атаки: 15
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Клонирование воина Red Wizard
+17.04.2024 19:40:13: Атака Red HeavyWarrior с силой 20 по Blue Archer
+17.04.2024 19:40:13: Получена атака Red HeavyWarrior с силой 20 от Blue Archer
+17.04.2024 19:40:13: Применение дальней атаки воина Red Archer к воину System.Func`1[System.String] Blue
+17.04.2024 19:40:13: Урон от дальней атаки: 20
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Атака Blue Archer с силой 15 по Red HeavyWarrior
+17.04.2024 19:40:13: Получена атака Blue Archer с силой 15 от Red HeavyWarrior
+17.04.2024 19:40:13: Применение дальней атаки воина Blue Archer к воину System.Func`1[System.String] Red
+17.04.2024 19:40:13: Урон от дальней атаки: 15
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Клонирование воина Red Wizard
+17.04.2024 19:40:13: Атака Red HeavyWarrior с силой 20 по Blue Archer
+17.04.2024 19:40:13: Получена атака Red HeavyWarrior с силой 20 от Blue Archer
+17.04.2024 19:40:13: Применение дальней атаки воина Red Archer к воину System.Func`1[System.String] Blue
+17.04.2024 19:40:13: Урон от дальней атаки: 20
+17.04.2024 19:40:13: Воин Blue Archer умер!
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:40:13: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Клонирование воина Red Wizard
+17.04.2024 19:40:13: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:40:13: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:40:13: Применение дальней атаки воина Red Archer к воину System.Func`1[System.String] Blue
+17.04.2024 19:40:13: Урон от дальней атаки: 20
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:40:13: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Клонирование воина Red Wizard
+17.04.2024 19:40:13: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:40:13: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:40:13: Применение дальней атаки воина Red Archer к воину System.Func`1[System.String] Blue
+17.04.2024 19:40:13: Урон от дальней атаки: 20
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:40:13: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Клонирование воина Red Wizard
+17.04.2024 19:40:13: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:40:13: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:40:13: Применение дальней атаки воина Red Archer к воину System.Func`1[System.String] Blue
+17.04.2024 19:40:13: Урон от дальней атаки: 20
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:40:13: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Клонирование воина Red Wizard
+17.04.2024 19:40:13: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:40:13: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:40:13: Применение дальней атаки воина Red Archer к воину System.Func`1[System.String] Blue
+17.04.2024 19:40:13: Урон от дальней атаки: 20
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:40:13: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Клонирование воина Red Wizard
+17.04.2024 19:40:13: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:40:13: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:40:13: Применение дальней атаки воина Red Archer к воину System.Func`1[System.String] Blue
+17.04.2024 19:40:13: Урон от дальней атаки: 20
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:40:13: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Ход начат!
+17.04.2024 19:40:13: Клонирование воина Red Wizard
+17.04.2024 19:40:13: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:40:13: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:40:13: Применение дальней атаки воина Red Archer к воину System.Func`1[System.String] Blue
+17.04.2024 19:40:13: Урон от дальней атаки: 20
+17.04.2024 19:40:13: Воин Blue HeavyWarrior умер!
+17.04.2024 19:40:13: Ход завершен!
+17.04.2024 19:40:13: Битва завершилась!
+17.04.2024 19:41:03: Битва началась!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Blue HeavyWarrior с силой 20 по Red Archer
+17.04.2024 19:41:03: Получена атака Blue HeavyWarrior с силой 20 от Red Archer
+17.04.2024 19:41:03: Применение дальней атаки воина Blue Archer к воину HeavyWarrior Red
+17.04.2024 19:41:03: Урон от дальней атаки: 20
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Клонирование воина Red Wizard
+17.04.2024 19:41:03: Применение лечения воином Red Healer
+17.04.2024 19:41:03: Атака Red Archer с силой 15 по Blue HeavyWarrior
+17.04.2024 19:41:03: Получена атака Red Archer с силой 15 от Blue HeavyWarrior
+17.04.2024 19:41:03: Применение дальней атаки воина Red Archer к воину HeavyWarrior Blue
+17.04.2024 19:41:03: Урон от дальней атаки: 0
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Blue HeavyWarrior с силой 20 по Red Archer
+17.04.2024 19:41:03: Получена атака Blue HeavyWarrior с силой 20 от Red Archer
+17.04.2024 19:41:03: Применение дальней атаки воина Blue Archer к воину Archer Red
+17.04.2024 19:41:03: Урон от дальней атаки: 20
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Клонирование воина Red Wizard
+17.04.2024 19:41:03: Атака Red Archer с силой 15 по Blue HeavyWarrior
+17.04.2024 19:41:03: Получена атака Red Archer с силой 15 от Blue HeavyWarrior
+17.04.2024 19:41:03: Применение дальней атаки воина Red Archer к воину Archer Blue
+17.04.2024 19:41:03: Урон от дальней атаки: 15
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Blue HeavyWarrior с силой 20 по Red Archer
+17.04.2024 19:41:03: Получена атака Blue HeavyWarrior с силой 20 от Red Archer
+17.04.2024 19:41:03: Применение дальней атаки воина Blue Archer к воину Healer Red
+17.04.2024 19:41:03: Урон от дальней атаки: 20
+17.04.2024 19:41:03: Воин Red Archer умер!
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Клонирование воина Red Wizard
+17.04.2024 19:41:03: Атака Red Wizard с силой 10 по Blue HeavyWarrior
+17.04.2024 19:41:03: Получена атака Red Wizard с силой 10 от Blue HeavyWarrior
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Blue HeavyWarrior с силой 20 по Red Wizard
+17.04.2024 19:41:03: Получена атака Blue HeavyWarrior с силой 20 от Red Wizard
+17.04.2024 19:41:03: Применение дальней атаки воина Blue Archer к воину Healer Red
+17.04.2024 19:41:03: Урон от дальней атаки: 20
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Клонирование воина Red Wizard
+17.04.2024 19:41:03: Атака Red Wizard с силой 10 по Blue HeavyWarrior
+17.04.2024 19:41:03: Получена атака Red Wizard с силой 10 от Blue HeavyWarrior
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Blue HeavyWarrior с силой 20 по Red Wizard
+17.04.2024 19:41:03: Получена атака Blue HeavyWarrior с силой 20 от Red Wizard
+17.04.2024 19:41:03: Применение дальней атаки воина Blue Archer к воину Healer Red
+17.04.2024 19:41:03: Урон от дальней атаки: 20
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Клонирование воина Red Wizard
+17.04.2024 19:41:03: Атака Red Wizard с силой 10 по Blue HeavyWarrior
+17.04.2024 19:41:03: Получена атака Red Wizard с силой 10 от Blue HeavyWarrior
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Blue HeavyWarrior с силой 20 по Red Wizard
+17.04.2024 19:41:03: Получена атака Blue HeavyWarrior с силой 20 от Red Wizard
+17.04.2024 19:41:03: Применение дальней атаки воина Blue Archer к воину Wizard Red
+17.04.2024 19:41:03: Урон от дальней атаки: 20
+17.04.2024 19:41:03: Воин Red Wizard умер!
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:41:03: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:41:03: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:41:03: Применение дальней атаки воина Blue Archer к воину HeavyWarrior Red
+17.04.2024 19:41:03: Урон от дальней атаки: 20
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:41:03: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:41:03: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:41:03: Применение дальней атаки воина Blue Archer к воину HeavyWarrior Red
+17.04.2024 19:41:03: Урон от дальней атаки: 20
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:41:03: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:41:03: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:41:03: Применение дальней атаки воина Blue Archer к воину Healer Red
+17.04.2024 19:41:03: Урон от дальней атаки: 0
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:41:03: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:41:03: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:41:03: Применение дальней атаки воина Blue Archer к воину HeavyWarrior Red
+17.04.2024 19:41:03: Урон от дальней атаки: 20
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Применение лечения воином Red Healer
+17.04.2024 19:41:03: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:41:03: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:41:03: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:41:03: Применение дальней атаки воина Blue Archer к воину Healer Red
+17.04.2024 19:41:03: Урон от дальней атаки: 0
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:41:03: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:41:03: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:41:03: Применение дальней атаки воина Blue Archer к воину Healer Red
+17.04.2024 19:41:03: Урон от дальней атаки: 0
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Применение лечения воином Red Healer
+17.04.2024 19:41:03: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:41:03: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:41:03: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:41:03: Применение дальней атаки воина Blue Archer к воину Healer Red
+17.04.2024 19:41:03: Урон от дальней атаки: 0
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:41:03: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:41:03: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:41:03: Применение дальней атаки воина Blue Archer к воину HeavyWarrior Red
+17.04.2024 19:41:03: Урон от дальней атаки: 20
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Применение лечения воином Red Healer
+17.04.2024 19:41:03: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:41:03: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Blue HeavyWarrior с силой 20 по Red HeavyWarrior
+17.04.2024 19:41:03: Получена атака Blue HeavyWarrior с силой 20 от Red HeavyWarrior
+17.04.2024 19:41:03: Применение дальней атаки воина Blue Archer к воину HeavyWarrior Red
+17.04.2024 19:41:03: Урон от дальней атаки: 20
+17.04.2024 19:41:03: Воин Red HeavyWarrior умер!
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Red Healer с силой 5 по Blue HeavyWarrior
+17.04.2024 19:41:03: Получена атака Red Healer с силой 5 от Blue HeavyWarrior
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Ход начат!
+17.04.2024 19:41:03: Атака Blue HeavyWarrior с силой 20 по Red Healer
+17.04.2024 19:41:03: Получена атака Blue HeavyWarrior с силой 20 от Red Healer
+17.04.2024 19:41:03: Применение дальней атаки воина Blue Archer к воину Healer Red
+17.04.2024 19:41:03: Урон от дальней атаки: 20
+17.04.2024 19:41:03: Воин Red Healer умер!
+17.04.2024 19:41:03: Ход завершен!
+17.04.2024 19:41:03: Битва завершилась!
+17.04.2024 19:42:41: Битва началась!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Blue Healer с силой 5 по Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Получена атака Blue Healer с силой 5 от Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Применение лечения воином Red Healer воина  Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Теперь у Red ImprovedHeavyWarrior 245 жизней.
+17.04.2024 19:42:41: Атака Red ImprovedHeavyWarrior с силой 40 по Blue Healer
+17.04.2024 19:42:41: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue Healer
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Blue Healer с силой 5 по Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Получена атака Blue Healer с силой 5 от Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Red ImprovedHeavyWarrior с силой 40 по Blue Healer
+17.04.2024 19:42:41: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue Healer
+17.04.2024 19:42:41: Воин Blue Healer умер!
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Blue Healer с силой 5 по Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Получена атака Blue Healer с силой 5 от Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Red ImprovedHeavyWarrior с силой 40 по Blue Healer
+17.04.2024 19:42:41: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue Healer
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Blue Healer с силой 5 по Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Получена атака Blue Healer с силой 5 от Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Red ImprovedHeavyWarrior с силой 40 по Blue Healer
+17.04.2024 19:42:41: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue Healer
+17.04.2024 19:42:41: Воин Blue Healer умер!
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Blue HeavyWarrior с силой 20 по Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Получена атака Blue HeavyWarrior с силой 20 от Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Red ImprovedHeavyWarrior с силой 40 по Blue HeavyWarrior
+17.04.2024 19:42:41: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue HeavyWarrior
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Blue HeavyWarrior с силой 20 по Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Получена атака Blue HeavyWarrior с силой 20 от Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Red ImprovedHeavyWarrior с силой 40 по Blue HeavyWarrior
+17.04.2024 19:42:41: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue HeavyWarrior
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Blue HeavyWarrior с силой 20 по Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Получена атака Blue HeavyWarrior с силой 20 от Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Red ImprovedHeavyWarrior с силой 40 по Blue HeavyWarrior
+17.04.2024 19:42:41: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue HeavyWarrior
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Blue HeavyWarrior с силой 20 по Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Получена атака Blue HeavyWarrior с силой 20 от Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Red ImprovedHeavyWarrior с силой 40 по Blue HeavyWarrior
+17.04.2024 19:42:41: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue HeavyWarrior
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Blue HeavyWarrior с силой 20 по Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Получена атака Blue HeavyWarrior с силой 20 от Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Red ImprovedHeavyWarrior с силой 40 по Blue HeavyWarrior
+17.04.2024 19:42:41: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue HeavyWarrior
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Применение лечения воином Blue Healer воина  Blue HeavyWarrior
+17.04.2024 19:42:41: Теперь у Blue HeavyWarrior 50 жизней.
+17.04.2024 19:42:41: Атака Blue HeavyWarrior с силой 20 по Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Получена атака Blue HeavyWarrior с силой 20 от Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Red ImprovedHeavyWarrior с силой 40 по Blue HeavyWarrior
+17.04.2024 19:42:41: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue HeavyWarrior
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Blue HeavyWarrior с силой 20 по Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Получена атака Blue HeavyWarrior с силой 20 от Red ImprovedHeavyWarrior
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Red HeavyWarrior с силой 20 по Blue HeavyWarrior
+17.04.2024 19:42:41: Получена атака Red HeavyWarrior с силой 20 от Blue HeavyWarrior
+17.04.2024 19:42:41: Воин Blue HeavyWarrior умер!
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Blue Healer с силой 5 по Red HeavyWarrior
+17.04.2024 19:42:41: Получена атака Blue Healer с силой 5 от Red HeavyWarrior
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Red HeavyWarrior с силой 20 по Blue Healer
+17.04.2024 19:42:41: Получена атака Red HeavyWarrior с силой 20 от Blue Healer
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Blue Healer с силой 5 по Red HeavyWarrior
+17.04.2024 19:42:41: Получена атака Blue Healer с силой 5 от Red HeavyWarrior
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Red HeavyWarrior с силой 20 по Blue Healer
+17.04.2024 19:42:41: Получена атака Red HeavyWarrior с силой 20 от Blue Healer
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Blue Healer с силой 5 по Red HeavyWarrior
+17.04.2024 19:42:41: Получена атака Blue Healer с силой 5 от Red HeavyWarrior
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Ход начат!
+17.04.2024 19:42:41: Атака Red HeavyWarrior с силой 20 по Blue Healer
+17.04.2024 19:42:41: Получена атака Red HeavyWarrior с силой 20 от Blue Healer
+17.04.2024 19:42:41: Воин Blue Healer умер!
+17.04.2024 19:42:41: Ход завершен!
+17.04.2024 19:42:41: Битва завершилась!

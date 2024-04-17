@@ -7,9 +7,9 @@ using System.Windows.Controls;
 
 namespace ClashGame
 {
-    class BattleManager
-    {
-        public void StartBattle(List<Warrior> firstArmy, List<Warrior> secondArmy, TextBox outputTextBox)
+    public class BattleManager
+    { 
+        virtual public void StartBattle(List<Warrior> firstArmy, List<Warrior> secondArmy, TextBox outputTextBox)
         {
             while (firstArmy.Count != 0)
             {
@@ -28,18 +28,21 @@ namespace ClashGame
             if (firstArmy.Count == 0) outputTextBox.AppendText("Вторые победили!!" + Environment.NewLine);
         }
 
-        public void Turn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
+        virtual public void Turn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
+            string logFilePath = "battle_logs.txt";
+            ILogger fileLogger = new FileLogger(logFilePath);
+
             Warrior attacker = attackers[0];
             Warrior defender = defenders[0];
 
             // Проверка наличия мага в списке атакующих
-            Wizard wizard = null;
+            WizardProxy wizard = null;
             foreach (var attacker1 in attackers)
             {
                 if (attacker1 is Wizard)
                 {
-                    wizard = (Wizard)attacker1;
+                    wizard = new WizardProxy(attacker1.Side, fileLogger);
                     break;
                 }
             }
@@ -56,13 +59,13 @@ namespace ClashGame
             }
 
             // Проверка на наличие лекаря в списке атакующих и его позиции
-            Healer healer = null;
+            HealerProxy healer = null;
             int healerIndex = -1;
             for (int i = 0; i < attackers.Count; i++)
             {
                 if (attackers[i] is Healer)
                 {
-                    healer = (Healer)attackers[i];
+                    healer = new HealerProxy(attackers[i].Side, fileLogger);
                     healerIndex = i;
                     break;
                 }
@@ -88,6 +91,7 @@ namespace ClashGame
                     }
                 }
             }
+
 
             // Проверка на наличие ImprovedHeavyWarrior в списке атакующих и его позиции
             ImprovedHeavyWarrior improvedHeavyWarrior = null;
@@ -144,7 +148,7 @@ namespace ClashGame
             {
                 if (warrior is Archer)
                 {
-                    Archer archer = (Archer)warrior;
+                    ArcherProxy archer = new ArcherProxy(warrior.Side, fileLogger);
                     var targetIndex = new Random().Next(0, defenders.Count); // Выбор случайного защищающегося воина
                     var target = defenders[targetIndex]; // Выбранный защищающийся воин
 
@@ -156,7 +160,6 @@ namespace ClashGame
                     break; // Выходим после того как нашли первого арчера
                 }
             }
-
             IsDead(defender, defenders);
         }
 
@@ -173,13 +176,13 @@ namespace ClashGame
             return alliesInRange;
         }
 
-        public void Attack(Warrior warrior1, Warrior warrior2, TextBox outputTextBox)
+        virtual public void Attack(Warrior warrior1, Warrior warrior2, TextBox outputTextBox)
         {
             outputTextBox.AppendText($"Атака {warrior1.Side} {warrior1} с силой {warrior1.Damage} по {warrior2.Side} {warrior2}" + Environment.NewLine);
             DefencePlease(warrior1, warrior2, outputTextBox);
         }
 
-        public void DefencePlease(Warrior warrior1, Warrior warrior2, TextBox outputTextBox)
+        virtual public void DefencePlease(Warrior warrior1, Warrior warrior2, TextBox outputTextBox)
         {
             Random random = new Random();
 
@@ -195,7 +198,7 @@ namespace ClashGame
             }
         }
 
-        public void IsDead(Warrior warrior, List<Warrior> army)
+        virtual public void IsDead(Warrior warrior, List<Warrior> army)
         {
             if (warrior.Healthpoints <= 0)
             {

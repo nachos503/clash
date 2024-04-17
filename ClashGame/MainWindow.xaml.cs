@@ -1,6 +1,4 @@
-﻿// MainWindow.xaml.cs
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -16,6 +14,8 @@ namespace ClashGame
             InitializeComponent();
             gameManager = GameManager.Instance;
             armyManager = new ArmyManager(outputTextBox, new ArmyUnitFactory());
+            ChooseBlueArmy.Visibility = Visibility.Hidden;
+            ChooseRedArmy.Visibility = Visibility.Hidden;
         }
 
         private void CreateArmy_Click(object sender, RoutedEventArgs e)
@@ -44,6 +44,11 @@ namespace ClashGame
             // Показываем кнопки "Синяя" и "Красная" для выбора команды
             ChooseBlueArmy.Visibility = Visibility.Visible;
             ChooseRedArmy.Visibility = Visibility.Visible;
+
+            //Меняем текст кнопки 
+            CreateArmy.Content = "Пересоздать армии";
+
+            MessageBox.Show("Теперь выберите армию");
         }
 
         private void ChooseBlueArmy_Click(object sender, RoutedEventArgs e)

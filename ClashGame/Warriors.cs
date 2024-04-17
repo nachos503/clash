@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClashGame
 {
-    abstract class Warrior : IClonableUnit
+    public abstract class Warrior : IClonableUnit
     {
         public double Healthpoints { get; set; }
         public double Damage { get; set; }
@@ -131,7 +131,7 @@ namespace ClashGame
         }
     }
 
-    class Archer : Warrior, IRangedUnit
+    public class Archer : Warrior, IRangedUnit
     {
 
         public string attackerSide { get; set; }
@@ -167,7 +167,7 @@ namespace ClashGame
             }
         }
 
-        public double RangedAttack(List<Warrior> enemies, int targetIndex, int attackerIndex)
+        virtual public double RangedAttack(List<Warrior> enemies, int targetIndex, int attackerIndex)
         {
             var enemy = enemies[targetIndex];
             int distance = Math.Abs(attackerIndex - targetIndex);
@@ -191,10 +191,15 @@ namespace ClashGame
                 return RangedDamage(attackerIndex);
             }
         }
+
+        public override string ToString()
+        {
+            return "Archer";
+        }
     }
 
     // Класс лекаря
-    class Healer : Warrior, IHealable
+    public class Healer : Warrior, IHealable
     {
         public Healer(string side) : base()
         {
@@ -206,7 +211,7 @@ namespace ClashGame
             Side = side;
         }
 
-        public void Heal(Warrior target)
+        virtual public void Heal(Warrior target)
         {
 
             double maxHealableHealthpoints = target.Healthpoints * 0.8;
@@ -219,9 +224,14 @@ namespace ClashGame
                     target.Healthpoints += healAmount; // Восстанавливаем 20 единиц здоровья
 
         }
+
+        public override string ToString()
+        {
+            return "Healer";
+        }
     }
 
-    class Wizard : Warrior
+   public class Wizard : Warrior
     {
         public Wizard(string side) : base()
         {
@@ -233,7 +243,7 @@ namespace ClashGame
             Side = side;
         }
 
-        public Warrior CloneLightWarrior(List<Warrior> warriors)
+        virtual public Warrior CloneLightWarrior(List<Warrior> warriors)
         {
             if (new Random().Next(0, 2) == 0)
             {
@@ -248,6 +258,11 @@ namespace ClashGame
                 }
             }
             return null;
+        }
+
+        public override string ToString()
+        {
+            return "Wizard";
         }
 
     }

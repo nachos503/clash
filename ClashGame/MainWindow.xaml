@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClashGame"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="1920" Width="1080">
     <Grid>
-        <TextBox x:Name="outputTextBox"  IsReadOnly="True" HorizontalAlignment="Left" Margin="103,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="616" Height="311"/>
-        <Button x:Name="ChooseBlueArmy" Click="ChooseBlueArmy_Click" Content="Синяя" HorizontalAlignment="Left" Height="26" Margin="250,398,0,0" VerticalAlignment="Top" Width="88"/>
-        <Button x:Name="ChooseRedArmy" Click="ChooseRedArmy_Click" Content="Красная" HorizontalAlignment="Left" Height="26" Margin="450,398,0,0" VerticalAlignment="Top" Width="88"/>
-        <Button x:Name="CreateArmy" Click="CreateArmy_Click" Content="Создать армии" HorizontalAlignment="Center" Height="26" Margin="0,369,0,0" VerticalAlignment="Top" Width="88"/>
+        <TextBox x:Name="outputTextBox"  IsReadOnly="True" HorizontalAlignment="Center" Margin="0,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="616" Height="311"/>
+        <Button x:Name="ChooseBlueArmy" Click="ChooseBlueArmy_Click" Content="Синяя" HorizontalAlignment="Left" Height="26" Margin="406,398,0,0" VerticalAlignment="Top" Width="88"/>
+        <Button x:Name="ChooseRedArmy" Click="ChooseRedArmy_Click" Content="Красная" HorizontalAlignment="Left" Height="26" Margin="586,398,0,0" VerticalAlignment="Top" Width="88"/>
+        <Button x:Name="CreateArmy" Click="CreateArmy_Click" Content="Создать армии"  HorizontalAlignment="Center" Height="26" Margin="0,367,0,0" VerticalAlignment="Top" Width="Auto"/>
 
     </Grid>
 </Window>

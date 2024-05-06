@@ -5,6 +5,7 @@ namespace ClashGame
 {
     sealed class GameManager
     {
+        //синглтон сраный
         private static GameManager? _instance;
         public static GameManager Instance
         {

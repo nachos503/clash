@@ -11,6 +11,12 @@
         <Button x:Name="ChooseBlueArmy" Click="ChooseBlueArmy_Click" Content="Синяя" HorizontalAlignment="Left" Height="26" Margin="406,398,0,0" VerticalAlignment="Top" Width="88"/>
         <Button x:Name="ChooseRedArmy" Click="ChooseRedArmy_Click" Content="Красная" HorizontalAlignment="Left" Height="26" Margin="586,398,0,0" VerticalAlignment="Top" Width="88"/>
         <Button x:Name="CreateArmy" Click="CreateArmy_Click" Content="Создать армии"  HorizontalAlignment="Center" Height="26" Margin="0,367,0,0" VerticalAlignment="Top" Width="Auto"/>
+        <Button x:Name="Turn" Click="Turn_Click" Content="Атака"  HorizontalAlignment="Left" Height="26" Margin="941,260,0,0" VerticalAlignment="Top" Width="61"/>
+        <Button x:Name="CancelTurn" Click="CancelTurn_Click" Content="Отмена хода"  HorizontalAlignment="Left" Height="26" Margin="990,182,0,0" VerticalAlignment="Top" Width="80"/>
+        <Button x:Name="ToTheEnd" Click="ToTheEnd_Click" Content="Доиграть до конца"  HorizontalAlignment="Left" Height="26" Margin="917,338,0,0" VerticalAlignment="Top" Width="Auto"/>
+        <Button x:Name="UseWizard" Click="UseWizard_Click" Content="Использовать мага"  HorizontalAlignment="Left" Height="26" Margin="873,53,0,0" VerticalAlignment="Top" Width="Auto"/>
+        <Button x:Name="UseHealer" Click="UseHealer_Click" Content="Использовать лекаря"  HorizontalAlignment="Left" Height="26" Margin="873,94,0,0" VerticalAlignment="Top" Width="Auto"/>
+        <Button x:Name="UseArcher" Click="UseArcher_Click" Content="Использовать лучников"  HorizontalAlignment="Left" Height="26" Margin="873,140,0,0" VerticalAlignment="Top" Width="Auto"/>
 
     </Grid>
 </Window>

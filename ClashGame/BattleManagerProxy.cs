@@ -54,10 +54,10 @@ namespace ClashGame
             _logger.Log("Битва завершилась!");
         }
 
-        public override void Turn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
+        public override void TurnComputer(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             _logger.Log("Ход начат!");
-            base.Turn(attackers, defenders, outputTextBox);
+            base.TurnComputer(attackers, defenders, outputTextBox);
             _logger.Log("Ход завершен!");
         }
 

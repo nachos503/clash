@@ -8,6 +8,7 @@ namespace ClashGame
     {
         private readonly ArmyManager armyManager;
         private readonly GameManager gameManager;
+        //private readonly BattleManager battleManager;
 
         public MainWindow()
         {
@@ -20,6 +21,56 @@ namespace ClashGame
 
         private void CreateArmy_Click(object sender, RoutedEventArgs e)
         {
+            CreateArmyClick(outputTextBox);
+        }
+
+        private void ChooseBlueArmy_Click(object sender, RoutedEventArgs e)
+        {
+            StartGameClick(outputTextBox, "Blue", "Red");
+        }
+
+        private void ChooseRedArmy_Click(object sender, RoutedEventArgs e)
+        {
+            StartGameClick(outputTextBox, "Red", "Blue");
+        }
+
+        private void UseWizard_Click(object sender, RoutedEventArgs e)
+        {
+  
+        }
+
+        private void UseHealer_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void UseArcher_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CancelTurn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Turn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ToTheEnd_Click(object sender, RoutedEventArgs e)
+        {
+            //StartBattle
+        }
+
+        public List<Warrior> GetCurrentArmy()
+        {
+            return null;
+        }
+
+        public void CreateArmyClick(TextBox outputTextBox)
+        {
+
             outputTextBox.Clear(); // Очищаем текстовое поле перед созданием армии
 
             List<Warrior> firstArmy = new List<Warrior>();
@@ -51,17 +102,7 @@ namespace ClashGame
             MessageBox.Show("Теперь выберите армию");
         }
 
-        private void ChooseBlueArmy_Click(object sender, RoutedEventArgs e)
-        {
-            StartGame(outputTextBox, "Blue", "Red");
-        }
-
-        private void ChooseRedArmy_Click(object sender, RoutedEventArgs e)
-        {
-            StartGame(outputTextBox, "Red", "Blue");
-        }
-
-        public void StartGame(TextBox outputTextBox, string firstArmyColor, string secondArmyColor)
+        public void StartGameClick(TextBox outputTextBox, string firstArmyColor, string secondArmyColor)
         {
             outputTextBox.Clear(); // Очищаем текстовое поле перед началом игры
             var firstArmy = armyManager.GetArmyByColor(firstArmyColor);
@@ -72,5 +113,6 @@ namespace ClashGame
             ChooseBlueArmy.Visibility = Visibility.Collapsed;
             ChooseRedArmy.Visibility = Visibility.Collapsed;
         }
+
     }
 }

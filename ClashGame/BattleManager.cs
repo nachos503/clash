@@ -58,7 +58,7 @@ namespace ClashGame
 
         public void WizardTurn(List<Warrior> attackers, TextBox outputTextBox)
         {
-            
+
             Wizard wizard = null;
 
             foreach (var attacker1 in attackers)
@@ -184,7 +184,7 @@ namespace ClashGame
             {
                 if (warrior is Archer)
                 {
-                   //ArcherProxy archer = new ArcherProxy(warrior.Side, fileLogger);
+                    //ArcherProxy archer = new ArcherProxy(warrior.Side, fileLogger);
                     var targetIndex = new Random().Next(0, defenders.Count); // Выбор случайного защищающегося воина
                     var target = defenders[targetIndex]; // Выбранный защищающийся воин
 

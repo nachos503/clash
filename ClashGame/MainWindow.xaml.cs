@@ -175,7 +175,7 @@ namespace ClashGame
         {
             if (playerArmy.Count == 0)
             {
-                MessageBox.Show("Компьютер победил!"); 
+                MessageBox.Show("Компьютер победил!");
                 Turn.IsEnabled = false;
                 CancelTurn.IsEnabled = false;
                 UseWizard.IsEnabled = false;

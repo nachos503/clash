@@ -1785,3 +1785,602 @@
 17.04.2024 19:42:41: Воин Blue Healer умер!
 17.04.2024 19:42:41: Ход завершен!
 17.04.2024 19:42:41: Битва завершилась!
+06.05.2024 22:07:02: Битва началась!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue ImprovedHeavyWarrior с силой 40 по Red HeavyWarrior
+06.05.2024 22:07:02: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red HeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Red HeavyWarrior с силой 20 по Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Получена атака Red HeavyWarrior с силой 20 от Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue ImprovedHeavyWarrior с силой 40 по Red HeavyWarrior
+06.05.2024 22:07:02: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red HeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Red HeavyWarrior с силой 20 по Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Получена атака Red HeavyWarrior с силой 20 от Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue ImprovedHeavyWarrior с силой 40 по Red HeavyWarrior
+06.05.2024 22:07:02: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red HeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Red HeavyWarrior с силой 20 по Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Получена атака Red HeavyWarrior с силой 20 от Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue ImprovedHeavyWarrior с силой 40 по Red HeavyWarrior
+06.05.2024 22:07:02: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red HeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Red HeavyWarrior с силой 20 по Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Получена атака Red HeavyWarrior с силой 20 от Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue ImprovedHeavyWarrior с силой 40 по Red HeavyWarrior
+06.05.2024 22:07:02: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red HeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Red HeavyWarrior с силой 20 по Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Получена атака Red HeavyWarrior с силой 20 от Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue ImprovedHeavyWarrior с силой 40 по Red HeavyWarrior
+06.05.2024 22:07:02: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red HeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Red HeavyWarrior с силой 20 по Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Получена атака Red HeavyWarrior с силой 20 от Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue ImprovedHeavyWarrior с силой 40 по Red HeavyWarrior
+06.05.2024 22:07:02: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red HeavyWarrior
+06.05.2024 22:07:02: Воин Red HeavyWarrior умер!
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Red Wizard с силой 10 по Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Получена атака Red Wizard с силой 10 от Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue ImprovedHeavyWarrior с силой 40 по Red Wizard
+06.05.2024 22:07:02: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red Wizard
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Red Wizard с силой 10 по Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Получена атака Red Wizard с силой 10 от Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue ImprovedHeavyWarrior с силой 40 по Red Wizard
+06.05.2024 22:07:02: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red Wizard
+06.05.2024 22:07:02: Воин Red Wizard умер!
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Red LightWarrior с силой 15 по Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Получена атака Red LightWarrior с силой 15 от Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue ImprovedHeavyWarrior с силой 40 по Red LightWarrior
+06.05.2024 22:07:02: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red LightWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Red LightWarrior с силой 15 по Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Получена атака Red LightWarrior с силой 15 от Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue ImprovedHeavyWarrior с силой 40 по Red LightWarrior
+06.05.2024 22:07:02: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red LightWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Red LightWarrior с силой 15 по Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Получена атака Red LightWarrior с силой 15 от Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue ImprovedHeavyWarrior с силой 40 по Red LightWarrior
+06.05.2024 22:07:02: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red LightWarrior
+06.05.2024 22:07:02: Воин Red LightWarrior умер!
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Red Healer с силой 5 по Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Получена атака Red Healer с силой 5 от Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue ImprovedHeavyWarrior с силой 40 по Red Healer
+06.05.2024 22:07:02: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red Healer
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Red Healer с силой 5 по Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Получена атака Red Healer с силой 5 от Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue ImprovedHeavyWarrior с силой 40 по Red Healer
+06.05.2024 22:07:02: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red Healer
+06.05.2024 22:07:02: Воин Red Healer умер!
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Red LightWarrior с силой 15 по Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Получена атака Red LightWarrior с силой 15 от Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue ImprovedHeavyWarrior с силой 40 по Red LightWarrior
+06.05.2024 22:07:02: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red LightWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Red LightWarrior с силой 15 по Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Получена атака Red LightWarrior с силой 15 от Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue ImprovedHeavyWarrior с силой 40 по Red LightWarrior
+06.05.2024 22:07:02: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red LightWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Red LightWarrior с силой 15 по Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Получена атака Red LightWarrior с силой 15 от Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue ImprovedHeavyWarrior с силой 40 по Red LightWarrior
+06.05.2024 22:07:02: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red LightWarrior
+06.05.2024 22:07:02: Воин Red LightWarrior умер!
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Red LightWarrior с силой 15 по Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Получена атака Red LightWarrior с силой 15 от Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue ImprovedHeavyWarrior с силой 40 по Red LightWarrior
+06.05.2024 22:07:02: Получена атака Blue ImprovedHeavyWarrior с силой 40 от Red LightWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Red LightWarrior с силой 15 по Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Получена атака Red LightWarrior с силой 15 от Blue ImprovedHeavyWarrior
+06.05.2024 22:07:02: Воин Blue ImprovedHeavyWarrior умер!
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+06.05.2024 22:07:02: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+06.05.2024 22:07:02: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+06.05.2024 22:07:02: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+06.05.2024 22:07:02: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+06.05.2024 22:07:02: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+06.05.2024 22:07:02: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Ход начат!
+06.05.2024 22:07:02: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+06.05.2024 22:07:02: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+06.05.2024 22:07:02: Воин Red LightWarrior умер!
+06.05.2024 22:07:02: Ход завершен!
+06.05.2024 22:07:02: Битва завершилась!
+06.05.2024 22:10:17: Битва началась!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Blue Wizard с силой 10 по Red LightWarrior
+06.05.2024 22:10:17: Получена атака Blue Wizard с силой 10 от Red LightWarrior
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Red LightWarrior с силой 15 по Blue Wizard
+06.05.2024 22:10:17: Получена атака Red LightWarrior с силой 15 от Blue Wizard
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Blue Wizard с силой 10 по Red LightWarrior
+06.05.2024 22:10:17: Получена атака Blue Wizard с силой 10 от Red LightWarrior
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Red LightWarrior с силой 15 по Blue Wizard
+06.05.2024 22:10:17: Получена атака Red LightWarrior с силой 15 от Blue Wizard
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Blue Wizard с силой 10 по Red LightWarrior
+06.05.2024 22:10:17: Получена атака Blue Wizard с силой 10 от Red LightWarrior
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Red LightWarrior с силой 15 по Blue Wizard
+06.05.2024 22:10:17: Получена атака Red LightWarrior с силой 15 от Blue Wizard
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Blue Wizard с силой 10 по Red LightWarrior
+06.05.2024 22:10:17: Получена атака Blue Wizard с силой 10 от Red LightWarrior
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Red LightWarrior с силой 15 по Blue Wizard
+06.05.2024 22:10:17: Получена атака Red LightWarrior с силой 15 от Blue Wizard
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Blue Wizard с силой 10 по Red LightWarrior
+06.05.2024 22:10:17: Получена атака Blue Wizard с силой 10 от Red LightWarrior
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Red LightWarrior с силой 15 по Blue Wizard
+06.05.2024 22:10:17: Получена атака Red LightWarrior с силой 15 от Blue Wizard
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Blue Wizard с силой 10 по Red LightWarrior
+06.05.2024 22:10:17: Получена атака Blue Wizard с силой 10 от Red LightWarrior
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Red LightWarrior с силой 15 по Blue Wizard
+06.05.2024 22:10:17: Получена атака Red LightWarrior с силой 15 от Blue Wizard
+06.05.2024 22:10:17: Воин Blue Wizard умер!
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+06.05.2024 22:10:17: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+06.05.2024 22:10:17: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+06.05.2024 22:10:17: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+06.05.2024 22:10:17: Воин Red LightWarrior умер!
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Red Wizard с силой 10 по Blue LightWarrior
+06.05.2024 22:10:17: Получена атака Red Wizard с силой 10 от Blue LightWarrior
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Blue LightWarrior с силой 15 по Red Wizard
+06.05.2024 22:10:17: Получена атака Blue LightWarrior с силой 15 от Red Wizard
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Red Wizard с силой 10 по Blue LightWarrior
+06.05.2024 22:10:17: Получена атака Red Wizard с силой 10 от Blue LightWarrior
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Blue LightWarrior с силой 15 по Red Wizard
+06.05.2024 22:10:17: Получена атака Blue LightWarrior с силой 15 от Red Wizard
+06.05.2024 22:10:17: Воин Red Wizard умер!
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+06.05.2024 22:10:17: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+06.05.2024 22:10:17: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+06.05.2024 22:10:17: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+06.05.2024 22:10:17: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+06.05.2024 22:10:17: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+06.05.2024 22:10:17: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+06.05.2024 22:10:17: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+06.05.2024 22:10:17: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Red LightWarrior с силой 15 по Blue LightWarrior
+06.05.2024 22:10:17: Получена атака Red LightWarrior с силой 15 от Blue LightWarrior
+06.05.2024 22:10:17: Воин Blue LightWarrior умер!
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Blue Archer с силой 15 по Red LightWarrior
+06.05.2024 22:10:17: Получена атака Blue Archer с силой 15 от Red LightWarrior
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Red LightWarrior с силой 15 по Blue Archer
+06.05.2024 22:10:17: Получена атака Red LightWarrior с силой 15 от Blue Archer
+06.05.2024 22:10:17: Воин Blue Archer умер!
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Blue Wizard с силой 10 по Red LightWarrior
+06.05.2024 22:10:17: Получена атака Blue Wizard с силой 10 от Red LightWarrior
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Red LightWarrior с силой 15 по Blue Wizard
+06.05.2024 22:10:17: Получена атака Red LightWarrior с силой 15 от Blue Wizard
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Blue Wizard с силой 10 по Red LightWarrior
+06.05.2024 22:10:17: Получена атака Blue Wizard с силой 10 от Red LightWarrior
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Red LightWarrior с силой 15 по Blue Wizard
+06.05.2024 22:10:17: Получена атака Red LightWarrior с силой 15 от Blue Wizard
+06.05.2024 22:10:17: Воин Blue Wizard умер!
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Blue LightWarrior с силой 15 по Red LightWarrior
+06.05.2024 22:10:17: Получена атака Blue LightWarrior с силой 15 от Red LightWarrior
+06.05.2024 22:10:17: Воин Red LightWarrior умер!
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Ход начат!
+06.05.2024 22:10:17: Атака Red Archer с силой 15 по Blue LightWarrior
+06.05.2024 22:10:17: Получена атака Red Archer с силой 15 от Blue LightWarrior
+06.05.2024 22:10:17: Воин Blue LightWarrior умер!
+06.05.2024 22:10:17: Ход завершен!
+06.05.2024 22:10:17: Битва завершилась!
+06.05.2024 22:10:39: Битва началась!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Blue LightWarrior с силой 15 по Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Получена атака Blue LightWarrior с силой 15 от Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Red ImprovedHeavyWarrior с силой 40 по Blue LightWarrior
+06.05.2024 22:10:39: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue LightWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Blue LightWarrior с силой 15 по Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Получена атака Blue LightWarrior с силой 15 от Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Red ImprovedHeavyWarrior с силой 40 по Blue LightWarrior
+06.05.2024 22:10:39: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue LightWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Blue LightWarrior с силой 15 по Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Получена атака Blue LightWarrior с силой 15 от Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Red ImprovedHeavyWarrior с силой 40 по Blue LightWarrior
+06.05.2024 22:10:39: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue LightWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Blue LightWarrior с силой 15 по Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Получена атака Blue LightWarrior с силой 15 от Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Red ImprovedHeavyWarrior с силой 40 по Blue LightWarrior
+06.05.2024 22:10:39: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue LightWarrior
+06.05.2024 22:10:39: Воин Blue LightWarrior умер!
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Blue Wizard с силой 10 по Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Получена атака Blue Wizard с силой 10 от Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Red ImprovedHeavyWarrior с силой 40 по Blue Wizard
+06.05.2024 22:10:39: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue Wizard
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Blue Wizard с силой 10 по Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Получена атака Blue Wizard с силой 10 от Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Red ImprovedHeavyWarrior с силой 40 по Blue Wizard
+06.05.2024 22:10:39: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue Wizard
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Blue Wizard с силой 10 по Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Получена атака Blue Wizard с силой 10 от Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Red ImprovedHeavyWarrior с силой 40 по Blue Wizard
+06.05.2024 22:10:39: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue Wizard
+06.05.2024 22:10:39: Воин Blue Wizard умер!
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Blue Healer с силой 5 по Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Получена атака Blue Healer с силой 5 от Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Red ImprovedHeavyWarrior с силой 40 по Blue Healer
+06.05.2024 22:10:39: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue Healer
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Blue Healer с силой 5 по Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Получена атака Blue Healer с силой 5 от Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Red ImprovedHeavyWarrior с силой 40 по Blue Healer
+06.05.2024 22:10:39: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue Healer
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Blue Healer с силой 5 по Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Получена атака Blue Healer с силой 5 от Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Red ImprovedHeavyWarrior с силой 40 по Blue Healer
+06.05.2024 22:10:39: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue Healer
+06.05.2024 22:10:39: Воин Blue Healer умер!
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Blue LightWarrior с силой 15 по Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Получена атака Blue LightWarrior с силой 15 от Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Red ImprovedHeavyWarrior с силой 40 по Blue LightWarrior
+06.05.2024 22:10:39: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue LightWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Blue LightWarrior с силой 15 по Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Получена атака Blue LightWarrior с силой 15 от Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Red ImprovedHeavyWarrior с силой 40 по Blue LightWarrior
+06.05.2024 22:10:39: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue LightWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Blue LightWarrior с силой 15 по Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Получена атака Blue LightWarrior с силой 15 от Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Red ImprovedHeavyWarrior с силой 40 по Blue LightWarrior
+06.05.2024 22:10:39: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue LightWarrior
+06.05.2024 22:10:39: Воин Blue LightWarrior умер!
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Blue LightWarrior с силой 15 по Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Получена атака Blue LightWarrior с силой 15 от Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Red ImprovedHeavyWarrior с силой 40 по Blue LightWarrior
+06.05.2024 22:10:39: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue LightWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Blue LightWarrior с силой 15 по Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Получена атака Blue LightWarrior с силой 15 от Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Red ImprovedHeavyWarrior с силой 40 по Blue LightWarrior
+06.05.2024 22:10:39: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue LightWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Blue LightWarrior с силой 15 по Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Получена атака Blue LightWarrior с силой 15 от Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Red ImprovedHeavyWarrior с силой 40 по Blue LightWarrior
+06.05.2024 22:10:39: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue LightWarrior
+06.05.2024 22:10:39: Воин Blue LightWarrior умер!
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Blue LightWarrior с силой 15 по Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Получена атака Blue LightWarrior с силой 15 от Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Red ImprovedHeavyWarrior с силой 40 по Blue LightWarrior
+06.05.2024 22:10:39: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue LightWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Blue LightWarrior с силой 15 по Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Получена атака Blue LightWarrior с силой 15 от Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Red ImprovedHeavyWarrior с силой 40 по Blue LightWarrior
+06.05.2024 22:10:39: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue LightWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Blue LightWarrior с силой 15 по Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Получена атака Blue LightWarrior с силой 15 от Red ImprovedHeavyWarrior
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Ход начат!
+06.05.2024 22:10:39: Атака Red ImprovedHeavyWarrior с силой 40 по Blue LightWarrior
+06.05.2024 22:10:39: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue LightWarrior
+06.05.2024 22:10:39: Воин Blue LightWarrior умер!
+06.05.2024 22:10:39: Ход завершен!
+06.05.2024 22:10:39: Битва завершилась!
+06.05.2024 22:24:58: Битва началась!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Blue Healer с силой 5 по Red Healer
+06.05.2024 22:24:58: Получена атака Blue Healer с силой 5 от Red Healer
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Red Healer с силой 5 по Blue Healer
+06.05.2024 22:24:58: Получена атака Red Healer с силой 5 от Blue Healer
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Blue Healer с силой 5 по Red Healer
+06.05.2024 22:24:58: Получена атака Blue Healer с силой 5 от Red Healer
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Red Healer с силой 5 по Blue Healer
+06.05.2024 22:24:58: Получена атака Red Healer с силой 5 от Blue Healer
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Blue Healer с силой 5 по Red Healer
+06.05.2024 22:24:58: Получена атака Blue Healer с силой 5 от Red Healer
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Red Healer с силой 5 по Blue Healer
+06.05.2024 22:24:58: Получена атака Red Healer с силой 5 от Blue Healer
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Blue Healer с силой 5 по Red Healer
+06.05.2024 22:24:58: Получена атака Blue Healer с силой 5 от Red Healer
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Red Healer с силой 5 по Blue Healer
+06.05.2024 22:24:58: Получена атака Red Healer с силой 5 от Blue Healer
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Blue Healer с силой 5 по Red Healer
+06.05.2024 22:24:58: Получена атака Blue Healer с силой 5 от Red Healer
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Red Healer с силой 5 по Blue Healer
+06.05.2024 22:24:58: Получена атака Red Healer с силой 5 от Blue Healer
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Blue Healer с силой 5 по Red Healer
+06.05.2024 22:24:58: Получена атака Blue Healer с силой 5 от Red Healer
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Red Healer с силой 5 по Blue Healer
+06.05.2024 22:24:58: Получена атака Red Healer с силой 5 от Blue Healer
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Blue Healer с силой 5 по Red Healer
+06.05.2024 22:24:58: Получена атака Blue Healer с силой 5 от Red Healer
+06.05.2024 22:24:58: Воин Red Healer умер!
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Red ImprovedHeavyWarrior с силой 40 по Blue Healer
+06.05.2024 22:24:58: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue Healer
+06.05.2024 22:24:58: Воин Blue Healer умер!
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Blue Archer с силой 15 по Red ImprovedHeavyWarrior
+06.05.2024 22:24:58: Получена атака Blue Archer с силой 15 от Red ImprovedHeavyWarrior
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Red ImprovedHeavyWarrior с силой 40 по Blue Archer
+06.05.2024 22:24:58: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue Archer
+06.05.2024 22:24:58: Воин Blue Archer умер!
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Blue LightWarrior с силой 15 по Red ImprovedHeavyWarrior
+06.05.2024 22:24:58: Получена атака Blue LightWarrior с силой 15 от Red ImprovedHeavyWarrior
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Red ImprovedHeavyWarrior с силой 40 по Blue LightWarrior
+06.05.2024 22:24:58: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue LightWarrior
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Blue LightWarrior с силой 15 по Red ImprovedHeavyWarrior
+06.05.2024 22:24:58: Получена атака Blue LightWarrior с силой 15 от Red ImprovedHeavyWarrior
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Red ImprovedHeavyWarrior с силой 40 по Blue LightWarrior
+06.05.2024 22:24:58: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue LightWarrior
+06.05.2024 22:24:58: Воин Blue LightWarrior умер!
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Blue Healer с силой 5 по Red ImprovedHeavyWarrior
+06.05.2024 22:24:58: Получена атака Blue Healer с силой 5 от Red ImprovedHeavyWarrior
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Red ImprovedHeavyWarrior с силой 40 по Blue Healer
+06.05.2024 22:24:58: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue Healer
+06.05.2024 22:24:58: Воин Blue Healer умер!
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Blue Healer с силой 5 по Red ImprovedHeavyWarrior
+06.05.2024 22:24:58: Получена атака Blue Healer с силой 5 от Red ImprovedHeavyWarrior
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Ход начат!
+06.05.2024 22:24:58: Атака Red ImprovedHeavyWarrior с силой 40 по Blue Healer
+06.05.2024 22:24:58: Получена атака Red ImprovedHeavyWarrior с силой 40 от Blue Healer
+06.05.2024 22:24:58: Воин Blue Healer умер!
+06.05.2024 22:24:58: Ход завершен!
+06.05.2024 22:24:58: Битва завершилась!

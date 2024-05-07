@@ -8,32 +8,8 @@ using ClashGame;
 
 namespace ClashGame
 {
-    public class BattleManager
+    public class BattleManager : IBattleManager
     {
-        private readonly ArmyManager armyManager;
-        //public List<Warrior> firstArmy
-        //{
-        //    get
-        //    {
-        //        return firstArmy;
-        //    }
-        //    private set
-        //    {
-        //        armyManager.CreateArmy(firstArmy, "red");
-        //    }
-        //}
-        //public  List<Warrior> secondArmy
-        //{
-        //    get
-        //    {
-        //        return secondArmy;
-        //    }
-        //    private set
-        //    {
-        //        armyManager.CreateArmy(firstArmy, "blue");
-        //    }
-        //}
-
         virtual public void StartBattle(List<Warrior> firstArmy, List<Warrior> secondArmy, TextBox outputTextBox)
         {
             while (firstArmy.Count != 0)
@@ -83,16 +59,16 @@ namespace ClashGame
         public void WizardTurn(List<Warrior> attackers, TextBox outputTextBox)
         {
             
-            WizardProxy wizard = null;
+            Wizard wizard = null;
 
-            //foreach (var attacker1 in attackers)
-            //{
-            //    if (attacker1 is Wizard)
-            //    {
-            //        wizard = new WizardProxy(attacker1.Side, fileLogger);
-            //        break;
-            //    }
-            //}
+            foreach (var attacker1 in attackers)
+            {
+                if (attacker1 is Wizard)
+                {
+                    wizard = new Wizard(attacker1.Side);
+                    break;
+                }
+            }
 
             // Попытка клонирования LightWarrior
             if (wizard != null)
@@ -103,22 +79,27 @@ namespace ClashGame
                     attackers.Insert(1, clonedWarrior); // Вставляем клонированного LightWarrior перед магом (на вторую позицию)
                     outputTextBox.AppendText($"Маг из команды {wizard.Side} клонировал LightWarrior с {clonedWarrior.Healthpoints} HP" + Environment.NewLine);
                 }
+                else
+                {
+                    outputTextBox.AppendText($"Маг из команды {wizard.Side} не смог склонировать LigthWarrior: " + Environment.NewLine);
+                    outputTextBox.AppendText("LightWarrior отсутствует, либо не повезло." + Environment.NewLine);
+                }
             }
         }
 
         public void HealerTurn(List<Warrior> attackers, TextBox outputTextBox)
         {
-            HealerProxy healer = null;
+            Healer healer = null;
             int healerIndex = -1;
-            //for (int i = 0; i < attackers.Count; i++)
-            //{
-            //    if (attackers[i] is Healer)
-            //    {
-            //        healer = new HealerProxy(attackers[i].Side, fileLogger);
-            //        healerIndex = i;
-            //        break;
-            //    }
-            //}
+            for (int i = 0; i < attackers.Count; i++)
+            {
+                if (attackers[i] is Healer)
+                {
+                    healer = new Healer(attackers[i].Side);
+                    healerIndex = i;
+                    break;
+                }
+            }
 
             if (healer != null && healerIndex != 0)
             {
@@ -139,6 +120,11 @@ namespace ClashGame
                         }
                     }
                 }
+                else
+                {
+                    outputTextBox.AppendText($"Лекарь из команды {healer.Side} никого не вылечил" + Environment.NewLine);
+                    outputTextBox.AppendText("Не прокнуло." + Environment.NewLine);
+                }
             }
         }
 
@@ -146,15 +132,15 @@ namespace ClashGame
         {
             ImprovedHeavyWarrior improvedHeavyWarrior = null;
             int improvedHeavyWarriorIndex = -1;
-            //for (int i = 0; i < attackers.Count; i++)
-            //{
-            //    if (attackers[i] is ImprovedHeavyWarrior)
-            //    {
-            //        improvedHeavyWarrior = (ImprovedHeavyWarrior)attackers[i];
-            //        improvedHeavyWarriorIndex = i;
-            //        break;
-            //    }
-            //}
+            for (int i = 0; i < attackers.Count; i++)
+            {
+                if (attackers[i] is ImprovedHeavyWarrior)
+                {
+                    improvedHeavyWarrior = (ImprovedHeavyWarrior)attackers[i];
+                    improvedHeavyWarriorIndex = i;
+                    break;
+                }
+            }
 
             // Проверяем, есть ли рядом с ImprovedHeavyWarrior LightWarrior
             bool lightWarriorNearby = false;

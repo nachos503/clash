@@ -14,7 +14,6 @@ namespace ClashGame
             return new LightWarrior(side);
         }
 
-
         public Warrior CreateHeavyWarrior(string side)
         {
             return new HeavyWarrior(side);
@@ -32,6 +31,10 @@ namespace ClashGame
         public Warrior CreateWizard(string side)
         {
             return new Wizard(side);
+        }
+        public Warrior CreateGulyayGorod(string side)
+        {
+            return new GulyayGorod(side);
         }
     }
 }

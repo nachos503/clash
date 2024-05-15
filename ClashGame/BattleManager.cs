@@ -185,7 +185,7 @@ namespace ClashGame
                 if (warrior is Archer)
                 {
                     //ArcherProxy archer = new ArcherProxy(warrior.Side, fileLogger);
-                    var targetIndex = new Random().Next(0, defenders.Count); // Выбор случайного защищающегося воина
+                    var targetIndex = new Random().Next(0, defenders.Count-1); // Выбор случайного защищающегося воина
                     var target = defenders[targetIndex]; // Выбранный защищающийся воин
 
                     Archer archer = new Archer(warrior.Side);

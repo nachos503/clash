@@ -58,6 +58,8 @@ namespace ClashGame
                 outputTextBox.AppendText(costSum.ToString() + Environment.NewLine); // Добавление информации в TextBox
             }
 
+            warriorList.Add(unitFactory.CreateGulyayGorod(side));
+
             for (int i = 0; i < warriorList.Count; i++)
             {
                 if (warriorList[i] is HeavyWarrior)

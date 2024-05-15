@@ -75,6 +75,7 @@ namespace ClashGame
             Turn.IsEnabled = true;
             ToTheEnd.Visibility = Visibility.Visible;
             ToTheEnd.IsEnabled = true;
+            UseGulyayGorod.IsEnabled = true;
         }
 
         private void RefreshUI()
@@ -173,6 +174,7 @@ namespace ClashGame
 
         private void CheckGameOver()
         {
+            //if (playerArmy.Count == 0 || (playerArmy.Count == 1 && playerArmy[0] is GulyayGorod))
             if (playerArmy.Count == 0)
             {
                 MessageBox.Show("Компьютер победил!");
@@ -182,6 +184,7 @@ namespace ClashGame
                 UseHealer.IsEnabled = false;
                 UseArcher.IsEnabled = false;
             }
+            //else if (computerArmy.Count == 0 || (computerArmy.Count == 1 && computerArmy[0] is GulyayGorod))
             else if (computerArmy.Count == 0)
             {
                 MessageBox.Show("Вы победили!");
@@ -220,6 +223,7 @@ namespace ClashGame
         private void ToTheEnd_Click(object sender, RoutedEventArgs e)
         {
             while (computerArmy.Count > 0 && playerArmy.Count > 0)
+            //while ((computerArmy.Count > 0 || computerArmy.Count > 1 && computerArmy[0] is GulyayGorod) && (playerArmy.Count > 0 || playerArmy.Count > 1 && playerArmy[0] is GulyayGorod))
             {
                 battleManagerProxy.TurnComputer(playerArmy, computerArmy, outputTextBox);
                 CheckGameOver();
@@ -230,6 +234,18 @@ namespace ClashGame
                 }
             }
             ToTheEnd.IsEnabled = false;
+        }
+
+        private void GulyayGorodr_Click(object sender, RoutedEventArgs e)
+        {
+            
+            var temp = playerArmy.First();
+            playerArmy[0] = playerArmy.Last();
+            playerArmy[playerArmy.Count() - 1] = temp;
+
+            UseGulyayGorod.IsEnabled = false;
+
+            battleManagerProxy.TurnComputer(computerArmy, playerArmy, outputTextBox);
         }
     }
 }

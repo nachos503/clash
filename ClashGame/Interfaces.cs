@@ -30,5 +30,6 @@ namespace ClashGame
         Warrior CreateArcher(string side);
         Warrior CreateHealer(string side);
         Warrior CreateWizard(string side);
+        Warrior CreateGulyayGorod(string side);
     }
 }

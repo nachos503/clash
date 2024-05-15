@@ -57,7 +57,15 @@ namespace ClashGame
         public void TurnComputer(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             Log("Ход начат!");
-            battleManager.TurnComputer(attackers, defenders, outputTextBox);
+            //battleManager.TurnComputer(attackers, defenders, outputTextBox);
+
+            WizardTurn(attackers, outputTextBox);
+            HealerTurn(attackers, outputTextBox);
+            HeavyWarriorUpgradeTurn(attackers, attackers[0], outputTextBox);
+            Attack(attackers[0], defenders[0], outputTextBox);
+            ArchersTurn(attackers, defenders, outputTextBox);
+            IsDead(defenders[0], defenders);
+
             Log("Ход завершен!");
         }
 

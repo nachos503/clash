@@ -70,5 +70,12 @@
                 Width="150" 
                 Height="26" 
                 Canvas.Left="873" Canvas.Top="140"/>
+        <Button x:Name="UseGulyayGorod" 
+                Click="GulyayGorodr_Click" 
+                Content="Использовать стену" 
+                IsEnabled="False" 
+                Width="150" 
+                Height="26" 
+                Canvas.Left="1066" Canvas.Top="260" HorizontalAlignment="Left" VerticalAlignment="Center"/>
     </Canvas>
 </Window>

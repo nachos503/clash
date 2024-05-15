@@ -39,24 +39,6 @@ namespace ClashGame
             Cost = 10;
             Side = side;
         }
-
-        public override string ToString()
-        {
-            return "LightWarrior";
-        }
-
-        public Warrior Clone()
-        {
-            // Создаем клон с текущими показателями
-            return new LightWarrior(Side)
-            {
-                Healthpoints = this.Healthpoints,
-                Damage = this.Damage,
-                Defence = this.Defence,
-                Dodge = this.Dodge,
-                Cost = this.Cost
-            };
-        }
     }
 
     class HeavyWarrior : Warrior
@@ -69,11 +51,6 @@ namespace ClashGame
             Dodge = 5;
             Cost = 25;
             Side = side;
-        }
-
-        public override string ToString()
-        {
-            return "HeavyWarrior";
         }
     }
 
@@ -94,11 +71,6 @@ namespace ClashGame
             Cost = heavyWarrior.Cost;
             Side = heavyWarrior.Side;
             isUpgraded = true;
-        }
-
-        public override string ToString()
-        {
-            return "ImprovedHeavyWarrior";
         }
 
         // Метод для проверки, должно ли улучшение быть отменено
@@ -191,11 +163,6 @@ namespace ClashGame
                 return RangedDamage(attackerIndex);
             }
         }
-
-        public override string ToString()
-        {
-            return "Archer";
-        }
     }
 
     // Класс лекаря
@@ -224,11 +191,6 @@ namespace ClashGame
                     target.Healthpoints += healAmount; // Восстанавливаем 20 единиц здоровья
 
         }
-
-        public override string ToString()
-        {
-            return "Healer";
-        }
     }
 
    public class Wizard : Warrior
@@ -245,7 +207,7 @@ namespace ClashGame
 
         virtual public Warrior CloneLightWarrior(List<Warrior> warriors)
         {
-            if (new Random().Next(0, 2) == 0)
+            if (new Random().Next(0, 20) == 0)
             {
                 // Ищем LightWarrior в списке воинов
                 foreach (var warrior in warriors)
@@ -259,11 +221,20 @@ namespace ClashGame
             }
             return null;
         }
+    }
 
-        public override string ToString()
+    public class GulyayGorod : Warrior
+    {
+        public GulyayGorod(string side) : base()
         {
-            return "Wizard";
+            Healthpoints = 500;
+            Damage = 0;
+            Defence = 0;
+            Dodge = 0;
+            Cost = 0;
+            Side = side;
         }
+
 
     }
 }

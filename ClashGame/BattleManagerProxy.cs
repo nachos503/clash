@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Windows.Controls;
 
 namespace ClashGame
@@ -16,12 +17,17 @@ namespace ClashGame
         void Attack(Warrior warrior1, Warrior warrior2, TextBox outputTextBox);
         void DefencePlease(Warrior warrior1, Warrior warrior2, TextBox outputTextBox);
         void IsDead(Warrior warrior, List<Warrior> army);
+        void GulyayGorodTurn(List<Warrior> attackers, TextBox outputTextBox);
     }
 
     public class BattleManagerProxy : IBattleManager
     {
         BattleManager battleManager = new BattleManager();
         private readonly string _filePath;
+        public int flagGulyayGorodBlue = 0;
+        public int flagGulyayGorodRed = 0;
+        public bool triggerGulyayGorodBlue = true;
+        public bool triggerGulyayGorodRed = true;
 
         public BattleManagerProxy(string filePath)
         {
@@ -66,6 +72,48 @@ namespace ClashGame
             ArchersTurn(attackers, defenders, outputTextBox);
             IsDead(defenders[0], defenders);
 
+            //ЗДЕСЬ БОДАТЬСЯ С УСЛОВИЯМИ
+            Random rand = new Random();
+            if (flagGulyayGorodBlue <= 3)
+            {
+                if (triggerGulyayGorodBlue && rand.Next(0, 5) == 0 && attackers[0].Side == "Blue" && defenders[0] is not GulyayGorod)
+                {
+                    GulyayGorodTurn(attackers, outputTextBox);
+                    triggerGulyayGorodBlue = false;
+                }
+
+                if (!triggerGulyayGorodBlue)
+                {
+                    flagGulyayGorodBlue++;
+                    GulyayGorodTurn(attackers, outputTextBox);
+                }
+
+                if (flagGulyayGorodBlue == 3)
+                {
+                    attackers.Remove(attackers[0]);
+                }
+            }
+
+            if (flagGulyayGorodRed <= 3)
+            {
+                if (triggerGulyayGorodRed && rand.Next(0, 5) == 0 && attackers[0].Side == "Red" && defenders[0] is not GulyayGorod)
+                {
+                    GulyayGorodTurn(attackers, outputTextBox);
+                    triggerGulyayGorodRed = false;
+                }
+
+                if (!triggerGulyayGorodRed)
+                {
+                    flagGulyayGorodRed++;
+                    GulyayGorodTurn(attackers, outputTextBox);
+                }
+
+
+                if (flagGulyayGorodRed == 3)
+                {
+                    attackers.Remove(attackers[0]);
+                }
+            }
             Log("Ход завершен!");
         }
 
@@ -111,6 +159,12 @@ namespace ClashGame
             }
 
             battleManager.IsDead(warrior, army);
+        }
+
+        public void GulyayGorodTurn(List<Warrior> attackers, TextBox outputTextBox)
+        {
+            Log($"Активирован гуляй город у {attackers[0].Side}");
+            battleManager.GulyayGorodTurn(attackers, outputTextBox);
         }
     }
 

@@ -241,5 +241,14 @@ namespace ClashGame
                 army.Remove(warrior);
             }
         }
+
+        public void GulyayGorodTurn(List<Warrior> attackers, TextBox outputTextBox)
+        {
+            var temp = attackers.First();
+            attackers[0] = attackers.Last();
+            attackers[attackers.Count() - 1] = temp;
+
+            outputTextBox.AppendText($"Активирован гуляй город у {attackers[0].Side}" + Environment.NewLine);
+        }
     }
 }

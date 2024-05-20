@@ -32,4 +32,11 @@ namespace ClashGame
         Warrior CreateWizard(string side);
         Warrior CreateGulyayGorod(string side);
     }
+
+    public interface ICommand
+    {
+        void Execute();
+        void Undo();
+    }
+
 }

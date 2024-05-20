@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -10,6 +12,7 @@ namespace ClashGame
         private readonly ArmyManager armyManager;
         private readonly GameManager gameManager;
         private BattleManagerProxy battleManagerProxy;
+        private CommandManager commandManager;
 
         private List<Warrior> playerArmy;
         private List<Warrior> computerArmy;
@@ -19,12 +22,15 @@ namespace ClashGame
         private bool healerUsed = false;
         private bool archerUsed = false;
 
+        private int countTurnsForGulyayGorod;
+
         public MainWindow()
         {
             InitializeComponent();
             gameManager = GameManager.Instance;
             armyManager = new ArmyManager(outputTextBox, new ArmyUnitFactory());
             battleManagerProxy = new BattleManagerProxy("1.txt");
+            commandManager = new CommandManager();
             InitializeUI();
         }
 
@@ -34,7 +40,7 @@ namespace ClashGame
             ChooseRedArmy.Visibility = Visibility.Collapsed;
             ToTheEnd.Visibility = Visibility.Collapsed;
             Turn.IsEnabled = false;
-            CancelTurn.IsEnabled = false;
+            CanсelTurn.IsEnabled = true;;
             DisableAbilityButtons();
         }
 
@@ -43,6 +49,7 @@ namespace ClashGame
             UseWizard.IsEnabled = false;
             UseHealer.IsEnabled = false;
             UseArcher.IsEnabled = false;
+            CanсelTurn.IsEnabled = false;
         }
 
         private void CreateArmy_Click(object sender, RoutedEventArgs e)
@@ -80,10 +87,10 @@ namespace ClashGame
 
         private void RefreshUI()
         {
-            // Проверяем, активен ли ход игрока и не были ли использованы способности
             UseWizard.IsEnabled = playerTurn && CheckForWizard(playerArmy) && !wizardUsed;
             UseHealer.IsEnabled = playerTurn && CheckForHealer(playerArmy) && !healerUsed;
             UseArcher.IsEnabled = playerTurn && CheckForArcher(playerArmy) && !archerUsed;
+            CanсelTurn.IsEnabled = commandManager.CanUndo();
         }
 
         private void UseWizard_Click(object sender, RoutedEventArgs e)
@@ -94,9 +101,11 @@ namespace ClashGame
                 return;
             }
 
-            battleManagerProxy.WizardTurn(playerArmy, outputTextBox);
+            var command = new WizardTurnCommand(battleManagerProxy, playerArmy, outputTextBox);
+            commandManager.ExecuteCommand(command);
             wizardUsed = true;
             UseWizard.IsEnabled = false;
+            CanсelTurn.IsEnabled = true;
             RefreshUI();
         }
 
@@ -108,9 +117,11 @@ namespace ClashGame
                 return;
             }
 
-            battleManagerProxy.HealerTurn(playerArmy, outputTextBox);
+            var command = new HealerTurnCommand(battleManagerProxy, playerArmy, outputTextBox);
+            commandManager.ExecuteCommand(command);
             healerUsed = true;
             UseHealer.IsEnabled = false;
+            CanсelTurn.IsEnabled = true;
             RefreshUI();
         }
 
@@ -122,26 +133,26 @@ namespace ClashGame
                 return;
             }
 
-            battleManagerProxy.ArchersTurn(playerArmy, computerArmy, outputTextBox);
+            var command = new ArcherTurnCommand(battleManagerProxy, playerArmy, computerArmy, outputTextBox);
+            commandManager.ExecuteCommand(command);
             archerUsed = true;
             UseArcher.IsEnabled = false;
+            CanсelTurn.IsEnabled = true;
             RefreshUI();
         }
 
         private void Turn_Click(object sender, RoutedEventArgs e)
         {
-            wizardUsed = false; // Сброс состояния использования способностей
+            wizardUsed = false;
             healerUsed = false;
             archerUsed = false;
-            playerTurn = true; // Начало хода игрока
+            playerTurn = true;
 
-            RefreshUI(); // Активировать кнопки, если условия позволяют
+            RefreshUI();
             Turn.IsEnabled = false;
-            CancelTurn.IsEnabled = true;
+            CanсelTurn.IsEnabled = true;
         }
-
-
-        private void CancelTurn_Click(object sender, RoutedEventArgs e)
+        private void EndTurn_Click(object sender, RoutedEventArgs e)
         {
             if (playerArmy.Count > 0 && computerArmy.Count > 0)
             {
@@ -153,10 +164,17 @@ namespace ClashGame
             playerTurn = false; // Завершение хода игрока
             ComputerTurn();
 
+            if (playerArmy[0] is GulyayGorod)
+            {
+                countTurnsForGulyayGorod++;
+                if(countTurnsForGulyayGorod == 7)
+                {
+                    playerArmy.Remove(playerArmy[0]);
+                }
+            }
+
             DisableAbilityButtons(); // Деактивировать кнопки способностей
         }
-
-
 
         private void ComputerTurn()
         {
@@ -167,33 +185,42 @@ namespace ClashGame
             }
             playerTurn = true; // Подготовка к началу нового хода игрока
             Turn.IsEnabled = true; // Позволяем начать новый ход
-            CancelTurn.IsEnabled = false;
+            CanсelTurn.IsEnabled = true;
             DisableAbilityButtons(); // Деактивировать кнопки до явного начала хода
         }
 
-
-        private void CheckGameOver()
+        private void CancelTurn_Click(object sender, RoutedEventArgs e)
         {
-            //if (playerArmy.Count == 0 || (playerArmy.Count == 1 && playerArmy[0] is GulyayGorod))
-            if (playerArmy.Count == 0)
+            commandManager.Undo();
+            RefreshUI();
+        }
+
+        private void ToTheEnd_Click(object sender, RoutedEventArgs e)
+        {
+            while (computerArmy.Count > 0 && playerArmy.Count > 0)
             {
-                MessageBox.Show("Компьютер победил!");
-                Turn.IsEnabled = false;
-                CancelTurn.IsEnabled = false;
-                UseWizard.IsEnabled = false;
-                UseHealer.IsEnabled = false;
-                UseArcher.IsEnabled = false;
+                battleManagerProxy.TurnComputer(playerArmy, computerArmy, outputTextBox);
+                CheckGameOver();
+                if (computerArmy.Count > 0)
+                {
+                    battleManagerProxy.TurnComputer(computerArmy, playerArmy, outputTextBox);
+                    CheckGameOver();
+                }
             }
-            //else if (computerArmy.Count == 0 || (computerArmy.Count == 1 && computerArmy[0] is GulyayGorod))
-            else if (computerArmy.Count == 0)
-            {
-                MessageBox.Show("Вы победили!");
-                Turn.IsEnabled = false;
-                CancelTurn.IsEnabled = false;
-                UseWizard.IsEnabled = false;
-                UseHealer.IsEnabled = false;
-                UseArcher.IsEnabled = false;
-            }
+            ToTheEnd.IsEnabled = false;
+        }
+
+        private void GulyayGorodr_Click(object sender, RoutedEventArgs e)
+        {
+            var temp = playerArmy.First();
+            playerArmy[0] = playerArmy.Last();
+            playerArmy[playerArmy.Count() - 1] = temp;
+
+            UseGulyayGorod.IsEnabled = false;
+
+            countTurnsForGulyayGorod = 0;
+
+            battleManagerProxy.TurnComputer(computerArmy, playerArmy, outputTextBox);
         }
 
         private bool CheckForWizard(List<Warrior> army)
@@ -220,32 +247,27 @@ namespace ClashGame
             healerUsed = false;
             archerUsed = false;
         }
-        private void ToTheEnd_Click(object sender, RoutedEventArgs e)
+
+        private void CheckGameOver()
         {
-            while (computerArmy.Count > 0 && playerArmy.Count > 0)
-            //while ((computerArmy.Count > 0 || computerArmy.Count > 1 && computerArmy[0] is GulyayGorod) && (playerArmy.Count > 0 || playerArmy.Count > 1 && playerArmy[0] is GulyayGorod))
+            if (playerArmy.Count == 0)
             {
-                battleManagerProxy.TurnComputer(playerArmy, computerArmy, outputTextBox);
-                CheckGameOver();
-                if (computerArmy.Count > 0)
-                {
-                    battleManagerProxy.TurnComputer(computerArmy, playerArmy, outputTextBox);
-                    CheckGameOver();
-                }
+                MessageBox.Show("Компьютер победил!");
+                Turn.IsEnabled = false;
+                CanсelTurn.IsEnabled = false;
+                UseWizard.IsEnabled = false;
+                UseHealer.IsEnabled = false;
+                UseArcher.IsEnabled = false;
             }
-            ToTheEnd.IsEnabled = false;
-        }
-
-        private void GulyayGorodr_Click(object sender, RoutedEventArgs e)
-        {
-            
-            var temp = playerArmy.First();
-            playerArmy[0] = playerArmy.Last();
-            playerArmy[playerArmy.Count() - 1] = temp;
-
-            UseGulyayGorod.IsEnabled = false;
-
-            battleManagerProxy.TurnComputer(computerArmy, playerArmy, outputTextBox);
+            else if (computerArmy.Count == 0)
+            {
+                MessageBox.Show("Вы победили!");
+                Turn.IsEnabled = false;
+                CanсelTurn.IsEnabled = false;
+                UseWizard.IsEnabled = false;
+                UseHealer.IsEnabled = false;
+                UseArcher.IsEnabled = false;
+            }
         }
     }
 }

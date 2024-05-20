@@ -20,15 +20,5 @@ namespace ClashGame
         {
         }
 
-        //public void StartGame(TextBox outputTextBox, List<Warrior> firstArmy, List<Warrior> secondArmy)
-        //{
-        //    string logFilePath = "battle_logs.txt";
-        //    ILogger fileLogger = new FileLogger(logFilePath);
-
-        //   // BattleManager battleManager = new BattleManager();
-        //    //BattleManagerProxy proxy = new BattleManagerProxy(fileLogger);
-        //    //proxy.StartBattle(firstArmy, secondArmy, outputTextBox);
-        //}
-
     }
 }

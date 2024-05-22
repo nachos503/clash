@@ -38,6 +38,15 @@ namespace ClashGame
             }
         }
 
+        //получает из окна сколько пользователь успел сделать ходов пока стена стоит
+        public void SetGulyayGorodCount(int count, string side)
+        {
+            if (side == "Blue")
+                flagGulyayGorodBlue = count;
+            else
+                flagGulyayGorodRed = count;
+        }
+
         public void Log(string message)
         {
             try
@@ -72,46 +81,62 @@ namespace ClashGame
             ArchersTurn(attackers, defenders, outputTextBox);
             IsDead(defenders[0], defenders);
 
-            //ЗДЕСЬ БОДАТЬСЯ С УСЛОВИЯМИ
             Random rand = new Random();
-            if (flagGulyayGorodBlue <= 3)
+            //проверка что стены не было
+            if (flagGulyayGorodBlue < 7)
             {
+                //проверка что пользователь вызвал стену но не доиграл ее
+                if (attackers[0] is GulyayGorod && triggerGulyayGorodBlue && attackers[0].Side == "Blue")
+                {
+                    triggerGulyayGorodBlue = false;
+                }
+
+                //попытка поставить стену в первый раз компьютером
                 if (triggerGulyayGorodBlue && rand.Next(0, 5) == 0 && attackers[0].Side == "Blue" && defenders[0] is not GulyayGorod)
                 {
                     GulyayGorodTurn(attackers, outputTextBox);
                     triggerGulyayGorodBlue = false;
+                    outputTextBox.AppendText("СТЕНА ПОЯВИЛАСЬ" + Environment.NewLine);
                 }
 
+                //счетчик ходов когда стена стоит
                 if (!triggerGulyayGorodBlue)
                 {
                     flagGulyayGorodBlue++;
-                    GulyayGorodTurn(attackers, outputTextBox);
                 }
 
-                if (flagGulyayGorodBlue == 3)
+                //убираем стену когда ходы все
+                if (flagGulyayGorodBlue == 7)
                 {
                     attackers.Remove(attackers[0]);
+                    outputTextBox.AppendText("СТЕНА УБРАЛАСЬ Синие" + Environment.NewLine);
                 }
             }
 
-            if (flagGulyayGorodRed <= 3)
+            if (flagGulyayGorodRed < 7)
             {
+                if (attackers[0] is GulyayGorod && triggerGulyayGorodRed && attackers[0].Side == "Red")
+                {
+                    triggerGulyayGorodRed = false;
+                }
+
                 if (triggerGulyayGorodRed && rand.Next(0, 5) == 0 && attackers[0].Side == "Red" && defenders[0] is not GulyayGorod)
                 {
                     GulyayGorodTurn(attackers, outputTextBox);
                     triggerGulyayGorodRed = false;
+                    outputTextBox.AppendText("СТЕНА ПОЯВИЛАСЬ" + Environment.NewLine);
                 }
 
                 if (!triggerGulyayGorodRed)
                 {
                     flagGulyayGorodRed++;
-                    GulyayGorodTurn(attackers, outputTextBox);
                 }
 
 
-                if (flagGulyayGorodRed == 3)
+                if (flagGulyayGorodRed == 7)
                 {
                     attackers.Remove(attackers[0]);
+                    outputTextBox.AppendText("СТЕНА УБРАЛАСЬ Красные" + Environment.NewLine);
                 }
             }
             Log("Ход завершен!");

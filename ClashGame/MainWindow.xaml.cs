@@ -166,8 +166,8 @@ namespace ClashGame
 
             if (playerArmy[0] is GulyayGorod)
             {
-                countTurnsForGulyayGorod++;
-                if(countTurnsForGulyayGorod == 7)
+                battleManagerProxy.SetGulyayGorodCount(countTurnsForGulyayGorod, playerArmy[0].Side); // Передача значения
+                if (countTurnsForGulyayGorod == 7) 
                 {
                     playerArmy.Remove(playerArmy[0]);
                 }
@@ -175,6 +175,7 @@ namespace ClashGame
 
             DisableAbilityButtons(); // Деактивировать кнопки способностей
         }
+
 
         private void ComputerTurn()
         {

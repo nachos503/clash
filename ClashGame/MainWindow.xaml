@@ -84,5 +84,29 @@
                 Width="150" 
                 Height="26" 
                 Canvas.Left="1066" Canvas.Top="94" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button x:Name="ChooseStrategy" 
+            Click="ChooseStrategy_Click" 
+            Content="Выбрать стратегию" 
+            Width="120" 
+            Height="26" 
+            Canvas.Left="480" Canvas.Top="372" RenderTransformOrigin="0.492,-0.306" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="ChooseTwoRows" 
+            Click="ChooseTwoRows_Click" 
+            Content="2 ряда" 
+            Width="88" 
+            Height="26" 
+            Canvas.Left="358" Canvas.Top="406" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="ChooseThreeRows" 
+            Click="ChooseThreeRows_Click" 
+            Content="3 ряда" 
+            Width="88" 
+            Height="26" 
+            Canvas.Left="496" Canvas.Top="406" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button x:Name="ChooseWallToWall" 
+            Click="ChooseWallToWall_Click" 
+            Content="Стенка - стенка" 
+            Width="88" 
+            Height="26" 
+            Canvas.Left="630" Canvas.Top="406" HorizontalAlignment="Left" VerticalAlignment="Top"/>
     </Canvas>
 </Window>

@@ -10,23 +10,36 @@ namespace ClashGame
 {
     public class BattleManager : IBattleManager
     {
-        virtual public void StartBattle(List<Warrior> firstArmy, List<Warrior> secondArmy, TextBox outputTextBox)
+        private IBattleStrategy _battleStrategy;
+        public void SetStrategy(IBattleStrategy strategy)
         {
-            while (firstArmy.Count != 0)
+            _battleStrategy = strategy;
+        }
+
+        public void StartBattle(List<Warrior> firstArmy, List<Warrior> secondArmy, TextBox outputTextBox)
+        {
+            _battleStrategy.ArrangeArmy(firstArmy);
+            _battleStrategy.ArrangeArmy(secondArmy);
+
+            while (firstArmy.Count != 0 && secondArmy.Count != 0)
             {
-                TurnComputer(firstArmy, secondArmy, outputTextBox);
+                _battleStrategy.ExecuteBattle(firstArmy, secondArmy, outputTextBox);
 
                 if (secondArmy.Count != 0)
                 {
-                    TurnComputer(secondArmy, firstArmy, outputTextBox);
+                    _battleStrategy.ExecuteBattle(secondArmy, firstArmy, outputTextBox);
                 }
                 else
                 {
-                    outputTextBox.AppendText("Первые победили!!" + Environment.NewLine);
+                    outputTextBox.AppendText("First army won!!" + Environment.NewLine);
                     break;
                 }
             }
-            if (firstArmy.Count == 0) outputTextBox.AppendText("Вторые победили!!" + Environment.NewLine);
+
+            if (firstArmy.Count == 0)
+            {
+                outputTextBox.AppendText("Second army won!!" + Environment.NewLine);
+            }
         }
 
         virtual public void TurnComputer(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -13,9 +12,11 @@ namespace ClashGame
         private readonly GameManager gameManager;
         private BattleManagerProxy battleManagerProxy;
         private CommandManager commandManager;
+        private IBattleStrategy currentStrategy;
 
         private List<Warrior> playerArmy;
         private List<Warrior> computerArmy;
+
         private bool playerTurn = true;
 
         private bool wizardUsed = false;
@@ -29,7 +30,7 @@ namespace ClashGame
             InitializeComponent();
             gameManager = GameManager.Instance;
             armyManager = new ArmyManager(outputTextBox, new ArmyUnitFactory());
-            battleManagerProxy = new BattleManagerProxy("1.txt");
+            battleManagerProxy = new BattleManagerProxy("1.txt", new TwoRowStrategy()); // Default strategy
             commandManager = new CommandManager();
             InitializeUI();
         }
@@ -40,8 +41,13 @@ namespace ClashGame
             ChooseRedArmy.Visibility = Visibility.Collapsed;
             ToTheEnd.Visibility = Visibility.Collapsed;
             Turn.IsEnabled = false;
-            CanсelTurn.IsEnabled = true;;
+            CanсelTurn.IsEnabled = true;
             DisableAbilityButtons();
+            // Hide strategy buttons initially
+            ChooseTwoRows.Visibility = Visibility.Hidden;
+            ChooseThreeRows.Visibility = Visibility.Hidden;
+            ChooseWallToWall.Visibility = Visibility.Hidden;
+            ChooseStrategy.Visibility = Visibility.Hidden;
         }
 
         private void DisableAbilityButtons()
@@ -78,11 +84,8 @@ namespace ClashGame
         {
             ChooseBlueArmy.Visibility = Visibility.Collapsed;
             ChooseRedArmy.Visibility = Visibility.Collapsed;
-            MessageBox.Show("Выбрана армия: " + (playerArmy == armyManager.GetArmyByColor("Blue") ? "Синяя" : "Красная") + ". Ваш ход!");
-            Turn.IsEnabled = true;
-            ToTheEnd.Visibility = Visibility.Visible;
-            ToTheEnd.IsEnabled = true;
-            UseGulyayGorod.IsEnabled = true;
+            ChooseStrategy.Visibility = Visibility.Visible;
+            MessageBox.Show("Выбрана армия: " + (playerArmy == armyManager.GetArmyByColor("Blue") ? "Синяя" : "Красная") + ". Выберите стратегию!");
         }
 
         private void RefreshUI()
@@ -156,7 +159,7 @@ namespace ClashGame
         {
             if (playerArmy.Count > 0 && computerArmy.Count > 0)
             {
-                battleManagerProxy.Attack(playerArmy[0], computerArmy[0], outputTextBox);
+                currentStrategy.ExecuteBattle(playerArmy, computerArmy, outputTextBox);
                 battleManagerProxy.IsDead(computerArmy[0], computerArmy);
                 CheckGameOver();
             }
@@ -167,7 +170,7 @@ namespace ClashGame
             if (playerArmy[0] is GulyayGorod)
             {
                 battleManagerProxy.SetGulyayGorodCount(countTurnsForGulyayGorod, playerArmy[0].Side); // Передача значения
-                if (countTurnsForGulyayGorod == 7) 
+                if (countTurnsForGulyayGorod == 7)
                 {
                     playerArmy.Remove(playerArmy[0]);
                 }
@@ -175,7 +178,6 @@ namespace ClashGame
 
             DisableAbilityButtons(); // Деактивировать кнопки способностей
         }
-
 
         private void ComputerTurn()
         {
@@ -209,6 +211,9 @@ namespace ClashGame
                 }
             }
             ToTheEnd.IsEnabled = false;
+
+            UseGulyayGorod.IsEnabled = false;
+            EndTurn.IsEnabled = false;
         }
 
         private void GulyayGorodr_Click(object sender, RoutedEventArgs e)
@@ -269,6 +274,46 @@ namespace ClashGame
                 UseHealer.IsEnabled = false;
                 UseArcher.IsEnabled = false;
             }
+        }
+
+        private void ChooseStrategy_Click(object sender, RoutedEventArgs e)
+        {
+            ChooseTwoRows.Visibility = Visibility.Visible;
+            ChooseThreeRows.Visibility = Visibility.Visible;
+            ChooseWallToWall.Visibility = Visibility.Visible;
+        }
+
+        private void ChooseTwoRows_Click(object sender, RoutedEventArgs e)
+        {
+            currentStrategy = new TwoRowStrategy();
+            currentStrategy.ArrangeArmy(playerArmy);
+            currentStrategy.ArrangeArmy(computerArmy);
+            MessageBox.Show("Two Rows strategy selected.");
+            HideStrategyButtons();
+        }
+
+        private void ChooseThreeRows_Click(object sender, RoutedEventArgs e)
+        {
+            currentStrategy = new ThreeRowStrategy();
+            currentStrategy.ArrangeArmy(playerArmy);
+            currentStrategy.ArrangeArmy(computerArmy);
+            MessageBox.Show("Three Rows strategy selected.");
+            HideStrategyButtons();
+        }
+
+        private void ChooseWallToWall_Click(object sender, RoutedEventArgs e)
+        {
+            currentStrategy = new WallToWallStrategy();
+            MessageBox.Show("Wall to Wall strategy selected.");
+            HideStrategyButtons();
+        }
+
+        private void HideStrategyButtons()
+        {
+            ChooseTwoRows.Visibility = Visibility.Collapsed;
+            ChooseThreeRows.Visibility = Visibility.Collapsed;
+            ChooseWallToWall.Visibility = Visibility.Collapsed;
+            Turn.IsEnabled = true;
         }
     }
 }

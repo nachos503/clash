@@ -36816,3 +36816,1627 @@
 22.05.2024 9:36:26: Атака Red ClashGame.ImprovedHeavyWarrior с силой 40 по Blue ClashGame.GulyayGorod
 22.05.2024 9:36:26: Атака лучниками
 22.05.2024 9:36:26: Ход завершен!
+22.05.2024 19:10:16: Starting logging...
+22.05.2024 19:10:22: Ход начат!
+22.05.2024 19:10:22: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.Healer
+22.05.2024 19:10:22: Атака лучниками
+22.05.2024 19:10:22: Ход завершен!
+22.05.2024 19:10:22: Ход начат!
+22.05.2024 19:10:22: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Атака Red ClashGame.Healer с силой 5 по Blue ClashGame.HeavyWarrior
+22.05.2024 19:10:22: Атака лучниками
+22.05.2024 19:10:22: Ход завершен!
+22.05.2024 19:10:22: Ход начат!
+22.05.2024 19:10:22: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.Healer
+22.05.2024 19:10:22: Атака лучниками
+22.05.2024 19:10:22: Воин Red ClashGame.Healer умер!
+22.05.2024 19:10:22: Ход завершен!
+22.05.2024 19:10:22: Ход начат!
+22.05.2024 19:10:22: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Атака Red ClashGame.ImprovedHeavyWarrior с силой 40 по Blue ClashGame.HeavyWarrior
+22.05.2024 19:10:22: Атака лучниками
+22.05.2024 19:10:22: Активирован гуляй город у Red
+22.05.2024 19:10:22: Ход завершен!
+22.05.2024 19:10:22: Ход начат!
+22.05.2024 19:10:22: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.GulyayGorod
+22.05.2024 19:10:22: Атака лучниками
+22.05.2024 19:10:22: Ход завершен!
+22.05.2024 19:10:22: Ход начат!
+22.05.2024 19:10:22: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Атака Red ClashGame.GulyayGorod с силой 0 по Blue ClashGame.HeavyWarrior
+22.05.2024 19:10:22: Атака лучниками
+22.05.2024 19:10:22: Ход завершен!
+22.05.2024 19:10:22: Ход начат!
+22.05.2024 19:10:22: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.GulyayGorod
+22.05.2024 19:10:22: Атака лучниками
+22.05.2024 19:10:22: Ход завершен!
+22.05.2024 19:10:22: Ход начат!
+22.05.2024 19:10:22: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Атака Red ClashGame.GulyayGorod с силой 0 по Blue ClashGame.HeavyWarrior
+22.05.2024 19:10:22: Атака лучниками
+22.05.2024 19:10:22: Ход завершен!
+22.05.2024 19:10:22: Ход начат!
+22.05.2024 19:10:22: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.GulyayGorod
+22.05.2024 19:10:22: Атака лучниками
+22.05.2024 19:10:22: Ход завершен!
+22.05.2024 19:10:22: Ход начат!
+22.05.2024 19:10:22: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Атака Red ClashGame.GulyayGorod с силой 0 по Blue ClashGame.HeavyWarrior
+22.05.2024 19:10:22: Атака лучниками
+22.05.2024 19:10:22: Ход завершен!
+22.05.2024 19:10:22: Ход начат!
+22.05.2024 19:10:22: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.LightWarrior
+22.05.2024 19:10:22: Атака лучниками
+22.05.2024 19:10:22: Ход завершен!
+22.05.2024 19:10:22: Ход начат!
+22.05.2024 19:10:22: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Атака Red ClashGame.LightWarrior с силой 15 по Blue ClashGame.HeavyWarrior
+22.05.2024 19:10:22: Атака лучниками
+22.05.2024 19:10:22: Ход завершен!
+22.05.2024 19:10:22: Ход начат!
+22.05.2024 19:10:22: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.LightWarrior
+22.05.2024 19:10:22: Атака лучниками
+22.05.2024 19:10:22: Ход завершен!
+22.05.2024 19:10:22: Ход начат!
+22.05.2024 19:10:22: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Атака Red ClashGame.LightWarrior с силой 15 по Blue ClashGame.HeavyWarrior
+22.05.2024 19:10:22: Атака лучниками
+22.05.2024 19:10:22: Ход завершен!
+22.05.2024 19:10:22: Ход начат!
+22.05.2024 19:10:22: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:22: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.LightWarrior
+22.05.2024 19:10:23: Атака лучниками
+22.05.2024 19:10:23: Ход завершен!
+22.05.2024 19:10:23: Ход начат!
+22.05.2024 19:10:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Атака Red ClashGame.LightWarrior с силой 15 по Blue ClashGame.HeavyWarrior
+22.05.2024 19:10:23: Атака лучниками
+22.05.2024 19:10:23: Ход завершен!
+22.05.2024 19:10:23: Ход начат!
+22.05.2024 19:10:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.LightWarrior
+22.05.2024 19:10:23: Атака лучниками
+22.05.2024 19:10:23: Воин Red ClashGame.LightWarrior умер!
+22.05.2024 19:10:23: Ход завершен!
+22.05.2024 19:10:23: Ход начат!
+22.05.2024 19:10:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Атака Red ClashGame.Healer с силой 5 по Blue ClashGame.HeavyWarrior
+22.05.2024 19:10:23: Атака лучниками
+22.05.2024 19:10:23: Ход завершен!
+22.05.2024 19:10:23: Ход начат!
+22.05.2024 19:10:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.Healer
+22.05.2024 19:10:23: Атака лучниками
+22.05.2024 19:10:23: Воин Red ClashGame.Healer умер!
+22.05.2024 19:10:23: Ход завершен!
+22.05.2024 19:10:23: Ход начат!
+22.05.2024 19:10:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Атака Red ClashGame.Wizard с силой 10 по Blue ClashGame.HeavyWarrior
+22.05.2024 19:10:23: Атака лучниками
+22.05.2024 19:10:23: Ход завершен!
+22.05.2024 19:10:23: Ход начат!
+22.05.2024 19:10:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.Wizard
+22.05.2024 19:10:23: Атака лучниками
+22.05.2024 19:10:23: Воин Red ClashGame.Wizard умер!
+22.05.2024 19:10:23: Ход завершен!
+22.05.2024 19:10:23: Ход начат!
+22.05.2024 19:10:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.HeavyWarrior
+22.05.2024 19:10:23: Атака лучниками
+22.05.2024 19:10:23: Ход завершен!
+22.05.2024 19:10:23: Ход начат!
+22.05.2024 19:10:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.HeavyWarrior
+22.05.2024 19:10:23: Атака лучниками
+22.05.2024 19:10:23: Ход завершен!
+22.05.2024 19:10:23: Ход начат!
+22.05.2024 19:10:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.HeavyWarrior
+22.05.2024 19:10:23: Атака лучниками
+22.05.2024 19:10:23: Ход завершен!
+22.05.2024 19:10:23: Ход начат!
+22.05.2024 19:10:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.HeavyWarrior
+22.05.2024 19:10:23: Атака лучниками
+22.05.2024 19:10:23: Ход завершен!
+22.05.2024 19:10:23: Ход начат!
+22.05.2024 19:10:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.HeavyWarrior
+22.05.2024 19:10:23: Атака лучниками
+22.05.2024 19:10:23: Ход завершен!
+22.05.2024 19:10:23: Ход начат!
+22.05.2024 19:10:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.HeavyWarrior
+22.05.2024 19:10:23: Атака лучниками
+22.05.2024 19:10:23: Ход завершен!
+22.05.2024 19:10:23: Ход начат!
+22.05.2024 19:10:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.HeavyWarrior
+22.05.2024 19:10:23: Атака лучниками
+22.05.2024 19:10:23: Ход завершен!
+22.05.2024 19:10:23: Ход начат!
+22.05.2024 19:10:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.HeavyWarrior
+22.05.2024 19:10:23: Атака лучниками
+22.05.2024 19:10:23: Ход завершен!
+22.05.2024 19:10:23: Ход начат!
+22.05.2024 19:10:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.HeavyWarrior
+22.05.2024 19:10:23: Атака лучниками
+22.05.2024 19:10:23: Ход завершен!
+22.05.2024 19:10:23: Ход начат!
+22.05.2024 19:10:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.HeavyWarrior
+22.05.2024 19:10:23: Атака лучниками
+22.05.2024 19:10:23: Ход завершен!
+22.05.2024 19:10:23: Ход начат!
+22.05.2024 19:10:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.HeavyWarrior
+22.05.2024 19:10:23: Атака лучниками
+22.05.2024 19:10:23: Ход завершен!
+22.05.2024 19:10:23: Ход начат!
+22.05.2024 19:10:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.HeavyWarrior
+22.05.2024 19:10:23: Атака лучниками
+22.05.2024 19:10:23: Ход завершен!
+22.05.2024 19:10:23: Ход начат!
+22.05.2024 19:10:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.HeavyWarrior
+22.05.2024 19:10:23: Атака лучниками
+22.05.2024 19:10:23: Ход завершен!
+22.05.2024 19:10:23: Ход начат!
+22.05.2024 19:10:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:10:23: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.HeavyWarrior
+22.05.2024 19:10:23: Атака лучниками
+22.05.2024 19:10:23: Воин Red ClashGame.HeavyWarrior умер!
+22.05.2024 19:10:23: Ход завершен!
+22.05.2024 19:11:02: Starting logging...
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.Wizard
+22.05.2024 19:11:06: Атака лучниками
+22.05.2024 19:11:06: Ход завершен!
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Атака Red ClashGame.Wizard с силой 10 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:06: Атака лучниками
+22.05.2024 19:11:06: Ход завершен!
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.Wizard
+22.05.2024 19:11:06: Атака лучниками
+22.05.2024 19:11:06: Ход завершен!
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Атака Red ClashGame.Wizard с силой 10 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:06: Атака лучниками
+22.05.2024 19:11:06: Активирован гуляй город у Red
+22.05.2024 19:11:06: Ход завершен!
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.GulyayGorod
+22.05.2024 19:11:06: Атака лучниками
+22.05.2024 19:11:06: Ход завершен!
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Атака Red ClashGame.GulyayGorod с силой 0 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:06: Атака лучниками
+22.05.2024 19:11:06: Ход завершен!
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.GulyayGorod
+22.05.2024 19:11:06: Атака лучниками
+22.05.2024 19:11:06: Ход завершен!
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Атака Red ClashGame.GulyayGorod с силой 0 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:06: Атака лучниками
+22.05.2024 19:11:06: Ход завершен!
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.GulyayGorod
+22.05.2024 19:11:06: Атака лучниками
+22.05.2024 19:11:06: Ход завершен!
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Атака Red ClashGame.GulyayGorod с силой 0 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:06: Атака лучниками
+22.05.2024 19:11:06: Ход завершен!
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.Healer
+22.05.2024 19:11:06: Атака лучниками
+22.05.2024 19:11:06: Ход завершен!
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Атака Red ClashGame.Healer с силой 5 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:06: Атака лучниками
+22.05.2024 19:11:06: Ход завершен!
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.Healer
+22.05.2024 19:11:06: Атака лучниками
+22.05.2024 19:11:06: Ход завершен!
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Атака Red ClashGame.Healer с силой 5 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:06: Атака лучниками
+22.05.2024 19:11:06: Ход завершен!
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.Healer
+22.05.2024 19:11:06: Атака лучниками
+22.05.2024 19:11:06: Ход завершен!
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Атака Red ClashGame.Healer с силой 5 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:06: Атака лучниками
+22.05.2024 19:11:06: Ход завершен!
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.Healer
+22.05.2024 19:11:06: Атака лучниками
+22.05.2024 19:11:06: Ход завершен!
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Атака Red ClashGame.Healer с силой 5 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:06: Атака лучниками
+22.05.2024 19:11:06: Ход завершен!
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.Healer
+22.05.2024 19:11:06: Атака лучниками
+22.05.2024 19:11:06: Ход завершен!
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Атака Red ClashGame.Healer с силой 5 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:06: Атака лучниками
+22.05.2024 19:11:06: Ход завершен!
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:06: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.Healer
+22.05.2024 19:11:06: Атака лучниками
+22.05.2024 19:11:06: Воин Red ClashGame.Healer умер!
+22.05.2024 19:11:06: Ход завершен!
+22.05.2024 19:11:06: Ход начат!
+22.05.2024 19:11:06: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Активирован гуляй город у Blue
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.GulyayGorod
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.GulyayGorod с силой 0 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.GulyayGorod
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.GulyayGorod с силой 0 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.GulyayGorod
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.GulyayGorod с силой 0 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Воин Blue ClashGame.LightWarrior умер!
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Воин Blue ClashGame.LightWarrior умер!
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Воин Red ClashGame.HeavyWarrior умер!
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Воин Blue ClashGame.LightWarrior умер!
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Воин Blue ClashGame.LightWarrior умер!
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Воин Blue ClashGame.LightWarrior умер!
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.Wizard с силой 10 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.Wizard
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.Wizard с силой 10 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.Wizard
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.Wizard с силой 10 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.Wizard
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.Wizard с силой 10 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.Wizard
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.Wizard с силой 10 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.Wizard
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.Wizard с силой 10 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.Wizard
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Воин Blue ClashGame.Wizard умер!
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Воин Red ClashGame.HeavyWarrior умер!
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.Wizard с силой 10 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.Wizard
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.Wizard с силой 10 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Воин Blue ClashGame.LightWarrior умер!
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.Healer с силой 5 по Red ClashGame.Wizard
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.Wizard с силой 10 по Blue ClashGame.Healer
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.Healer с силой 5 по Red ClashGame.Wizard
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.Wizard с силой 10 по Blue ClashGame.Healer
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.Healer с силой 5 по Red ClashGame.Wizard
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Red ClashGame.Wizard с силой 10 по Blue ClashGame.Healer
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:07: Ход начат!
+22.05.2024 19:11:07: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:07: Атака Blue ClashGame.Healer с силой 5 по Red ClashGame.Wizard
+22.05.2024 19:11:07: Атака лучниками
+22.05.2024 19:11:07: Воин Red ClashGame.Wizard умер!
+22.05.2024 19:11:07: Ход завершен!
+22.05.2024 19:11:50: Starting logging...
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Blue ClashGame.Archer с силой 15 по Red ClashGame.LightWarrior
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Red ClashGame.LightWarrior с силой 15 по Blue ClashGame.Archer
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Активирован гуляй город у Red
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Blue ClashGame.Archer с силой 15 по Red ClashGame.GulyayGorod
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Red ClashGame.GulyayGorod с силой 0 по Blue ClashGame.Archer
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Blue ClashGame.Archer с силой 15 по Red ClashGame.GulyayGorod
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Red ClashGame.GulyayGorod с силой 0 по Blue ClashGame.Archer
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Blue ClashGame.Archer с силой 15 по Red ClashGame.GulyayGorod
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Red ClashGame.GulyayGorod с силой 0 по Blue ClashGame.Archer
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Blue ClashGame.Archer с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.Archer
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Blue ClashGame.Archer с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Активирован гуляй город у Blue
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.GulyayGorod
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Blue ClashGame.GulyayGorod с силой 0 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.GulyayGorod
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Blue ClashGame.GulyayGorod с силой 0 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.GulyayGorod
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Blue ClashGame.GulyayGorod с силой 0 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Воин Blue ClashGame.LightWarrior умер!
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Воин Blue ClashGame.LightWarrior умер!
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Blue ClashGame.Archer с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:55: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.Archer
+22.05.2024 19:11:55: Атака лучниками
+22.05.2024 19:11:55: Ход завершен!
+22.05.2024 19:11:55: Ход начат!
+22.05.2024 19:11:55: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Атака Blue ClashGame.Archer с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:56: Атака лучниками
+22.05.2024 19:11:56: Ход завершен!
+22.05.2024 19:11:56: Ход начат!
+22.05.2024 19:11:56: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.Archer
+22.05.2024 19:11:56: Атака лучниками
+22.05.2024 19:11:56: Воин Blue ClashGame.Archer умер!
+22.05.2024 19:11:56: Ход завершен!
+22.05.2024 19:11:56: Ход начат!
+22.05.2024 19:11:56: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Атака Blue ClashGame.Wizard с силой 10 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:56: Атака лучниками
+22.05.2024 19:11:56: Ход завершен!
+22.05.2024 19:11:56: Ход начат!
+22.05.2024 19:11:56: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.Wizard
+22.05.2024 19:11:56: Атака лучниками
+22.05.2024 19:11:56: Ход завершен!
+22.05.2024 19:11:56: Ход начат!
+22.05.2024 19:11:56: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Атака Blue ClashGame.Wizard с силой 10 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:56: Атака лучниками
+22.05.2024 19:11:56: Ход завершен!
+22.05.2024 19:11:56: Ход начат!
+22.05.2024 19:11:56: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.Wizard
+22.05.2024 19:11:56: Атака лучниками
+22.05.2024 19:11:56: Воин Blue ClashGame.Wizard умер!
+22.05.2024 19:11:56: Ход завершен!
+22.05.2024 19:11:56: Ход начат!
+22.05.2024 19:11:56: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Атака Blue ClashGame.Archer с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:11:56: Атака лучниками
+22.05.2024 19:11:56: Ход завершен!
+22.05.2024 19:11:56: Ход начат!
+22.05.2024 19:11:56: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:11:56: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.Archer
+22.05.2024 19:11:56: Атака лучниками
+22.05.2024 19:11:56: Воин Blue ClashGame.Archer умер!
+22.05.2024 19:11:56: Ход завершен!
+22.05.2024 19:12:17: Starting logging...
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.Archer
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Red ClashGame.Archer с силой 15 по Blue ClashGame.LightWarrior
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Активирован гуляй город у Red
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.GulyayGorod
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Red ClashGame.GulyayGorod с силой 0 по Blue ClashGame.LightWarrior
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.GulyayGorod
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Red ClashGame.GulyayGorod с силой 0 по Blue ClashGame.LightWarrior
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.GulyayGorod
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Red ClashGame.GulyayGorod с силой 0 по Blue ClashGame.LightWarrior
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Активирован гуляй город у Blue
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.GulyayGorod
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Blue ClashGame.GulyayGorod с силой 0 по Red ClashGame.HeavyWarrior
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.GulyayGorod
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Blue ClashGame.GulyayGorod с силой 0 по Red ClashGame.HeavyWarrior
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.GulyayGorod
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Blue ClashGame.GulyayGorod с силой 0 по Red ClashGame.HeavyWarrior
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.HeavyWarrior
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.LightWarrior
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Воин Blue ClashGame.LightWarrior умер!
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.HeavyWarrior
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Red ClashGame.HeavyWarrior с силой 20 по Blue ClashGame.HeavyWarrior
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.HeavyWarrior
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Воин Red ClashGame.HeavyWarrior умер!
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Red ClashGame.Wizard с силой 10 по Blue ClashGame.HeavyWarrior
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.Wizard
+22.05.2024 19:12:23: Атака лучниками
+22.05.2024 19:12:23: Воин Red ClashGame.Wizard умер!
+22.05.2024 19:12:23: Ход завершен!
+22.05.2024 19:12:23: Ход начат!
+22.05.2024 19:12:23: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:23: Атака Red ClashGame.Archer с силой 15 по Blue ClashGame.HeavyWarrior
+22.05.2024 19:12:24: Атака лучниками
+22.05.2024 19:12:24: Ход завершен!
+22.05.2024 19:12:24: Ход начат!
+22.05.2024 19:12:24: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:24: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:24: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:24: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.Archer
+22.05.2024 19:12:24: Атака лучниками
+22.05.2024 19:12:24: Ход завершен!
+22.05.2024 19:12:24: Ход начат!
+22.05.2024 19:12:24: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:24: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:24: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 19:12:24: Атака Red ClashGame.Archer с силой 15 по Blue ClashGame.HeavyWarrior
+22.05.2024 19:12:24: Атака лучниками
+22.05.2024 19:12:24: Ход завершен!
+22.05.2024 19:12:24: Ход начат!
+22.05.2024 19:12:24: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:24: Применение лечения воином Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:24: Улучшение воина Blue ClashGame.BattleManagerProxy
+22.05.2024 19:12:24: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.Archer
+22.05.2024 19:12:24: Атака лучниками
+22.05.2024 19:12:24: Воин Red ClashGame.Archer умер!
+22.05.2024 19:12:24: Ход завершен!
+22.05.2024 19:15:26: Starting logging...
+22.05.2024 20:59:55: Starting logging...
+22.05.2024 21:03:57: Starting logging...
+22.05.2024 21:10:19: Starting logging...
+22.05.2024 21:11:16: Starting logging...
+22.05.2024 21:11:30: Атака Blue ClashGame.LightWarrior с силой 15 по Red ClashGame.Archer
+22.05.2024 21:11:30: Ход начат!
+22.05.2024 21:11:30: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 21:11:30: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 21:11:30: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 21:11:30: Атака Red ClashGame.Archer с силой 15 по Blue ClashGame.LightWarrior
+22.05.2024 21:11:30: Атака лучниками
+22.05.2024 21:11:30: Активирован гуляй город у Red
+22.05.2024 21:11:30: Ход завершен!
+22.05.2024 21:13:51: Starting logging...
+22.05.2024 21:14:02: Клонирование воина Blue ClashGame.BattleManagerProxy
+22.05.2024 21:14:03: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.LightWarrior
+22.05.2024 21:14:03: Ход начат!
+22.05.2024 21:14:03: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 21:14:03: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 21:14:03: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 21:14:03: Атака Red ClashGame.LightWarrior с силой 15 по Blue ClashGame.HeavyWarrior
+22.05.2024 21:14:03: Атака лучниками
+22.05.2024 21:14:03: Ход завершен!
+22.05.2024 21:14:25: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.LightWarrior
+22.05.2024 21:14:25: Ход начат!
+22.05.2024 21:14:25: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 21:14:25: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 21:14:25: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 21:14:25: Атака Red ClashGame.LightWarrior с силой 15 по Blue ClashGame.HeavyWarrior
+22.05.2024 21:14:25: Атака лучниками
+22.05.2024 21:14:25: Активирован гуляй город у Red
+22.05.2024 21:14:25: Ход завершен!
+22.05.2024 21:14:53: Атака Blue ClashGame.HeavyWarrior с силой 20 по Red ClashGame.GulyayGorod
+22.05.2024 21:14:53: Ход начат!
+22.05.2024 21:14:53: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 21:14:53: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 21:14:53: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 21:14:53: Атака Red ClashGame.GulyayGorod с силой 0 по Blue ClashGame.HeavyWarrior
+22.05.2024 21:14:53: Атака лучниками
+22.05.2024 21:14:53: Ход завершен!
+22.05.2024 21:18:32: Starting logging...
+22.05.2024 21:19:44: Starting logging...
+22.05.2024 21:24:16: Starting logging...
+22.05.2024 21:25:03: Starting logging...
+22.05.2024 21:25:46: Starting logging...
+22.05.2024 21:25:53: Ход начат!
+22.05.2024 21:25:53: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 21:25:53: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 21:25:53: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 21:32:57: Starting logging...
+22.05.2024 21:33:05: Ход начат!
+22.05.2024 21:33:05: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 21:33:05: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 21:33:05: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 21:34:50: Starting logging...
+22.05.2024 21:34:57: Ход начат!
+22.05.2024 21:34:57: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 21:34:57: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 21:34:57: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 21:34:57: Атака лучниками
+22.05.2024 21:34:57: Ход завершен!
+22.05.2024 21:35:15: Ход начат!
+22.05.2024 21:35:15: Клонирование воина Red ClashGame.BattleManagerProxy
+22.05.2024 21:35:15: Применение лечения воином Red ClashGame.BattleManagerProxy
+22.05.2024 21:35:15: Улучшение воина Red ClashGame.BattleManagerProxy
+22.05.2024 21:35:15: Атака лучниками
+22.05.2024 21:35:15: Ход завершен!
+22.05.2024 21:40:36: Starting logging...

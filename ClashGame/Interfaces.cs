@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace ClashGame
 {
@@ -32,11 +33,30 @@ namespace ClashGame
         Warrior CreateWizard(string side);
         Warrior CreateGulyayGorod(string side);
     }
+    public interface IBattleManager
+    {
+        void StartBattle(List<Warrior> firstArmy, List<Warrior> secondArmy, TextBox outputTextBox);
+        void TurnComputer(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
+        void WizardTurn(List<Warrior> attackers, TextBox outputTextBox);
+        void HealerTurn(List<Warrior> attackers, TextBox outputTextBox);
+        void HeavyWarriorUpgradeTurn(List<Warrior> attackers, Warrior attacker, TextBox outputTextBox);
+        void ArchersTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
+        void Attack(Warrior warrior1, Warrior warrior2, TextBox outputTextBox);
+        void DefencePlease(Warrior warrior1, Warrior warrior2, TextBox outputTextBox);
+        void IsDead(Warrior warrior, List<Warrior> army);
+        void GulyayGorodTurn(List<Warrior> attackers, TextBox outputTextBox);
+    }
 
     public interface ICommand
     {
         void Execute();
         void Undo();
+    }
+
+    public interface IBattleStrategy
+    {
+        void ArrangeArmy(List<Warrior> army);
+        void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
     }
 
 }

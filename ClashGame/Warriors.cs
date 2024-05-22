@@ -234,7 +234,5 @@ namespace ClashGame
             Cost = 0;
             Side = side;
         }
-
-
     }
 }

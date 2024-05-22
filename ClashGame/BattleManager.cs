@@ -16,37 +16,8 @@ namespace ClashGame
             _battleStrategy = strategy;
         }
 
-        public void StartBattle(List<Warrior> firstArmy, List<Warrior> secondArmy, TextBox outputTextBox)
-        {
-            _battleStrategy.ArrangeArmy(firstArmy);
-            _battleStrategy.ArrangeArmy(secondArmy);
-
-            while (firstArmy.Count != 0 && secondArmy.Count != 0)
-            {
-                _battleStrategy.ExecuteBattle(firstArmy, secondArmy, outputTextBox);
-
-                if (secondArmy.Count != 0)
-                {
-                    _battleStrategy.ExecuteBattle(secondArmy, firstArmy, outputTextBox);
-                }
-                else
-                {
-                    outputTextBox.AppendText("First army won!!" + Environment.NewLine);
-                    break;
-                }
-            }
-
-            if (firstArmy.Count == 0)
-            {
-                outputTextBox.AppendText("Second army won!!" + Environment.NewLine);
-            }
-        }
-
         virtual public void TurnComputer(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
-            //string logFilePath = "battle_logs.txt";
-            //ILogger fileLogger = new FileLogger(logFilePath);
-
             Warrior attacker = attackers[0];
             Warrior defender = defenders[0];
 

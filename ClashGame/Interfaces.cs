@@ -35,7 +35,6 @@ namespace ClashGame
     }
     public interface IBattleManager
     {
-        void StartBattle(List<Warrior> firstArmy, List<Warrior> secondArmy, TextBox outputTextBox);
         void TurnComputer(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
         void WizardTurn(List<Warrior> attackers, TextBox outputTextBox);
         void HealerTurn(List<Warrior> attackers, TextBox outputTextBox);
@@ -55,7 +54,6 @@ namespace ClashGame
 
     public interface IBattleStrategy
     {
-        void ArrangeArmy(List<Warrior> army);
         void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
     }
 

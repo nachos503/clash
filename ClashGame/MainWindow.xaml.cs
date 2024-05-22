@@ -286,8 +286,6 @@ namespace ClashGame
         private void ChooseTwoRows_Click(object sender, RoutedEventArgs e)
         {
             currentStrategy = new TwoRowStrategy();
-            currentStrategy.ArrangeArmy(playerArmy);
-            currentStrategy.ArrangeArmy(computerArmy);
             MessageBox.Show("Two Rows strategy selected.");
             HideStrategyButtons();
         }
@@ -295,8 +293,6 @@ namespace ClashGame
         private void ChooseThreeRows_Click(object sender, RoutedEventArgs e)
         {
             currentStrategy = new ThreeRowStrategy();
-            currentStrategy.ArrangeArmy(playerArmy);
-            currentStrategy.ArrangeArmy(computerArmy);
             MessageBox.Show("Three Rows strategy selected.");
             HideStrategyButtons();
         }

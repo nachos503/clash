@@ -51,13 +51,6 @@ namespace ClashGame
             }
         }
 
-        public void StartBattle(List<Warrior> firstArmy, List<Warrior> secondArmy, TextBox outputTextBox)
-        {
-            Log("Битва началась!");
-            battleManager.StartBattle(firstArmy, secondArmy, outputTextBox);
-            Log("Битва завершилась!");
-        }
-
         public void TurnComputer(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             Log("Ход начат!");

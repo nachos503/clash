@@ -63,7 +63,6 @@ C:\Users\Варвара\Source\Repos\nachos503\clash\ClashGame\obj\Debug\net6.0-
 C:\Users\user1\Documents\GitHub\clash\ClashGame\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\user1\Documents\GitHub\clash\ClashGame\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\user1\Documents\GitHub\clash\ClashGame\obj\Debug\net6.0-windows\ClashGame_MarkupCompile.cache
-C:\Users\user1\Documents\GitHub\clash\ClashGame\obj\Debug\net6.0-windows\ClashGame_MarkupCompile.lref
 C:\Users\user1\Documents\GitHub\clash\ClashGame\obj\Debug\net6.0-windows\ClashGame.dll
 C:\Users\user1\Documents\GitHub\clash\ClashGame\obj\Debug\net6.0-windows\refint\ClashGame.dll
 C:\Users\user1\Documents\GitHub\clash\ClashGame\obj\Debug\net6.0-windows\ClashGame.pdb

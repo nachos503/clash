@@ -85,30 +85,53 @@ namespace ClashGame
                 }
             }
 
-            if (healer != null && healerIndex != 0)
+            // Из-за IsFrontLine всё сломалось, убрать нахуй, добавить (в xaml.cs желательно): 
+
+            //private bool CanUseAbility(Warrior warrior, List<Warrior> defenders)
+            //{
+            //    int index = playerArmy.IndexOf(warrior);
+            //    return index >= defenders.Count || defenders[index] == null;
+            //}
+
+            //private void CheckAbilityUsage()
+            //{
+            //    for (int i = 0; i < playerArmy.Count; i++)
+            //    {
+            //        var warrior = playerArmy[i];
+            //        if (warrior is Wizard && !wizardUsed && CanUseAbility(warrior, computerArmy))
+            //        {
+            //            UseWizard.IsEnabled = true;
+            //        }
+            //        if (warrior is Healer && !healerUsed && CanUseAbility(warrior, computerArmy))
+            //        {
+            //            UseHealer.IsEnabled = true;
+            //        }
+            //        if (warrior is Archer && !archerUsed && CanUseAbility(warrior, computerArmy))
+            //        {
+            //            UseArcher.IsEnabled = true;
+            //        }
+            //    }
+            //}
+
+            if (healer != null && !_battleStrategy.IsFrontLine(healerIndex))
             {
                 // Проверка на выполнение условий для лечения
-                if (new Random().Next(0, 10) == 0)
+                if (new Random().Next(0, 2) == 0)
                 {
-                    // Вызов лечения у случайного союзника
-                    List<Warrior> alliesInRange = GetAlliesInRange(attackers, healerIndex);
-                    if (alliesInRange.Count > 0)
-                    {
-                        int targetIndex = new Random().Next(0, alliesInRange.Count);
-                        Warrior targetAlly = alliesInRange[targetIndex];
-                        if (!(targetAlly is LightWarrior))
-                        {
-                            healer.Heal(targetAlly);
-                            outputTextBox.AppendText($"Лекарь из команды {healer.Side} вылечил {targetAlly.Side} {targetAlly}" + Environment.NewLine);
-                            outputTextBox.AppendText($"Теперь у {targetAlly.Side} {targetAlly} {targetAlly.Healthpoints} HP" + Environment.NewLine);
-                        }
-                    }
+                // Вызов лечения у случайного союзника
+                    Warrior warriorForHeal = _battleStrategy.GetWarriorHeal(attackers, healerIndex, healer);
+                    outputTextBox.AppendText($"Лекарь из команды {healer.Side} вылечил {warriorForHeal.Side} {warriorForHeal}" + Environment.NewLine);
+                    outputTextBox.AppendText($"Теперь у {warriorForHeal.Side} {warriorForHeal} {warriorForHeal.Healthpoints} HP" + Environment.NewLine);
                 }
                 else
                 {
                     outputTextBox.AppendText($"Лекарь из команды {healer.Side} никого не вылечил" + Environment.NewLine);
                     outputTextBox.AppendText("Не прокнуло." + Environment.NewLine);
                 }
+            }
+            else 
+            {
+                outputTextBox.AppendText($"Лекарь  стоит на первом месте" + Environment.NewLine);
             }
         }
 
@@ -181,19 +204,6 @@ namespace ClashGame
                     break; // Выходим после того как нашли первого арчера
                 }
             }
-        }
-
-        private List<Warrior> GetAlliesInRange(List<Warrior> attackers, int healerIndex)
-        {
-            List<Warrior> alliesInRange = new List<Warrior>();
-            for (int i = Math.Max(0, healerIndex - 3); i < Math.Min(attackers.Count, healerIndex + 4); i++)
-            {
-                if (i != healerIndex && attackers[i].Side == attackers[healerIndex].Side)
-                {
-                    alliesInRange.Add(attackers[i]);
-                }
-            }
-            return alliesInRange;
         }
 
         virtual public void Attack(Warrior warrior1, Warrior warrior2, TextBox outputTextBox)

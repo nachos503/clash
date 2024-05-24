@@ -55,6 +55,9 @@ namespace ClashGame
     public interface IBattleStrategy
     {
         void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
+        Warrior GetWarriorHeal(List<Warrior> attackers, int healerIndex, Healer healer);
+
+        bool IsFrontLine(int attackerIndex);
     }
 
 }

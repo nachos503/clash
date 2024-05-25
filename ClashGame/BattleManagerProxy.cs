@@ -36,6 +36,14 @@ namespace ClashGame
                 flagGulyayGorodRed = count;
         }
 
+        //rename styrategy
+        //из-за батлменеджера который мы создаем конструктором здесь каждый раз новый у нас обнуляется батлстратеджи в батлеменеджере
+        //сделать конструктор?? передавать везде стратегию?? (хуйня)
+        public void SetStrategy(IBattleStrategy strategyIt)
+        {
+            strategy = strategyIt;
+        }
+
         public void Log(string message)
         {
             try
@@ -57,7 +65,7 @@ namespace ClashGame
             //battleManager.TurnComputer(attackers, defenders, outputTextBox);
 
             WizardTurn(attackers, outputTextBox);
-            HealerTurn(attackers, outputTextBox);
+            HealerTurn(attackers, defenders, outputTextBox);
             HeavyWarriorUpgradeTurn(attackers, attackers[0], outputTextBox);
             strategy.ExecuteBattle(attackers, defenders, outputTextBox);
             ArchersTurn(attackers, defenders, outputTextBox);
@@ -130,10 +138,10 @@ namespace ClashGame
             battleManager.WizardTurn(attackers, outputTextBox);
         }
 
-        public void HealerTurn(List<Warrior> attackers, TextBox outputTextBox)
+        public void HealerTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             Log($"Применение лечения воином {attackers[0].Side} {this}");
-            battleManager.HealerTurn(attackers, outputTextBox);
+            battleManager.HealerTurn(attackers, defenders, outputTextBox);
         }
 
         public void HeavyWarriorUpgradeTurn(List<Warrior> attackers, Warrior attacker, TextBox outputTextBox)

@@ -54,9 +54,9 @@ namespace ClashGame
             return warriorForHeal;
         }
 
-        public bool IsFrontLine(int attackerIndex)
+        public bool IsFrontLine(int attackerIndex, List<Warrior> defenders)
         {
-            if (attackerIndex == 0 || attackerIndex == 1)
+            if ((attackerIndex == 0) || (attackerIndex == 1 && defenders[1] != null))
             {
                 return true;
             }
@@ -105,9 +105,9 @@ namespace ClashGame
             return warriorForHeal;
         }
 
-        public bool IsFrontLine(int attackerIndex)
+        public bool IsFrontLine(int attackerIndex, List<Warrior> defenders)
         {
-            if (attackerIndex == 0 || attackerIndex == 1 || attackerIndex == 2)
+            if (attackerIndex == 0 || (attackerIndex == 1 && defenders[1] != null) || (attackerIndex == 2 && defenders[2] != null))
             {
                 return true;
             }
@@ -147,9 +147,12 @@ namespace ClashGame
             return warriorForHeal;
         }
 
-        public bool IsFrontLine(int attackerIndex)
+        public bool IsFrontLine(int attackerIndex, List<Warrior> defenders)
         {
-            return false;
+            if (defenders[attackerIndex] == null)
+                return false;
+            else
+                return true;
         }
     }
 }

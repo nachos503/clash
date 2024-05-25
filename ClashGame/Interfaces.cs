@@ -37,7 +37,7 @@ namespace ClashGame
     {
         void TurnComputer(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
         void WizardTurn(List<Warrior> attackers, TextBox outputTextBox);
-        void HealerTurn(List<Warrior> attackers, TextBox outputTextBox);
+        void HealerTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
         void HeavyWarriorUpgradeTurn(List<Warrior> attackers, Warrior attacker, TextBox outputTextBox);
         void ArchersTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
         void Attack(Warrior warrior1, Warrior warrior2, TextBox outputTextBox);
@@ -57,7 +57,7 @@ namespace ClashGame
         void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
         Warrior GetWarriorHeal(List<Warrior> attackers, int healerIndex, Healer healer);
 
-        bool IsFrontLine(int attackerIndex);
+        bool IsFrontLine(int attackerIndex, List<Warrior> defenders);
     }
 
 }

@@ -11,10 +11,6 @@ namespace ClashGame
     public class BattleManager : IBattleManager
     {
         private IBattleStrategy _battleStrategy;
-        public void SetStrategy(IBattleStrategy strategy)
-        {
-            _battleStrategy = strategy;
-        }
 
         virtual public void TurnComputer(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
@@ -25,7 +21,7 @@ namespace ClashGame
             WizardTurn(attackers, outputTextBox);
 
             // Проверка на наличие лекаря в списке атакующих и его позиции
-            HealerTurn(attackers, outputTextBox);
+            HealerTurn(attackers, defenders, outputTextBox); ;
 
             // Проверка на наличие ImprovedHeavyWarrior в списке атакующих и его позиции
             HeavyWarriorUpgradeTurn(attackers, attacker, outputTextBox);
@@ -71,7 +67,7 @@ namespace ClashGame
             }
         }
 
-        public void HealerTurn(List<Warrior> attackers, TextBox outputTextBox)
+        public void HealerTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             Healer healer = null;
             int healerIndex = -1;
@@ -113,7 +109,7 @@ namespace ClashGame
             //    }
             //}
 
-            if (healer != null && !_battleStrategy.IsFrontLine(healerIndex))
+            if (healer != null && !_battleStrategy.IsFrontLine(healerIndex, defenders))
             {
                 // Проверка на выполнение условий для лечения
                 if (new Random().Next(0, 2) == 0)

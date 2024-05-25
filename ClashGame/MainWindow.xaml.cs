@@ -15,6 +15,7 @@ namespace ClashGame
         private readonly ArmyManager armyManager;
         private readonly GameManager gameManager;
         private BattleManagerProxy battleManagerProxy;
+        private BattleManager battleManager;
         private CommandManager commandManager;
         private IBattleStrategy currentStrategy;
 
@@ -33,6 +34,7 @@ namespace ClashGame
         {
             InitializeComponent();
             gameManager = GameManager.Instance;
+            battleManager = new BattleManager();
             armyManager = new ArmyManager(outputTextBox, new ArmyUnitFactory());
             battleManagerProxy = new BattleManagerProxy("1.txt", new TwoRowStrategy()); // Default strategy
             commandManager = new CommandManager();
@@ -132,7 +134,7 @@ namespace ClashGame
                 return;
             }
 
-            var command = new HealerTurnCommand(battleManagerProxy, playerArmy, outputTextBox);
+            var command = new HealerTurnCommand(battleManagerProxy, playerArmy, computerArmy, outputTextBox);
             commandManager.ExecuteCommand(command);
             healerUsed = true;
             UseHealer.IsEnabled = false;
@@ -312,6 +314,7 @@ namespace ClashGame
         private void ChooseTwoRows_Click(object sender, RoutedEventArgs e)
         {
             currentStrategy = new TwoRowStrategy();
+            battleManager.SetStrategy(currentStrategy);
             MessageBox.Show("Two Rows strategy selected.");
             HideStrategyButtons();
             DrawArmies();
@@ -320,6 +323,7 @@ namespace ClashGame
         private void ChooseThreeRows_Click(object sender, RoutedEventArgs e)
         {
             currentStrategy = new ThreeRowStrategy();
+            battleManager.SetStrategy(currentStrategy);
             MessageBox.Show("Three Rows strategy selected.");
             HideStrategyButtons();
             DrawArmies();
@@ -328,6 +332,7 @@ namespace ClashGame
         private void ChooseWallToWall_Click(object sender, RoutedEventArgs e)
         {
             currentStrategy = new WallToWallStrategy();
+            battleManager.SetStrategy(currentStrategy);
             MessageBox.Show("Wall to Wall strategy selected.");
             HideStrategyButtons();
             DrawArmies();
@@ -400,7 +405,7 @@ namespace ClashGame
             {
                 Width = 64,
                 Height = 64,
-                Source = GetWarriorImage(warrior),
+                //Source = GetWarriorImage(warrior),
                 Tag = warrior // Сохранение ссылки на воина
             };
 

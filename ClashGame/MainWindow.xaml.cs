@@ -38,12 +38,32 @@ namespace ClashGame
 
         private void InitializeUI()
         {
-            ChooseBlueArmy.Visibility = Visibility.Collapsed;
-            ChooseRedArmy.Visibility = Visibility.Collapsed;
-            ToTheEnd.Visibility = Visibility.Collapsed;
-            Turn.IsEnabled = false;
-            CanсelTurn.IsEnabled = true; ;
+            ChooseBlueArmy.Visibility = Visibility.Hidden;
+            ChooseRedArmy.Visibility = Visibility.Hidden;
+            ChooseBlueArmy.Visibility = Visibility.Hidden;
+            UseWizard.Visibility = Visibility.Hidden;
+            UseHealer.Visibility = Visibility.Hidden;
+            UseArcher.Visibility = Visibility.Hidden;
+            CanсelTurn.Visibility = Visibility.Hidden;
+            ToTheEnd.Visibility = Visibility.Hidden;
+            Turn.Visibility = Visibility.Hidden;
+            CanсelTurn.Visibility = Visibility.Hidden;
+            UseGulyayGorod.Visibility = Visibility.Hidden;
+            EndTurn.Visibility = Visibility.Hidden;
             DisableAbilityButtons();
+
+            // Hide strategy buttons initially
+            ChooseTwoRows.Visibility = Visibility.Hidden;
+            ChooseThreeRows.Visibility = Visibility.Hidden;
+            ChooseWallToWall.Visibility = Visibility.Hidden;
+            ChooseStrategy.Visibility = Visibility.Hidden;
+
+  
+            battlefieldCanvas = new Canvas();
+            battlefieldCanvas.Width = 800;
+            battlefieldCanvas.Height = 400;
+            MainGrid.Children.Add(battlefieldCanvas);
+           
         }
 
         private void DisableAbilityButtons()
@@ -52,6 +72,7 @@ namespace ClashGame
             UseHealer.IsEnabled = false;
             UseArcher.IsEnabled = false;
             CanсelTurn.IsEnabled = false;
+            UseGulyayGorod.IsEnabled = false;
         }
 
         private void CreateArmy_Click(object sender, RoutedEventArgs e)
@@ -60,6 +81,8 @@ namespace ClashGame
             DisableAbilityButtons();
             ChooseBlueArmy.Visibility = Visibility.Visible;
             ChooseRedArmy.Visibility = Visibility.Visible;
+            ChooseBlueArmy.IsEnabled = true;
+            ChooseRedArmy.IsEnabled = true;
         }
 
         private void ChooseBlueArmy_Click(object sender, RoutedEventArgs e)
@@ -67,6 +90,10 @@ namespace ClashGame
             playerArmy = armyManager.GetArmyByColor("Blue");
             computerArmy = armyManager.GetArmyByColor("Red");
             InitializeGame();
+            ChooseRedArmy.Visibility = Visibility.Collapsed;
+            ChooseBlueArmy.IsEnabled = false;
+            CreateArmy.Visibility = Visibility.Collapsed;
+
         }
 
         private void ChooseRedArmy_Click(object sender, RoutedEventArgs e)
@@ -74,17 +101,15 @@ namespace ClashGame
             playerArmy = armyManager.GetArmyByColor("Red");
             computerArmy = armyManager.GetArmyByColor("Blue");
             InitializeGame();
+            ChooseBlueArmy.Visibility = Visibility.Collapsed;
+            ChooseRedArmy.IsEnabled = false;
+            CreateArmy.Visibility = Visibility.Collapsed;
         }
 
         private void InitializeGame()
         {
-            ChooseBlueArmy.Visibility = Visibility.Collapsed;
-            ChooseRedArmy.Visibility = Visibility.Collapsed;
-            MessageBox.Show("Выбрана армия: " + (playerArmy == armyManager.GetArmyByColor("Blue") ? "Синяя" : "Красная") + ". Ваш ход!");
-            Turn.IsEnabled = true;
-            ToTheEnd.Visibility = Visibility.Visible;
-            ToTheEnd.IsEnabled = true;
-            UseGulyayGorod.IsEnabled = true;
+            ChooseStrategy.Visibility = Visibility.Visible;
+            MessageBox.Show("Выбрана армия: " + (playerArmy == armyManager.GetArmyByColor("Blue") ? "Синяя" : "Красная") + ". Выберите стратегию!");
         }
 
         private void RefreshUI()
@@ -149,6 +174,7 @@ namespace ClashGame
             healerUsed = false;
             archerUsed = false;
             playerTurn = true;
+            EndTurn.IsEnabled = true;
 
             RefreshUI();
             Turn.IsEnabled = false;
@@ -176,6 +202,7 @@ namespace ClashGame
             }
 
             DisableAbilityButtons(); // Деактивировать кнопки способностей
+            EndTurn.IsEnabled = false;
         }
 
 
@@ -196,6 +223,7 @@ namespace ClashGame
         {
             commandManager.Undo();
             RefreshUI();
+            CanсelTurn.IsEnabled = false;
         }
 
         private void ToTheEnd_Click(object sender, RoutedEventArgs e)
@@ -211,6 +239,9 @@ namespace ClashGame
                 }
             }
             ToTheEnd.IsEnabled = false;
+
+            UseGulyayGorod.IsEnabled = false;
+            EndTurn.IsEnabled = false;
         }
 
         private void GulyayGorodr_Click(object sender, RoutedEventArgs e)
@@ -278,13 +309,22 @@ namespace ClashGame
             ChooseTwoRows.Visibility = Visibility.Visible;
             ChooseThreeRows.Visibility = Visibility.Visible;
             ChooseWallToWall.Visibility = Visibility.Visible;
+            ChooseTwoRows.IsEnabled = true;
+            ChooseThreeRows.IsEnabled = true;
+            ChooseWallToWall.IsEnabled = true;
         }
 
         private void ChooseTwoRows_Click(object sender, RoutedEventArgs e)
         {
             currentStrategy = new TwoRowStrategy();
             MessageBox.Show("Two Rows strategy selected.");
-            //HideStrategyButtons();
+            ChooseThreeRows.Visibility = Visibility.Collapsed;
+            ChooseWallToWall.Visibility = Visibility.Collapsed;
+            ChooseStrategy.Visibility = Visibility.Collapsed;
+            ShowPlayButtons();
+            ChooseTwoRows.IsEnabled = false;
+          
+
             //DrawArmies();
         }
 
@@ -292,17 +332,73 @@ namespace ClashGame
         {
             currentStrategy = new ThreeRowStrategy();
             MessageBox.Show("Three Rows strategy selected.");
-            //HideStrategyButtons();
+            ChooseTwoRows.Visibility = Visibility.Collapsed;
+            ChooseWallToWall.Visibility = Visibility.Collapsed;
+            ChooseStrategy.Visibility = Visibility.Collapsed;
+            ShowPlayButtons();
+            ChooseThreeRows.IsEnabled = false;
+           
             //DrawArmies();
         }
 
         private void ChooseWallToWall_Click(object sender, RoutedEventArgs e)
         {
+            
             currentStrategy = new WallToWallStrategy();
             MessageBox.Show("Wall to Wall strategy selected.");
-            //HideStrategyButtons();
+            ChooseTwoRows.Visibility = Visibility.Collapsed;
+            ChooseThreeRows.Visibility = Visibility.Collapsed;
+            ChooseStrategy.Visibility = Visibility.Collapsed;
+            ShowPlayButtons();
+            ChooseWallToWall.IsEnabled = false;
+           
             //DrawArmies();
         }
 
+        private void ShowPlayButtons()
+        {
+            UseWizard.Visibility = Visibility.Visible;
+            UseHealer.Visibility = Visibility.Visible;
+            UseArcher.Visibility = Visibility.Visible;
+            CanсelTurn.Visibility = Visibility.Visible;
+            Turn.Visibility = Visibility.Visible;
+            ToTheEnd.Visibility = Visibility.Visible;
+            UseGulyayGorod.Visibility = Visibility.Visible;
+            EndTurn.Visibility = Visibility.Visible;
+            UseGulyayGorod.IsEnabled = true;
+            EndTurn.IsEnabled = false;
+            Turn.IsEnabled = true;
+            ToTheEnd.IsEnabled = true;
+        }
+
+        private void StartAgain_Click(object sender, RoutedEventArgs e)
+        {
+            CreateArmy.Visibility = Visibility.Visible;
+            ChooseBlueArmy.Visibility = Visibility.Hidden;
+            ChooseRedArmy.Visibility = Visibility.Hidden;
+  
+            UseWizard.Visibility = Visibility.Hidden;
+            UseHealer.Visibility = Visibility.Hidden;
+            UseArcher.Visibility = Visibility.Hidden;
+            UseGulyayGorod.Visibility = Visibility.Hidden;
+
+            CanсelTurn.Visibility = Visibility.Hidden;
+
+            ToTheEnd.Visibility = Visibility.Hidden;
+
+            Turn.Visibility = Visibility.Hidden;
+
+            CanсelTurn.Visibility = Visibility.Hidden;
+
+            EndTurn.Visibility = Visibility.Hidden;
+            DisableAbilityButtons();
+
+            // Hide strategy buttons initially
+            ChooseTwoRows.Visibility = Visibility.Hidden;
+            ChooseThreeRows.Visibility = Visibility.Hidden;
+            ChooseWallToWall.Visibility = Visibility.Hidden;
+
+            ChooseStrategy.Visibility = Visibility.Hidden;
+        }
     }
 }

@@ -113,10 +113,16 @@ namespace ClashGame
 
         public void Undo()
         {
-            for (int i = 0; i < _attackers.Count; i++)
+            for (int i = 0; i < _attackers.Count-1; i++)
             {
-                _attackers[i] = _previousState[i];
+                    _attackers[i] = _previousState[i];
             }
+            
+            if (_attackers.Count == _previousState.Count)
+                _attackers[_attackers.Count - 1] = _previousState[_attackers.Count - 1];
+            else
+                _attackers.Remove(_attackers[_attackers.Count-1]);
+       
             _outputTextBox.AppendText("Отмена хода мага, восстановлено состояние армии." + Environment.NewLine);
         }
     }

@@ -65,20 +65,22 @@ namespace ClashGame
     {
         private IBattleManager _battleManager;
         private List<Warrior> _attackers;
+        private List<Warrior> _defenders;
         private TextBox _outputTextBox;
         private List<Warrior> _previousState;
 
-        public HealerTurnCommand(IBattleManager battleManager, List<Warrior> attackers, TextBox outputTextBox)
+        public HealerTurnCommand(IBattleManager battleManager, List<Warrior> attackers, List<Warrior> defenders,TextBox outputTextBox)
         {
             _battleManager = battleManager;
             _attackers = attackers;
+            _defenders = defenders;
             _outputTextBox = outputTextBox;
         }
 
         public void Execute()
         {
             _previousState = _attackers.Select(w => w.Clone()).ToList();
-            _battleManager.HealerTurn(_attackers, _outputTextBox);
+            _battleManager.HealerTurn(_attackers, _defenders, _outputTextBox);
         }
 
         public void Undo()
@@ -95,20 +97,22 @@ namespace ClashGame
     {
         private IBattleManager _battleManager;
         private List<Warrior> _attackers;
+        private List<Warrior> _defenders;
         private TextBox _outputTextBox;
         private List<Warrior> _previousState;
 
-        public WizardTurnCommand(IBattleManager battleManager, List<Warrior> attackers, TextBox outputTextBox)
+        public WizardTurnCommand(IBattleManager battleManager, List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             _battleManager = battleManager;
             _attackers = attackers;
+            _defenders = defenders;
             _outputTextBox = outputTextBox;
         }
 
         public void Execute()
         {
             _previousState = _attackers.Select(w => w.Clone()).ToList();
-            _battleManager.WizardTurn(_attackers, _outputTextBox);
+            _battleManager.WizardTurn(_attackers, _defenders, _outputTextBox);
         }
 
         public void Undo()

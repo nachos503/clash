@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
@@ -26,14 +27,19 @@ namespace ClashGame
         {
             Warrior warriorForHeal = null;
             var minHealth = double.MaxValue;
-            if (healerIndex == 0 || healerIndex == 1)
+            if(healerIndex != attackers.Count() - 1 && healerIndex != attackers.Count() - 2)
             {
-                return null;
-            }
-            if (attackers[healerIndex + 1].Healthpoints < minHealth && healerIndex % 2 == 0 && attackers[healerIndex + 1] is not LightWarrior)
-            {
-                minHealth = attackers[healerIndex + 1].Healthpoints;
-                warriorForHeal = attackers[healerIndex + 1];
+                if (attackers[healerIndex + 1].Healthpoints < minHealth && healerIndex % 2 == 0 && attackers[healerIndex + 1] is not LightWarrior)
+                {
+                    minHealth = attackers[healerIndex + 1].Healthpoints;
+                    warriorForHeal = attackers[healerIndex + 1];
+                }
+                if (attackers[healerIndex + 2].Healthpoints < minHealth && attackers[healerIndex + 2] is not LightWarrior)
+                {
+                    minHealth = attackers[healerIndex + 2].Healthpoints;
+                    warriorForHeal = attackers[healerIndex + 2];
+                }
+
             }
             if (attackers[healerIndex - 1].Healthpoints < minHealth && healerIndex % 2 != 0 && attackers[healerIndex - 1] is not LightWarrior)
             {
@@ -45,20 +51,27 @@ namespace ClashGame
                 minHealth = attackers[healerIndex - 2].Healthpoints;
                 warriorForHeal = attackers[healerIndex - 2];
             }
-            if (attackers[healerIndex + 2].Healthpoints < minHealth && attackers[healerIndex + 2] is not LightWarrior)
-            {
-                minHealth = attackers[healerIndex + 2].Healthpoints;
-                warriorForHeal = attackers[healerIndex + 2];
-            }
-            healer.Heal(warriorForHeal);
+            if (warriorForHeal != null)
+                healer.Heal(warriorForHeal);
             return warriorForHeal;
         }
 
         public bool IsFrontLine(int attackerIndex, List<Warrior> defenders)
         {
-            if ((attackerIndex == 0) || (attackerIndex == 1 && defenders[1] != null))
+            if (attackerIndex == 0)
             {
                 return true;
+            }
+            if (defenders.Count() > 0)
+            {
+                if (attackerIndex == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else return false;
         }
@@ -81,10 +94,19 @@ namespace ClashGame
         {
             Warrior warriorForHeal = null;
             var minHealth = double.MaxValue;
-            if (attackers[healerIndex + 1].Healthpoints < minHealth && healerIndex % 3 != 2 && attackers[healerIndex + 1] is not LightWarrior)
+            if (healerIndex != attackers.Count() - 1 && healerIndex != attackers.Count() - 2)
             {
-                minHealth = attackers[healerIndex + 1].Healthpoints;
-                warriorForHeal = attackers[healerIndex + 1];
+                if (attackers[healerIndex + 1].Healthpoints < minHealth && healerIndex % 2 == 0 && attackers[healerIndex + 1] is not LightWarrior)
+                {
+                    minHealth = attackers[healerIndex + 1].Healthpoints;
+                    warriorForHeal = attackers[healerIndex + 1];
+                }
+                if (attackers[healerIndex + 3].Healthpoints < minHealth && attackers[healerIndex + 3] is not LightWarrior)
+                {
+                    minHealth = attackers[healerIndex + 3].Healthpoints;
+                    warriorForHeal = attackers[healerIndex + 3];
+                }
+
             }
             if (attackers[healerIndex - 1].Healthpoints < minHealth && healerIndex % 3 != 0 && attackers[healerIndex - 1] is not LightWarrior)
             {
@@ -96,21 +118,37 @@ namespace ClashGame
                 minHealth = attackers[healerIndex - 3].Healthpoints;
                 warriorForHeal = attackers[healerIndex - 3];
             }
-            if (attackers[healerIndex + 3].Healthpoints < minHealth && attackers[healerIndex + 3] is not LightWarrior)
-            {
-                minHealth = attackers[healerIndex + 3].Healthpoints;
-                warriorForHeal = attackers[healerIndex + 3];
-            }
-            healer.Heal(warriorForHeal);
+            if (warriorForHeal != null)
+                healer.Heal(warriorForHeal);
             return warriorForHeal;
         }
 
         public bool IsFrontLine(int attackerIndex, List<Warrior> defenders)
         {
-            if (attackerIndex == 0 || (attackerIndex == 1 && defenders[1] != null) || (attackerIndex == 2 && defenders[2] != null))
+            if (attackerIndex == 0)
             {
                 return true;
             }
+            if (defenders.Count() > 0)
+            {
+                if (attackerIndex == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else if (defenders.Count() > 1)
+                if (attackerIndex == 2)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             else return false;
         }
     }
@@ -132,27 +170,30 @@ namespace ClashGame
         {
             Warrior warriorForHeal = null;
             var minHealth = double.MaxValue;
-            if (attackers[healerIndex + 1].Healthpoints < minHealth && attackers[healerIndex + 1] is not LightWarrior)
+            if (healerIndex != attackers.Count() - 1 && healerIndex != attackers.Count() - 2)
             {
-                minHealth = attackers[healerIndex + 1].Healthpoints;
-                warriorForHeal = attackers[healerIndex + 1];
+                if (attackers[healerIndex + 1].Healthpoints < minHealth && attackers[healerIndex + 1] is not LightWarrior)
+                {
+                    minHealth = attackers[healerIndex + 1].Healthpoints;
+                    warriorForHeal = attackers[healerIndex + 1];
+                }
             }
             if (attackers[healerIndex - 1].Healthpoints < minHealth && attackers[healerIndex - 1] is not LightWarrior)
             {
                 minHealth = attackers[healerIndex - 1].Healthpoints;
                 warriorForHeal = attackers[healerIndex - 1];
             }
-
-            healer.Heal(warriorForHeal);
+            if (warriorForHeal!=null)
+                healer.Heal(warriorForHeal);
             return warriorForHeal;
         }
 
         public bool IsFrontLine(int attackerIndex, List<Warrior> defenders)
         {
-            if (defenders[attackerIndex] == null)
-                return false;
-            else
+            if (defenders.Count() - 1 > attackerIndex)
                 return true;
+            else
+                return false;
         }
     }
 }

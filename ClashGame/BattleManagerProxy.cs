@@ -42,8 +42,8 @@ namespace ClashGame
             Log("Ход начат!");
             //battleManager.TurnComputer(attackers, defenders, outputTextBox);
 
-            WizardTurn(attackers, outputTextBox);
-            HealerTurn(attackers, outputTextBox);
+            WizardTurn(attackers, defenders, outputTextBox);
+            HealerTurn(attackers, defenders,outputTextBox);
             HeavyWarriorUpgradeTurn(attackers, attackers[0], outputTextBox);
             Attack(attackers[0], defenders[0], outputTextBox);
             ArchersTurn(attackers, defenders, outputTextBox);
@@ -52,16 +52,16 @@ namespace ClashGame
             Log("Ход завершен!");
         }
 
-        public void WizardTurn(List<Warrior> attackers, TextBox outputTextBox)
+        public void WizardTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             Log($"Клонирование воина {attackers[0].Side} {this}");
-            _battleManager.WizardTurn(attackers, outputTextBox);
+            _battleManager.WizardTurn(attackers, defenders, outputTextBox);
         }
 
-        public void HealerTurn(List<Warrior> attackers, TextBox outputTextBox)
+        public void HealerTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             Log($"Применение лечения воином {attackers[0].Side} {this}");
-            _battleManager.HealerTurn(attackers, outputTextBox);
+            _battleManager.HealerTurn(attackers, defenders, outputTextBox);
         }
 
         public void HeavyWarriorUpgradeTurn(List<Warrior> attackers, Warrior attacker, TextBox outputTextBox)

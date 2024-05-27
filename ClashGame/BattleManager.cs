@@ -29,10 +29,10 @@ namespace ClashGame
             Warrior defender = defenders[0];
 
             // Проверка наличия мага в списке атакующих
-            WizardTurn(attackers, outputTextBox);
+            WizardTurn(attackers, defenders,outputTextBox);
 
             // Проверка на наличие лекаря в списке атакующих и его позиции
-            HealerTurn(attackers, outputTextBox);
+            HealerTurn(attackers, defenders, outputTextBox);
 
             // Проверка на наличие ImprovedHeavyWarrior в списке атакующих и его позиции
             HeavyWarriorUpgradeTurn(attackers, attacker, outputTextBox);
@@ -47,7 +47,7 @@ namespace ClashGame
             IsDead(defender, defenders);
         }
 
-        public void WizardTurn(List<Warrior> attackers, TextBox outputTextBox)
+        public void WizardTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
 
             Wizard wizard = null;
@@ -78,7 +78,7 @@ namespace ClashGame
             }
         }
 
-        public void HealerTurn(List<Warrior> attackers, TextBox outputTextBox)
+        public void HealerTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             Healer healer = null;
             int healerIndex = -1;
@@ -88,33 +88,25 @@ namespace ClashGame
                 {
                     healer = new Healer(attackers[i].Side);
                     healerIndex = i;
-                    break;
-                }
-            }
 
-            if (healer != null && healerIndex != 0)
-            {
-                // Проверка на выполнение условий для лечения
-                if (new Random().Next(0, 10) == 0)
-                {
-                    // Вызов лечения у случайного союзника
-                    List<Warrior> alliesInRange = GetAlliesInRange(attackers, healerIndex);
-                    if (alliesInRange.Count > 0)
+                    if (!_strategy.IsFrontLine(healerIndex, defenders))
                     {
-                        int targetIndex = new Random().Next(0, alliesInRange.Count);
-                        Warrior targetAlly = alliesInRange[targetIndex];
-                        if (!(targetAlly is LightWarrior))
+                        // Проверка на выполнение условий для лечения
+                        if (new Random().Next(0, 10) == 0)
                         {
-                            healer.Heal(targetAlly);
+                            // Вызов лечения у случайного союзника
+
+                            Warrior targetAlly = _strategy.GetWarriorHeal(attackers, healerIndex, healer);
                             outputTextBox.AppendText($"Лекарь из команды {healer.Side} вылечил {targetAlly.Side} {targetAlly}" + Environment.NewLine);
                             outputTextBox.AppendText($"Теперь у {targetAlly.Side} {targetAlly} {targetAlly.Healthpoints} HP" + Environment.NewLine);
+
+                        }
+                        else
+                        {
+                            outputTextBox.AppendText($"Лекарь из команды {healer.Side} никого не вылечил" + Environment.NewLine);
+                            outputTextBox.AppendText("Не прокнуло." + Environment.NewLine);
                         }
                     }
-                }
-                else
-                {
-                    outputTextBox.AppendText($"Лекарь из команды {healer.Side} никого не вылечил" + Environment.NewLine);
-                    outputTextBox.AppendText("Не прокнуло." + Environment.NewLine);
                 }
             }
         }

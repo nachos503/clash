@@ -50,8 +50,8 @@ namespace ClashGame
     public interface IBattleManager
     {
         void TurnComputer(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
-        void WizardTurn(List<Warrior> attackers, TextBox outputTextBox);
-        void HealerTurn(List<Warrior> attackers, TextBox outputTextBox);
+        void WizardTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
+        void HealerTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
         void HeavyWarriorUpgradeTurn(List<Warrior> attackers, Warrior attacker, TextBox outputTextBox);
         void ArchersTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
         void Attack(Warrior warrior1, Warrior warrior2, TextBox outputTextBox);

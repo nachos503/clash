@@ -66,6 +66,7 @@ namespace ClashGame
            
         }
 
+        #region Clicks
         private void DisableAbilityButtons()
         {
             UseWizard.IsEnabled = false;
@@ -115,7 +116,7 @@ namespace ClashGame
         private void RefreshUI()
         {
             UseWizard.IsEnabled = playerTurn && CheckForWizard(playerArmy) && !wizardUsed;
-            UseHealer.IsEnabled = playerTurn && CheckForHealer(playerArmy) && !healerUsed;
+            UseHealer.IsEnabled = playerTurn && CheckForHealer(playerArmy, computerArmy) && !healerUsed;
             UseArcher.IsEnabled = playerTurn && CheckForArcher(playerArmy) && !archerUsed;
             CanсelTurn.IsEnabled = commandManager.CanUndo();
         }
@@ -128,7 +129,7 @@ namespace ClashGame
                 return;
             }
 
-            var command = new WizardTurnCommand(battleManagerProxy, playerArmy, outputTextBox);
+            var command = new WizardTurnCommand(battleManagerProxy, playerArmy, computerArmy, outputTextBox);
             commandManager.ExecuteCommand(command);
             wizardUsed = true;
             UseWizard.IsEnabled = false;
@@ -144,7 +145,7 @@ namespace ClashGame
                 return;
             }
 
-            var command = new HealerTurnCommand(battleManagerProxy, playerArmy, outputTextBox);
+            var command = new HealerTurnCommand(battleManagerProxy, playerArmy, computerArmy, outputTextBox);
             commandManager.ExecuteCommand(command);
             healerUsed = true;
             UseHealer.IsEnabled = false;
@@ -256,21 +257,38 @@ namespace ClashGame
 
             battleManagerProxy.TurnComputer(computerArmy, playerArmy, outputTextBox);
         }
+        #endregion
 
+        #region Check
         private bool CheckForWizard(List<Warrior> army)
         {
             return army.Any(warrior => warrior is Wizard);
         }
 
-        private bool CheckForHealer(List<Warrior> army)
+        private bool CheckForHealer(List<Warrior> army, List<Warrior> defenders)
         {
-            return army.Any(warrior => warrior is Healer);
+            bool hasHealer = army.Any(warrior => warrior is Healer);
+
+            if (hasHealer)
+            {
+                for (int i = 0; i < army.Count; i++)
+                {
+                    if (!currentStrategy.IsFrontLine(i, defenders) && army[i] is Healer)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
         }
 
         private bool CheckForArcher(List<Warrior> army)
         {
             return army.Any(warrior => warrior is Archer);
         }
+
+        #endregion
 
         public void CreateArmyClick(TextBox outputTextBox)
         {

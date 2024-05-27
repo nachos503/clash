@@ -7,6 +7,13 @@ using System.Windows.Controls;
 
 namespace ClashGame
 {
+    public interface IBattleStrategy
+    {
+        public void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
+        public Warrior GetWarriorHeal(List<Warrior> attackers, int healerIndex, Healer healer);
+        public bool IsFrontLine(int attackerIndex, List<Warrior> defenders);
+
+    }
     interface IHealable
     {
         void Heal(Warrior target);

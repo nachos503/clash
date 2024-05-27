@@ -24,11 +24,12 @@ namespace ClashGame
 
         private int countTurnsForGulyayGorod;
 
+        private IBattleStrategy currentStrategy = new TwoRowStrategy();
         public MainWindow()
         {
             InitializeComponent();
             armyManager = new ArmyManager(outputTextBox, new ArmyUnitFactory());
-            battleManager = new BattleManager();
+            battleManager = new BattleManager(currentStrategy);
             battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
 
             commandManager = new CommandManager();
@@ -271,5 +272,37 @@ namespace ClashGame
                 UseArcher.IsEnabled = false;
             }
         }
+
+        private void ChooseStrategy_Click(object sender, RoutedEventArgs e)
+        {
+            ChooseTwoRows.Visibility = Visibility.Visible;
+            ChooseThreeRows.Visibility = Visibility.Visible;
+            ChooseWallToWall.Visibility = Visibility.Visible;
+        }
+
+        private void ChooseTwoRows_Click(object sender, RoutedEventArgs e)
+        {
+            currentStrategy = new TwoRowStrategy();
+            MessageBox.Show("Two Rows strategy selected.");
+            //HideStrategyButtons();
+            //DrawArmies();
+        }
+
+        private void ChooseThreeRows_Click(object sender, RoutedEventArgs e)
+        {
+            currentStrategy = new ThreeRowStrategy();
+            MessageBox.Show("Three Rows strategy selected.");
+            //HideStrategyButtons();
+            //DrawArmies();
+        }
+
+        private void ChooseWallToWall_Click(object sender, RoutedEventArgs e)
+        {
+            currentStrategy = new WallToWallStrategy();
+            MessageBox.Show("Wall to Wall strategy selected.");
+            //HideStrategyButtons();
+            //DrawArmies();
+        }
+
     }
 }

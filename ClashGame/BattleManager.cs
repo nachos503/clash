@@ -10,8 +10,12 @@ namespace ClashGame
 {
     public class BattleManager : IBattleManager
     {
+        public IBattleStrategy _strategy;
 
-        public BattleManager() { }
+        public BattleManager(IBattleStrategy strategy)
+        {
+            this._strategy = strategy ?? throw new ArgumentNullException(nameof(strategy), "Strategy cannot be null");
+        }
 
         public int flagGulyayGorodBlue = 0;
         public int flagGulyayGorodRed = 0;

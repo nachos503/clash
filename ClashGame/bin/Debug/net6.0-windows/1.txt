@@ -41334,3 +41334,4 @@
 24.05.2024 23:25:21: Ход начат!
 24.05.2024 23:25:21: Клонирование воина Blue ClashGame.BattleManagerProxy
 24.05.2024 23:25:21: Применение лечения воином Blue ClashGame.BattleManagerProxy
+25.05.2024 11:17:48: Starting logging...

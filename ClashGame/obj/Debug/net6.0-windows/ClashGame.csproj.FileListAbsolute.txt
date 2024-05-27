@@ -88,7 +88,6 @@ C:\Users\Varvara\source\repos\nachos503\clash\ClashGame\bin\Debug\net6.0-windows
 C:\Users\Varvara\source\repos\nachos503\clash\ClashGame\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\Varvara\source\repos\nachos503\clash\ClashGame\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\Varvara\source\repos\nachos503\clash\ClashGame\obj\Debug\net6.0-windows\ClashGame_MarkupCompile.cache
-C:\Users\Varvara\source\repos\nachos503\clash\ClashGame\obj\Debug\net6.0-windows\ClashGame_MarkupCompile.lref
 C:\Users\Varvara\source\repos\nachos503\clash\ClashGame\obj\Debug\net6.0-windows\MainWindow.baml
 C:\Users\Varvara\source\repos\nachos503\clash\ClashGame\obj\Debug\net6.0-windows\ClashGame.g.resources
 C:\Users\Varvara\source\repos\nachos503\clash\ClashGame\obj\Debug\net6.0-windows\ClashGame.GeneratedMSBuildEditorConfig.editorconfig

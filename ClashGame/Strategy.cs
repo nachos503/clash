@@ -11,39 +11,39 @@ namespace ClashGame
 {
     public class TwoRowStrategy : IBattleStrategy
     {
-        private BattleManager battleManager = new BattleManager();
+        BattleManager _battleManager;
 
         public void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             int rows = Math.Min(2, Math.Min(attackers.Count, defenders.Count));
             for (int i = 0; i < rows; i++)
             {
-                battleManager.Attack(attackers[i], defenders[i], outputTextBox);
+                _battleManager.Attack(attackers[i], defenders[i], outputTextBox);
             }
         }
 
-       public Warrior GetWarriorHeal(List<Warrior>  attackers, int healerIndex, Healer healer)
-       {
+        public Warrior GetWarriorHeal(List<Warrior> attackers, int healerIndex, Healer healer)
+        {
             Warrior warriorForHeal = null;
             var minHealth = double.MaxValue;
             if (healerIndex == 0 || healerIndex == 1)
             {
                 return null;
             }
-            if (attackers[healerIndex+1].Healthpoints < minHealth && healerIndex % 2 == 0 && attackers[healerIndex + 1] is not LightWarrior)
+            if (attackers[healerIndex + 1].Healthpoints < minHealth && healerIndex % 2 == 0 && attackers[healerIndex + 1] is not LightWarrior)
             {
-               minHealth = attackers[healerIndex + 1].Healthpoints;
-               warriorForHeal = attackers[healerIndex+1];
+                minHealth = attackers[healerIndex + 1].Healthpoints;
+                warriorForHeal = attackers[healerIndex + 1];
             }
             if (attackers[healerIndex - 1].Healthpoints < minHealth && healerIndex % 2 != 0 && attackers[healerIndex - 1] is not LightWarrior)
             {
                 minHealth = attackers[healerIndex - 1].Healthpoints;
                 warriorForHeal = attackers[healerIndex - 1];
             }
-            if (attackers[healerIndex-2].Healthpoints < minHealth && attackers[healerIndex - 2] is not LightWarrior)
+            if (attackers[healerIndex - 2].Healthpoints < minHealth && attackers[healerIndex - 2] is not LightWarrior)
             {
-                minHealth = attackers[healerIndex -2].Healthpoints;
-                warriorForHeal = attackers[healerIndex -2];
+                minHealth = attackers[healerIndex - 2].Healthpoints;
+                warriorForHeal = attackers[healerIndex - 2];
             }
             if (attackers[healerIndex + 2].Healthpoints < minHealth && attackers[healerIndex + 2] is not LightWarrior)
             {
@@ -54,9 +54,9 @@ namespace ClashGame
             return warriorForHeal;
         }
 
-        public bool IsFrontLine(int attackerIndex)
+        public bool IsFrontLine(int attackerIndex, List<Warrior> defenders)
         {
-            if (attackerIndex == 0 || attackerIndex == 1)
+            if ((attackerIndex == 0) || (attackerIndex == 1 && defenders[1] != null))
             {
                 return true;
             }
@@ -66,14 +66,14 @@ namespace ClashGame
 
     public class ThreeRowStrategy : IBattleStrategy
     {
-        private BattleManager battleManager = new BattleManager();
+        BattleManager _battleManager;
 
         public void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             int rows = Math.Min(3, Math.Min(attackers.Count, defenders.Count));
             for (int i = 0; i < rows; i++)
             {
-                battleManager.Attack(attackers[i], defenders[i], outputTextBox);
+                _battleManager.Attack(attackers[i], defenders[i], outputTextBox);
             }
         }
 
@@ -105,9 +105,9 @@ namespace ClashGame
             return warriorForHeal;
         }
 
-        public bool IsFrontLine(int attackerIndex)
+        public bool IsFrontLine(int attackerIndex, List<Warrior> defenders)
         {
-            if (attackerIndex == 0 || attackerIndex == 1 || attackerIndex == 2)
+            if (attackerIndex == 0 || (attackerIndex == 1 && defenders[1] != null) || (attackerIndex == 2 && defenders[2] != null))
             {
                 return true;
             }
@@ -117,14 +117,14 @@ namespace ClashGame
 
     public class WallToWallStrategy : IBattleStrategy
     {
-        private BattleManager battleManager = new BattleManager();
+        BattleManager _battleManager;
 
         public void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             int rows = Math.Min(attackers.Count, defenders.Count);
             for (int i = 0; i < rows; i++)
             {
-                battleManager.Attack(attackers[i], defenders[i], outputTextBox);
+                _battleManager.Attack(attackers[i], defenders[i], outputTextBox);
             }
         }
 
@@ -147,9 +147,12 @@ namespace ClashGame
             return warriorForHeal;
         }
 
-        public bool IsFrontLine(int attackerIndex)
+        public bool IsFrontLine(int attackerIndex, List<Warrior> defenders)
         {
-            return false;
+            if (defenders[attackerIndex] == null)
+                return false;
+            else
+                return true;
         }
     }
 }

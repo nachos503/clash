@@ -7,6 +7,13 @@ using System.Windows.Controls;
 
 namespace ClashGame
 {
+    public interface IBattleStrategy
+    {
+        public void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
+        public Warrior GetWarriorHeal(List<Warrior> attackers, int healerIndex, Healer healer);
+        public bool IsFrontLine(int attackerIndex, List<Warrior> defenders);
+
+    }
     interface IHealable
     {
         void Heal(Warrior target);
@@ -33,6 +40,13 @@ namespace ClashGame
         Warrior CreateWizard(string side);
         Warrior CreateGulyayGorod(string side);
     }
+
+    public interface ICommand
+    {
+        void Execute();
+        void Undo();
+    }
+
     public interface IBattleManager
     {
         void TurnComputer(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
@@ -45,19 +59,4 @@ namespace ClashGame
         void IsDead(Warrior warrior, List<Warrior> army);
         void GulyayGorodTurn(List<Warrior> attackers, TextBox outputTextBox);
     }
-
-    public interface ICommand
-    {
-        void Execute();
-        void Undo();
-    }
-
-    public interface IBattleStrategy
-    {
-        void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
-        Warrior GetWarriorHeal(List<Warrior> attackers, int healerIndex, Healer healer);
-
-        bool IsFrontLine(int attackerIndex);
-    }
-
 }

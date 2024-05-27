@@ -67,18 +67,20 @@ namespace ClashGame
         private List<Warrior> _attackers;
         private TextBox _outputTextBox;
         private List<Warrior> _previousState;
+        private List<Warrior> _defenders;
 
-        public HealerTurnCommand(IBattleManager battleManager, List<Warrior> attackers, TextBox outputTextBox)
+        public HealerTurnCommand(IBattleManager battleManager, List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             _battleManager = battleManager;
             _attackers = attackers;
             _outputTextBox = outputTextBox;
+            _defenders = defenders;
         }
 
         public void Execute()
         {
             _previousState = _attackers.Select(w => w.Clone()).ToList();
-            _battleManager.HealerTurn(_attackers, _outputTextBox);
+            _battleManager.HealerTurn(_attackers,_defenders, _outputTextBox);
         }
 
         public void Undo()

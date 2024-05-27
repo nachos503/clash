@@ -207,7 +207,7 @@ namespace ClashGame
 
         virtual public Warrior CloneLightWarrior(List<Warrior> warriors)
         {
-            if (new Random().Next(0, 20) == 0)
+            if (new Random().Next(0, 2) == 0)
             {
                 // Ищем LightWarrior в списке воинов
                 foreach (var warrior in warriors)
@@ -234,7 +234,5 @@ namespace ClashGame
             Cost = 0;
             Side = side;
         }
-
-
     }
 }

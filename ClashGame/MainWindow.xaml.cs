@@ -10,9 +10,9 @@ namespace ClashGame
     public partial class MainWindow : Window
     {
         private readonly ArmyManager armyManager;
-        private readonly GameManager gameManager;
         private BattleManagerProxy battleManagerProxy;
         private CommandManager commandManager;
+        private BattleManager battleManager;
 
         private List<Warrior> playerArmy;
         private List<Warrior> computerArmy;
@@ -27,9 +27,10 @@ namespace ClashGame
         public MainWindow()
         {
             InitializeComponent();
-            gameManager = GameManager.Instance;
             armyManager = new ArmyManager(outputTextBox, new ArmyUnitFactory());
-            battleManagerProxy = new BattleManagerProxy("1.txt");
+            battleManager = new BattleManager();
+            battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
+            
             commandManager = new CommandManager();
             InitializeUI();
         }
@@ -166,7 +167,7 @@ namespace ClashGame
 
             if (playerArmy[0] is GulyayGorod)
             {
-                battleManagerProxy.SetGulyayGorodCount(countTurnsForGulyayGorod, playerArmy[0].Side); // Передача значения
+                battleManager.SetGulyayGorodCount(countTurnsForGulyayGorod, playerArmy[0].Side); // Передача значения
                 if (countTurnsForGulyayGorod == 7) 
                 {
                     playerArmy.Remove(playerArmy[0]);

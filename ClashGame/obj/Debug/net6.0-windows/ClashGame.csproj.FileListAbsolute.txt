@@ -25,7 +25,6 @@ D:\001\Documents\GitHub\clash\ClashGame\bin\Debug\net6.0-windows\ClashGame.runti
 D:\001\Documents\GitHub\clash\ClashGame\bin\Debug\net6.0-windows\ClashGame.dll
 D:\001\Documents\GitHub\clash\ClashGame\bin\Debug\net6.0-windows\ref\ClashGame.dll
 D:\001\Documents\GitHub\clash\ClashGame\bin\Debug\net6.0-windows\ClashGame.pdb
-D:\001\Documents\GitHub\clash\ClashGame\obj\Debug\net6.0-windows\ClashGame.csproj.AssemblyReference.cache
 D:\001\Documents\GitHub\clash\ClashGame\obj\Debug\net6.0-windows\MainWindow.g.cs
 D:\001\Documents\GitHub\clash\ClashGame\obj\Debug\net6.0-windows\App.g.cs
 D:\001\Documents\GitHub\clash\ClashGame\obj\Debug\net6.0-windows\ClashGame_MarkupCompile.cache

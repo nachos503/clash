@@ -30,7 +30,7 @@ namespace ClashGame
             armyManager = new ArmyManager(outputTextBox, new ArmyUnitFactory());
             battleManager = new BattleManager();
             battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
-            
+
             commandManager = new CommandManager();
             InitializeUI();
         }
@@ -41,7 +41,7 @@ namespace ClashGame
             ChooseRedArmy.Visibility = Visibility.Collapsed;
             ToTheEnd.Visibility = Visibility.Collapsed;
             Turn.IsEnabled = false;
-            CanсelTurn.IsEnabled = true;;
+            CanсelTurn.IsEnabled = true; ;
             DisableAbilityButtons();
         }
 
@@ -168,7 +168,7 @@ namespace ClashGame
             if (playerArmy[0] is GulyayGorod)
             {
                 battleManager.SetGulyayGorodCount(countTurnsForGulyayGorod, playerArmy[0].Side); // Передача значения
-                if (countTurnsForGulyayGorod == 7) 
+                if (countTurnsForGulyayGorod == 7)
                 {
                     playerArmy.Remove(playerArmy[0]);
                 }

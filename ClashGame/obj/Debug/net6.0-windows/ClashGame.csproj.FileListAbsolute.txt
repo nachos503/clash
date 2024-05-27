@@ -119,3 +119,4 @@ C:\Users\annab\Source\Repos\clash123\ClashGame\obj\Debug\net6.0-windows\refint\C
 C:\Users\annab\Source\Repos\clash123\ClashGame\obj\Debug\net6.0-windows\ClashGame.pdb
 C:\Users\annab\Source\Repos\clash123\ClashGame\obj\Debug\net6.0-windows\ClashGame.genruntimeconfig.cache
 C:\Users\annab\Source\Repos\clash123\ClashGame\obj\Debug\net6.0-windows\ref\ClashGame.dll
+D:\001\Documents\GitHub\clash\ClashGame\obj\Debug\net6.0-windows\ClashGame.csproj.AssemblyReference.cache

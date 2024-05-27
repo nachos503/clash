@@ -32,34 +32,34 @@ namespace ClashGame
         }
     }
 
-        public class AttackCommand : ICommand
+    public class AttackCommand : ICommand
+    {
+        private IBattleManager _battleManager;
+        private Warrior _attacker;
+        private Warrior _defender;
+        private TextBox _outputTextBox;
+        private double _previousHealthPoints;
+
+        public AttackCommand(IBattleManager battleManager, Warrior attacker, Warrior defender, TextBox outputTextBox)
         {
-            private IBattleManager _battleManager;
-            private Warrior _attacker;
-            private Warrior _defender;
-            private TextBox _outputTextBox;
-            private double _previousHealthPoints;
-
-            public AttackCommand(IBattleManager battleManager, Warrior attacker, Warrior defender, TextBox outputTextBox)
-            {
-                _battleManager = battleManager;
-                _attacker = attacker;
-                _defender = defender;
-                _outputTextBox = outputTextBox;
-            }
-
-            public void Execute()
-            {
-                _previousHealthPoints = _defender.Healthpoints;
-                _battleManager.Attack(_attacker, _defender, _outputTextBox);
-            }
-
-            public void Undo()
-            {
-                _defender.Healthpoints = _previousHealthPoints;
-                _outputTextBox.AppendText($"Отмена атаки, восстановлено HP у {_defender.Side} {_defender}" + Environment.NewLine);
-            }
+            _battleManager = battleManager;
+            _attacker = attacker;
+            _defender = defender;
+            _outputTextBox = outputTextBox;
         }
+
+        public void Execute()
+        {
+            _previousHealthPoints = _defender.Healthpoints;
+            _battleManager.Attack(_attacker, _defender, _outputTextBox);
+        }
+
+        public void Undo()
+        {
+            _defender.Healthpoints = _previousHealthPoints;
+            _outputTextBox.AppendText($"Отмена атаки, восстановлено HP у {_defender.Side} {_defender}" + Environment.NewLine);
+        }
+    }
 
     public class HealerTurnCommand : ICommand
     {
@@ -67,20 +67,18 @@ namespace ClashGame
         private List<Warrior> _attackers;
         private TextBox _outputTextBox;
         private List<Warrior> _previousState;
-        private List<Warrior> _defenders;
 
-        public HealerTurnCommand(IBattleManager battleManager, List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
+        public HealerTurnCommand(IBattleManager battleManager, List<Warrior> attackers, TextBox outputTextBox)
         {
             _battleManager = battleManager;
             _attackers = attackers;
             _outputTextBox = outputTextBox;
-            _defenders = defenders;
         }
 
         public void Execute()
         {
             _previousState = _attackers.Select(w => w.Clone()).ToList();
-            _battleManager.HealerTurn(_attackers,_defenders, _outputTextBox);
+            _battleManager.HealerTurn(_attackers, _outputTextBox);
         }
 
         public void Undo()
@@ -124,39 +122,39 @@ namespace ClashGame
     }
 
     public class ArcherTurnCommand : ICommand
+    {
+        private IBattleManager _battleManager;
+        private List<Warrior> _attackers;
+        private List<Warrior> _defenders;
+        private TextBox _outputTextBox;
+        private List<Warrior> _previousDefenderState;
+        private int _targetIndex;
+        private double _previousHealthPoints;
+
+        public ArcherTurnCommand(IBattleManager battleManager, List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
-                private IBattleManager _battleManager;
-                private List<Warrior> _attackers;
-                private List<Warrior> _defenders;
-                private TextBox _outputTextBox;
-                private List<Warrior> _previousDefenderState;
-                private int _targetIndex;
-                private double _previousHealthPoints;
-
-                public ArcherTurnCommand(IBattleManager battleManager, List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
-                {
-                    _battleManager = battleManager;
-                    _attackers = attackers;
-                    _defenders = defenders;
-                    _outputTextBox = outputTextBox;
-                }
-
-                public void Execute()
-                {
-                    _previousDefenderState = _defenders.Select(w => w.Clone()).ToList();
-                    _targetIndex = new Random().Next(0, _defenders.Count);
-                    _previousHealthPoints = _defenders[_targetIndex].Healthpoints;
-                    _battleManager.ArchersTurn(_attackers, _defenders, _outputTextBox);
-                }
-
-                public void Undo()
-                {
-                    for (int i = 0; i < _defenders.Count; i++)
-                    {
-                        _defenders[i] = _previousDefenderState[i];
-                    }
-                    _outputTextBox.AppendText($"Отмена атаки лучника, восстановлено HP у {_defenders[_targetIndex].Side} {_defenders[_targetIndex]}" + Environment.NewLine);
-                }
+            _battleManager = battleManager;
+            _attackers = attackers;
+            _defenders = defenders;
+            _outputTextBox = outputTextBox;
         }
+
+        public void Execute()
+        {
+            _previousDefenderState = _defenders.Select(w => w.Clone()).ToList();
+            _targetIndex = new Random().Next(0, _defenders.Count);
+            _previousHealthPoints = _defenders[_targetIndex].Healthpoints;
+            _battleManager.ArchersTurn(_attackers, _defenders, _outputTextBox);
+        }
+
+        public void Undo()
+        {
+            for (int i = 0; i < _defenders.Count; i++)
+            {
+                _defenders[i] = _previousDefenderState[i];
+            }
+            _outputTextBox.AppendText($"Отмена атаки лучника, восстановлено HP у {_defenders[_targetIndex].Side} {_defenders[_targetIndex]}" + Environment.NewLine);
+        }
+    }
 
 }

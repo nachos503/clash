@@ -62,25 +62,22 @@ namespace ClashGame
 
                     if (!_strategy.IsFrontLine(wizardIndex, defenders))
                     {
-                       if (new Random().Next(0, 1) == 0)
+                       if (new Random().Next(0, 5) == 0)
                        {    // Попытка клонирования LightWarrior
-                            if (wizard != null)
-                            {
                                 Warrior clonedWarrior = _strategy.CloneWarrior(attackers, wizardIndex, wizard);
                                 if (clonedWarrior != null)
                                 {
                                     attackers.Insert(1, clonedWarrior); // Вставляем клонированного LightWarrior перед магом (на вторую позицию)
                                     outputTextBox.AppendText($"Маг из команды {wizard.Side} клонировал LightWarrior с {clonedWarrior.Healthpoints} HP" + Environment.NewLine);
                                 }
-                            }
-                            else
-                            {
-                                outputTextBox.AppendText($"Маг из команды {wizard.Side} не смог склонировать LigthWarrior: " + Environment.NewLine);
-                                outputTextBox.AppendText("LightWarrior отсутствует, либо не повезло." + Environment.NewLine);
-                            }
-                        }
-                        else
-                           outputTextBox.AppendText($"Маг из команды {wizard.Side} не смог клонировать LightWarrior" + Environment.NewLine);
+                                else
+                                {
+                                    outputTextBox.AppendText($"Маг из команды {wizard.Side} не смог склонировать LigthWarrior: " + Environment.NewLine);
+                                    outputTextBox.AppendText("LightWarrior отсутствует, либо не повезло." + Environment.NewLine);
+                                }
+                       }
+                       else
+                          outputTextBox.AppendText($"Маг из команды {wizard.Side} не смог клонировать LightWarrior" + Environment.NewLine);
                     }
                 }
             }
@@ -190,19 +187,6 @@ namespace ClashGame
                     break; // Выходим после того как нашли первого арчера
                 }
             }
-        }
-
-        private List<Warrior> GetAlliesInRange(List<Warrior> attackers, int healerIndex)
-        {
-            List<Warrior> alliesInRange = new List<Warrior>();
-            for (int i = Math.Max(0, healerIndex - 3); i < Math.Min(attackers.Count, healerIndex + 4); i++)
-            {
-                if (i != healerIndex && attackers[i].Side == attackers[healerIndex].Side)
-                {
-                    alliesInRange.Add(attackers[i]);
-                }
-            }
-            return alliesInRange;
         }
 
         virtual public void Attack(Warrior warrior1, Warrior warrior2, TextBox outputTextBox)

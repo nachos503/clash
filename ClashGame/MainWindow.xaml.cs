@@ -17,6 +17,7 @@ namespace ClashGame
         private List<Warrior> playerArmy;
         private List<Warrior> computerArmy;
         private bool playerTurn = true;
+        private IBattleStrategy currentStrategy;
 
         private bool wizardUsed = false;
         private bool healerUsed = false;
@@ -24,17 +25,17 @@ namespace ClashGame
 
         private int countTurnsForGulyayGorod;
 
-        private IBattleStrategy currentStrategy = new TwoRowStrategy();
+        
+
         public MainWindow()
         {
             InitializeComponent();
             armyManager = new ArmyManager(outputTextBox, new ArmyUnitFactory());
-            battleManager = new BattleManager(currentStrategy);
-            battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
-
             commandManager = new CommandManager();
             InitializeUI();
         }
+
+        
 
         private void InitializeUI()
         {
@@ -115,7 +116,7 @@ namespace ClashGame
 
         private void RefreshUI()
         {
-            UseWizard.IsEnabled = playerTurn && CheckForWizard(playerArmy) && !wizardUsed;
+            UseWizard.IsEnabled = playerTurn && CheckForWizard(playerArmy, computerArmy) && !wizardUsed;
             UseHealer.IsEnabled = playerTurn && CheckForHealer(playerArmy, computerArmy) && !healerUsed;
             UseArcher.IsEnabled = playerTurn && CheckForArcher(playerArmy) && !archerUsed;
             CanсelTurn.IsEnabled = commandManager.CanUndo();
@@ -260,9 +261,22 @@ namespace ClashGame
         #endregion
 
         #region Check
-        private bool CheckForWizard(List<Warrior> army)
+        private bool CheckForWizard(List<Warrior> army, List<Warrior> defenders)
         {
-            return army.Any(warrior => warrior is Wizard);
+            bool hasWizard = army.Any(warrior => warrior is Wizard);
+
+            if (hasWizard)
+            {
+                for (int i = 0; i < army.Count; i++)
+                {
+                    if (!currentStrategy.IsFrontLine(i, defenders) && army[i] is Wizard)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
         }
 
         private bool CheckForHealer(List<Warrior> army, List<Warrior> defenders)
@@ -336,12 +350,16 @@ namespace ClashGame
         {
             currentStrategy = new TwoRowStrategy();
             MessageBox.Show("Two Rows strategy selected.");
-            ChooseThreeRows.Visibility = Visibility.Collapsed;
-            ChooseWallToWall.Visibility = Visibility.Collapsed;
-            ChooseStrategy.Visibility = Visibility.Collapsed;
+            //ChooseThreeRows.Visibility = Visibility.Collapsed;
+            //ChooseWallToWall.Visibility = Visibility.Collapsed;
+            //ChooseStrategy.Visibility = Visibility.Collapsed;
             ShowPlayButtons();
             ChooseTwoRows.IsEnabled = false;
-          
+            ChooseThreeRows.IsEnabled = true;
+            ChooseWallToWall.IsEnabled = true;
+
+            battleManager = new BattleManager(currentStrategy);
+            battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
 
             //DrawArmies();
         }
@@ -350,12 +368,16 @@ namespace ClashGame
         {
             currentStrategy = new ThreeRowStrategy();
             MessageBox.Show("Three Rows strategy selected.");
-            ChooseTwoRows.Visibility = Visibility.Collapsed;
-            ChooseWallToWall.Visibility = Visibility.Collapsed;
-            ChooseStrategy.Visibility = Visibility.Collapsed;
+            //ChooseTwoRows.Visibility = Visibility.Collapsed;
+            //ChooseWallToWall.Visibility = Visibility.Collapsed;
+            //ChooseStrategy.Visibility = Visibility.Collapsed;
             ShowPlayButtons();
             ChooseThreeRows.IsEnabled = false;
-           
+            ChooseWallToWall.IsEnabled = true;
+            ChooseTwoRows.IsEnabled = true;
+
+            battleManager = new BattleManager(currentStrategy);
+            battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
             //DrawArmies();
         }
 
@@ -364,12 +386,18 @@ namespace ClashGame
             
             currentStrategy = new WallToWallStrategy();
             MessageBox.Show("Wall to Wall strategy selected.");
-            ChooseTwoRows.Visibility = Visibility.Collapsed;
-            ChooseThreeRows.Visibility = Visibility.Collapsed;
-            ChooseStrategy.Visibility = Visibility.Collapsed;
+            //ChooseTwoRows.Visibility = Visibility.Collapsed;
+            //ChooseThreeRows.Visibility = Visibility.Collapsed;
+            //ChooseStrategy.Visibility = Visibility.Collapsed;
             ShowPlayButtons();
             ChooseWallToWall.IsEnabled = false;
-           
+            ChooseTwoRows.IsEnabled = true;
+            ChooseThreeRows.IsEnabled = true;
+
+
+            battleManager = new BattleManager(currentStrategy);
+            battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
+
             //DrawArmies();
         }
 

@@ -25,26 +25,33 @@ namespace ClashGame
 
         public Warrior CloneWarrior (List<Warrior> attackers, int wizardIndex, Wizard wizard)
         {
+            bool isCloned = false;
             Warrior warriorForClone = null;
-            if  (wizardIndex != attackers.Count() - 1 && wizardIndex != attackers.Count() - 2)
+            if (wizardIndex != attackers.Count() - 1)
             {
                 if (wizardIndex % 2 == 0 && attackers[wizardIndex + 1] is LightWarrior)
                 {
                     warriorForClone = attackers[wizardIndex + 1];
+                    isCloned = true;
                 }
-                if (attackers[wizardIndex + 2] is  LightWarrior && warriorForClone != null)
+            }
+            if (wizardIndex < attackers.Count() - 2)
+            { 
+                if (attackers[wizardIndex + 2] is  LightWarrior && warriorForClone == null && isCloned == false)
                 {
                     warriorForClone = attackers[wizardIndex + 2];
+                    isCloned = true;
                 }
-
             }
-            if (wizardIndex % 2 != 0 && attackers[wizardIndex - 1] is LightWarrior && warriorForClone != null)
+            if (wizardIndex % 2 != 0 && attackers[wizardIndex - 1] is LightWarrior && warriorForClone == null && isCloned == false)
             {
                 warriorForClone = attackers[wizardIndex - 1];
+                isCloned = true;
             }
-            if (attackers[wizardIndex - 2] is LightWarrior && warriorForClone != null)
+            if (attackers[wizardIndex - 2] is LightWarrior && warriorForClone == null && isCloned == false)
             {
                 warriorForClone = attackers[wizardIndex - 2];
+                isCloned = true;
             }
             if (warriorForClone != null)
                 wizard.CloneLightWarrior(warriorForClone);
@@ -120,26 +127,35 @@ namespace ClashGame
 
         public Warrior CloneWarrior(List<Warrior> attackers, int wizardIndex, Wizard wizard)
         {
+            bool isCloned = false;
             Warrior warriorForClone = null;
-            if (wizardIndex != attackers.Count() - 1 && wizardIndex != attackers.Count() - 2)
+            if (wizardIndex != attackers.Count() - 1 )
             {
-                if (wizardIndex % 2 == 0 && attackers[wizardIndex + 1] is LightWarrior)
+                if (wizardIndex % 2 == 0 && attackers[wizardIndex + 1] is LightWarrior && isCloned == false)
                 {
                     warriorForClone = attackers[wizardIndex + 1];
+                    isCloned = true;
                 }
-                if (attackers[wizardIndex + 3] is LightWarrior && warriorForClone != null)
+            }
+            if (wizardIndex < attackers.Count() - 3)
+            {
+
+                if (attackers[wizardIndex + 3] is LightWarrior && warriorForClone == null && isCloned == false)
                 {
                     warriorForClone = attackers[wizardIndex + 3];
+                    isCloned = true;
                 }
-
             }
-            if (wizardIndex % 3 != 0 && attackers[wizardIndex - 1] is LightWarrior && warriorForClone != null)
+
+            if (wizardIndex % 3 != 0 && attackers[wizardIndex - 1] is LightWarrior && warriorForClone == null && isCloned == false)
             {
                 warriorForClone = attackers[wizardIndex - 1];
+                isCloned = true;
             }
-            if (attackers[wizardIndex - 3] is LightWarrior && warriorForClone != null)
+            if (attackers[wizardIndex - 3] is LightWarrior && warriorForClone == null && isCloned == false)
             {
                 warriorForClone = attackers[wizardIndex - 3];
+                isCloned = true;
             }
             if (warriorForClone != null)
                 wizard.CloneLightWarrior(warriorForClone);
@@ -191,12 +207,9 @@ namespace ClashGame
                 {
                     return true;
                 }
-                else
-                {
-                    return false;
-                }
+
             }
-            else if (defenders.Count() > 1)
+            if (defenders.Count() > 1)
                 if (attackerIndex == 2)
                 {
                     return true;
@@ -224,15 +237,16 @@ namespace ClashGame
 
         public Warrior CloneWarrior(List<Warrior> attackers, int wizardIndex, Wizard wizard)
         {
+            bool isCloned = false;
             Warrior warriorForClone = null;
             if (wizardIndex != attackers.Count() - 1 && wizardIndex != attackers.Count() - 2)
             {
-                if (attackers[wizardIndex + 1] is LightWarrior)
+                if (attackers[wizardIndex + 1] is LightWarrior && isCloned == false)
                 {
                     warriorForClone = attackers[wizardIndex + 1];
                 }
             }
-            if (attackers[wizardIndex - 1] is LightWarrior && warriorForClone != null)
+            if (attackers[wizardIndex - 1] is LightWarrior && warriorForClone == null && isCloned == false)
             {
                 warriorForClone = attackers[wizardIndex - 1];
             }

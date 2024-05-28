@@ -23,6 +23,34 @@ namespace ClashGame
             }
         }
 
+        public Warrior CloneWarrior (List<Warrior> attackers, int wizardIndex, Wizard wizard)
+        {
+            Warrior warriorForClone = null;
+            if  (wizardIndex != attackers.Count() - 1 && wizardIndex != attackers.Count() - 2)
+            {
+                if (wizardIndex % 2 == 0 && attackers[wizardIndex + 1] is LightWarrior)
+                {
+                    warriorForClone = attackers[wizardIndex + 1];
+                }
+                if (attackers[wizardIndex + 2] is  LightWarrior && warriorForClone != null)
+                {
+                    warriorForClone = attackers[wizardIndex + 2];
+                }
+
+            }
+            if (wizardIndex % 2 != 0 && attackers[wizardIndex - 1] is LightWarrior && warriorForClone != null)
+            {
+                warriorForClone = attackers[wizardIndex - 1];
+            }
+            if (attackers[wizardIndex - 2] is LightWarrior && warriorForClone != null)
+            {
+                warriorForClone = attackers[wizardIndex - 2];
+            }
+            if (warriorForClone != null)
+                wizard.CloneLightWarrior(warriorForClone);
+            return warriorForClone;
+        }
+    
         public Warrior GetWarriorHeal(List<Warrior> attackers, int healerIndex, Healer healer)
         {
             Warrior warriorForHeal = null;
@@ -88,6 +116,34 @@ namespace ClashGame
             {
                 _battleManager.Attack(attackers[i], defenders[i], outputTextBox);
             }
+        }
+
+        public Warrior CloneWarrior(List<Warrior> attackers, int wizardIndex, Wizard wizard)
+        {
+            Warrior warriorForClone = null;
+            if (wizardIndex != attackers.Count() - 1 && wizardIndex != attackers.Count() - 2)
+            {
+                if (wizardIndex % 2 == 0 && attackers[wizardIndex + 1] is LightWarrior)
+                {
+                    warriorForClone = attackers[wizardIndex + 1];
+                }
+                if (attackers[wizardIndex + 3] is LightWarrior && warriorForClone != null)
+                {
+                    warriorForClone = attackers[wizardIndex + 3];
+                }
+
+            }
+            if (wizardIndex % 3 != 0 && attackers[wizardIndex - 1] is LightWarrior && warriorForClone != null)
+            {
+                warriorForClone = attackers[wizardIndex - 1];
+            }
+            if (attackers[wizardIndex - 3] is LightWarrior && warriorForClone != null)
+            {
+                warriorForClone = attackers[wizardIndex - 3];
+            }
+            if (warriorForClone != null)
+                wizard.CloneLightWarrior(warriorForClone);
+            return warriorForClone;
         }
 
         public Warrior GetWarriorHeal(List<Warrior> attackers, int healerIndex, Healer healer)
@@ -166,6 +222,24 @@ namespace ClashGame
             }
         }
 
+        public Warrior CloneWarrior(List<Warrior> attackers, int wizardIndex, Wizard wizard)
+        {
+            Warrior warriorForClone = null;
+            if (wizardIndex != attackers.Count() - 1 && wizardIndex != attackers.Count() - 2)
+            {
+                if (attackers[wizardIndex + 1] is LightWarrior)
+                {
+                    warriorForClone = attackers[wizardIndex + 1];
+                }
+            }
+            if (attackers[wizardIndex - 1] is LightWarrior && warriorForClone != null)
+            {
+                warriorForClone = attackers[wizardIndex - 1];
+            }
+            if (warriorForClone != null)
+                wizard.CloneLightWarrior(warriorForClone);
+            return warriorForClone;
+        }
         public Warrior GetWarriorHeal(List<Warrior> attackers, int healerIndex, Healer healer)
         {
             Warrior warriorForHeal = null;

@@ -205,21 +205,15 @@ namespace ClashGame
             Side = side;
         }
 
-        virtual public Warrior CloneLightWarrior(List<Warrior> warriors)
+        virtual public Warrior CloneLightWarrior(Warrior warrior)
         {
-            if (new Random().Next(0, 2) == 0)
+            if (warrior is LightWarrior)
             {
-                // Ищем LightWarrior в списке воинов
-                foreach (var warrior in warriors)
-                {
-                    if (warrior is LightWarrior)
-                    {
-                        // Клонируем LightWarrior
-                        return warrior.Clone();
-                    }
-                }
+                // Клонируем LightWarrior
+                return warrior.Clone();
             }
-            return null;
+            else
+                return null;
         }
     }
 

@@ -11,6 +11,7 @@ namespace ClashGame
     {
         public void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
         public Warrior GetWarriorHeal(List<Warrior> attackers, int healerIndex, Healer healer);
+        public Warrior CloneWarrior(List<Warrior> attackers, int wizardIndex, Wizard wizard);
         public bool IsFrontLine(int attackerIndex, List<Warrior> defenders);
 
     }

@@ -51,29 +51,37 @@ namespace ClashGame
         {
 
             Wizard wizard = null;
+            int wizardIndex = -1;
 
-            foreach (var attacker1 in attackers)
+            for (int i = 0; i < attackers.Count; i++)
             {
-                if (attacker1 is Wizard)
+                if (attackers[i] is Wizard)
                 {
-                    wizard = new Wizard(attacker1.Side);
-                    break;
-                }
-            }
+                    wizard = new Wizard(attackers[i].Side);
+                    wizardIndex = i;
 
-            // Попытка клонирования LightWarrior
-            if (wizard != null)
-            {
-                Warrior clonedWarrior = wizard.CloneLightWarrior(attackers);
-                if (clonedWarrior != null)
-                {
-                    attackers.Insert(1, clonedWarrior); // Вставляем клонированного LightWarrior перед магом (на вторую позицию)
-                    outputTextBox.AppendText($"Маг из команды {wizard.Side} клонировал LightWarrior с {clonedWarrior.Healthpoints} HP" + Environment.NewLine);
-                }
-                else
-                {
-                    outputTextBox.AppendText($"Маг из команды {wizard.Side} не смог склонировать LigthWarrior: " + Environment.NewLine);
-                    outputTextBox.AppendText("LightWarrior отсутствует, либо не повезло." + Environment.NewLine);
+                    if (!_strategy.IsFrontLine(wizardIndex, defenders))
+                    {
+                       if (new Random().Next(0, 1) == 0)
+                       {    // Попытка клонирования LightWarrior
+                            if (wizard != null)
+                            {
+                                Warrior clonedWarrior = _strategy.CloneWarrior(attackers, wizardIndex, wizard);
+                                if (clonedWarrior != null)
+                                {
+                                    attackers.Insert(1, clonedWarrior); // Вставляем клонированного LightWarrior перед магом (на вторую позицию)
+                                    outputTextBox.AppendText($"Маг из команды {wizard.Side} клонировал LightWarrior с {clonedWarrior.Healthpoints} HP" + Environment.NewLine);
+                                }
+                            }
+                            else
+                            {
+                                outputTextBox.AppendText($"Маг из команды {wizard.Side} не смог склонировать LigthWarrior: " + Environment.NewLine);
+                                outputTextBox.AppendText("LightWarrior отсутствует, либо не повезло." + Environment.NewLine);
+                            }
+                        }
+                        else
+                           outputTextBox.AppendText($"Маг из команды {wizard.Side} не смог клонировать LightWarrior" + Environment.NewLine);
+                    }
                 }
             }
         }
@@ -95,10 +103,12 @@ namespace ClashGame
                         if (new Random().Next(0, 10) == 0)
                         {
                             // Вызов лечения у случайного союзника
-
                             Warrior targetAlly = _strategy.GetWarriorHeal(attackers, healerIndex, healer);
-                            outputTextBox.AppendText($"Лекарь из команды {healer.Side} вылечил {targetAlly.Side} {targetAlly}" + Environment.NewLine);
-                            outputTextBox.AppendText($"Теперь у {targetAlly.Side} {targetAlly} {targetAlly.Healthpoints} HP" + Environment.NewLine);
+                            if (targetAlly != null)
+                            {
+                                outputTextBox.AppendText($"Лекарь из команды {healer.Side} вылечил {targetAlly.Side} {targetAlly}" + Environment.NewLine);
+                                outputTextBox.AppendText($"Теперь у {targetAlly.Side} {targetAlly} {targetAlly.Healthpoints} HP" + Environment.NewLine);
+                            }
 
                         }
                         else

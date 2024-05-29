@@ -45,7 +45,9 @@ namespace ClashGame
             WizardTurn(attackers, defenders, outputTextBox);
             HealerTurn(attackers, defenders,outputTextBox);
             HeavyWarriorUpgradeTurn(attackers, attackers[0], outputTextBox);
-            _battleManager._strategy.ExecuteBattle(attackers, defenders, outputTextBox);
+            if (_battleManager.flagGulyayGorodBlue < 0 && _battleManager.flagGulyayGorodBlue > 7 
+                || _battleManager.flagGulyayGorodRed < 0 && _battleManager.flagGulyayGorodRed > 7)
+                _battleManager._strategy.ExecuteBattle(attackers, defenders, outputTextBox);
             ArchersTurn(attackers, defenders, outputTextBox);
             IsDead(defenders[0], defenders);
             CheckGulyayGorod(attackers, defenders, outputTextBox);

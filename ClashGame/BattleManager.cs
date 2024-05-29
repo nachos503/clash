@@ -41,7 +41,6 @@ namespace ClashGame
 
             // Проверка на наличие ImprovedHeavyWarrior в списке атакующих и его позиции
             HeavyWarriorUpgradeTurn(attackers, attacker, outputTextBox);
-
             //Контрольная атака за ход
             _strategy.ExecuteBattle(attackers, defenders, outputTextBox);
 
@@ -173,14 +172,13 @@ namespace ClashGame
             }
         }
 
-        //в работе
         public void ArchersTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             Archer archer = null;
             int archerIndex = -1;
             for (int i = 0; i < attackers.Count; i++)
             {
-                if (attackers[i] is Healer)
+                if (attackers[i] is Archer)
                 {
                     archer = new Archer(attackers[i].Side);
                     archerIndex = i;

@@ -183,7 +183,9 @@ namespace ClashGame
         {
             if (playerArmy.Count > 0 && computerArmy.Count > 0)
             {
-                currentStrategy.ExecuteBattle(playerArmy, computerArmy, outputTextBox);
+                if (battleManager.flagGulyayGorodBlue < 0 && battleManager.flagGulyayGorodBlue > 7
+                || battleManager.flagGulyayGorodRed < 0 && battleManager.flagGulyayGorodRed > 7)
+                    currentStrategy.ExecuteBattle(playerArmy, computerArmy, outputTextBox);
                 battleManagerProxy.IsDead(computerArmy[0], computerArmy);
                 CheckGameOver();
             }
@@ -191,6 +193,14 @@ namespace ClashGame
             playerTurn = false; // Завершение хода игрока
             ComputerTurn();
 
+            CountGulyayGorod();
+
+            DisableAbilityButtons(); // Деактивировать кнопки способностей
+            EndTurn.IsEnabled = false;
+        }
+
+        private void CountGulyayGorod()
+        {
             if (playerArmy[0] is GulyayGorod)
             {
                 battleManager.SetGulyayGorodCount(countTurnsForGulyayGorod, playerArmy[0].Side); // Передача значения
@@ -199,9 +209,6 @@ namespace ClashGame
                     playerArmy.Remove(playerArmy[0]);
                 }
             }
-
-            DisableAbilityButtons(); // Деактивировать кнопки способностей
-            EndTurn.IsEnabled = false;
         }
 
 
@@ -209,6 +216,7 @@ namespace ClashGame
         {
             if (computerArmy.Count > 0 && playerArmy.Count > 0)
             {
+                CountGulyayGorod();
                 battleManagerProxy.TurnComputer(computerArmy, playerArmy, outputTextBox);
                 CheckGameOver();
             }
@@ -229,11 +237,17 @@ namespace ClashGame
         {
             while (computerArmy.Count > 0 && playerArmy.Count > 0)
             {
+                countTurnsForGulyayGorod++;
+                CountGulyayGorod();
                 battleManagerProxy.TurnComputer(playerArmy, computerArmy, outputTextBox);
+                
                 CheckGameOver();
                 if (computerArmy.Count > 0)
                 {
+                    countTurnsForGulyayGorod++;
+                    CountGulyayGorod();
                     battleManagerProxy.TurnComputer(computerArmy, playerArmy, outputTextBox);
+                   
                     CheckGameOver();
                 }
             }

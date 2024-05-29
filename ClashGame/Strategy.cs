@@ -53,8 +53,27 @@ namespace ClashGame
             }
         }
 
+        //прикол
         public Warrior GetEnemyWarrior(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
         {
+            //Random random = new Random();
+            //var flag = random.Next(0,2);
+            //if (archerIndex == 2 ||  archerIndex == 3)
+            //{
+            //    if(flag == 0)
+            //        return defenders[archerIndex];
+            //    else return defenders[archerIndex + 2];
+            //}
+            //if (archerIndex == 4 || archerIndex == 5)
+            //{
+            //    if (flag == 0)
+            //        return defenders[archerIndex -2];
+            //    else return defenders[archerIndex -4];
+            //}
+            //if (archerIndex == 6 || archerIndex == 7)
+            //{
+            //    return defenders[archerIndex - 6];
+            //}
             return null;
         }
 

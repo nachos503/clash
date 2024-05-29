@@ -17,6 +17,11 @@ namespace ClashGame
             this._strategy = strategy ?? throw new ArgumentNullException(nameof(strategy), "Strategy cannot be null");
         }
 
+        public void SetStrategy(IBattleStrategy strategy)
+        {
+            _strategy = strategy ?? throw new ArgumentNullException(nameof(strategy));
+        }
+
         public int flagGulyayGorodBlue = 0;
         public int flagGulyayGorodRed = 0;
         public bool triggerGulyayGorodBlue = true;
@@ -38,7 +43,7 @@ namespace ClashGame
             HeavyWarriorUpgradeTurn(attackers, attacker, outputTextBox);
 
             //Контрольная атака за ход
-            Attack(attacker, defender, outputTextBox);
+            _strategy.ExecuteBattle(attackers, defenders, outputTextBox);
 
             // После обычной атаки, ищем арчера в оставшемся списке воинов
             ArchersTurn(attackers, defenders, outputTextBox);
@@ -168,23 +173,28 @@ namespace ClashGame
             }
         }
 
+        //в работе
         public void ArchersTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
-            foreach (var warrior in attackers)
+            Archer archer = null;
+            int archerIndex = -1;
+            for (int i = 0; i < attackers.Count; i++)
             {
-                if (warrior is Archer)
+                if (attackers[i] is Healer)
                 {
-                    //ArcherProxy archer = new ArcherProxy(warrior.Side, fileLogger);
-                    var targetIndex = new Random().Next(0, defenders.Count-1); // Выбор случайного защищающегося воина
-                    var target = defenders[targetIndex]; // Выбранный защищающийся воин
+                    archer = new Archer(attackers[i].Side);
+                    archerIndex = i;
 
-                    Archer archer = new Archer(warrior.Side);
-                    // Передача индекса атакующего лучника
-                    archer.RangedAttack(defenders, targetIndex, attackers.IndexOf(warrior));
-                    outputTextBox.AppendText($"Атака {archer.Side} {archer} с силой {archer.RangedDamage(attackers.IndexOf(warrior))} по {target}" + Environment.NewLine);
-                    outputTextBox.AppendText($"HP у  {target.Side} {target} осталось {target.Healthpoints}" + Environment.NewLine);
+                    if (!_strategy.IsFrontLine(archerIndex, defenders))
+                    {
+                        var target = _strategy.GetEnemyWarrior(attackers, defenders, archerIndex, archer); // Выбранный защищающийся воин
 
-                    break; // Выходим после того как нашли первого арчера
+                        // Передача индекса атакующего лучника
+                        // archer.RangedAttack(defenders, targetIndex, attackers.IndexOf(warrior)); переписать
+                        outputTextBox.AppendText($"Атака {archer.Side} {archer} с силой {archer.RangedDamage(attackers.IndexOf(archer))} по {target}" + Environment.NewLine);
+                        outputTextBox.AppendText($"HP у  {target.Side} {target} осталось {target.Healthpoints}" + Environment.NewLine);
+
+                    }
                 }
             }
         }

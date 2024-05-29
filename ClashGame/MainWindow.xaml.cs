@@ -25,8 +25,6 @@ namespace ClashGame
 
         private int countTurnsForGulyayGorod;
 
-        
-
         public MainWindow()
         {
             InitializeComponent();
@@ -35,7 +33,6 @@ namespace ClashGame
             InitializeUI();
         }
 
-        
 
         private void InitializeUI()
         {
@@ -118,7 +115,7 @@ namespace ClashGame
         {
             UseWizard.IsEnabled = playerTurn && CheckForWizard(playerArmy, computerArmy) && !wizardUsed;
             UseHealer.IsEnabled = playerTurn && CheckForHealer(playerArmy, computerArmy) && !healerUsed;
-            UseArcher.IsEnabled = playerTurn && CheckForArcher(playerArmy) && !archerUsed;
+            UseArcher.IsEnabled = playerTurn && CheckForArcher(playerArmy, computerArmy) && !archerUsed;
             CanсelTurn.IsEnabled = commandManager.CanUndo();
         }
 
@@ -186,7 +183,7 @@ namespace ClashGame
         {
             if (playerArmy.Count > 0 && computerArmy.Count > 0)
             {
-                battleManagerProxy.Attack(playerArmy[0], computerArmy[0], outputTextBox);
+                currentStrategy.ExecuteBattle(playerArmy, computerArmy, outputTextBox);
                 battleManagerProxy.IsDead(computerArmy[0], computerArmy);
                 CheckGameOver();
             }
@@ -297,9 +294,22 @@ namespace ClashGame
             return false;
         }
 
-        private bool CheckForArcher(List<Warrior> army)
+        private bool CheckForArcher(List<Warrior> army, List<Warrior> defenders)
         {
-            return army.Any(warrior => warrior is Archer);
+            bool hasArcher = army.Any(warrior => warrior is Archer);
+
+            if (hasArcher)
+            {
+                for (int i = 0; i < army.Count; i++)
+                {
+                    if (!currentStrategy.IsFrontLine(i, defenders) && army[i] is Archer)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
         }
 
         #endregion
@@ -348,55 +358,64 @@ namespace ClashGame
 
         private void ChooseTwoRows_Click(object sender, RoutedEventArgs e)
         {
-            currentStrategy = new TwoRowStrategy();
+            IBattleStrategy initialStrategy = new DefoltStratagy();
+
+            battleManager = new BattleManager(initialStrategy);
+            battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
+
+            currentStrategy = new TwoRowStrategy(battleManagerProxy);
+
+            battleManager.SetStrategy(currentStrategy);
             MessageBox.Show("Two Rows strategy selected.");
-            //ChooseThreeRows.Visibility = Visibility.Collapsed;
-            //ChooseWallToWall.Visibility = Visibility.Collapsed;
-            //ChooseStrategy.Visibility = Visibility.Collapsed;
+            
             ShowPlayButtons();
             ChooseTwoRows.IsEnabled = false;
             ChooseThreeRows.IsEnabled = true;
             ChooseWallToWall.IsEnabled = true;
 
-            battleManager = new BattleManager(currentStrategy);
-            battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
+            
 
             //DrawArmies();
         }
 
         private void ChooseThreeRows_Click(object sender, RoutedEventArgs e)
         {
-            currentStrategy = new ThreeRowStrategy();
+            IBattleStrategy initialStrategy = new DefoltStratagy();
+
+            battleManager = new BattleManager(initialStrategy);
+            battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
+
+            currentStrategy = new ThreeRowStrategy(battleManagerProxy);
+
+            battleManager.SetStrategy(currentStrategy);
             MessageBox.Show("Three Rows strategy selected.");
-            //ChooseTwoRows.Visibility = Visibility.Collapsed;
-            //ChooseWallToWall.Visibility = Visibility.Collapsed;
-            //ChooseStrategy.Visibility = Visibility.Collapsed;
+           
             ShowPlayButtons();
             ChooseThreeRows.IsEnabled = false;
             ChooseWallToWall.IsEnabled = true;
             ChooseTwoRows.IsEnabled = true;
 
-            battleManager = new BattleManager(currentStrategy);
-            battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
+         
             //DrawArmies();
         }
 
         private void ChooseWallToWall_Click(object sender, RoutedEventArgs e)
         {
-            
-            currentStrategy = new WallToWallStrategy();
+            IBattleStrategy initialStrategy = new DefoltStratagy();
+
+            battleManager = new BattleManager(initialStrategy);
+            battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
+
+            currentStrategy = new WallToWallStrategy(battleManagerProxy);
+
+            battleManager.SetStrategy(currentStrategy);
+
             MessageBox.Show("Wall to Wall strategy selected.");
-            //ChooseTwoRows.Visibility = Visibility.Collapsed;
-            //ChooseThreeRows.Visibility = Visibility.Collapsed;
-            //ChooseStrategy.Visibility = Visibility.Collapsed;
+          
             ShowPlayButtons();
             ChooseWallToWall.IsEnabled = false;
             ChooseTwoRows.IsEnabled = true;
             ChooseThreeRows.IsEnabled = true;
-
-
-            battleManager = new BattleManager(currentStrategy);
-            battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
 
             //DrawArmies();
         }

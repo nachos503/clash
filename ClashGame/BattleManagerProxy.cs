@@ -45,7 +45,7 @@ namespace ClashGame
             WizardTurn(attackers, defenders, outputTextBox);
             HealerTurn(attackers, defenders,outputTextBox);
             HeavyWarriorUpgradeTurn(attackers, attackers[0], outputTextBox);
-            Attack(attackers[0], defenders[0], outputTextBox);
+            _battleManager._strategy.ExecuteBattle(attackers, defenders, outputTextBox);
             ArchersTurn(attackers, defenders, outputTextBox);
             IsDead(defenders[0], defenders);
             CheckGulyayGorod(attackers, defenders, outputTextBox);

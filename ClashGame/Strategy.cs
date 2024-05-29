@@ -10,17 +10,52 @@ using System.Windows.Controls;
 
 namespace ClashGame
 {
+    //деволтная стратегия, чтобы не ломался конструктор
+    public class DefoltStratagy : IBattleStrategy
+    {
+        public void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
+        {
+
+        }
+        public Warrior GetEnemyWarrior(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
+        {
+            return null;
+        }
+        public Warrior CloneWarrior(List<Warrior> attackers, int wizardIndex, Wizard wizard)
+        {
+            return null;
+        }
+        public Warrior GetWarriorHeal(List<Warrior> attackers, int healerIndex, Healer healer)
+        {
+            return null;
+        }
+        public bool IsFrontLine(int attackerIndex, List<Warrior> defenders)
+        {
+            return false;
+        }
+    }
     public class TwoRowStrategy : IBattleStrategy
     {
-        BattleManager _battleManager;
+        BattleManagerProxy _battleManagerProxy;
+
+        public TwoRowStrategy(BattleManagerProxy battleManagerProxy)
+        {
+            _battleManagerProxy = battleManagerProxy;
+        }
 
         public void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             int rows = Math.Min(2, Math.Min(attackers.Count, defenders.Count));
             for (int i = 0; i < rows; i++)
             {
-                _battleManager.Attack(attackers[i], defenders[i], outputTextBox);
+                if (attackers[i] is not GulyayGorod && defenders[i] is not GulyayGorod)
+                    _battleManagerProxy.Attack(attackers[i], defenders[i], outputTextBox);
             }
+        }
+
+        public Warrior GetEnemyWarrior(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
+        {
+            return null;
         }
 
         public Warrior CloneWarrior (List<Warrior> attackers, int wizardIndex, Wizard wizard)
@@ -114,15 +149,26 @@ namespace ClashGame
 
     public class ThreeRowStrategy : IBattleStrategy
     {
-        BattleManager _battleManager;
+        BattleManagerProxy _battleManagerProxy;
+
+        public ThreeRowStrategy(BattleManagerProxy battleManagerProxy)
+        {
+            _battleManagerProxy = battleManagerProxy;
+        }
 
         public void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             int rows = Math.Min(3, Math.Min(attackers.Count, defenders.Count));
             for (int i = 0; i < rows; i++)
             {
-                _battleManager.Attack(attackers[i], defenders[i], outputTextBox);
+                if (attackers[i] is not GulyayGorod && defenders[i] is not GulyayGorod)
+                    _battleManagerProxy.Attack(attackers[i], defenders[i], outputTextBox);
             }
+        }
+
+        public Warrior GetEnemyWarrior(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
+        {
+            return null;
         }
 
         public Warrior CloneWarrior(List<Warrior> attackers, int wizardIndex, Wizard wizard)
@@ -224,15 +270,26 @@ namespace ClashGame
 
     public class WallToWallStrategy : IBattleStrategy
     {
-        BattleManager _battleManager;
+        BattleManagerProxy _battleManagerProxy;
+
+        public WallToWallStrategy(BattleManagerProxy battleManagerProxy)
+        {
+            _battleManagerProxy = battleManagerProxy;
+        }
 
         public void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             int rows = Math.Min(attackers.Count, defenders.Count);
             for (int i = 0; i < rows; i++)
             {
-                _battleManager.Attack(attackers[i], defenders[i], outputTextBox);
+                if (attackers[i] is not GulyayGorod && defenders[i] is not GulyayGorod)
+                _battleManagerProxy.Attack(attackers[i], defenders[i], outputTextBox);
             }
+        }
+
+        public Warrior GetEnemyWarrior(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
+        {
+            return null;
         }
 
         public Warrior CloneWarrior(List<Warrior> attackers, int wizardIndex, Wizard wizard)

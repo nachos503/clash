@@ -10,7 +10,7 @@
         <Button x:Name="CreateArmy" Content="Create Army" Click="CreateArmy_Click" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"/>
         <Button x:Name="ChooseBlueArmy" Content="Choose Blue Army" Click="ChooseBlueArmy_Click" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,10,0,0"/>
         <Button x:Name="ChooseRedArmy" Content="Choose Red Army" Click="ChooseRedArmy_Click" Width="150" HorizontalAlignment="Left" Margin="280,10,0,0" Height="30" VerticalAlignment="Top"/>
-        <Button x:Name="Turn" Content="Turn" Click="Turn_Click" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0"/>
+        <Button x:Name="Turn" Content="Turn" Click="StartTurn_Click" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0"/>
         <Button x:Name="CanсelTurn" Content="Cancel Turn" Click="CancelTurn_Click" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,50,0,0"/>
         <Button x:Name="ToTheEnd" Content="To The End" Click="ToTheEnd_Click" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="230,50,0,0"/>
         <Button x:Name="UseWizard" Content="Use Wizard" Click="UseWizard_Click" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="340,50,0,0"/>

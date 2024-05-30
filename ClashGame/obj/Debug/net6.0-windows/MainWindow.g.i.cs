@@ -198,7 +198,7 @@ namespace ClashGame {
         /// InitializeComponent
         /// </summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "8.0.1.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "7.0.13.0")]
         public void InitializeComponent() {
             if (_contentLoaded) {
                 return;
@@ -214,7 +214,7 @@ namespace ClashGame {
         }
         
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "8.0.1.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "7.0.13.0")]
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
@@ -259,7 +259,7 @@ namespace ClashGame {
             this.Turn = ((System.Windows.Controls.Button)(target));
             
             #line 13 "..\..\..\MainWindow.xaml"
-            this.Turn.Click += new System.Windows.RoutedEventHandler(this.Turn_Click);
+            this.Turn.Click += new System.Windows.RoutedEventHandler(this.StartTurn_Click);
             
             #line default
             #line hidden

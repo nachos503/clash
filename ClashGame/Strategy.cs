@@ -17,15 +17,15 @@ namespace ClashGame
         {
 
         }
-        public Warrior GetEnemyWarrior(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
+        public Warrior GetEnemyForArcher(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
         {
             return null;
         }
-        public Warrior GetWarriorClone(List<Warrior> attackers, int wizardIndex)
+        public Warrior GetNearestLightWarrior(List<Warrior> attackers, int wizardIndex)
         {
             return null;
         }
-        public Warrior GetWarriorHeal(List<Warrior> attackers, int healerIndex, Healer healer)
+        public Warrior GetWarriorForHeal(List<Warrior> attackers, int healerIndex, Healer healer)
         {
             return null;
         }
@@ -34,15 +34,15 @@ namespace ClashGame
             return false;
         }
     }
+    //битва в 2 ряда
     public class TwoRowStrategy : IBattleStrategy
     {
         BattleManagerProxy _battleManagerProxy;
-
         public TwoRowStrategy(BattleManagerProxy battleManagerProxy)
         {
             _battleManagerProxy = battleManagerProxy;
         }
-
+        //одна атака - пиздят по  раза
         public void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             int rows = Math.Min(2, Math.Min(attackers.Count, defenders.Count));
@@ -56,137 +56,108 @@ namespace ClashGame
                 }
             }
         }
-
-        //прикол
-        public Warrior GetEnemyWarrior(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
+        //получение жертвы лучника
+        public Warrior GetEnemyForArcher(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
         {
             var range = archer.Range();
+            //идем с позиции лучника до начала его армии
             for (int i = archerIndex; i > 1; i -= 2)
-            {
                 range--;
-            }
+            //идем с начала армии противника пока не кончится его дальность
+            
             if (range > 0)
-            {
                 for (int i = 0; i < defenders.Count; i += 2)
                 {
                     range--;
                     if (range == 0)
                     {
-                        if (archerIndex % 2 == 0)
-                        {
-                            return defenders[i];
-                        }
-                        else if (defenders.Count > i+1) 
-                        {
-                            return defenders[i + 1];
-                        }
+                        //проверка в каком ряду стоит лучник (стреляет только вперед)
+                        if (archerIndex % 2 == 0) return defenders[i];
+                        else if (defenders.Count > i+1)  return defenders[i + 1];
                     }
-                } 
-            }
+                }
+
             return null;
         }
-
-        public Warrior GetWarriorClone (List<Warrior> attackers, int wizardIndex)
+        //получение легкого воина для хила и оруженосца
+        public Warrior GetNearestLightWarrior (List<Warrior> attackers, int attackerIndex)
         {
-            bool isCloned = false;
-            Warrior warriorForClone = null;
-            if (wizardIndex != attackers.Count() - 1)
-            {
-                if (wizardIndex % 2 == 0 && attackers[wizardIndex + 1] is LightWarrior)
+            bool isUsed = false;
+            Warrior nearestLightWarrior = null;
+            //смотрим вверх вних направо налево
+            if (attackerIndex != attackers.Count() - 1)
+                if (attackerIndex % 2 == 0 && attackers[attackerIndex + 1] is LightWarrior)
                 {
-                    warriorForClone = attackers[wizardIndex + 1];
-                    isCloned = true;
+                    nearestLightWarrior = attackers[attackerIndex + 1];
+                    isUsed = true;
                 }
-            }
-            if (wizardIndex < attackers.Count() - 2)
-            { 
-                if (attackers[wizardIndex + 2] is  LightWarrior && warriorForClone == null && isCloned == false)
+            if (attackerIndex < attackers.Count() - 2)
+                if (attackers[attackerIndex + 2] is  LightWarrior && nearestLightWarrior == null && isUsed == false)
                 {
-                    warriorForClone = attackers[wizardIndex + 2];
-                    isCloned = true;
+                    nearestLightWarrior = attackers[attackerIndex + 2];
+                    isUsed = true;
                 }
-            }
-            if (wizardIndex >= 1)
-            {
-                if (wizardIndex % 2 != 0 && attackers[wizardIndex - 1] is LightWarrior && warriorForClone == null && isCloned == false)
+            if (attackerIndex >= 1)
+                if (attackerIndex % 2 != 0 && attackers[attackerIndex - 1] is LightWarrior && nearestLightWarrior == null && isUsed == false)
                 {
-                    warriorForClone = attackers[wizardIndex - 1];
-                    isCloned = true;
+                    nearestLightWarrior = attackers[attackerIndex - 1];
+                    isUsed = true;
                 }
-            }
-            if (wizardIndex >= 2)
-            {
-                if (attackers[wizardIndex - 2] is LightWarrior && warriorForClone == null && isCloned == false)
+            if (attackerIndex >= 2)
+                if (attackers[attackerIndex - 2] is LightWarrior && nearestLightWarrior == null && isUsed == false)
                 {
-                    warriorForClone = attackers[wizardIndex - 2];
-                    isCloned = true;
+                    nearestLightWarrior = attackers[attackerIndex - 2];
+                    isUsed = true;
                 }
-            }
-            return warriorForClone;
+
+            return nearestLightWarrior;
         }
-    
-        public Warrior GetWarriorHeal(List<Warrior> attackers, int healerIndex, Healer healer)
+    //воин не лайтвориор для лечения
+        public Warrior GetWarriorForHeal(List<Warrior> attackers, int healerIndex, Healer healer)
         {
             Warrior warriorForHeal = null;
             var minHealth = double.MaxValue;
-
-                if (healerIndex + 1 < attackers.Count())
+            //смотрим вверх вниз вправо влево
+            if (healerIndex + 1 < attackers.Count())
+                if (attackers[healerIndex + 1].Healthpoints < minHealth && healerIndex % 2 == 0 && attackers[healerIndex + 1] is not LightWarrior)
                 {
-                    if (attackers[healerIndex + 1].Healthpoints < minHealth && healerIndex % 2 == 0 && attackers[healerIndex + 1] is not LightWarrior)
-                    {
-                        minHealth = attackers[healerIndex + 1].Healthpoints;
-                        warriorForHeal = attackers[healerIndex + 1];
-                    }
+                     minHealth = attackers[healerIndex + 1].Healthpoints;
+                     warriorForHeal = attackers[healerIndex + 1];
                 }
-                if (healerIndex + 2 < attackers.Count())
+            if (healerIndex + 2 < attackers.Count())
+                if (attackers[healerIndex + 2].Healthpoints < minHealth && attackers[healerIndex + 2] is not LightWarrior)
                 {
-                    if (attackers[healerIndex + 2].Healthpoints < minHealth && attackers[healerIndex + 2] is not LightWarrior)
-                    {
-                        minHealth = attackers[healerIndex + 2].Healthpoints;
-                        warriorForHeal = attackers[healerIndex + 2];
-                    }
+                    minHealth = attackers[healerIndex + 2].Healthpoints;
+                    warriorForHeal = attackers[healerIndex + 2];
                 }
             if (healerIndex >= 1)
-            {
                 if (attackers[healerIndex - 1].Healthpoints < minHealth && healerIndex % 2 != 0 && attackers[healerIndex - 1] is not LightWarrior)
                 {
                     minHealth = attackers[healerIndex - 1].Healthpoints;
                     warriorForHeal = attackers[healerIndex - 1];
                 }
-            }
             if (healerIndex >= 2)
-            {
                 if (attackers[healerIndex - 2].Healthpoints < minHealth && attackers[healerIndex - 2] is not LightWarrior)
                 {
                     minHealth = attackers[healerIndex - 2].Healthpoints;
                     warriorForHeal = attackers[healerIndex - 2];
                 }
-            }
             
             return warriorForHeal;
         }
-
+        //проверка на переднюю линию
         public bool IsFrontLine(int attackerIndex, List<Warrior> defenders)
         {
-            if (attackerIndex == 0)
+            if (attackerIndex == 0)  return true;
+            else if (defenders.Count() > 0)
             {
-                return true;
-            }
-            if (defenders.Count() > 0)
-            {
-                if (attackerIndex == 1)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                if (attackerIndex == 1) return true;
+                else  return false;
             }
             else return false;
         }
     }
-
+    //пиздятся в три линии - комментарии аналогичны двум линиям
     public class ThreeRowStrategy : IBattleStrategy
     {
         BattleManagerProxy _battleManagerProxy;
@@ -200,161 +171,115 @@ namespace ClashGame
         {
             int rows = Math.Min(3, Math.Min(attackers.Count, defenders.Count));
             for (int i = 0; i < rows; i++)
-            {
                 if (defenders.Count > i)
                 {
                     if (attackers[i] is not GulyayGorod && defenders[i] is not GulyayGorod)
                         _battleManagerProxy.Attack(attackers[i], defenders[i], outputTextBox);
                     _battleManagerProxy.IsDead(defenders[i], defenders);
                 }
-            }
         }
 
-        public Warrior GetEnemyWarrior(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
+        public Warrior GetEnemyForArcher(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
         {
             var range = archer.Range();
             for (int i = archerIndex; i > 1; i -= 3)
-            {
                 range--;
-            }
+
             if (range > 0)
-            {
                 for (int i = 0; i < defenders.Count; i += 3)
                 {
                     range--;
                     if (range == 0)
                     {
-                        if (archerIndex % 3 == 0)
-                        {
-                            return defenders[i];
-                        }
-                        else if (defenders.Count > i + 1 && archerIndex % 3 == 1)
-                        {
-                            return defenders[i + 1];
-                        }
-                        else if (defenders.Count > i + 2)
-                        {
-                            return defenders[i + 2];
-                        }
+                        if (archerIndex % 3 == 0) return defenders[i];
+                        else if (defenders.Count > i + 1 && archerIndex % 3 == 1) return defenders[i + 1];
+                        else if (defenders.Count > i + 2) return defenders[i + 2];
                     }
                 }
-            }
+
             return null;
         }
 
-        public Warrior GetWarriorClone(List<Warrior> attackers, int wizardIndex)
+        public Warrior GetNearestLightWarrior(List<Warrior> attackers, int attackersIndex)
         {
-            bool isCloned = false;
-            Warrior warriorForClone = null;
-            if (wizardIndex != attackers.Count() - 1 )
-            {
-                if (wizardIndex % 2 == 0 && attackers[wizardIndex + 1] is LightWarrior && isCloned == false)
+            bool isUsed = false;
+            Warrior nearestLightWarrior = null;
+            if (attackersIndex != attackers.Count() - 1 )
+                if (attackersIndex % 2 == 0 && attackers[attackersIndex + 1] is LightWarrior && isUsed == false)
                 {
-                    warriorForClone = attackers[wizardIndex + 1];
-                    isCloned = true;
+                    nearestLightWarrior = attackers[attackersIndex + 1];
+                    isUsed = true;
                 }
-            }
-            if (wizardIndex < attackers.Count() - 3)
-            {
-
-                if (attackers[wizardIndex + 3] is LightWarrior && warriorForClone == null && isCloned == false)
+            if (attackersIndex < attackers.Count() - 3)
+                if (attackers[attackersIndex + 3] is LightWarrior && nearestLightWarrior == null && isUsed == false)
                 {
-                    warriorForClone = attackers[wizardIndex + 3];
-                    isCloned = true;
+                    nearestLightWarrior = attackers[attackersIndex + 3];
+                    isUsed = true;
                 }
-            }
-
-            if (wizardIndex >= 1)
-            {
-                if (wizardIndex % 3 != 0 && attackers[wizardIndex - 1] is LightWarrior && warriorForClone == null && isCloned == false)
+            if (attackersIndex >= 1)
+                if (attackersIndex % 3 != 0 && attackers[attackersIndex - 1] is LightWarrior && nearestLightWarrior == null && isUsed == false)
                 {
-                    warriorForClone = attackers[wizardIndex - 1];
-                    isCloned = true;
+                    nearestLightWarrior = attackers[attackersIndex - 1];
+                    isUsed = true;
                 }
-            }
-            if (wizardIndex >= 3)
-            {
-                if (attackers[wizardIndex - 3] is LightWarrior && warriorForClone == null && isCloned == false)
+            if (attackersIndex >= 3)
+                if (attackers[attackersIndex - 3] is LightWarrior && nearestLightWarrior == null && isUsed == false)
                 {
-                    warriorForClone = attackers[wizardIndex - 3];
-                    isCloned = true;
+                    nearestLightWarrior = attackers[attackersIndex - 3];
+                    isUsed = true;
                 }
-            }
                 
-            return warriorForClone;
+            return nearestLightWarrior;
         }
 
-        public Warrior GetWarriorHeal(List<Warrior> attackers, int healerIndex, Healer healer)
+        public Warrior GetWarriorForHeal(List<Warrior> attackers, int healerIndex, Healer healer)
         {
             Warrior warriorForHeal = null;
             var minHealth = double.MaxValue;
 
-                if (healerIndex + 1 < attackers.Count())
+            if (healerIndex + 1 < attackers.Count())
+                if (attackers[healerIndex + 1].Healthpoints < minHealth && healerIndex % 2 == 0 && attackers[healerIndex + 1] is not LightWarrior)
                 {
-                    if (attackers[healerIndex + 1].Healthpoints < minHealth && healerIndex % 2 == 0 && attackers[healerIndex + 1] is not LightWarrior)
-                    {
-                        minHealth = attackers[healerIndex + 1].Healthpoints;
-                        warriorForHeal = attackers[healerIndex + 1];
-                    }
+                    minHealth = attackers[healerIndex + 1].Healthpoints;
+                    warriorForHeal = attackers[healerIndex + 1];
                 }
-                if (healerIndex + 3 < attackers.Count())
+            if (healerIndex + 3 < attackers.Count())
+                if (attackers[healerIndex + 3].Healthpoints < minHealth && attackers[healerIndex + 3] is not LightWarrior)
                 {
-                    if (attackers[healerIndex + 3].Healthpoints < minHealth && attackers[healerIndex + 3] is not LightWarrior)
-                    {
-                        minHealth = attackers[healerIndex + 3].Healthpoints;
-                        warriorForHeal = attackers[healerIndex + 3];
-                    }
+                    minHealth = attackers[healerIndex + 3].Healthpoints;
+                    warriorForHeal = attackers[healerIndex + 3];
                 }
             if (healerIndex >= 1)
-            {
                 if (attackers[healerIndex - 1].Healthpoints < minHealth && healerIndex % 3 != 0 && attackers[healerIndex - 1] is not LightWarrior)
                 {
                     minHealth = attackers[healerIndex - 1].Healthpoints;
                     warriorForHeal = attackers[healerIndex - 1];
                 }
-            }
             if (healerIndex >= 3)
-            {
                 if (attackers[healerIndex - 3].Healthpoints < minHealth && attackers[healerIndex - 3] is not LightWarrior)
                 {
                     minHealth = attackers[healerIndex - 3].Healthpoints;
                     warriorForHeal = attackers[healerIndex - 3];
                 }
-            }
-            if (warriorForHeal != null)
-                healer.Heal(warriorForHeal);
+
             return warriorForHeal;
         }
 
         public bool IsFrontLine(int attackerIndex, List<Warrior> defenders)
         {
-            if (attackerIndex == 0)
-            {
-                return true;
-            }
+            if (attackerIndex == 0)  return true;
             if (defenders.Count() > 0)
-            {
-                if (attackerIndex == 1)
-                {
-                    return true;
-                }
-
-            }
+                if (attackerIndex == 1) return true;
+                
             if (defenders.Count() > 1)
             { 
-                if (attackerIndex == 2)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                if (attackerIndex == 2)  return true;
+                else  return false;
             }
             else return false;
         }
     }
-
+    //пиздятся стенка на стенку
     public class WallToWallStrategy : IBattleStrategy
     {
         BattleManagerProxy _battleManagerProxy;
@@ -378,63 +303,51 @@ namespace ClashGame
             }
         }
 
-        public Warrior GetEnemyWarrior(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
+        public Warrior GetEnemyForArcher(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
         {
             if (defenders.Count() > 0)
-            {
                 return defenders.Count() - 1 < archerIndex - 3 ? null : defenders[defenders.Count() - 1];
-            }
             return null;
         }
 
-        public Warrior GetWarriorClone(List<Warrior> attackers, int wizardIndex)
+        public Warrior GetNearestLightWarrior(List<Warrior> attackers, int wizardIndex)
         {
-            bool isCloned = false;
-            Warrior warriorForClone = null;
+            bool isUsed = false;
+            Warrior nearestLightWarrior = null;
             if (wizardIndex != attackers.Count() - 1 && wizardIndex != attackers.Count() - 2)
-            {
-                if (attackers[wizardIndex + 1] is LightWarrior && isCloned == false)
-                {
-                    warriorForClone = attackers[wizardIndex + 1];
-                }
-            }
+                if (attackers[wizardIndex + 1] is LightWarrior && isUsed == false)
+                    nearestLightWarrior = attackers[wizardIndex + 1];
+                
             if (wizardIndex > 0)
-            {
-                if (attackers[wizardIndex - 1] is LightWarrior && warriorForClone == null && isCloned == false)
-                {
-                    warriorForClone = attackers[wizardIndex - 1];
-                }
-            }
-            return warriorForClone;
+                if (attackers[wizardIndex - 1] is LightWarrior && nearestLightWarrior == null && isUsed == false)
+                    nearestLightWarrior = attackers[wizardIndex - 1];
+                
+            return nearestLightWarrior;
         }
-        public Warrior GetWarriorHeal(List<Warrior> attackers, int healerIndex, Healer healer)
+        public Warrior GetWarriorForHeal(List<Warrior> attackers, int healerIndex, Healer healer)
         {
             Warrior warriorForHeal = null;
             var minHealth = double.MaxValue;
             if (healerIndex != attackers.Count() - 1 && healerIndex != attackers.Count() - 2)
-            {
                 if (attackers[healerIndex + 1].Healthpoints < minHealth && attackers[healerIndex + 1] is not LightWarrior)
                 {
                     minHealth = attackers[healerIndex + 1].Healthpoints;
                     warriorForHeal = attackers[healerIndex + 1];
                 }
-            }
-            if (attackers[healerIndex - 1].Healthpoints < minHealth && attackers[healerIndex - 1] is not LightWarrior)
-            {
-                minHealth = attackers[healerIndex - 1].Healthpoints;
-                warriorForHeal = attackers[healerIndex - 1];
-            }
-            if (warriorForHeal!=null)
-                healer.Heal(warriorForHeal);
+            if (healerIndex >= 1)
+                if (attackers[healerIndex - 1].Healthpoints < minHealth && attackers[healerIndex - 1] is not LightWarrior)
+                {
+                    minHealth = attackers[healerIndex - 1].Healthpoints;
+                    warriorForHeal = attackers[healerIndex - 1];
+                }
+          
             return warriorForHeal;
         }
 
         public bool IsFrontLine(int attackerIndex, List<Warrior> defenders)
         {
-            if (defenders.Count() - 1 > attackerIndex)
-                return true;
-            else
-                return false;
+            if (defenders.Count() - 1 > attackerIndex) return true;
+            else return false;
         }
     }
 }

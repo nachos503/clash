@@ -7,6 +7,7 @@ using System.Windows.Controls;
 
 namespace ClashGame
 {
+    //бля ну мамой клянусь не ебу как работает
     public class CommandManager
     {
         private Stack<ICommand> _commands = new Stack<ICommand>();
@@ -57,9 +58,7 @@ namespace ClashGame
         public void Undo()
         {
             for (int i = 0; i < _attackers.Count; i++)
-            {
                 _attackers[i] = _previousState[i];
-            }
             _outputTextBox.AppendText("Отмена лечения, восстановлено состояние армии." + Environment.NewLine);
         }
     }
@@ -89,9 +88,7 @@ namespace ClashGame
         public void Undo()
         {
             for (int i = 0; i < _attackers.Count-1; i++)
-            {
-                    _attackers[i] = _previousState[i];
-            }
+                _attackers[i] = _previousState[i];
             
             if (_attackers.Count == _previousState.Count)
                 _attackers[_attackers.Count - 1] = _previousState[_attackers.Count - 1];
@@ -131,9 +128,7 @@ namespace ClashGame
         public void Undo()
         {
             for (int i = 0; i < _defenders.Count; i++)
-            {
                 _defenders[i] = _previousDefenderState[i];
-            }
             _outputTextBox.AppendText($"Отмена атаки лучника, восстановлено HP у {_defenders[_targetIndex].Side} {_defenders[_targetIndex]}" + Environment.NewLine);
         }
     }

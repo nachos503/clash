@@ -9,70 +9,62 @@ namespace ClashGame
         private readonly TextBox outputTextBox;
         private readonly IUnitFactory unitFactory;
         private readonly Dictionary<string, List<Warrior>> armies;
-
+        //конструктор
         public ArmyManager(TextBox outputTextBox, IUnitFactory unitFactory)
         {
             this.outputTextBox = outputTextBox;
             this.unitFactory = unitFactory;
             armies = new Dictionary<string, List<Warrior>>();
         }
-
+        //создание армии
         public List<Warrior> CreateArmy(List<Warrior> warriorList, string side)
         {
-            Random rand = new Random();
-            int maxCost = 100;
-            int costSum = 0;
-
-            while (costSum < maxCost)
+            Random random = new Random();
+            int maxArmyCost = 100;
+            int currentArmyCostSum = 0;
+            //пока еще есть на какую сумму набираь - рандомно выбираем воина
+            while (currentArmyCostSum < maxArmyCost)
             {
-                if (rand.Next(0, 5) == 0 && costSum + unitFactory.CreateWizard(side).Cost <= maxCost)
+                if (random.Next(0, 5) == 0 && currentArmyCostSum + unitFactory.CreateWizard(side).Cost <= maxArmyCost)
                 {
                     warriorList.Add(unitFactory.CreateWizard(side));
-                    costSum += unitFactory.CreateWizard(side).Cost;
+                    currentArmyCostSum += unitFactory.CreateWizard(side).Cost;
                 }
-                if (rand.Next(0, 4) == 0 && costSum + unitFactory.CreateArcher(side).Cost <= maxCost)
+                if (random.Next(0, 4) == 0 && currentArmyCostSum + unitFactory.CreateArcher(side).Cost <= maxArmyCost)
                 {
                     warriorList.Add(unitFactory.CreateArcher(side));
-                    costSum += unitFactory.CreateArcher(side).Cost;
+                    currentArmyCostSum += unitFactory.CreateArcher(side).Cost;
                 }
-                else if (rand.Next(0, 3) == 0 && costSum + unitFactory.CreateHealer(side).Cost <= maxCost)
+                else if (random.Next(0, 3) == 0 && currentArmyCostSum + unitFactory.CreateHealer(side).Cost <= maxArmyCost)
                 {
                     warriorList.Add(unitFactory.CreateHealer(side));
-                    costSum += unitFactory.CreateHealer(side).Cost;
+                    currentArmyCostSum += unitFactory.CreateHealer(side).Cost;
                 }
-                else if (rand.Next(0, 2) == 0 && costSum + unitFactory.CreateLightWarrior(side).Cost <= maxCost)
+                else if (random.Next(0, 2) == 0 && currentArmyCostSum + unitFactory.CreateLightWarrior(side).Cost <= maxArmyCost)
                 {
                     warriorList.Add(unitFactory.CreateLightWarrior(side));
-                    costSum += unitFactory.CreateLightWarrior(side).Cost;
+                    currentArmyCostSum += unitFactory.CreateLightWarrior(side).Cost;
                 }
-                else if (costSum + unitFactory.CreateHeavyWarrior(side).Cost <= maxCost)
+                else if (currentArmyCostSum + unitFactory.CreateHeavyWarrior(side).Cost <= maxArmyCost)
                 {
                     warriorList.Add(unitFactory.CreateHeavyWarrior(side));
-                    costSum += unitFactory.CreateHeavyWarrior(side).Cost;
+                    currentArmyCostSum += unitFactory.CreateHeavyWarrior(side).Cost;
                 }
-                else
-                {
-                    break;
-                }
+                else break;
 
-                outputTextBox.AppendText(costSum.ToString() + Environment.NewLine); // Добавление информации в TextBox
+                outputTextBox.AppendText(currentArmyCostSum.ToString() + Environment.NewLine); // Добавление информации в TextBox
             }
 
             for (int i = 0; i < warriorList.Count; i++)
-            {
                 outputTextBox.AppendText(warriorList[i].ToString() + Environment.NewLine); // Добавление информации в TextBox
-            }
 
-
+            //добавление в конце списка стену
             warriorList.Add(unitFactory.CreateGulyayGorod(side));
 
             armies[side] = warriorList;
             return warriorList;
         }
-
-        public List<Warrior> GetArmyByColor(string side)
-        {
-            return armies.ContainsKey(side) ? armies[side] : new List<Warrior>();
-        }
+        //получение слиста армии по ее цвету
+        public List<Warrior> GetArmyByColor(string side) => armies.ContainsKey(side) ? armies[side] : new List<Warrior>();
     }
 }

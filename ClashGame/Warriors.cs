@@ -21,11 +21,8 @@ namespace ClashGame
         }
 
         // Реализация метода Clone в базовом классе Warrior
-        public virtual Warrior Clone()
-        {
-            // Возвращаем клон текущего воина
-            return (Warrior)this.MemberwiseClone();
-        }
+        // Возвращаем клон текущего воина
+        public virtual Warrior Clone() => (Warrior)this.MemberwiseClone();
     }
 
     class LightWarrior : Warrior
@@ -72,30 +69,6 @@ namespace ClashGame
             Side = heavyWarrior.Side;
             isUpgraded = true;
         }
-
-        // Метод для проверки, должно ли улучшение быть отменено
-        public bool ShouldCancelUpgrade(List<Warrior> allies)
-        {
-            // Проверяем, есть ли рядом LightWarrior
-            foreach (var ally in allies)
-            {
-                if (ally is LightWarrior && ally.Healthpoints > 0)
-                    return false;
-            }
-
-            // Проверяем, не мало ли у нас HP
-            if (Healthpoints < 0.4 * heavyWarrior.Healthpoints)
-                return true;
-
-            return false;
-        }
-
-        // Метод для получения базового тяжёлого воина
-        public HeavyWarrior GetBaseHeavyWarrior()
-        {
-            return heavyWarrior;
-        }
-
     }
 
     public class Archer : Warrior, IRangedUnit
@@ -113,31 +86,24 @@ namespace ClashGame
             Side = side;
         }
 
-        public int Range()
-        {
-            // Расчет дальности атаки арчера
-            return 3;
-        }
+        // Расчет дальности атаки арчера
+        public int Range() => 3;
 
         public double RangedDamage(int index)
         {
-            if (index == 0)
-            {
-                // Ближний бой
-                return 15;
-            }
-            else
-            {
-                //Дальний бой
-                // Расчет урона от атаки арчера
-                return 20;
-            }
+            // Ближний бой
+            if (index == 0) return 15;
+            //Дальний бой
+            // Расчет урона от атаки арчера
+            else return 20;
+            
         }
 
+        //аттака лучника
         virtual public double RangedAttack(List<Warrior> enemies, Warrior target, int attackerIndex)
         {
-                target.Healthpoints -= RangedDamage(attackerIndex);
-                return RangedDamage(attackerIndex);
+           target.Healthpoints -= RangedDamage(attackerIndex);
+           return RangedDamage(attackerIndex);
         }
     }
 
@@ -156,7 +122,6 @@ namespace ClashGame
 
         virtual public void Heal(Warrior target)
         {
-
             double maxHealableHealthpoints = target.Healthpoints * 0.8;
             double healAmount = 20;
 
@@ -165,7 +130,6 @@ namespace ClashGame
                     target.Healthpoints = maxHealableHealthpoints; // Восстанавливаем до максимально возможного
                 else
                     target.Healthpoints += healAmount; // Восстанавливаем 20 единиц здоровья
-
         }
     }
 
@@ -183,13 +147,9 @@ namespace ClashGame
 
         virtual public Warrior CloneLightWarrior(Warrior warrior)
         {
-            if (warrior is LightWarrior)
-            {
-                // Клонируем LightWarrior
-                return warrior.Clone();
-            }
-            else
-                return null;
+            // Клонируем LightWarrior
+            if (warrior is LightWarrior) return warrior.Clone();
+            else return null;
         }
     }
 

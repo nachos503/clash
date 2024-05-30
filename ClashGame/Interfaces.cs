@@ -30,7 +30,7 @@ namespace ClashGame
     {
         int Range();
         double RangedDamage(int index);
-        double RangedAttack(List<Warrior> enemies, int targetIndex, int attackerIndex);
+        double RangedAttack(List<Warrior> enemies, Warrior target, int attackerIndex);
     }
 
     interface IUnitFactory

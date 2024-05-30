@@ -10,8 +10,8 @@ using System.Windows.Controls;
 
 namespace ClashGame
 {
-    //деволтная стратегия, чтобы не ломался конструктор
-    public class DefoltStratagy : IBattleStrategy
+    //дефолтная стратегия, чтобы не ломался конструктор
+    public class DefaultStratagy : IBattleStrategy
     {
         public void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
@@ -48,32 +48,36 @@ namespace ClashGame
             int rows = Math.Min(2, Math.Min(attackers.Count, defenders.Count));
             for (int i = 0; i < rows; i++)
             {
-                if (attackers[i] is not GulyayGorod && defenders[i] is not GulyayGorod)
-                    _battleManagerProxy.Attack(attackers[i], defenders[i], outputTextBox);
+                if (defenders.Count > i)
+                {
+                    if (attackers[i] is not GulyayGorod && defenders[i] is not GulyayGorod)
+                        _battleManagerProxy.Attack(attackers[i], defenders[i], outputTextBox);
+                    _battleManagerProxy.IsDead(defenders[i], defenders);
+                }
             }
         }
 
         //прикол
         public Warrior GetEnemyWarrior(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
         {
-            //Random random = new Random();
-            //var flag = random.Next(0,2);
-            //if (archerIndex == 2 ||  archerIndex == 3)
-            //{
-            //    if(flag == 0)
-            //        return defenders[archerIndex];
-            //    else return defenders[archerIndex + 2];
-            //}
-            //if (archerIndex == 4 || archerIndex == 5)
-            //{
-            //    if (flag == 0)
-            //        return defenders[archerIndex -2];
-            //    else return defenders[archerIndex -4];
-            //}
-            //if (archerIndex == 6 || archerIndex == 7)
-            //{
-            //    return defenders[archerIndex - 6];
-            //}
+            Random random = new Random();
+            var flag = random.Next(0, 2);
+            if (archerIndex == 2 || archerIndex == 3)
+            {
+                if (flag == 0)
+                    return defenders[archerIndex];
+                else return defenders[archerIndex + 2];
+            }
+            if (archerIndex == 4 || archerIndex == 5)
+            {
+                if (flag == 0)
+                    return defenders[archerIndex - 2];
+                else return defenders[archerIndex - 4];
+            }
+            if (archerIndex == 6 || archerIndex == 7)
+            {
+                return defenders[archerIndex - 6];
+            }
             return null;
         }
 
@@ -180,8 +184,12 @@ namespace ClashGame
             int rows = Math.Min(3, Math.Min(attackers.Count, defenders.Count));
             for (int i = 0; i < rows; i++)
             {
-                if (attackers[i] is not GulyayGorod && defenders[i] is not GulyayGorod)
-                    _battleManagerProxy.Attack(attackers[i], defenders[i], outputTextBox);
+                if (defenders.Count > i)
+                {
+                    if (attackers[i] is not GulyayGorod && defenders[i] is not GulyayGorod)
+                        _battleManagerProxy.Attack(attackers[i], defenders[i], outputTextBox);
+                    _battleManagerProxy.IsDead(defenders[i], defenders);
+                }
             }
         }
 
@@ -301,8 +309,12 @@ namespace ClashGame
             int rows = Math.Min(attackers.Count, defenders.Count);
             for (int i = 0; i < rows; i++)
             {
-                if (attackers[i] is not GulyayGorod && defenders[i] is not GulyayGorod)
-                _battleManagerProxy.Attack(attackers[i], defenders[i], outputTextBox);
+                if (defenders.Count > i)
+                {
+                        if (attackers[i] is not GulyayGorod && defenders[i] is not GulyayGorod)
+                        _battleManagerProxy.Attack(attackers[i], defenders[i], outputTextBox);
+                        _battleManagerProxy.IsDead(defenders[i], defenders);
+                    }
             }
         }
 

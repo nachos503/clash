@@ -139,29 +139,10 @@ namespace ClashGame
             }
         }
 
-        virtual public double RangedAttack(List<Warrior> enemies, int targetIndex, int attackerIndex)
+        virtual public double RangedAttack(List<Warrior> enemies, Warrior target, int attackerIndex)
         {
-            var enemy = enemies[targetIndex];
-            int distance = Math.Abs(attackerIndex - targetIndex);
-
-            if (distance == 0) // Ближний бой
-            {
-                if (attackerSide != defenderSide) // Проверяем, находятся ли воины на разных сторонах
-                {
-                    enemy.Healthpoints -= RangedDamage(attackerIndex);
-                    return RangedDamage(attackerIndex);
-                }
-                else
-                {
-                    // Воины находятся на одной стороне, ближняя атака невозможна
-                    return 0;
-                }
-            }
-            else // Дальний бой
-            {
-                enemy.Healthpoints -= RangedDamage(attackerIndex);
+                target.Healthpoints -= RangedDamage(attackerIndex);
                 return RangedDamage(attackerIndex);
-            }
         }
     }
 

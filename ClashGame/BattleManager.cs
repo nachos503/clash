@@ -35,17 +35,24 @@ namespace ClashGame
 
             // Проверка наличия мага в списке атакующих
             WizardTurn(attackers, defenders,outputTextBox);
+            IsDead(defender, defenders);
 
             // Проверка на наличие лекаря в списке атакующих и его позиции
             HealerTurn(attackers, defenders, outputTextBox);
+
+            IsDead(defender, defenders);
 
             // Проверка на наличие ImprovedHeavyWarrior в списке атакующих и его позиции
             HeavyWarriorUpgradeTurn(attackers, attacker, outputTextBox);
             //Контрольная атака за ход
             _strategy.ExecuteBattle(attackers, defenders, outputTextBox);
 
+            IsDead(defender, defenders);
+
             // После обычной атаки, ищем арчера в оставшемся списке воинов
             ArchersTurn(attackers, defenders, outputTextBox);
+
+            IsDead(defender, defenders);
 
             //Контрольная проверка на живых соперников
             IsDead(defender, defenders);
@@ -188,7 +195,7 @@ namespace ClashGame
                         var target = _strategy.GetEnemyWarrior(attackers, defenders, archerIndex, archer); // Выбранный защищающийся воин
 
                         // Передача индекса атакующего лучника
-                        // archer.RangedAttack(defenders, targetIndex, attackers.IndexOf(warrior)); переписать
+                        archer.RangedAttack(defenders, target, attackers.IndexOf(archer)); 
                         outputTextBox.AppendText($"Атака {archer.Side} {archer} с силой {archer.RangedDamage(attackers.IndexOf(archer))} по {target}" + Environment.NewLine);
                         outputTextBox.AppendText($"HP у  {target.Side} {target} осталось {target.Healthpoints}" + Environment.NewLine);
 

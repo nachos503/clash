@@ -23,7 +23,6 @@ namespace ClashGame
         private bool healerUsed = false;
         private bool archerUsed = false;
 
-        private int countTurnsForGulyayGorod;
 
         public MainWindow()
         {
@@ -183,8 +182,7 @@ namespace ClashGame
         {
             if (playerArmy.Count > 0 && computerArmy.Count > 0)
             {
-                if (battleManager.flagGulyayGorodBlue < 0 && battleManager.flagGulyayGorodBlue > 7
-                || battleManager.flagGulyayGorodRed < 0 && battleManager.flagGulyayGorodRed > 7)
+                if (playerArmy[0] is not GulyayGorod || computerArmy[0] is not GulyayGorod)
                     currentStrategy.ExecuteBattle(playerArmy, computerArmy, outputTextBox);
                 battleManagerProxy.IsDead(computerArmy[0], computerArmy);
                 CheckGameOver();
@@ -193,31 +191,20 @@ namespace ClashGame
             playerTurn = false; // Завершение хода игрока
             ComputerTurn();
 
-            CountGulyayGorod();
 
             DisableAbilityButtons(); // Деактивировать кнопки способностей
             EndTurn.IsEnabled = false;
         }
 
-        private void CountGulyayGorod()
-        {
-            if (playerArmy[0] is GulyayGorod)
-            {
-                battleManager.SetGulyayGorodCount(countTurnsForGulyayGorod, playerArmy[0].Side); // Передача значения
-                if (countTurnsForGulyayGorod == 7)
-                {
-                    playerArmy.Remove(playerArmy[0]);
-                }
-            }
-        }
+  
 
 
         private void ComputerTurn()
         {
             if (computerArmy.Count > 0 && playerArmy.Count > 0)
             {
-                CountGulyayGorod();
                 battleManagerProxy.TurnComputer(computerArmy, playerArmy, outputTextBox);
+                battleManagerProxy.IsDead(computerArmy[0], computerArmy);
                 CheckGameOver();
             }
             playerTurn = true; // Подготовка к началу нового хода игрока
@@ -236,16 +223,12 @@ namespace ClashGame
         private void ToTheEnd_Click(object sender, RoutedEventArgs e)
         {
             while (computerArmy.Count > 0 && playerArmy.Count > 0)
-            {
-                countTurnsForGulyayGorod++;
-                CountGulyayGorod();
+            { 
                 battleManagerProxy.TurnComputer(playerArmy, computerArmy, outputTextBox);
                 
                 CheckGameOver();
                 if (computerArmy.Count > 0)
                 {
-                    countTurnsForGulyayGorod++;
-                    CountGulyayGorod();
                     battleManagerProxy.TurnComputer(computerArmy, playerArmy, outputTextBox);
                    
                     CheckGameOver();
@@ -264,8 +247,6 @@ namespace ClashGame
             playerArmy[playerArmy.Count() - 1] = temp;
 
             UseGulyayGorod.IsEnabled = false;
-
-            countTurnsForGulyayGorod = 0;
 
             battleManagerProxy.TurnComputer(computerArmy, playerArmy, outputTextBox);
         }
@@ -340,7 +321,7 @@ namespace ClashGame
 
         private void CheckGameOver()
         {
-            if (playerArmy.Count == 0)
+            if (playerArmy.Count == 0 || (playerArmy.Count == 1 && playerArmy[0] is GulyayGorod))
             {
                 MessageBox.Show("Компьютер победил!");
                 Turn.IsEnabled = false;
@@ -349,7 +330,7 @@ namespace ClashGame
                 UseHealer.IsEnabled = false;
                 UseArcher.IsEnabled = false;
             }
-            else if (computerArmy.Count == 0)
+            else if (computerArmy.Count == 0 || (computerArmy.Count == 1 && computerArmy[0] is GulyayGorod))
             {
                 MessageBox.Show("Вы победили!");
                 Turn.IsEnabled = false;
@@ -372,7 +353,7 @@ namespace ClashGame
 
         private void ChooseTwoRows_Click(object sender, RoutedEventArgs e)
         {
-            IBattleStrategy initialStrategy = new DefoltStratagy();
+            IBattleStrategy initialStrategy = new DefaultStratagy();
 
             battleManager = new BattleManager(initialStrategy);
             battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
@@ -394,7 +375,7 @@ namespace ClashGame
 
         private void ChooseThreeRows_Click(object sender, RoutedEventArgs e)
         {
-            IBattleStrategy initialStrategy = new DefoltStratagy();
+            IBattleStrategy initialStrategy = new DefaultStratagy();
 
             battleManager = new BattleManager(initialStrategy);
             battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
@@ -415,7 +396,7 @@ namespace ClashGame
 
         private void ChooseWallToWall_Click(object sender, RoutedEventArgs e)
         {
-            IBattleStrategy initialStrategy = new DefoltStratagy();
+            IBattleStrategy initialStrategy = new DefaultStratagy();
 
             battleManager = new BattleManager(initialStrategy);
             battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");

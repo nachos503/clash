@@ -21,7 +21,7 @@ namespace ClashGame
         {
             return null;
         }
-        public Warrior CloneWarrior(List<Warrior> attackers, int wizardIndex, Wizard wizard)
+        public Warrior GetWarriorClone(List<Warrior> attackers, int wizardIndex)
         {
             return null;
         }
@@ -60,28 +60,33 @@ namespace ClashGame
         //прикол
         public Warrior GetEnemyWarrior(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
         {
-            Random random = new Random();
-            var flag = random.Next(0, 2);
-            if (archerIndex == 2 || archerIndex == 3)
+            var range = archer.Range();
+            for (int i = archerIndex; i > 1; i -= 2)
             {
-                if (flag == 0)
-                    return defenders[archerIndex];
-                else return defenders[archerIndex + 2];
+                range--;
             }
-            if (archerIndex == 4 || archerIndex == 5)
+            if (range > 0)
             {
-                if (flag == 0)
-                    return defenders[archerIndex - 2];
-                else return defenders[archerIndex - 4];
-            }
-            if (archerIndex == 6 || archerIndex == 7)
-            {
-                return defenders[archerIndex - 6];
+                for (int i = 0; i < defenders.Count; i += 2)
+                {
+                    range--;
+                    if (range == 0)
+                    {
+                        if (archerIndex % 2 == 0)
+                        {
+                            return defenders[i];
+                        }
+                        else if (defenders.Count > i+1) 
+                        {
+                            return defenders[i + 1];
+                        }
+                    }
+                } 
             }
             return null;
         }
 
-        public Warrior CloneWarrior (List<Warrior> attackers, int wizardIndex, Wizard wizard)
+        public Warrior GetWarriorClone (List<Warrior> attackers, int wizardIndex)
         {
             bool isCloned = false;
             Warrior warriorForClone = null;
@@ -101,18 +106,22 @@ namespace ClashGame
                     isCloned = true;
                 }
             }
-            if (wizardIndex % 2 != 0 && attackers[wizardIndex - 1] is LightWarrior && warriorForClone == null && isCloned == false)
+            if (wizardIndex >= 1)
             {
-                warriorForClone = attackers[wizardIndex - 1];
-                isCloned = true;
+                if (wizardIndex % 2 != 0 && attackers[wizardIndex - 1] is LightWarrior && warriorForClone == null && isCloned == false)
+                {
+                    warriorForClone = attackers[wizardIndex - 1];
+                    isCloned = true;
+                }
             }
-            if (attackers[wizardIndex - 2] is LightWarrior && warriorForClone == null && isCloned == false)
+            if (wizardIndex >= 2)
             {
-                warriorForClone = attackers[wizardIndex - 2];
-                isCloned = true;
+                if (attackers[wizardIndex - 2] is LightWarrior && warriorForClone == null && isCloned == false)
+                {
+                    warriorForClone = attackers[wizardIndex - 2];
+                    isCloned = true;
+                }
             }
-            if (warriorForClone != null)
-                wizard.CloneLightWarrior(warriorForClone);
             return warriorForClone;
         }
     
@@ -120,32 +129,40 @@ namespace ClashGame
         {
             Warrior warriorForHeal = null;
             var minHealth = double.MaxValue;
-            if(healerIndex != attackers.Count() - 1 && healerIndex != attackers.Count() - 2)
-            {
-                if (attackers[healerIndex + 1].Healthpoints < minHealth && healerIndex % 2 == 0 && attackers[healerIndex + 1] is not LightWarrior)
-                {
-                    minHealth = attackers[healerIndex + 1].Healthpoints;
-                    warriorForHeal = attackers[healerIndex + 1];
-                }
-                if (attackers[healerIndex + 2].Healthpoints < minHealth && attackers[healerIndex + 2] is not LightWarrior)
-                {
-                    minHealth = attackers[healerIndex + 2].Healthpoints;
-                    warriorForHeal = attackers[healerIndex + 2];
-                }
 
-            }
-            if (attackers[healerIndex - 1].Healthpoints < minHealth && healerIndex % 2 != 0 && attackers[healerIndex - 1] is not LightWarrior)
+                if (healerIndex + 1 < attackers.Count())
+                {
+                    if (attackers[healerIndex + 1].Healthpoints < minHealth && healerIndex % 2 == 0 && attackers[healerIndex + 1] is not LightWarrior)
+                    {
+                        minHealth = attackers[healerIndex + 1].Healthpoints;
+                        warriorForHeal = attackers[healerIndex + 1];
+                    }
+                }
+                if (healerIndex + 2 < attackers.Count())
+                {
+                    if (attackers[healerIndex + 2].Healthpoints < minHealth && attackers[healerIndex + 2] is not LightWarrior)
+                    {
+                        minHealth = attackers[healerIndex + 2].Healthpoints;
+                        warriorForHeal = attackers[healerIndex + 2];
+                    }
+                }
+            if (healerIndex >= 1)
             {
-                minHealth = attackers[healerIndex - 1].Healthpoints;
-                warriorForHeal = attackers[healerIndex - 1];
+                if (attackers[healerIndex - 1].Healthpoints < minHealth && healerIndex % 2 != 0 && attackers[healerIndex - 1] is not LightWarrior)
+                {
+                    minHealth = attackers[healerIndex - 1].Healthpoints;
+                    warriorForHeal = attackers[healerIndex - 1];
+                }
             }
-            if (attackers[healerIndex - 2].Healthpoints < minHealth && attackers[healerIndex - 2] is not LightWarrior)
+            if (healerIndex >= 2)
             {
-                minHealth = attackers[healerIndex - 2].Healthpoints;
-                warriorForHeal = attackers[healerIndex - 2];
+                if (attackers[healerIndex - 2].Healthpoints < minHealth && attackers[healerIndex - 2] is not LightWarrior)
+                {
+                    minHealth = attackers[healerIndex - 2].Healthpoints;
+                    warriorForHeal = attackers[healerIndex - 2];
+                }
             }
-            if (warriorForHeal != null)
-                healer.Heal(warriorForHeal);
+            
             return warriorForHeal;
         }
 
@@ -195,10 +212,37 @@ namespace ClashGame
 
         public Warrior GetEnemyWarrior(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
         {
+            var range = archer.Range();
+            for (int i = archerIndex; i > 1; i -= 3)
+            {
+                range--;
+            }
+            if (range > 0)
+            {
+                for (int i = 0; i < defenders.Count; i += 3)
+                {
+                    range--;
+                    if (range == 0)
+                    {
+                        if (archerIndex % 3 == 0)
+                        {
+                            return defenders[i];
+                        }
+                        else if (defenders.Count > i + 1 && archerIndex % 3 == 1)
+                        {
+                            return defenders[i + 1];
+                        }
+                        else if (defenders.Count > i + 2)
+                        {
+                            return defenders[i + 2];
+                        }
+                    }
+                }
+            }
             return null;
         }
 
-        public Warrior CloneWarrior(List<Warrior> attackers, int wizardIndex, Wizard wizard)
+        public Warrior GetWarriorClone(List<Warrior> attackers, int wizardIndex)
         {
             bool isCloned = false;
             Warrior warriorForClone = null;
@@ -220,18 +264,23 @@ namespace ClashGame
                 }
             }
 
-            if (wizardIndex % 3 != 0 && attackers[wizardIndex - 1] is LightWarrior && warriorForClone == null && isCloned == false)
+            if (wizardIndex >= 1)
             {
-                warriorForClone = attackers[wizardIndex - 1];
-                isCloned = true;
+                if (wizardIndex % 3 != 0 && attackers[wizardIndex - 1] is LightWarrior && warriorForClone == null && isCloned == false)
+                {
+                    warriorForClone = attackers[wizardIndex - 1];
+                    isCloned = true;
+                }
             }
-            if (attackers[wizardIndex - 3] is LightWarrior && warriorForClone == null && isCloned == false)
+            if (wizardIndex >= 3)
             {
-                warriorForClone = attackers[wizardIndex - 3];
-                isCloned = true;
+                if (attackers[wizardIndex - 3] is LightWarrior && warriorForClone == null && isCloned == false)
+                {
+                    warriorForClone = attackers[wizardIndex - 3];
+                    isCloned = true;
+                }
             }
-            if (warriorForClone != null)
-                wizard.CloneLightWarrior(warriorForClone);
+                
             return warriorForClone;
         }
 
@@ -239,29 +288,38 @@ namespace ClashGame
         {
             Warrior warriorForHeal = null;
             var minHealth = double.MaxValue;
-            if (healerIndex != attackers.Count() - 1 && healerIndex != attackers.Count() - 2)
-            {
-                if (attackers[healerIndex + 1].Healthpoints < minHealth && healerIndex % 2 == 0 && attackers[healerIndex + 1] is not LightWarrior)
-                {
-                    minHealth = attackers[healerIndex + 1].Healthpoints;
-                    warriorForHeal = attackers[healerIndex + 1];
-                }
-                if (attackers[healerIndex + 3].Healthpoints < minHealth && attackers[healerIndex + 3] is not LightWarrior)
-                {
-                    minHealth = attackers[healerIndex + 3].Healthpoints;
-                    warriorForHeal = attackers[healerIndex + 3];
-                }
 
-            }
-            if (attackers[healerIndex - 1].Healthpoints < minHealth && healerIndex % 3 != 0 && attackers[healerIndex - 1] is not LightWarrior)
+                if (healerIndex + 1 < attackers.Count())
+                {
+                    if (attackers[healerIndex + 1].Healthpoints < minHealth && healerIndex % 2 == 0 && attackers[healerIndex + 1] is not LightWarrior)
+                    {
+                        minHealth = attackers[healerIndex + 1].Healthpoints;
+                        warriorForHeal = attackers[healerIndex + 1];
+                    }
+                }
+                if (healerIndex + 3 < attackers.Count())
+                {
+                    if (attackers[healerIndex + 3].Healthpoints < minHealth && attackers[healerIndex + 3] is not LightWarrior)
+                    {
+                        minHealth = attackers[healerIndex + 3].Healthpoints;
+                        warriorForHeal = attackers[healerIndex + 3];
+                    }
+                }
+            if (healerIndex >= 1)
             {
-                minHealth = attackers[healerIndex - 1].Healthpoints;
-                warriorForHeal = attackers[healerIndex - 1];
+                if (attackers[healerIndex - 1].Healthpoints < minHealth && healerIndex % 3 != 0 && attackers[healerIndex - 1] is not LightWarrior)
+                {
+                    minHealth = attackers[healerIndex - 1].Healthpoints;
+                    warriorForHeal = attackers[healerIndex - 1];
+                }
             }
-            if (attackers[healerIndex - 3].Healthpoints < minHealth && attackers[healerIndex - 3] is not LightWarrior)
+            if (healerIndex >= 3)
             {
-                minHealth = attackers[healerIndex - 3].Healthpoints;
-                warriorForHeal = attackers[healerIndex - 3];
+                if (attackers[healerIndex - 3].Healthpoints < minHealth && attackers[healerIndex - 3] is not LightWarrior)
+                {
+                    minHealth = attackers[healerIndex - 3].Healthpoints;
+                    warriorForHeal = attackers[healerIndex - 3];
+                }
             }
             if (warriorForHeal != null)
                 healer.Heal(warriorForHeal);
@@ -283,6 +341,7 @@ namespace ClashGame
 
             }
             if (defenders.Count() > 1)
+            { 
                 if (attackerIndex == 2)
                 {
                     return true;
@@ -291,6 +350,7 @@ namespace ClashGame
                 {
                     return false;
                 }
+            }
             else return false;
         }
     }
@@ -320,10 +380,14 @@ namespace ClashGame
 
         public Warrior GetEnemyWarrior(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
         {
+            if (defenders.Count() > 0)
+            {
+                return defenders.Count() - 1 < archerIndex - 3 ? null : defenders[defenders.Count() - 1];
+            }
             return null;
         }
 
-        public Warrior CloneWarrior(List<Warrior> attackers, int wizardIndex, Wizard wizard)
+        public Warrior GetWarriorClone(List<Warrior> attackers, int wizardIndex)
         {
             bool isCloned = false;
             Warrior warriorForClone = null;
@@ -334,12 +398,13 @@ namespace ClashGame
                     warriorForClone = attackers[wizardIndex + 1];
                 }
             }
-            if (attackers[wizardIndex - 1] is LightWarrior && warriorForClone == null && isCloned == false)
+            if (wizardIndex > 0)
             {
-                warriorForClone = attackers[wizardIndex - 1];
+                if (attackers[wizardIndex - 1] is LightWarrior && warriorForClone == null && isCloned == false)
+                {
+                    warriorForClone = attackers[wizardIndex - 1];
+                }
             }
-            if (warriorForClone != null)
-                wizard.CloneLightWarrior(warriorForClone);
             return warriorForClone;
         }
         public Warrior GetWarriorHeal(List<Warrior> attackers, int healerIndex, Healer healer)

@@ -96,11 +96,6 @@ namespace ClashGame
             return heavyWarrior;
         }
 
-        // Метод для проверки, улучшён ли воин
-        public bool IsUpgraded()
-        {
-            return isUpgraded;
-        }
     }
 
     public class Archer : Warrior, IRangedUnit

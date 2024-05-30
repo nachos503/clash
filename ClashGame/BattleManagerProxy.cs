@@ -44,7 +44,10 @@ namespace ClashGame
             //battleManager.TurnComputer(attackers, defenders, outputTextBox);
 
             WizardTurn(attackers, defenders, outputTextBox);
-            IsDead(defenders[0], defenders);
+            if (defenders.Count > 0)
+            {
+                IsDead(defenders[0], defenders);
+            }
             HealerTurn(attackers, defenders,outputTextBox);
             HeavyWarriorUpgradeTurn(attackers, attackers[0], outputTextBox);
             if (attackers[0] is not GulyayGorod || defenders[0] is not GulyayGorod)

@@ -22,6 +22,7 @@ namespace ClashGame
         private bool wizardUsed = false;
         private bool healerUsed = false;
         private bool archerUsed = false;
+        bool flag = false;
 
 
         public MainWindow()
@@ -76,6 +77,7 @@ namespace ClashGame
         private void CreateArmy_Click(object sender, RoutedEventArgs e)
         {
             CreateArmyClick(outputTextBox);
+
             DisableAbilityButtons();
             ChooseBlueArmy.Visibility = Visibility.Visible;
             ChooseRedArmy.Visibility = Visibility.Visible;
@@ -321,7 +323,8 @@ namespace ClashGame
 
         private void CheckGameOver()
         {
-            if (playerArmy.Count == 0 || (playerArmy.Count == 1 && playerArmy[0] is GulyayGorod))
+            
+            if (playerArmy.Count == 0 || (playerArmy.Count == 1 && playerArmy[0] is GulyayGorod && !flag))
             {
                 MessageBox.Show("Компьютер победил!");
                 Turn.IsEnabled = false;
@@ -329,8 +332,9 @@ namespace ClashGame
                 UseWizard.IsEnabled = false;
                 UseHealer.IsEnabled = false;
                 UseArcher.IsEnabled = false;
+                flag = true;
             }
-            else if (computerArmy.Count == 0 || (computerArmy.Count == 1 && computerArmy[0] is GulyayGorod))
+            else if (computerArmy.Count == 0 || (computerArmy.Count == 1 && computerArmy[0] is GulyayGorod && !flag))
             {
                 MessageBox.Show("Вы победили!");
                 Turn.IsEnabled = false;
@@ -338,6 +342,7 @@ namespace ClashGame
                 UseWizard.IsEnabled = false;
                 UseHealer.IsEnabled = false;
                 UseArcher.IsEnabled = false;
+                flag = true;
             }
         }
 
@@ -360,9 +365,13 @@ namespace ClashGame
 
             currentStrategy = new TwoRowStrategy(battleManagerProxy);
 
+
             battleManager.SetStrategy(currentStrategy);
             MessageBox.Show("Two Rows strategy selected.");
-            
+
+            battleManager.UpgradeHeavyWarrior(playerArmy, computerArmy, outputTextBox);
+            battleManager.UpgradeHeavyWarrior(computerArmy, playerArmy, outputTextBox);
+
             ShowPlayButtons();
             ChooseTwoRows.IsEnabled = false;
             ChooseThreeRows.IsEnabled = true;
@@ -384,7 +393,10 @@ namespace ClashGame
 
             battleManager.SetStrategy(currentStrategy);
             MessageBox.Show("Three Rows strategy selected.");
-           
+
+            battleManager.UpgradeHeavyWarrior(playerArmy, computerArmy, outputTextBox);
+            battleManager.UpgradeHeavyWarrior(computerArmy, playerArmy, outputTextBox);
+
             ShowPlayButtons();
             ChooseThreeRows.IsEnabled = false;
             ChooseWallToWall.IsEnabled = true;
@@ -406,7 +418,10 @@ namespace ClashGame
             battleManager.SetStrategy(currentStrategy);
 
             MessageBox.Show("Wall to Wall strategy selected.");
-          
+
+            battleManager.UpgradeHeavyWarrior(playerArmy, computerArmy, outputTextBox);
+            battleManager.UpgradeHeavyWarrior(computerArmy, playerArmy, outputTextBox);
+
             ShowPlayButtons();
             ChooseWallToWall.IsEnabled = false;
             ChooseTwoRows.IsEnabled = true;

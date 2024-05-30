@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows.Controls;
+using System.Xml.Serialization;
 
 namespace ClashGame
 {
@@ -43,12 +44,26 @@ namespace ClashGame
             //battleManager.TurnComputer(attackers, defenders, outputTextBox);
 
             WizardTurn(attackers, defenders, outputTextBox);
+            if (defenders.Count > 0)
+            {
+                IsDead(defenders[0], defenders);
+            }
             HealerTurn(attackers, defenders,outputTextBox);
             HeavyWarriorUpgradeTurn(attackers, attackers[0], outputTextBox);
-            Attack(attackers[0], defenders[0], outputTextBox);
+            if (attackers[0] is not GulyayGorod || defenders[0] is not GulyayGorod)
+                _battleManager._strategy.ExecuteBattle(attackers, defenders, outputTextBox);
+            if (defenders.Count > 0)
+            {
+                IsDead(defenders[0], defenders);
+            }
             ArchersTurn(attackers, defenders, outputTextBox);
-            IsDead(defenders[0], defenders);
-            CheckGulyayGorod(attackers, defenders, outputTextBox);
+
+            if (defenders.Count > 0)
+            {
+                IsDead(defenders[0], defenders);
+            }
+                CheckGulyayGorod(attackers, defenders, outputTextBox);
+
             Log("Ход завершен!");
         }
 

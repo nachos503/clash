@@ -32,35 +32,6 @@ namespace ClashGame
         }
     }
 
-    public class AttackCommand : ICommand
-    {
-        private IBattleManager _battleManager;
-        private Warrior _attacker;
-        private Warrior _defender;
-        private TextBox _outputTextBox;
-        private double _previousHealthPoints;
-
-        public AttackCommand(IBattleManager battleManager, Warrior attacker, Warrior defender, TextBox outputTextBox)
-        {
-            _battleManager = battleManager;
-            _attacker = attacker;
-            _defender = defender;
-            _outputTextBox = outputTextBox;
-        }
-
-        public void Execute()
-        {
-            _previousHealthPoints = _defender.Healthpoints;
-            _battleManager.Attack(_attacker, _defender, _outputTextBox);
-        }
-
-        public void Undo()
-        {
-            _defender.Healthpoints = _previousHealthPoints;
-            _outputTextBox.AppendText($"Отмена атаки, восстановлено HP у {_defender.Side} {_defender}" + Environment.NewLine);
-        }
-    }
-
     public class HealerTurnCommand : ICommand
     {
         private IBattleManager _battleManager;

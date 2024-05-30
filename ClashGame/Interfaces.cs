@@ -11,6 +11,8 @@ namespace ClashGame
     {
         public void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
         public Warrior GetWarriorHeal(List<Warrior> attackers, int healerIndex, Healer healer);
+        public Warrior GetEnemyWarrior(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer);
+        public Warrior GetWarriorClone(List<Warrior> attackers, int wizardIndex);
         public bool IsFrontLine(int attackerIndex, List<Warrior> defenders);
 
     }
@@ -28,7 +30,7 @@ namespace ClashGame
     {
         int Range();
         double RangedDamage(int index);
-        double RangedAttack(List<Warrior> enemies, int targetIndex, int attackerIndex);
+        double RangedAttack(List<Warrior> enemies, Warrior target, int attackerIndex);
     }
 
     interface IUnitFactory

@@ -17,6 +17,11 @@ namespace ClashGame
             this._strategy = strategy ?? throw new ArgumentNullException(nameof(strategy), "Strategy cannot be null");
         }
 
+        public void SetStrategy(IBattleStrategy strategy)
+        {
+            _strategy = strategy ?? throw new ArgumentNullException(nameof(strategy));
+        }
+
         public int flagGulyayGorodBlue = 0;
         public int flagGulyayGorodRed = 0;
         public bool triggerGulyayGorodBlue = true;
@@ -30,18 +35,24 @@ namespace ClashGame
 
             // Проверка наличия мага в списке атакующих
             WizardTurn(attackers, defenders,outputTextBox);
+            IsDead(defender, defenders);
 
             // Проверка на наличие лекаря в списке атакующих и его позиции
             HealerTurn(attackers, defenders, outputTextBox);
 
+            IsDead(defender, defenders);
+
             // Проверка на наличие ImprovedHeavyWarrior в списке атакующих и его позиции
             HeavyWarriorUpgradeTurn(attackers, attacker, outputTextBox);
-
             //Контрольная атака за ход
-            Attack(attacker, defender, outputTextBox);
+            _strategy.ExecuteBattle(attackers, defenders, outputTextBox);
+
+            IsDead(defender, defenders);
 
             // После обычной атаки, ищем арчера в оставшемся списке воинов
             ArchersTurn(attackers, defenders, outputTextBox);
+
+            IsDead(defender, defenders);
 
             //Контрольная проверка на живых соперников
             IsDead(defender, defenders);
@@ -51,29 +62,35 @@ namespace ClashGame
         {
 
             Wizard wizard = null;
+            int wizardIndex = -1;
 
-            foreach (var attacker1 in attackers)
+            for (int i = 0; i < attackers.Count; i++)
             {
-                if (attacker1 is Wizard)
+                if (attackers[i] is Wizard)
                 {
-                    wizard = new Wizard(attacker1.Side);
-                    break;
-                }
-            }
+                    wizard = new Wizard(attackers[i].Side);
+                    wizardIndex = i;
 
-            // Попытка клонирования LightWarrior
-            if (wizard != null)
-            {
-                Warrior clonedWarrior = wizard.CloneLightWarrior(attackers);
-                if (clonedWarrior != null)
-                {
-                    attackers.Insert(1, clonedWarrior); // Вставляем клонированного LightWarrior перед магом (на вторую позицию)
-                    outputTextBox.AppendText($"Маг из команды {wizard.Side} клонировал LightWarrior с {clonedWarrior.Healthpoints} HP" + Environment.NewLine);
-                }
-                else
-                {
-                    outputTextBox.AppendText($"Маг из команды {wizard.Side} не смог склонировать LigthWarrior: " + Environment.NewLine);
-                    outputTextBox.AppendText("LightWarrior отсутствует, либо не повезло." + Environment.NewLine);
+                    if (!_strategy.IsFrontLine(wizardIndex, defenders))
+                    {
+                       if (new Random().Next(0, 5) == 0)
+                       {    // Попытка клонирования LightWarrior
+                                Warrior clonedWarrior = _strategy.GetWarriorClone(attackers, wizardIndex);
+                                if (clonedWarrior != null)
+                                {
+                                    wizard.CloneLightWarrior(clonedWarrior);
+                                    attackers.Insert(1, clonedWarrior); // Вставляем клонированного LightWarrior перед магом (на вторую позицию)
+                                    outputTextBox.AppendText($"Маг из команды {wizard.Side} клонировал LightWarrior с {clonedWarrior.Healthpoints} HP" + Environment.NewLine);
+                                }
+                                else
+                                {
+                                    outputTextBox.AppendText($"Маг из команды {wizard.Side} не смог склонировать LigthWarrior: " + Environment.NewLine);
+                                    outputTextBox.AppendText("LightWarrior отсутствует, либо не повезло." + Environment.NewLine);
+                                }
+                       }
+                       else
+                          outputTextBox.AppendText($"Маг из команды {wizard.Side} не смог клонировать LightWarrior" + Environment.NewLine);
+                    }
                 }
             }
         }
@@ -95,10 +112,13 @@ namespace ClashGame
                         if (new Random().Next(0, 10) == 0)
                         {
                             // Вызов лечения у случайного союзника
-
                             Warrior targetAlly = _strategy.GetWarriorHeal(attackers, healerIndex, healer);
-                            outputTextBox.AppendText($"Лекарь из команды {healer.Side} вылечил {targetAlly.Side} {targetAlly}" + Environment.NewLine);
-                            outputTextBox.AppendText($"Теперь у {targetAlly.Side} {targetAlly} {targetAlly.Healthpoints} HP" + Environment.NewLine);
+                            if (targetAlly != null)
+                            {
+                                healer.Heal(targetAlly);
+                                outputTextBox.AppendText($"Лекарь из команды {healer.Side} вылечил {targetAlly.Side} {targetAlly}" + Environment.NewLine);
+                                outputTextBox.AppendText($"Теперь у {targetAlly.Side} {targetAlly} {targetAlly.Healthpoints} HP" + Environment.NewLine);
+                            }
 
                         }
                         else
@@ -111,6 +131,27 @@ namespace ClashGame
             }
         }
 
+
+        public void UpgradeHeavyWarrior(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
+        {
+
+            for (int i = 0; i < attackers.Count; i++)
+            {
+                if (attackers[i] is HeavyWarrior)
+                {
+                    if (!_strategy.IsFrontLine(i, defenders))
+                    {
+                        Warrior lightWarriorNearby = _strategy.GetWarriorClone(attackers, i);
+                        if (lightWarriorNearby != null)
+                        {
+                            ImprovedHeavyWarrior improvedHeavyWarrior = new ImprovedHeavyWarrior((HeavyWarrior)attackers[i]);
+                            attackers[i] = improvedHeavyWarrior;
+                            outputTextBox.AppendText($"Улучшение у ImprovedHeavyWarrior прошло, рядом есть LightWarrior." + Environment.NewLine);
+                        }
+                    }
+                }
+            }
+        }
         public void HeavyWarriorUpgradeTurn(List<Warrior> attackers, Warrior attacker, TextBox outputTextBox)
         {
             ImprovedHeavyWarrior improvedHeavyWarrior = null;
@@ -126,20 +167,12 @@ namespace ClashGame
             }
 
             // Проверяем, есть ли рядом с ImprovedHeavyWarrior LightWarrior
-            bool lightWarriorNearby = false;
             if (improvedHeavyWarrior != null)
             {
                 // Проверяем наличие LightWarrior на расстоянии 1 от ImprovedHeavyWarrior
-                for (int i = Math.Max(0, improvedHeavyWarriorIndex - 1); i < Math.Min(attackers.Count, improvedHeavyWarriorIndex + 2); i++)
-                {
-                    if (attackers[i] is LightWarrior)
-                    {
-                        lightWarriorNearby = true;
-                        break;
-                    }
-                }
+                Warrior lightWarriorNearby = _strategy.GetWarriorClone(attackers, improvedHeavyWarriorIndex);
 
-                if (!lightWarriorNearby)
+                if (lightWarriorNearby == null)
                 {
                     // Если рядом с ImprovedHeavyWarrior нет LightWarrior, отменяем улучшение
                     attackers[improvedHeavyWarriorIndex] = new HeavyWarrior(improvedHeavyWarrior.Side)
@@ -147,7 +180,6 @@ namespace ClashGame
                         Healthpoints = improvedHeavyWarrior.Healthpoints // сохраняем текущее здоровье
                     };
                     outputTextBox.AppendText($"Улучшение у ImprovedHeavyWarrior отменено, так как рядом нет LightWarrior." + Environment.NewLine);
-                    attacker = attackers[0];
                 }
             }
 
@@ -157,42 +189,35 @@ namespace ClashGame
                 // Если здоровье упало ниже 40%, отменяем улучшение
                 attackers[improvedHeavyWarriorIndex] = new HeavyWarrior(improvedHeavyWarrior.Side);
                 outputTextBox.AppendText($"Улучшение у ImprovedHeavyWarrior отменено, так как его здоровье упало ниже 40%." + Environment.NewLine);
-                attacker = attackers[0];
             }
         }
 
         public void ArchersTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
-            foreach (var warrior in attackers)
+            Archer archer = null;
+            int archerIndex = -1;
+            for (int i = 0; i < attackers.Count; i++)
             {
-                if (warrior is Archer)
+                if (attackers[i] is Archer)
                 {
-                    //ArcherProxy archer = new ArcherProxy(warrior.Side, fileLogger);
-                    var targetIndex = new Random().Next(0, defenders.Count-1); // Выбор случайного защищающегося воина
-                    var target = defenders[targetIndex]; // Выбранный защищающийся воин
+                    archer = new Archer(attackers[i].Side);
+                    archerIndex = i;
 
-                    Archer archer = new Archer(warrior.Side);
-                    // Передача индекса атакующего лучника
-                    archer.RangedAttack(defenders, targetIndex, attackers.IndexOf(warrior));
-                    outputTextBox.AppendText($"Атака {archer.Side} {archer} с силой {archer.RangedDamage(attackers.IndexOf(warrior))} по {target}" + Environment.NewLine);
-                    outputTextBox.AppendText($"HP у  {target.Side} {target} осталось {target.Healthpoints}" + Environment.NewLine);
+                    if (!_strategy.IsFrontLine(archerIndex, defenders))
+                    {
+                        var target = _strategy.GetEnemyWarrior(attackers, defenders, archerIndex, archer); // Выбранный защищающийся воин
 
-                    break; // Выходим после того как нашли первого арчера
+                        if (target != null && target is not GulyayGorod)
+                        {
+                            // Передача индекса атакующего лучника
+                            archer.RangedAttack(defenders, target, attackers.IndexOf(archer));
+                            outputTextBox.AppendText($"Атака {archer.Side} {archer} с силой {archer.RangedDamage(attackers.IndexOf(archer))} по {target}" + Environment.NewLine);
+                            outputTextBox.AppendText($"HP у  {target.Side} {target} осталось {target.Healthpoints}" + Environment.NewLine);
+                        }
+
+                    }
                 }
             }
-        }
-
-        private List<Warrior> GetAlliesInRange(List<Warrior> attackers, int healerIndex)
-        {
-            List<Warrior> alliesInRange = new List<Warrior>();
-            for (int i = Math.Max(0, healerIndex - 3); i < Math.Min(attackers.Count, healerIndex + 4); i++)
-            {
-                if (i != healerIndex && attackers[i].Side == attackers[healerIndex].Side)
-                {
-                    alliesInRange.Add(attackers[i]);
-                }
-            }
-            return alliesInRange;
         }
 
         virtual public void Attack(Warrior warrior1, Warrior warrior2, TextBox outputTextBox)
@@ -257,11 +282,14 @@ namespace ClashGame
                 }
 
                 //попытка поставить стену в первый раз компьютером
-                if (triggerGulyayGorodBlue && rand.Next(0, 5) == 0 && attackers[0].Side == "Blue" && defenders[0] is not GulyayGorod)
+                if (defenders.Count() > 0)
                 {
-                    GulyayGorodTurn(attackers, outputTextBox);
-                    triggerGulyayGorodBlue = false;
-                    outputTextBox.AppendText("СТЕНА ПОЯВИЛАСЬ" + Environment.NewLine);
+                    if (triggerGulyayGorodBlue && rand.Next(0, 5) == 0 && attackers[0].Side == "Blue" && defenders[0] is not GulyayGorod)
+                    {
+                        GulyayGorodTurn(attackers, outputTextBox);
+                        triggerGulyayGorodBlue = false;
+                        outputTextBox.AppendText("СТЕНА ПОЯВИЛАСЬ" + Environment.NewLine);
+                    }
                 }
 
                 //счетчик ходов когда стена стоит

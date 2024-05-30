@@ -96,11 +96,6 @@ namespace ClashGame
             return heavyWarrior;
         }
 
-        // Метод для проверки, улучшён ли воин
-        public bool IsUpgraded()
-        {
-            return isUpgraded;
-        }
     }
 
     public class Archer : Warrior, IRangedUnit
@@ -139,29 +134,10 @@ namespace ClashGame
             }
         }
 
-        virtual public double RangedAttack(List<Warrior> enemies, int targetIndex, int attackerIndex)
+        virtual public double RangedAttack(List<Warrior> enemies, Warrior target, int attackerIndex)
         {
-            var enemy = enemies[targetIndex];
-            int distance = Math.Abs(attackerIndex - targetIndex);
-
-            if (distance == 0) // Ближний бой
-            {
-                if (attackerSide != defenderSide) // Проверяем, находятся ли воины на разных сторонах
-                {
-                    enemy.Healthpoints -= RangedDamage(attackerIndex);
-                    return RangedDamage(attackerIndex);
-                }
-                else
-                {
-                    // Воины находятся на одной стороне, ближняя атака невозможна
-                    return 0;
-                }
-            }
-            else // Дальний бой
-            {
-                enemy.Healthpoints -= RangedDamage(attackerIndex);
+                target.Healthpoints -= RangedDamage(attackerIndex);
                 return RangedDamage(attackerIndex);
-            }
         }
     }
 
@@ -205,21 +181,15 @@ namespace ClashGame
             Side = side;
         }
 
-        virtual public Warrior CloneLightWarrior(List<Warrior> warriors)
+        virtual public Warrior CloneLightWarrior(Warrior warrior)
         {
-            if (new Random().Next(0, 2) == 0)
+            if (warrior is LightWarrior)
             {
-                // Ищем LightWarrior в списке воинов
-                foreach (var warrior in warriors)
-                {
-                    if (warrior is LightWarrior)
-                    {
-                        // Клонируем LightWarrior
-                        return warrior.Clone();
-                    }
-                }
+                // Клонируем LightWarrior
+                return warrior.Clone();
             }
-            return null;
+            else
+                return null;
         }
     }
 

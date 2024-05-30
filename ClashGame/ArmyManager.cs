@@ -58,27 +58,13 @@ namespace ClashGame
                 outputTextBox.AppendText(costSum.ToString() + Environment.NewLine); // Добавление информации в TextBox
             }
 
-            warriorList.Add(unitFactory.CreateGulyayGorod(side));
-
             for (int i = 0; i < warriorList.Count; i++)
             {
-                if (warriorList[i] is HeavyWarrior)
-                {
-                    if ((i > 0 && warriorList[i - 1] is LightWarrior) || (i < warriorList.Count - 1 && warriorList[i + 1] is LightWarrior))
-                    {
-                        ImprovedHeavyWarrior improvedHeavyWarrior = new ImprovedHeavyWarrior((HeavyWarrior)warriorList[i]);
-                        if (improvedHeavyWarrior.ShouldCancelUpgrade(warriorList))
-                        {
-                            warriorList[i] = improvedHeavyWarrior.GetBaseHeavyWarrior();
-                        }
-                        else
-                        {
-                            warriorList[i] = improvedHeavyWarrior;
-                        }
-                    }
-                }
                 outputTextBox.AppendText(warriorList[i].ToString() + Environment.NewLine); // Добавление информации в TextBox
             }
+
+
+            warriorList.Add(unitFactory.CreateGulyayGorod(side));
 
             armies[side] = warriorList;
             return warriorList;

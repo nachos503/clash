@@ -17,24 +17,22 @@ namespace ClashGame
         private List<Warrior> playerArmy;
         private List<Warrior> computerArmy;
         private bool playerTurn = true;
+        private IBattleStrategy currentStrategy;
 
         private bool wizardUsed = false;
         private bool healerUsed = false;
         private bool archerUsed = false;
+        bool flag = false;
 
-        private int countTurnsForGulyayGorod;
 
-        private IBattleStrategy currentStrategy = new TwoRowStrategy();
         public MainWindow()
         {
             InitializeComponent();
             armyManager = new ArmyManager(outputTextBox, new ArmyUnitFactory());
-            battleManager = new BattleManager(currentStrategy);
-            battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
-
             commandManager = new CommandManager();
             InitializeUI();
         }
+
 
         private void InitializeUI()
         {
@@ -79,6 +77,7 @@ namespace ClashGame
         private void CreateArmy_Click(object sender, RoutedEventArgs e)
         {
             CreateArmyClick(outputTextBox);
+
             DisableAbilityButtons();
             ChooseBlueArmy.Visibility = Visibility.Visible;
             ChooseRedArmy.Visibility = Visibility.Visible;
@@ -115,9 +114,9 @@ namespace ClashGame
 
         private void RefreshUI()
         {
-            UseWizard.IsEnabled = playerTurn && CheckForWizard(playerArmy) && !wizardUsed;
+            UseWizard.IsEnabled = playerTurn && CheckForWizard(playerArmy, computerArmy) && !wizardUsed;
             UseHealer.IsEnabled = playerTurn && CheckForHealer(playerArmy, computerArmy) && !healerUsed;
-            UseArcher.IsEnabled = playerTurn && CheckForArcher(playerArmy) && !archerUsed;
+            UseArcher.IsEnabled = playerTurn && CheckForArcher(playerArmy, computerArmy) && !archerUsed;
             CanсelTurn.IsEnabled = commandManager.CanUndo();
         }
 
@@ -185,7 +184,8 @@ namespace ClashGame
         {
             if (playerArmy.Count > 0 && computerArmy.Count > 0)
             {
-                battleManagerProxy.Attack(playerArmy[0], computerArmy[0], outputTextBox);
+                if (playerArmy[0] is not GulyayGorod || computerArmy[0] is not GulyayGorod)
+                    currentStrategy.ExecuteBattle(playerArmy, computerArmy, outputTextBox);
                 battleManagerProxy.IsDead(computerArmy[0], computerArmy);
                 CheckGameOver();
             }
@@ -193,18 +193,12 @@ namespace ClashGame
             playerTurn = false; // Завершение хода игрока
             ComputerTurn();
 
-            if (playerArmy[0] is GulyayGorod)
-            {
-                battleManager.SetGulyayGorodCount(countTurnsForGulyayGorod, playerArmy[0].Side); // Передача значения
-                if (countTurnsForGulyayGorod == 7)
-                {
-                    playerArmy.Remove(playerArmy[0]);
-                }
-            }
 
             DisableAbilityButtons(); // Деактивировать кнопки способностей
             EndTurn.IsEnabled = false;
         }
+
+  
 
 
         private void ComputerTurn()
@@ -212,6 +206,7 @@ namespace ClashGame
             if (computerArmy.Count > 0 && playerArmy.Count > 0)
             {
                 battleManagerProxy.TurnComputer(computerArmy, playerArmy, outputTextBox);
+                battleManagerProxy.IsDead(computerArmy[0], computerArmy);
                 CheckGameOver();
             }
             playerTurn = true; // Подготовка к началу нового хода игрока
@@ -230,12 +225,14 @@ namespace ClashGame
         private void ToTheEnd_Click(object sender, RoutedEventArgs e)
         {
             while (computerArmy.Count > 0 && playerArmy.Count > 0)
-            {
+            { 
                 battleManagerProxy.TurnComputer(playerArmy, computerArmy, outputTextBox);
+                
                 CheckGameOver();
                 if (computerArmy.Count > 0)
                 {
                     battleManagerProxy.TurnComputer(computerArmy, playerArmy, outputTextBox);
+                   
                     CheckGameOver();
                 }
             }
@@ -253,16 +250,27 @@ namespace ClashGame
 
             UseGulyayGorod.IsEnabled = false;
 
-            countTurnsForGulyayGorod = 0;
-
             battleManagerProxy.TurnComputer(computerArmy, playerArmy, outputTextBox);
         }
         #endregion
 
         #region Check
-        private bool CheckForWizard(List<Warrior> army)
+        private bool CheckForWizard(List<Warrior> army, List<Warrior> defenders)
         {
-            return army.Any(warrior => warrior is Wizard);
+            bool hasWizard = army.Any(warrior => warrior is Wizard);
+
+            if (hasWizard)
+            {
+                for (int i = 0; i < army.Count; i++)
+                {
+                    if (!currentStrategy.IsFrontLine(i, defenders) && army[i] is Wizard)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
         }
 
         private bool CheckForHealer(List<Warrior> army, List<Warrior> defenders)
@@ -283,9 +291,22 @@ namespace ClashGame
             return false;
         }
 
-        private bool CheckForArcher(List<Warrior> army)
+        private bool CheckForArcher(List<Warrior> army, List<Warrior> defenders)
         {
-            return army.Any(warrior => warrior is Archer);
+            bool hasArcher = army.Any(warrior => warrior is Archer);
+
+            if (hasArcher)
+            {
+                for (int i = 0; i < army.Count; i++)
+                {
+                    if (!currentStrategy.IsFrontLine(i, defenders) && army[i] is Archer)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
         }
 
         #endregion
@@ -302,7 +323,8 @@ namespace ClashGame
 
         private void CheckGameOver()
         {
-            if (playerArmy.Count == 0)
+            
+            if (playerArmy.Count == 0 || (playerArmy.Count == 1 && playerArmy[0] is GulyayGorod && !flag))
             {
                 MessageBox.Show("Компьютер победил!");
                 Turn.IsEnabled = false;
@@ -310,8 +332,9 @@ namespace ClashGame
                 UseWizard.IsEnabled = false;
                 UseHealer.IsEnabled = false;
                 UseArcher.IsEnabled = false;
+                flag = true;
             }
-            else if (computerArmy.Count == 0)
+            else if (computerArmy.Count == 0 || (computerArmy.Count == 1 && computerArmy[0] is GulyayGorod && !flag))
             {
                 MessageBox.Show("Вы победили!");
                 Turn.IsEnabled = false;
@@ -319,6 +342,7 @@ namespace ClashGame
                 UseWizard.IsEnabled = false;
                 UseHealer.IsEnabled = false;
                 UseArcher.IsEnabled = false;
+                flag = true;
             }
         }
 
@@ -334,42 +358,75 @@ namespace ClashGame
 
         private void ChooseTwoRows_Click(object sender, RoutedEventArgs e)
         {
-            currentStrategy = new TwoRowStrategy();
+            IBattleStrategy initialStrategy = new DefaultStratagy();
+
+            battleManager = new BattleManager(initialStrategy);
+            battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
+
+            currentStrategy = new TwoRowStrategy(battleManagerProxy);
+
+
+            battleManager.SetStrategy(currentStrategy);
             MessageBox.Show("Two Rows strategy selected.");
-            ChooseThreeRows.Visibility = Visibility.Collapsed;
-            ChooseWallToWall.Visibility = Visibility.Collapsed;
-            ChooseStrategy.Visibility = Visibility.Collapsed;
+
+            battleManager.UpgradeHeavyWarrior(playerArmy, computerArmy, outputTextBox);
+            battleManager.UpgradeHeavyWarrior(computerArmy, playerArmy, outputTextBox);
+
             ShowPlayButtons();
             ChooseTwoRows.IsEnabled = false;
-          
+            ChooseThreeRows.IsEnabled = true;
+            ChooseWallToWall.IsEnabled = true;
+
+            
 
             //DrawArmies();
         }
 
         private void ChooseThreeRows_Click(object sender, RoutedEventArgs e)
         {
-            currentStrategy = new ThreeRowStrategy();
+            IBattleStrategy initialStrategy = new DefaultStratagy();
+
+            battleManager = new BattleManager(initialStrategy);
+            battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
+
+            currentStrategy = new ThreeRowStrategy(battleManagerProxy);
+
+            battleManager.SetStrategy(currentStrategy);
             MessageBox.Show("Three Rows strategy selected.");
-            ChooseTwoRows.Visibility = Visibility.Collapsed;
-            ChooseWallToWall.Visibility = Visibility.Collapsed;
-            ChooseStrategy.Visibility = Visibility.Collapsed;
+
+            battleManager.UpgradeHeavyWarrior(playerArmy, computerArmy, outputTextBox);
+            battleManager.UpgradeHeavyWarrior(computerArmy, playerArmy, outputTextBox);
+
             ShowPlayButtons();
             ChooseThreeRows.IsEnabled = false;
-           
+            ChooseWallToWall.IsEnabled = true;
+            ChooseTwoRows.IsEnabled = true;
+
+         
             //DrawArmies();
         }
 
         private void ChooseWallToWall_Click(object sender, RoutedEventArgs e)
         {
-            
-            currentStrategy = new WallToWallStrategy();
+            IBattleStrategy initialStrategy = new DefaultStratagy();
+
+            battleManager = new BattleManager(initialStrategy);
+            battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
+
+            currentStrategy = new WallToWallStrategy(battleManagerProxy);
+
+            battleManager.SetStrategy(currentStrategy);
+
             MessageBox.Show("Wall to Wall strategy selected.");
-            ChooseTwoRows.Visibility = Visibility.Collapsed;
-            ChooseThreeRows.Visibility = Visibility.Collapsed;
-            ChooseStrategy.Visibility = Visibility.Collapsed;
+
+            battleManager.UpgradeHeavyWarrior(playerArmy, computerArmy, outputTextBox);
+            battleManager.UpgradeHeavyWarrior(computerArmy, playerArmy, outputTextBox);
+
             ShowPlayButtons();
             ChooseWallToWall.IsEnabled = false;
-           
+            ChooseTwoRows.IsEnabled = true;
+            ChooseThreeRows.IsEnabled = true;
+
             //DrawArmies();
         }
 

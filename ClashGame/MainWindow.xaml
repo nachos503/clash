@@ -4,6 +4,7 @@
         Title="ClashGame"
         WindowStyle="None" ResizeMode="NoResize" WindowState="Maximized">
     <Grid x:Name="MainGrid">
+        
         <!-- Canvas для отображения армий -->
         <Canvas x:Name="battlefieldCanvas" Background="LightGray" Margin="0,0,-41,-58"/>
 
@@ -36,7 +37,7 @@
                 <TextBox x:Name="outputTextBox" Width="471" Height="438" IsReadOnly="True" VerticalScrollBarVisibility="Auto" Background="{x:Null}" TextAlignment="Center" TextWrapping="Wrap" FontFamily="Arial Black" FontSize="20"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
-                <Button x:Name="StartAgain" Content="Начать заново" Click="StartAgain_Click" Width="200" Height="60"/>
+                <Button x:Name="StartAgain" Content="Начать заново" Click="StartAgain_Click" Width="200" Height="60" Background="#FFFFF7A0" Foreground="#FF545805" FontFamily="Arial Black" FontSize="20"/>
             </StackPanel>
         </StackPanel>
     </Grid>

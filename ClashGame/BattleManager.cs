@@ -113,7 +113,10 @@ namespace ClashGame
         /// <param name="army">The army to which the warrior belongs.</param>
         virtual public void IsDead(Warrior warrior, List<Warrior> army)
         {
-            if (warrior.Healthpoints <= 0) army.Remove(warrior);
+            for (int i =0; i < army.Count(); i++)
+            {
+                if (army[i].Healthpoints <= 0) army.Remove(army[i]);
+            }
         }
 
         /// <summary>

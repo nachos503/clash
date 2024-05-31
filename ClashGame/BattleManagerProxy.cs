@@ -76,7 +76,7 @@ namespace ClashGame
             if (defenders.Count > 0)  IsDead(defenders[0], defenders);
             HealerTurn(attackers, defenders,outputTextBox);
             ImprovedHeavyWarriorTurn(attackers, attackers[0], outputTextBox);
-            if (attackers[0] is not GulyayGorod || defenders[0] is not GulyayGorod)
+            if (attackers[0] is not GulyayGorod && defenders[0] is not GulyayGorod)
                 _battleManager._strategy.ExecuteBattle(attackers, defenders, outputTextBox);
             if (defenders.Count > 0) IsDead(defenders[0], defenders);
             ArchersTurn(attackers, defenders, outputTextBox);

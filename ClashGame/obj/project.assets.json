@@ -8,23 +8,23 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\annab\\.nuget\\packages\\": {},
+    "C:\\Users\\Varvara\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\annab\\Source\\Repos\\clash555\\ClashGame\\ClashGame.csproj",
+      "projectUniqueName": "C:\\Users\\Varvara\\source\\repos\\nachos503\\clash\\ClashGame\\ClashGame.csproj",
       "projectName": "ClashGame",
-      "projectPath": "C:\\Users\\annab\\Source\\Repos\\clash555\\ClashGame\\ClashGame.csproj",
-      "packagesPath": "C:\\Users\\annab\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\annab\\Source\\Repos\\clash555\\ClashGame\\obj\\",
+      "projectPath": "C:\\Users\\Varvara\\source\\repos\\nachos503\\clash\\ClashGame\\ClashGame.csproj",
+      "packagesPath": "C:\\Users\\Varvara\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Varvara\\source\\repos\\nachos503\\clash\\ClashGame\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\annab\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Varvara\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -45,11 +45,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -66,24 +61,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.29, 6.0.29]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.29, 6.0.29]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.29, 6.0.29]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.29, 6.0.29]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -92,7 +69,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

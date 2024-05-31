@@ -60,6 +60,12 @@ namespace ClashGame
         private List<Warrior> computerArmy;
 
         /// <summary>
+        /// Counting tuns for limited Gulyay Gorod life time .
+        /// Identifier string "F:ClashGame.MainWindow.countTurnForGulyayGorod".
+        /// </summary>
+        private int countTurnForGulyayGorod = 0;
+
+        /// <summary>
         /// Flag indicating that it is currently the player's turn.
         /// Identifier string "F:ClashGame.MainWindow.playerTurn".
         /// </summary>
@@ -159,7 +165,6 @@ namespace ClashGame
             UseHealer.IsEnabled = false;
             UseArcher.IsEnabled = false;
             CanсelTurn.IsEnabled = false;
-            UseGulyayGorod.IsEnabled = false;
         }
 
         /// <summary>
@@ -173,6 +178,7 @@ namespace ClashGame
             CreateArmies(outputTextBox);
 
             DisableAbilityButtons();
+            UseGulyayGorod.IsEnabled = false;
             ChooseBlueArmy.Visibility = Visibility.Visible;
             ChooseRedArmy.Visibility = Visibility.Visible;
             ChooseBlueArmy.IsEnabled = true;
@@ -377,7 +383,7 @@ namespace ClashGame
             ToTheEnd.Visibility = Visibility.Visible;
             UseGulyayGorod.Visibility = Visibility.Visible;
             EndTurn.Visibility = Visibility.Visible;
-            UseGulyayGorod.IsEnabled = true;
+            if (playerArmy[0] is not GulyayGorod) UseGulyayGorod.IsEnabled = true;
             EndTurn.IsEnabled = false;
             StartTurn.IsEnabled = true;
             ToTheEnd.IsEnabled = true;
@@ -484,6 +490,8 @@ namespace ClashGame
 
             UseGulyayGorod.IsEnabled = false;
 
+            countTurnForGulyayGorod++;
+
             battleManagerProxy.TurnComputer(computerArmy, playerArmy, outputTextBox);
             DrawArmies();
         }
@@ -569,7 +577,6 @@ namespace ClashGame
 
             RefreshUI();
             StartTurn.IsEnabled = false;
-            CanсelTurn.IsEnabled = true;
         }
 
         /// <summary>
@@ -582,7 +589,7 @@ namespace ClashGame
         {
             if (playerArmy.Count > 0 && computerArmy.Count > 0)
             {
-                if (playerArmy[0] is not GulyayGorod || computerArmy[0] is not GulyayGorod)
+                if (playerArmy[0] is not GulyayGorod && computerArmy[0] is not GulyayGorod)
                     currentStrategy.ExecuteBattle(playerArmy, computerArmy, outputTextBox);
                 battleManagerProxy.IsDead(computerArmy[0], computerArmy);
                 CheckGameOver();
@@ -590,6 +597,16 @@ namespace ClashGame
 
             playerTurn = false; // End of player's turn
             ComputerTurn();
+
+            if (countTurnForGulyayGorod < 7 && (playerArmy[0] is GulyayGorod || computerArmy[0] is GulyayGorod))
+            {
+                countTurnForGulyayGorod += 2;
+                if (countTurnForGulyayGorod == 7)
+                {
+                    if (playerArmy[0] is GulyayGorod) playerArmy.Remove(playerArmy[0]);
+                    else computerArmy.Remove(computerArmy[0]);
+                }
+            }
 
             DisableAbilityButtons(); // Deactivate ability buttons
             EndTurn.IsEnabled = false;
@@ -702,23 +719,33 @@ namespace ClashGame
             if (playerArmy.Count == 0 || (playerArmy.Count == 1 && playerArmy[0] is GulyayGorod && !isGameOverFlag))
             {
                 MessageBox.Show("Компьютер победил!");
-                StartTurn.IsEnabled = false;
-                CanсelTurn.IsEnabled = false;
-                UseWizard.IsEnabled = false;
-                UseHealer.IsEnabled = false;
-                UseArcher.IsEnabled = false;
+                DisableAllButtons();
                 isGameOverFlag = true;
             }
             else if (computerArmy.Count == 0 || (computerArmy.Count == 1 && computerArmy[0] is GulyayGorod && !isGameOverFlag))
             {
                 MessageBox.Show("Вы победили!");
-                StartTurn.IsEnabled = false;
-                CanсelTurn.IsEnabled = false;
-                UseWizard.IsEnabled = false;
-                UseHealer.IsEnabled = false;
-                UseArcher.IsEnabled = false;
+                DisableAllButtons();
                 isGameOverFlag = true;
             }
+        }
+        /// <summary>
+        /// Disable all buttons except StartAgain_Click.
+        /// Method identifier: "M:ClashGame.MainWindow.DisableAllButtons".
+        /// </summary>
+        private void DisableAllButtons()
+        {
+            StartTurn.IsEnabled = false;
+            CanсelTurn.IsEnabled = false;
+            UseWizard.IsEnabled = false;
+            UseHealer.IsEnabled = false;
+            UseArcher.IsEnabled = false;
+            ToTheEnd.IsEnabled = false;
+            EndTurn.IsEnabled = false;
+            UseGulyayGorod.IsEnabled = false;
+            ChooseTwoRows.IsEnabled = false;
+            ChooseThreeRows.IsEnabled = false;
+            ChooseWallToWall.IsEnabled = false;
         }
         #endregion
 

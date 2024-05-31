@@ -115,6 +115,10 @@ namespace ClashGame
         public MainWindow()
         {
             InitializeComponent();
+            ImageBrush myBrush = new ImageBrush();
+            string imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "background.png");
+            myBrush.ImageSource = new BitmapImage(new Uri(imagePath, UriKind.Absolute));
+            this.Background = myBrush;
             armyManager = new ArmyManager(outputTextBox, new ArmyUnitFactory());
             commandManager = new CommandManager();
             InitializeUI();

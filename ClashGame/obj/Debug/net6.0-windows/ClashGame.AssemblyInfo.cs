@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClashGame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+adc21d55ea9d7eec9237da825e99669f65e2bfd0")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClashGame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClashGame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

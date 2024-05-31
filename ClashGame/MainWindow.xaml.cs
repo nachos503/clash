@@ -11,27 +11,101 @@ using System.IO;
 
 namespace ClashGame
 {
+    /// <summary>
+    /// Класс MainWindow, представляющий главное окно приложения.
+    /// Строка идентификатора "T:ClashGame.MainWindow".
+    /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// Управляющий армией.
+        /// Строка идентификатора "F:ClashGame.MainWindow.armyManager".
+        /// </summary>
         private readonly ArmyManager armyManager;
+
+        /// <summary>
+        /// Прокси-объект BattleManager.
+        /// Строка идентификатора "F:ClashGame.MainWindow.battleManagerProxy".
+        /// </summary>
         private BattleManagerProxy battleManagerProxy;
+
+        /// <summary>
+        /// Управляющий командами.
+        /// Строка идентификатора "F:ClashGame.MainWindow.commandManager".
+        /// </summary>
         private CommandManager commandManager;
+
+        /// <summary>
+        /// Управляющий битвой.
+        /// Строка идентификатора "F:ClashGame.MainWindow.battleManager".
+        /// </summary>
         private BattleManager battleManager;
+
+        /// <summary>
+        /// Текущая стратегия битвы.
+        /// Строка идентификатора "F:ClashGame.MainWindow.currentStrategy".
+        /// </summary>
         private IBattleStrategy currentStrategy;
 
+        /// <summary>
+        /// Армия игрока.
+        /// Строка идентификатора "F:ClashGame.MainWindow.playerArmy".
+        /// </summary>
         private List<Warrior> playerArmy;
+
+        /// <summary>
+        /// Армия компьютера.
+        /// Строка идентификатора "F:ClashGame.MainWindow.computerArmy".
+        /// </summary>
         private List<Warrior> computerArmy;
 
+        /// <summary>
+        /// Флаг, указывающий, что сейчас ход игрока.
+        /// Строка идентификатора "F:ClashGame.MainWindow.playerTurn".
+        /// </summary>
         private bool playerTurn = true;
+
+        /// <summary>
+        /// Флаг, указывающий, что маг использован.
+        /// Строка идентификатора "F:ClashGame.MainWindow.wizardUsed".
+        /// </summary>
         private bool wizardUsed = false;
+
+        /// <summary>
+        /// Флаг, указывающий, что лекарь использован.
+        /// Строка идентификатора "F:ClashGame.MainWindow.healerUsed".
+        /// </summary>
         private bool healerUsed = false;
+
+        /// <summary>
+        /// Флаг, указывающий, что лучник использован.
+        /// Строка идентификатора "F:ClashGame.MainWindow.archerUsed".
+        /// </summary>
         private bool archerUsed = false;
+
+        /// <summary>
+        /// Флаг, указывающий, что игра окончена.
+        /// Строка идентификатора "F:ClashGame.MainWindow.isGameOverFlag".
+        /// </summary>
+
         private bool isGameOverFlag = false;
 
+        /// <summary>
+        /// Цвет армии игрока.
+        /// Строка идентификатора "F:ClashGame.MainWindow.playerColor".
+        /// </summary>
         private Color playerColor = Colors.Blue;
+
+        /// <summary>
+        /// Цвет армии компьютера.
+        /// Строка идентификатора "F:ClashGame.MainWindow.computerColor".
+        /// </summary>
         private Color computerColor = Colors.Red;
 
-
+        /// <summary>
+        /// Конструктор для класса MainWindow.
+        /// Строка идентификатора "M:ClashGame.MainWindow.#ctor".
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -40,7 +114,10 @@ namespace ClashGame
             InitializeUI();
         }
 
-
+        /// <summary>
+        /// Инициализирует пользовательский интерфейс.
+        /// Строка идентификатора "M:ClashGame.MainWindow.InitializeUI".
+        /// </summary>
         private void InitializeUI()
         {
             ChooseBlueArmy.Visibility = Visibility.Hidden;
@@ -72,7 +149,10 @@ namespace ClashGame
         }
 
         #region ChooseArmyClicks
-        //скрываем кнопки бафом на время 
+        /// <summary>
+        /// Скрывает кнопки способностей на время.
+        /// Строка идентификатора "M:ClashGame.MainWindow.DisableAbilityButtons".
+        /// </summary>
         private void DisableAbilityButtons()
         {
             UseWizard.IsEnabled = false;
@@ -81,7 +161,13 @@ namespace ClashGame
             CanсelTurn.IsEnabled = false;
             UseGulyayGorod.IsEnabled = false;
         }
-        //создание армий - кнопка
+
+        /// <summary>
+        /// Обработчик события нажатия кнопки создания армии.
+        /// Строка идентификатора "M:ClashGame.MainWindow.CreateArmy_Click(System.Object,System.Windows.RoutedEventArgs)".
+        /// </summary>
+        /// <param name="sender">Источник события.</param>
+        /// <param name="e">Аргументы события.</param>
         private void CreateArmy_Click(object sender, RoutedEventArgs e)
         {
             CreateArmies(outputTextBox);
@@ -92,7 +178,12 @@ namespace ClashGame
             ChooseBlueArmy.IsEnabled = true;
             ChooseRedArmy.IsEnabled = true;
         }
-        //создаине армий - метод
+
+        //// <summary>
+        /// Создает армии игроков.
+        /// Строка идентификатора "M:ClashGame.MainWindow.CreateArmies(System.Windows.Controls.TextBox)".
+        /// </summary>
+        /// <param name="outputTextBox">TextBox для вывода информации.</param>
         public void CreateArmies(TextBox outputTextBox)
         {
             outputTextBox.Clear();
@@ -102,7 +193,12 @@ namespace ClashGame
             healerUsed = false;
             archerUsed = false;
         }
-        // Метод для установки цветов армий в зависимости от выбора игрока
+
+        /// <summary>
+        /// Устанавливает цвета армий в зависимости от выбора игрока.
+        /// Строка идентификатора "M:ClashGame.MainWindow.SetArmyColors(System.String)".
+        /// </summary>
+        /// <param name="playerArmyColor">Цвет армии игрока.</param>
         private void SetArmyColors(string playerArmyColor)
         {
             if (playerArmyColor == "Blue")
@@ -117,7 +213,12 @@ namespace ClashGame
             }
         }
 
-        // Обновленные методы выбора армии
+        /// <summary>
+        /// Обработчик события нажатия кнопки выбора синей армии.
+        /// Строка идентификатора "M:ClashGame.MainWindow.ChooseBlueArmy_Click(System.Object,System.Windows.RoutedEventArgs)".
+        /// </summary>
+        /// <param name="sender">Источник события.</param>
+        /// <param name="e">Аргументы события.</param>
         private void ChooseBlueArmy_Click(object sender, RoutedEventArgs e)
         {
             playerArmy = armyManager.GetArmyByColor("Blue");
@@ -129,6 +230,12 @@ namespace ClashGame
             CreateArmy.Visibility = Visibility.Collapsed;
         }
 
+        /// <summary>
+        /// Обработчик события нажатия кнопки выбора красной армии.
+        /// Строка идентификатора "M:ClashGame.MainWindow.ChooseRedArmy_Click(System.Object,System.Windows.RoutedEventArgs)".
+        /// </summary>
+        /// <param name="sender">Источник события.</param>
+        /// <param name="e">Аргументы события.</param>
         private void ChooseRedArmy_Click(object sender, RoutedEventArgs e)
         {
             playerArmy = armyManager.GetArmyByColor("Red");
@@ -139,7 +246,11 @@ namespace ClashGame
             ChooseRedArmy.IsEnabled = false;
             CreateArmy.Visibility = Visibility.Collapsed;
         }
-        //переход к выбору стратегии
+
+        /// <summary>
+        /// Переход к выбору стратегии.
+        /// Строка идентификатора "M:ClashGame.MainWindow.InitializeGame".
+        /// </summary>
         private void InitializeGame()
         {
             ChooseStrategy.Visibility = Visibility.Visible;
@@ -148,7 +259,13 @@ namespace ClashGame
         #endregion
 
         #region ChooseStrategyClicks
-        //выбор статегии - кнопка
+       
+        /// <summary>
+        /// Обработчик события нажатия кнопки выбора стратегии.
+        /// Строка идентификатора "M:ClashGame.MainWindow.ChooseStrategy_Click(System.Object,System.Windows.RoutedEventArgs)".
+        /// </summary>
+        /// <param name="sender">Источник события.</param>
+        /// <param name="e">Аргументы события.</param>
         private void ChooseStrategy_Click(object sender, RoutedEventArgs e)
         {
             ChooseTwoRows.Visibility = Visibility.Visible;
@@ -158,7 +275,13 @@ namespace ClashGame
             ChooseThreeRows.IsEnabled = true;
             ChooseWallToWall.IsEnabled = true;
         }
-        //2 линии
+
+        /// <summary>
+        /// Обработчик события нажатия кнопки выбора стратегии "две линии".
+        /// Строка идентификатора "M:ClashGame.MainWindow.ChooseTwoRows_Click(System.Object,System.Windows.RoutedEventArgs)".
+        /// </summary>
+        /// <param name="sender">Источник события.</param>
+        /// <param name="e">Аргументы события.</param>
         private void ChooseTwoRows_Click(object sender, RoutedEventArgs e)
         {
             IBattleStrategy initialStrategy = new DefaultStratagy();
@@ -181,7 +304,13 @@ namespace ClashGame
 
             DrawArmies();
         }
-        //3 линии
+
+        /// <summary>
+        /// Обработчик события нажатия кнопки выбора стратегии "три линии".
+        /// Строка идентификатора "M:ClashGame.MainWindow.ChooseThreeRows_Click(System.Object,System.Windows.RoutedEventArgs)".
+        /// </summary>
+        /// <param name="sender">Источник события.</param>
+        /// <param name="e">Аргументы события.</param>
         private void ChooseThreeRows_Click(object sender, RoutedEventArgs e)
         {
             IBattleStrategy initialStrategy = new DefaultStratagy();
@@ -204,7 +333,13 @@ namespace ClashGame
 
             DrawArmies();
         }
-        //стенка на стенку
+
+        /// <summary>
+        /// Обработчик события нажатия кнопки выбора стратегии "стенка на стенку".
+        /// Строка идентификатора "M:ClashGame.MainWindow.ChooseWallToWall_Click(System.Object,System.Windows.RoutedEventArgs)".
+        /// </summary>
+        /// <param name="sender">Источник события.</param>
+        /// <param name="e">Аргументы события.</param>
         private void ChooseWallToWall_Click(object sender, RoutedEventArgs e)
         {
             IBattleStrategy initialStrategy = new DefaultStratagy();
@@ -227,7 +362,11 @@ namespace ClashGame
 
             DrawArmies();
         }
-        //показывать кнопки для игры дальше
+
+        /// <summary>
+        /// Показывает кнопки для продолжения игры.
+        /// Строка идентификатора "M:ClashGame.MainWindow.ShowPlayButtons".
+        /// </summary>
         private void ShowPlayButtons()
         {
             UseWizard.Visibility = Visibility.Visible;
@@ -246,7 +385,11 @@ namespace ClashGame
         #endregion
 
         #region SpecialAbilitiesClicks
-        //проверка что бафы есть
+
+        /// <summary>
+        /// Обновляет состояние элементов пользовательского интерфейса.
+        /// Строка идентификатора "M:ClashGame.MainWindow.RefreshUI".
+        /// </summary>
         private void RefreshUI()
         {
             UseWizard.IsEnabled = playerTurn && CheckForWizard(playerArmy, computerArmy) && !wizardUsed;
@@ -254,7 +397,13 @@ namespace ClashGame
             UseArcher.IsEnabled = playerTurn && CheckForArcher(playerArmy, computerArmy) && !archerUsed;
             CanсelTurn.IsEnabled = commandManager.CanUndo();
         }
-        //применение кудесника
+
+        /// <summary>
+        /// Обработчик события нажатия кнопки применения способности мага.
+        /// Строка идентификатора "M:ClashGame.MainWindow.UseWizard_Click(System.Object,System.Windows.RoutedEventArgs)".
+        /// </summary>
+        /// <param name="sender">Источник события.</param>
+        /// <param name="e">Аргументы события.</param>
         private void UseWizard_Click(object sender, RoutedEventArgs e)
         {
             if (playerArmy == null || playerArmy.Count == 0 || !playerTurn || wizardUsed)
@@ -272,7 +421,13 @@ namespace ClashGame
             RefreshUI();
             DrawArmies();
         }
-        //применение медсестры
+
+        /// <summary>
+        /// Обработчик события нажатия кнопки применения способности лекаря.
+        /// Строка идентификатора "M:ClashGame.MainWindow.UseHealer_Click(System.Object,System.Windows.RoutedEventArgs)".
+        /// </summary>
+        /// <param name="sender">Источник события.</param>
+        /// <param name="e">Аргументы события.</param>
         private void UseHealer_Click(object sender, RoutedEventArgs e)
         {
             if (playerArmy == null || playerArmy.Count == 0 || !playerTurn || healerUsed)
@@ -290,7 +445,13 @@ namespace ClashGame
             RefreshUI();
             DrawArmies();
         }
-        //асташлепка
+
+        /// <summary>
+        /// Обработчик события нажатия кнопки применения способности лучника.
+        /// Строка идентификатора "M:ClashGame.MainWindow.UseArcher_Click(System.Object,System.Windows.RoutedEventArgs)".
+        /// </summary>
+        /// <param name="sender">Источник события.</param>
+        /// <param name="e">Аргументы события.</param>
         private void UseArcher_Click(object sender, RoutedEventArgs e)
         {
             if (playerArmy == null || playerArmy.Count == 0 || !playerTurn || archerUsed)
@@ -308,7 +469,13 @@ namespace ClashGame
             RefreshUI();
             DrawArmies();
         }
-        //блядская стена
+
+        /// <summary>
+        /// Обработчик события нажатия кнопки применения способности Гуляй-города.
+        /// Строка идентификатора "M:ClashGame.MainWindow.GulyayGorod_Click(System.Object,System.Windows.RoutedEventArgs)".
+        /// </summary>
+        /// <param name="sender">Источник события.</param>
+        /// <param name="e">Аргументы события.</param>
         private void GulyayGorodr_Click(object sender, RoutedEventArgs e)
         {
             var temp = playerArmy.First();
@@ -323,7 +490,14 @@ namespace ClashGame
         #endregion
 
         #region CheckForSpecialAbilities
-        //функции проверки существоваиня бафов
+
+        /// <summary>
+        /// Проверяет наличие мага в армии, который не находится на передовой линии.
+        /// Строка идентификатора "M:ClashGame.MainWindow.CheckForWizard(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior})".
+        /// </summary>
+        /// <param name="army">Армия, которую нужно проверить.</param>
+        /// <param name="defenders">Список защищающихся воинов.</param>
+        /// <returns>True, если есть маг не на передовой линии, иначе false.</returns>
         private bool CheckForWizard(List<Warrior> army, List<Warrior> defenders)
         {
             //если есть хоть один
@@ -337,6 +511,13 @@ namespace ClashGame
             return false;
         }
 
+        /// <summary>
+        /// Проверяет наличие лекаря в армии, который не находится на передовой линии.
+        /// Строка идентификатора "M:ClashGame.MainWindow.CheckForHealer(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior})".
+        /// </summary>
+        /// <param name="army">Армия, которую нужно проверить.</param>
+        /// <param name="defenders">Список защищающихся воинов.</param>
+        /// <returns>True, если есть лекарь не на передовой линии, иначе false.</returns>
         private bool CheckForHealer(List<Warrior> army, List<Warrior> defenders)
         {
             bool hasHealer = army.Any(warrior => warrior is Healer);
@@ -349,6 +530,13 @@ namespace ClashGame
             return false;
         }
 
+        /// <summary>
+        /// Проверяет наличие лучника в армии, который не находится на передовой линии.
+        /// Строка идентификатора "M:ClashGame.MainWindow.CheckForArcher(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior})".
+        /// </summary>
+        /// <param name="army">Армия, которую нужно проверить.</param>
+        /// <param name="defenders">Список защищающихся воинов.</param>
+        /// <returns>True, если есть лучник не на передовой линии, иначе false.</returns>
         private bool CheckForArcher(List<Warrior> army, List<Warrior> defenders)
         {
             bool hasArcher = army.Any(warrior => warrior is Archer);
@@ -364,7 +552,13 @@ namespace ClashGame
         #endregion
 
         #region AnyTurnClick
-        //анопка начала хода - выбор бафов, отмены бафов
+
+        /// <summary>
+        /// Обработчик события нажатия кнопки начала хода.
+        /// Строка идентификатора "M:ClashGame.MainWindow.StartTurn_Click(System.Object,System.Windows.RoutedEventArgs)".
+        /// </summary>
+        /// <param name="sender">Источник события.</param>
+        /// <param name="e">Аргументы события.</param>
         private void StartTurn_Click(object sender, RoutedEventArgs e)
         {
             wizardUsed = false;
@@ -377,7 +571,13 @@ namespace ClashGame
             StartTurn.IsEnabled = false;
             CanсelTurn.IsEnabled = true;
         }
-        //конец хода - конечная атака
+
+        /// <summary>
+        /// Обработчик события нажатия кнопки окончания хода.
+        /// Строка идентификатора "M:ClashGame.MainWindow.EndTurn_Click(System.Object,System.Windows.RoutedEventArgs)".
+        /// </summary>
+        /// <param name="sender">Источник события.</param>
+        /// <param name="e">Аргументы события.</param>
         private void EndTurn_Click(object sender, RoutedEventArgs e)
         {
             if (playerArmy.Count > 0 && computerArmy.Count > 0)
@@ -395,7 +595,11 @@ namespace ClashGame
             EndTurn.IsEnabled = false;
             DrawArmies();
         }
-        //ход компьютера после атаки игрока
+
+        /// <summary>
+        /// Выполняет ход компьютера после окончания хода игрока.
+        /// Строка идентификатора "M:ClashGame.MainWindow.ComputerTurn".
+        /// </summary>
         private void ComputerTurn()
         {
             if (computerArmy.Count > 0 && playerArmy.Count > 0)
@@ -410,7 +614,13 @@ namespace ClashGame
             DisableAbilityButtons(); // Деактивировать кнопки до явного начала хода
             DrawArmies();
         }
-        //отмена хода через паттерн команда
+
+        /// <summary>
+        /// Обработчик события нажатия кнопки отмены хода.
+        /// Строка идентификатора "M:ClashGame.MainWindow.CancelTurn_Click(System.Object,System.Windows.RoutedEventArgs)".
+        /// </summary>
+        /// <param name="sender">Источник события.</param>
+        /// <param name="e">Аргументы события.</param>
         private void CancelTurn_Click(object sender, RoutedEventArgs e)
         {
             commandManager.Undo();
@@ -418,7 +628,13 @@ namespace ClashGame
             CanсelTurn.IsEnabled = false;
             DrawArmies();
         }
-        //доиграть гру до конца
+
+        /// <summary>
+        /// Обработчик события нажатия кнопки доиграть игру до конца.
+        /// Строка идентификатора "M:ClashGame.MainWindow.ToTheEnd_Click(System.Object,System.Windows.RoutedEventArgs)".
+        /// </summary>
+        /// <param name="sender">Источник события.</param>
+        /// <param name="e">Аргументы события.</param>
         private void ToTheEnd_Click(object sender, RoutedEventArgs e)
         {
             while (computerArmy.Count > 0 && playerArmy.Count > 0)
@@ -439,7 +655,13 @@ namespace ClashGame
             EndTurn.IsEnabled = false;
             DrawArmies();
         }
-        //начать игру заново
+
+        /// <summary>
+        /// Обработчик события нажатия кнопки начать игру заново.
+        /// Строка идентификатора "M:ClashGame.MainWindow.StartAgain_Click(System.Object,System.Windows.RoutedEventArgs)".
+        /// </summary>
+        /// <param name="sender">Источник события.</param>
+        /// <param name="e">Аргументы события.</param>
         private void StartAgain_Click(object sender, RoutedEventArgs e)
         {
             CreateArmy.Visibility = Visibility.Visible;
@@ -469,7 +691,11 @@ namespace ClashGame
 
             ChooseStrategy.Visibility = Visibility.Hidden;
         }
-        //проверка что армии не сдохли поголовно
+
+        /// <summary>
+        /// Проверяет, завершена ли игра.
+        /// Строка идентификатора "M:ClashGame.MainWindow.CheckGameOver".
+        /// </summary>
         private void CheckGameOver()
         {
 
@@ -497,6 +723,11 @@ namespace ClashGame
         #endregion
 
         #region Graphics&Animation
+
+        /// <summary>
+        /// Рисует армии на поле битвы.
+        /// Строка идентификатора "M:ClashGame.MainWindow.DrawArmies".
+        /// </summary>
         private void DrawArmies()
         {
             battlefieldCanvas.Children.Clear();
@@ -504,6 +735,14 @@ namespace ClashGame
             DrawArmy(computerArmy, 700, 200, true); // Правая армия
         }
 
+        /// <summary>
+        /// Рисует армию на поле битвы.
+        /// Строка идентификатора "M:ClashGame.MainWindow.DrawArmy(System.Collections.Generic.List{ClashGame.Warrior},System.Double,System.Double,System.Boolean)".
+        /// </summary>
+        /// <param name="army">Список воинов армии.</param>
+        /// <param name="xOffset">Смещение по оси X.</param>
+        /// <param name="yOffset">Смещение по оси Y.</param>
+        /// <param name="isComputerArmy">Указывает, является ли армия армией компьютера.</param>
         private void DrawArmy(List<Warrior> army, double xOffset, double yOffset, bool isComputerArmy)
         {
             if (currentStrategy is TwoRowStrategy)
@@ -530,6 +769,15 @@ namespace ClashGame
             }
         }
 
+        /// <summary>
+        /// Рисует армию в несколько рядов.
+        /// Строка идентификатора "M:ClashGame.MainWindow.DrawArmyInRows(System.Collections.Generic.List{ClashGame.Warrior},System.Double,System.Double,System.Int32,System.Boolean)".
+        /// </summary>
+        /// <param name="army">Список воинов армии.</param>
+        /// <param name="xOffset">Смещение по оси X.</param>
+        /// <param name="yOffset">Смещение по оси Y.</param>
+        /// <param name="rows">Количество рядов.</param>
+        /// <param name="isComputerArmy">Указывает, является ли армия армией компьютера.</param>
         private void DrawArmyInRows(List<Warrior> army, double xOffset, double yOffset, int rows, bool isComputerArmy)
         {
             int warriorsPerRow = (int)Math.Ceiling((double)army.Count / rows);
@@ -547,7 +795,14 @@ namespace ClashGame
             }
         }
 
-        // Метод для изменения оттенка изображения
+
+        /// <summary>
+        /// Изменяет оттенок изображения.
+        /// Строка идентификатора "M:ClashGame.MainWindow.ChangeImageColor(System.Windows.Media.ImageSource,System.Windows.Media.Color)".
+        /// </summary>
+        /// <param name="originalImage">Исходное изображение.</param>
+        /// <param name="targetColor">Целевой цвет.</param>
+        /// <returns>Новое изображение с измененным оттенком.</returns>
         private BitmapSource ChangeImageColor(ImageSource originalImage, Color targetColor)
         {
             if (originalImage is BitmapSource bitmapSource)
@@ -592,7 +847,14 @@ namespace ClashGame
             throw new InvalidOperationException("The provided ImageSource is not a BitmapSource.");
         }
 
-
+        /// <summary>
+        /// Рисует воина на поле битвы.
+        /// Строка идентификатора "M:ClashGame.MainWindow.DrawWarrior(ClashGame.Warrior,System.Double,System.Double,System.Boolean)".
+        /// </summary>
+        /// <param name="warrior">Воин, которого нужно нарисовать.</param>
+        /// <param name="x">Позиция по оси X.</param>
+        /// <param name="y">Позиция по оси Y.</param>
+        /// <param name="isComputerArmy">Указывает, является ли армия армией компьютера.</param>
         private void DrawWarrior(Warrior warrior, double x, double y, bool isComputerArmy)
         {
             Image warriorImage = new Image
@@ -618,7 +880,12 @@ namespace ClashGame
             warriorImage.BeginAnimation(UIElement.OpacityProperty, fadeIn);
         }
 
-
+        /// <summary>
+        /// Получает изображение для воина.
+        /// Строка идентификатора "M:ClashGame.MainWindow.GetWarriorImage(ClashGame.Warrior)".
+        /// </summary>
+        /// <param name="warrior">Воин, для которого нужно получить изображение.</param>
+        /// <returns>Изображение воина.</returns>
         private ImageSource GetWarriorImage(Warrior warrior)
         {
             // Замените пути на реальные пути к вашим изображениям

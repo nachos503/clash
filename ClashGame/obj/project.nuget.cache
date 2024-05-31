@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "6Qi08zQLPtj4F9EP304nGM+6avE6yl11sVySS+ixiQG6We9ofDM/Wvss30AyivgAg+N2o3k+4JAQ+j4lWVdxTg==",
+  "dgSpecHash": "9ioLbey4QsFlmXvs5ZAe1nh0E9EZa1eGNUvKt60H0DZ8L4u0RH0FK0g7I5YK4Sa7xw7Lfgdj3Y1AcwhtR+ZjCA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Varvara\\Source\\Repos\\nachos503\\clash\\ClashGame\\ClashGame.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\annab\\Source\\Repos\\clash555\\ClashGame\\ClashGame.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\annab\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\annab\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\annab\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\annab\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.29\\microsoft.netcore.app.host.win-x64.6.0.29.nupkg.sha512"
+  ],
   "logs": []
 }

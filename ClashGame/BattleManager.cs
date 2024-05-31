@@ -8,32 +8,87 @@ using ClashGame;
 
 namespace ClashGame
 {
+    /// <summary>
+    /// public class BattleManager - класс для управления атаками.
+    /// Реализует интерфейс IBattleManager.
+    /// Строка идентификатора "T:ClashGame.BattleManager".
+    /// </summary>
     public class BattleManager : IBattleManager
     {
+        /// <summary>
+        /// public IBattleStrategy _strategy; - стратегия ведения боя.
+        /// Строка идентификатора "F:ClashGame.BattleManager._strategy".
+        /// </summary>
         public IBattleStrategy _strategy;
 
+        /// <summary>
+        /// public BattleManager(IBattleStrategy strategy) - конструктор класса BattleManager.
+        /// Инициализирует экземпляр класса BattleManager с заданной стратегией.
+        /// Строка идентификатора "M:ClashGame.BattleManager.BattleManager(ClashGame.IBattleStrategy)".
+        /// </summary>
+        /// <param name="strategy">Стратегия ведения боя.</param>
         public BattleManager(IBattleStrategy strategy)
         {
             this._strategy = strategy ?? throw new ArgumentNullException(nameof(strategy), "Strategy cannot be null");
         }
 
+        /// <summary>
+        /// public void SetStrategy(IBattleStrategy strategy) - метод для установки стратегии ведения боя.
+        /// Строка идентификатора "M:ClashGame.BattleManager.SetStrategy(ClashGame.IBattleStrategy)".
+        /// </summary>
+        /// <param name="strategy">Новая стратегия ведения боя.</param>
         public void SetStrategy(IBattleStrategy strategy)
         {
             _strategy = strategy ?? throw new ArgumentNullException(nameof(strategy));
         }
-        //флаги для гуляй голода чтобы шаги правильно передавались
+
+
+        /// <summary>
+        /// public int flagGulyayGorodBlue - флаг для отслеживания шагов "Гуляй-город" для синей стороны.
+        /// Строка идентификатора "F:ClashGame.BattleManager.flagGulyayGorodBlue".
+        /// </summary>
         public int flagGulyayGorodBlue = 0;
+
+        /// <summary>
+        /// public int flagGulyayGorodRed - флаг для отслеживания шагов "Гуляй-город" для красной стороны.
+        /// Строка идентификатора "F:ClashGame.BattleManager.flagGulyayGorodRed".
+        /// </summary>
         public int flagGulyayGorodRed = 0;
+
+        /// <summary>
+        /// public bool triggerGulyayGorodBlue - триггер для отслеживания активации "Гуляй-город" для синей стороны.
+        /// Строка идентификатора "F:ClashGame.BattleManager.triggerGulyayGorodBlue".
+        /// </summary>
         public bool triggerGulyayGorodBlue = true;
+
+        /// <summary>
+        /// public bool triggerGulyayGorodRed - триггер для отслеживания активации "Гуляй-город" для красной стороны.
+        /// Строка идентификатора "F:ClashGame.BattleManager.triggerGulyayGorodRed".
+        /// </summary>
         public bool triggerGulyayGorodRed = true;
 
-        //атака обычных бедолаг на первой линии
+        /// <summary>
+        /// virtual public void Attack(Warrior attacker, Warrior defender, TextBox outputTextBox) - метод для выполнения атаки.
+        /// Выполняет атаку одного воина на другого и выводит информацию об атаке в TextBox.
+        /// Строка идентификатора "M:ClashGame.BattleManager.Attack(ClashGame.Warrior,ClashGame.Warrior,System.Windows.Controls.TextBox)".
+        /// </summary>
+        /// <param name="attacker">Атакующий воин.</param>
+        /// <param name="defender">Защищающийся воин.</param>
+        /// <param name="outputTextBox">TextBox для вывода информации об атаке.</param>
         virtual public void Attack(Warrior attacker, Warrior defender, TextBox outputTextBox)
         {
             outputTextBox.AppendText($"Атака {attacker.Side} {attacker} с силой {attacker.Damage} по {defender.Side} {defender}" + Environment.NewLine);
             Defence(attacker, defender, outputTextBox);
         }
-        //возможный уворот противника от атаки
+
+        /// <summary>
+        /// virtual public void Defence(Warrior attacker, Warrior defender, TextBox outputTextBox) - метод для выполнения защиты.
+        /// Проверяет, удалось ли защищающемуся уклониться от атаки, и уменьшает его очки здоровья в случае неудачи.
+        /// Строка идентификатора "M:ClashGame.BattleManager.Defence(ClashGame.Warrior,ClashGame.Warrior,System.Windows.Controls.TextBox)".
+        /// </summary>
+        /// <param name="attacker">Атакующий воин.</param>
+        /// <param name="defender">Защищающийся воин.</param>
+        /// <param name="outputTextBox">TextBox для вывода информации о защите.</param>
         virtual public void Defence(Warrior attacker, Warrior defender, TextBox outputTextBox)
         {
             Random random = new Random();
@@ -47,14 +102,29 @@ namespace ClashGame
             else
                 outputTextBox.AppendText("Dodge cool" + Environment.NewLine);
         }
-        //сдохни или умри
+
+
+        /// <summary>
+        /// virtual public void IsDead(Warrior warrior, List<Warrior> army) - метод для проверки, мертв ли воин.
+        /// Удаляет воина из списка армии, если его очки здоровья меньше или равны нулю.
+        /// Строка идентификатора "M:ClashGame.BattleManager.IsDead(ClashGame.Warrior,System.Collections.Generic.List{ClashGame.Warrior})".
+        /// </summary>
+        /// <param name="warrior">Проверяемый воин.</param>
+        /// <param name="army">Армия, к которой принадлежит воин.</param>
         virtual public void IsDead(Warrior warrior, List<Warrior> army)
         {
             if (warrior.Healthpoints <= 0) army.Remove(warrior);
         }
 
-    //параша
-    virtual public void TurnComputer(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
+        /// <summary>
+        /// virtual public void TurnComputer(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox) - метод для выполнения хода компьютера.
+        /// Выполняет ходы различных типов юнитов и применяет стратегию боя.
+        /// Строка идентификатора "M:ClashGame.BattleManager.TurnComputer(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
+        /// </summary>
+        /// <param name="attackers">Список атакующих юнитов.</param>
+        /// <param name="defenders">Список защищающихся юнитов.</param>
+        /// <param name="outputTextBox">TextBox для вывода информации о ходе.</param>
+        virtual public void TurnComputer(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
 
             Warrior attacker = attackers[0];
@@ -84,7 +154,15 @@ namespace ClashGame
             //Контрольная проверка на живых соперников
             IsDead(defender, defenders);
         }
-        //ход волшебника
+
+        /// <summary>
+        /// public void WizardTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox) - метод для выполнения хода волшебника.
+        /// Волшебник может клонировать лёгкого воина, если он не на первой линии.
+        /// Строка идентификатора "M:ClashGame.BattleManager.WizardTurn(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
+        /// </summary>
+        /// <param name="attackers">Список атакующих юнитов.</param>
+        /// <param name="defenders">Список защищающихся юнитов.</param>
+        /// <param name="outputTextBox">TextBox для вывода информации о ходе волшебника.</param>
         public void WizardTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             Wizard wizard = null;
@@ -118,7 +196,16 @@ namespace ClashGame
                     }
                 }
         }
-        //медсестра
+
+
+        /// <summary>
+        /// public void HealerTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox) - метод для выполнения хода лекаря.
+        /// Обрабатывает ход лекаря, включая лечение случайного союзного юнита.
+        /// Строка идентификатора "M:ClashGame.BattleManager.HealerTurn(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
+        /// </summary>
+        /// <param name="attackers">Список атакующих юнитов.</param>
+        /// <param name="defenders">Список защищающихся юнитов.</param>
+        /// <param name="outputTextBox">TextBox для вывода информации о ходе лекаря.</param>
         public void HealerTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             Healer healer = null;
@@ -153,14 +240,20 @@ namespace ClashGame
                 }
         }
 
-        //превращение из тихона в алешу поповича
+        /// <summary>
+        /// public void UpgradeHeavyWarrior(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox) - метод для улучшения тяжелого воина.
+        /// Обрабатывает улучшение тяжелого воина до улучшенного тяжелого воина, если рядом есть легкий воин.
+        /// Строка идентификатора "M:ClashGame.BattleManager.UpgradeHeavyWarrior(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
+        /// </summary>
+        /// <param name="attackers">Список атакующих юнитов.</param>
+        /// <param name="defenders">Список защищающихся юнитов.</param>
+        /// <param name="outputTextBox">TextBox для вывода информации об улучшении.</param>
         public void UpgradeHeavyWarrior(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             for (int i = 0; i < attackers.Count; i++)
                 if (attackers[i] is HeavyWarrior)
                 {
                     //но только если не на первой линии
-                    //поздно пить боржоми когда почки отказали
                     if (!_strategy.IsFrontLine(i, defenders))
                     {
                         Warrior nearestLightWarrior = _strategy.GetNearestLightWarrior(attackers, i);
@@ -173,8 +266,15 @@ namespace ClashGame
                     }
                 }
         }
-        //ход богатыря - по сути проверка, что пиздюк еще рядом с ним
-        //иначе разоружаем
+
+        /// <summary>
+        /// public void ImprovedHeavyWarriorTurn(List<Warrior> attackers, Warrior attacker, TextBox outputTextBox) - метод для выполнения хода улучшенного тяжелого воина.
+        /// Проверяет наличие рядом легкого воина и здоровье улучшенного тяжелого воина, чтобы отменить или сохранить улучшение.
+        /// Строка идентификатора "M:ClashGame.BattleManager.ImprovedHeavyWarriorTurn(System.Collections.Generic.List{ClashGame.Warrior},ClashGame.Warrior,System.Windows.Controls.TextBox)".
+        /// </summary>
+        /// <param name="attackers">Список атакующих юнитов.</param>
+        /// <param name="attacker">Атакующий юнит.</param>
+        /// <param name="outputTextBox">TextBox для вывода информации о ходе улучшенного тяжелого воина.</param>
         public void ImprovedHeavyWarriorTurn(List<Warrior> attackers, Warrior attacker, TextBox outputTextBox)
         {
             ImprovedHeavyWarrior improvedHeavyWarrior = null;
@@ -212,7 +312,16 @@ namespace ClashGame
                 outputTextBox.AppendText($"Улучшение у ImprovedHeavyWarrior отменено, так как его здоровье упало ниже 40%." + Environment.NewLine);
             }
         }
-        //воин как асташлепка - стреляет на поражение
+
+
+        /// <summary>
+        /// public void ArchersTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox) - метод для выполнения хода лучников.
+        /// Ищет лучника среди атакующих и инициирует его атаку на защитников, если лучник не находится на первой линии.
+        /// Строка идентификатора "M:ClashGame.BattleManager.ArchersTurn(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
+        /// </summary>
+        /// <param name="attackers">Список атакующих юнитов.</param>
+        /// <param name="defenders">Список защищающихся юнитов.</param>
+        /// <param name="outputTextBox">TextBox для вывода информации о ходе лучников.</param>
         public void ArchersTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             Archer archer = null;
@@ -223,7 +332,7 @@ namespace ClashGame
                 {
                     archer = new Archer(attackers[i].Side);
                     archerIndex = i;
-                    //если не первая линия - нихуя они у нас не леголасы
+                    //если не первая линия
                     if (!_strategy.IsFrontLine(archerIndex, defenders))
                     {
                         var target = _strategy.GetEnemyForArcher(attackers, defenders, archerIndex, archer); // Выбранный защищающийся воин
@@ -239,7 +348,14 @@ namespace ClashGame
                     }
                 }
         }
-        //ну блядская стена епта
+
+        /// <summary>
+        /// public void GulyayGorodTurn(List<Warrior> attackers, TextBox outputTextBox) - метод для выполнения хода "Гуляй-город".
+        /// Перемещает "Гуляй-город" на первую позицию среди атакующих юнитов.
+        /// Строка идентификатора "M:ClashGame.BattleManager.GulyayGorodTurn(System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
+        /// </summary>
+        /// <param name="attackers">Список атакующих юнитов.</param>
+        /// <param name="outputTextBox">TextBox для вывода информации о ходе "Гуляй-город".</param>
         public void GulyayGorodTurn(List<Warrior> attackers, TextBox outputTextBox)
         {
             //ставим вперед
@@ -251,7 +367,13 @@ namespace ClashGame
         }
 
 
-        //получает из окна сколько пользователь успел сделать ходов пока стена стоит
+        /// <summary>
+        /// public void SetGulyayGorodCount(int count, string side) - метод для установки количества ходов "Гуляй-город".
+        /// Устанавливает количество ходов для "Гуляй-город" в зависимости от стороны.
+        /// Строка идентификатора "M:ClashGame.BattleManager.SetGulyayGorodCount(System.Int32,System.String)".
+        /// </summary>
+        /// <param name="count">Количество ходов.</param>
+        /// <param name="side">Сторона (Blue или Red).</param>
         public void SetGulyayGorodCount(int count, string side)
         {
             if (side == "Blue")
@@ -259,7 +381,15 @@ namespace ClashGame
             else
                 flagGulyayGorodRed = count;
         }
-//проверка что блядская стена уже стоит
+
+        /// <summary>
+        /// public void CheckGulyayGorod(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox) - метод для проверки состояния "Гуляй-город".
+        /// Проверяет и управляет состоянием "Гуляй-город" для обеих сторон, устанавливая или убирая его в зависимости от условий.
+        /// Строка идентификатора "M:ClashGame.BattleManager.CheckGulyayGorod(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
+        /// </summary>
+        /// <param name="attackers">Список атакующих юнитов.</param>
+        /// <param name="defenders">Список защищающихся юнитов.</param>
+        /// <param name="outputTextBox">TextBox для вывода информации о состоянии "Гуляй-город".</param>
         public void CheckGulyayGorod(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             Random random = new Random();

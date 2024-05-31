@@ -10,30 +10,30 @@
         <!-- Центральная панель для кнопок -->
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                <Button x:Name="CreateArmy" Content="Create Army" Click="CreateArmy_Click" Width="247" Height="60"/>
-                <Button x:Name="ChooseBlueArmy" Content="Choose Blue Army" Click="ChooseBlueArmy_Click" Width="300" Height="60" Margin="20,0,0,0"/>
-                <Button x:Name="ChooseRedArmy" Content="Choose Red Army" Click="ChooseRedArmy_Click" Width="300" Height="60" Margin="20,0,0,0"/>
+                <Button x:Name="CreateArmy" Content="Создать армии" Click="CreateArmy_Click" Width="247" Height="60" Background="#FFBCB2B2" FontFamily="Arial Black" FontSize="20"/>
+                <Button x:Name="ChooseBlueArmy" Content="Моя армия Синие" Click="ChooseBlueArmy_Click" Width="300" Height="60" Margin="20,0,0,0" FontSize="20" FontFamily="Arial Black" Background="#FFD0D4F9" Foreground="#FF020359"/>
+                <Button x:Name="ChooseRedArmy" Content="Моя армия Красные" Click="ChooseRedArmy_Click" Width="300" Height="60" Margin="20,0,0,0" Background="#FFFCE5E5" FontFamily="Arial Black" FontSize="20" Foreground="#FF790000"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
-                <Button x:Name="StartTurn" Content="Turn" Click="StartTurn_Click" Width="200" Height="60"/>
-                <Button x:Name="CanсelTurn" Content="Cancel Turn" Click="CancelTurn_Click" Width="200" Height="60" Margin="20,0,0,0"/>
-                <Button x:Name="ToTheEnd" Content="To The End" Click="ToTheEnd_Click" Width="200" Height="60" Margin="20,0,0,0"/>
-                <Button x:Name="UseWizard" Content="Use Wizard" Click="UseWizard_Click" Width="200" Height="60" Margin="20,0,0,0"/>
-                <Button x:Name="UseHealer" Content="Use Healer" Click="UseHealer_Click" Width="200" Height="60" Margin="20,0,0,0"/>
-                <Button x:Name="UseArcher" Content="Use Archer" Click="UseArcher_Click" Width="200" Height="60" Margin="20,0,0,0"/>
-                <Button x:Name="EndTurn" Content="End Turn" Click="EndTurn_Click" Width="200" Height="60" Margin="20,0,0,0"/>
+                <Button x:Name="StartTurn" Content="Начать атаку" Click="StartTurn_Click" Width="200" Height="60" FontSize="20" FontFamily="Arial Black" Background="#FFF4F99E" Foreground="#FF453C02"/>
+                <Button x:Name="CanсelTurn" Content="Отменить" Click="CancelTurn_Click" Width="200" Height="60" Margin="20,0,0,0" Foreground="#FF453C02" FontFamily="Arial Black" FontSize="20" Background="#FFF4F99E"/>
+                <Button x:Name="ToTheEnd" Content="Доиграть до&#xD;&#xA;      конца" Click="ToTheEnd_Click" Width="200" Height="60" Margin="20,0,0,0" Background="#FFFFAC6D" FontFamily="Arial Black" FontSize="20" Foreground="#FF6F3400"/>
+                <Button x:Name="UseWizard" Content="Применить мага" Click="UseWizard_Click" Width="200" Height="60" Margin="20,0,0,0" Background="#FF95E675" Foreground="#FF164C00" FontFamily="Arial Black" FontSize="20"/>
+                <Button x:Name="UseHealer" Content="Применить&#xD;&#xA;    лекаря" Click="UseHealer_Click" Width="200" Height="60" Margin="20,0,0,0" Background="#FF95E675" Foreground="#FF164C00" FontFamily="Arial Black" FontSize="20"/>
+                <Button x:Name="UseArcher" Content="Применить&#xD;&#xA;  лучников" Click="UseArcher_Click" Width="200" Height="60" Margin="20,0,0,0" Background="#FF95E675" Foreground="#FF164C00" FontFamily="Arial Black" FontSize="20"/>
+                <Button x:Name="EndTurn" Content="Сделать атаку" Click="EndTurn_Click" Width="200" Height="60" Margin="20,0,0,0" FontSize="20" FontFamily="Arial Black" Background="#FFF4F99E" Foreground="#FF453C02"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,20,0,0">
-                <Button x:Name="ChooseStrategy" Content="Choose Strategy" Click="ChooseStrategy_Click" Width="240" Height="60"/>
-                    <Button x:Name="ChooseTwoRows" Content="Two Rows" Click="ChooseTwoRows_Click" Width="200" Height="60" Margin="20,0,0,0"/>
-                    <Button x:Name="ChooseThreeRows" Content="Three Rows" Click="ChooseThreeRows_Click" Width="200" Height="60" Margin="20,0,0,0"/>
-                <Button x:Name="ChooseWallToWall" Content="Wall to Wall" Click="ChooseWallToWall_Click" Width="200" Height="60" Margin="20,0,0,0"/>
+                <Button x:Name="ChooseStrategy" Content="Выбрать стратегию" Click="ChooseStrategy_Click" Width="240" Height="60" Background="#FFBCB2B2" FontFamily="Arial Black" FontSize="20"/>
+                    <Button x:Name="ChooseTwoRows" Content="В 2 линии" Click="ChooseTwoRows_Click" Width="200" Height="60" Margin="20,0,0,0" Background="#FFD090F9" FontSize="20" FontFamily="Arial Black" Foreground="#FF240054"/>
+                    <Button x:Name="ChooseThreeRows" Content="В 3 линии" Click="ChooseThreeRows_Click" Width="200" Height="60" Margin="20,0,0,0" Background="#FFD090F9" FontSize="20" FontFamily="Arial Black" Foreground="#FF240054"/>
+                <Button x:Name="ChooseWallToWall" Content="Стенка на стенку" Click="ChooseWallToWall_Click" Width="200" Height="60" Margin="20,0,0,0" Background="#FFD090F9" FontFamily="Arial Black" FontSize="20" Foreground="#FF240054"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
-                <Button x:Name="UseGulyayGorod" Content="Use Gulyay Gorod" Click="GulyayGorodr_Click" Width="300" Height="60" Margin="20,0,0,0" HorizontalAlignment="Right"/>
+                <Button x:Name="UseGulyayGorod" Content="Применить Гуляй-город" Click="GulyayGorodr_Click" Width="300" Height="60" Margin="20,0,0,0" HorizontalAlignment="Right" Foreground="#FF164C00" FontFamily="Arial Black" FontSize="20" Background="#FF95E675"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,20,0,0">
-                <TextBox x:Name="outputTextBox" Width="471" Height="438" IsReadOnly="True" VerticalScrollBarVisibility="Auto"/>
+                <TextBox x:Name="outputTextBox" Width="471" Height="438" IsReadOnly="True" VerticalScrollBarVisibility="Auto" Background="{x:Null}" TextAlignment="Center" TextWrapping="Wrap" FontFamily="Arial Black" FontSize="20"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
                 <Button x:Name="StartAgain" Content="Начать заново" Click="StartAgain_Click" Width="200" Height="60"/>

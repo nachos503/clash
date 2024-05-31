@@ -8,278 +8,278 @@ using System.Windows.Controls;
 namespace ClashGame
 {
     /// <summary>
-    /// interface IHealable - интерфейс для объектов, которые могут лечить.
-    /// Строка идентификатора "T:ClashGame.IHealable".
+    /// interface IHealable - interface for objects that can be treated.
+    /// ID string "T:ClashGame.IHealable".
     /// </summary>
     interface IHealable
     {
         /// <summary>
-        /// void Heal(Warrior target) - метод для лечения воина.
-        /// Строка идентификатора "M:ClashGame.IHealable.Heal(ClashGame.Warrior)".
+        /// void Heal(Warrior target) is a method for treating a warrior.
+        /// ID string "M:ClashGame.IHealable.Heal(ClashGame.Warrior)".
         /// </summary>
-        /// <param name="target">Целевой воин для лечения.</param>
+        /// <param name="target">Target warrior for treatment.</param>
         void Heal(Warrior target);
     }
 
     /// <summary>
-    /// interface IClonableUnit - интерфейс для объектов, которые могут клонировать. Прототип
-    /// Строка идентификатора "T:ClashGame.IClonableUnit".
+    /// interface IClonableUnit - interface for objects that can clone. Prototype
+    /// Identifier string "T:ClashGame.IClonableUnit".
     /// </summary>
     interface IClonableUnit
     {
-        /// <summary>
-        /// Warrior Clone() - метод для клонирования юнита.
-        /// Строка идентификатора "M:ClashGame.IClonableUnit.Clone".
+        ///<summary>
+        /// Warrior Clone() is a method for cloning a unit.
+        /// ID string "M:ClashGame.IClonableUnit.Clone".
         /// </summary>
-        /// <returns>Клон юнита.</returns>
+        /// <returns>A clone of the unit.</returns>
         Warrior Clone();
     }
 
     /// <summary>
-    /// interface IRangedUnit - интерфейс для объектов, которые могут рассчитывать дальность атаки.
-    /// Строка идентификатора "T:ClashGame.IRangedUnit".
+    /// interface IRangedUnit is an interface for objects that can calculate the attack range.
+    /// ID string "T:ClashGame.IRangedUnit".
     /// </summary>
     interface IRangedUnit
     {
         /// <summary>
-        /// int Range() - метод для получения дальности атаки.
-        /// Строка идентификатора "M:ClashGame.IRangedUnit.Range".
+        /// int Range() is a method for getting the attack range.
+        /// ID string "M:ClashGame.IRangedUnit.Range".
         /// </summary>
-        /// <returns>Дальность атаки.</returns>
+        /// <returns>Attack range.</returns>
         int Range();
 
         /// <summary>
-        /// double RangedDamage(int index) - метод для получения урона на дальнем расстоянии.
-        /// Строка идентификатора "M:ClashGame.IRangedUnit.RangedDamage(System.Int32)".
+        /// double Ranged Damage(int index) is a method for taking long-range damage.
+        /// ID string "M:ClashGame.IRangedUnit.RangedDamage(System.Int32)".
         /// </summary>
-        /// <param name="index">Индекс атакующего.</param>
-        /// <returns>Урон на дальнем расстоянии.</returns>
+        /// <param name="index">The attacker's index.</param>
+        /// <returns>Long-range damage.</returns>
         double RangedDamage(int index);
 
         /// <summary>
-        /// double RangedAttack(List<Warrior> enemies, Warrior target, int attackerIndex) - метод для выполнения дальнобойной атаки.
-        /// Строка идентификатора "M:ClashGame.IRangedUnit.RangedAttack(System.Collections.Generic.List{ClashGame.Warrior},ClashGame.Warrior,System.Int32)".
+        /// double Ranged Attack(Last<Warrior> enemies, Warrior target, int attacker Index) is a method for performing a long-range attack.
+        /// ID string "M:ClashGame.IRangedUnit.RangedAttack(System.Collections.Generic.List{ClashGame.Warrior},ClashGame.Warrior,System.Int32)".
         /// </summary>
-        /// <param name="enemies">Список врагов.</param>
-        /// <param name="target">Целевой воин для атаки.</param>
-        /// <param name="attackerIndex">Индекс атакующего.</param>
-        /// <returns>Результат дальнобойной атаки.</returns>
+        /// <param name="enemies">List of enemies.</param>
+        /// <param name="target">Target warrior to attack.</param>
+        /// <param name="attackerIndex">The attacker's index.</param>
+        /// <returns>The result of a long-range attack.</returns>
         double RangedAttack(List<Warrior> enemies, Warrior target, int attackerIndex);
     }
 
 
     /// <summary>
-    /// interface IUnitFactory - интерфейс для юнитов. Паттерн фабрика
-    /// Строка идентификатора "T:ClashGame.IUnitFactory".
-    /// </summary>
+    /// interface Junitfactory - interface for units. Pattern factory
+    /// ID string "T:ClashGame.IUnitFactory".
+    /// </summary
     interface IUnitFactory
     {
         /// <summary>
-        /// Warrior CreateLightWarrior(string side) - метод для создания легкого воина.
-        /// Строка идентификатора "M:ClashGame.IUnitFactory.CreateLightWarrior(System.String)".
+        /// Warrior CreateLightWarrior(string side) - method for creating a light warrior.
+        /// Identifier string: "M:ClashGame.IUnitFactory.CreateLightWarrior(System.String)".
         /// </summary>
-        /// <param name="side">Сторона, для которой создается юнит.</param>
-        /// <returns>Легкий воин.</returns>
+        /// <param name="side">The side for which the unit is created.</param>
+        /// <returns>The light warrior.</returns>
         Warrior CreateLightWarrior(string side);
 
         /// <summary>
-        /// Warrior CreateHeavyWarrior(string side) - метод для создания тяжелого воина.
-        /// Строка идентификатора "M:ClashGame.IUnitFactory.CreateHeavyWarrior(System.String)".
+        /// Warrior CreateHeavyWarrior(string side) - method for creating a heavy warrior.
+        /// Identifier string: "M:ClashGame.IUnitFactory.CreateHeavyWarrior(System.String)".
         /// </summary>
-        /// <param name="side">Сторона, для которой создается юнит.</param>
-        /// <returns>Тяжелый воин.</returns>
+        /// <param name="side">The side for which the unit is created.</param>
+        /// <returns>The heavy warrior.</returns>
         Warrior CreateHeavyWarrior(string side);
 
         /// <summary>
-        /// Warrior CreateArcher(string side) - метод для создания лучника.
-        /// Строка идентификатора "M:ClashGame.IUnitFactory.CreateArcher(System.String)".
+        /// Warrior CreateArcher(string side) - method for creating an archer.
+        /// Identifier string: "M:ClashGame.IUnitFactory.CreateArcher(System.String)".
         /// </summary>
-        /// <param name="side">Сторона, для которой создается юнит.</param>
-        /// <returns>Лучник.</returns>
+        /// <param name="side">The side for which the unit is created.</param>
+        /// <returns>The archer.</returns>
         Warrior CreateArcher(string side);
 
         /// <summary>
-        /// Warrior CreateHealer(string side) - метод для создания лекаря.
-        /// Строка идентификатора "M:ClashGame.IUnitFactory.CreateHealer(System.String)".
+        /// Warrior CreateHealer(string side) - method for creating a healer.
+        /// Identifier string: "M:ClashGame.IUnitFactory.CreateHealer(System.String)".
         /// </summary>
-        /// <param name="side">Сторона, для которой создается юнит.</param>
-        /// <returns>Лекарь.</returns>
+        /// <param name="side">The side for which the unit is created.</param>
+        /// <returns>The healer.</returns>
         Warrior CreateHealer(string side);
 
         /// <summary>
-        /// Warrior CreateWizard(string side) - метод для создания мага.
-        /// Строка идентификатора "M:ClashGame.IUnitFactory.CreateWizard(System.String)".
+        /// Warrior CreateWizard(string side) - method for creating a wizard.
+        /// Identifier string: "M:ClashGame.IUnitFactory.CreateWizard(System.String)".
         /// </summary>
-        /// <param name="side">Сторона, для которой создается юнит.</param>
-        /// <returns>Маг.</returns>
+        /// <param name="side">The side for which the unit is created.</param>
+        /// <returns>The wizard.</returns>
         Warrior CreateWizard(string side);
 
         /// <summary>
-        /// Warrior CreateGulyayGorod(string side) - метод для создания "Гуляй-город".
-        /// Строка идентификатора "M:ClashGame.IUnitFactory.CreateGulyayGorod(System.String)".
+        /// Warrior CreateGulyayGorod(string side) - method for creating a "Gulyay-gorod".
+        /// Identifier string: "M:ClashGame.IUnitFactory.CreateGulyayGorod(System.String)".
         /// </summary>
-        /// <param name="side">Сторона, для которой создается юнит.</param>
-        /// <returns>Гуляй-город.</returns>
+        /// <param name="side">The side for which the unit is created.</param>
+        /// <returns>The "Gulyay-gorod".</returns>
         Warrior CreateGulyayGorod(string side);
     }
 
     /// <summary>
-    /// public interface IBattleManager - интерфейс для менеджера битвы. Паттерн прокси
-    /// Строка идентификатора "T:ClashGame.IBattleManager".
+    /// public interface IBattleManager - interface for the battle manager. Proxy pattern.
+    /// Identifier string: "T:ClashGame.IBattleManager".
     /// </summary>
     public interface IBattleManager
     {
         /// <summary>
-        /// void Attack(Warrior warrior1, Warrior warrior2, TextBox outputTextBox) - метод для выполнения атаки.
-        /// Строка идентификатора "M:ClashGame.IBattleManager.Attack(ClashGame.Warrior,ClashGame.Warrior,System.Windows.Controls.TextBox)".
+        /// void Attack(Warrior warrior1, Warrior warrior2, TextBox outputTextBox) - method to execute an attack.
+        /// Identifier string: "M:ClashGame.IBattleManager.Attack(ClashGame.Warrior,ClashGame.Warrior,System.Windows.Controls.TextBox)".
         /// </summary>
-        /// <param name="warrior1">Атакующий воин.</param>
-        /// <param name="warrior2">Защитник воин.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации об атаке.</param>
+        /// <param name="warrior1">Attacking warrior.</param>
+        /// <param name="warrior2">Defending warrior.</param>
+        /// <param name="outputTextBox">TextBox for displaying attack information.</param>
         void Attack(Warrior warrior1, Warrior warrior2, TextBox outputTextBox);
 
         /// <summary>
-        /// void Defence(Warrior warrior1, Warrior warrior2, TextBox outputTextBox) - метод для обработки защиты.
-        /// Строка идентификатора "M:ClashGame.IBattleManager.Defence(ClashGame.Warrior,ClashGame.Warrior,System.Windows.Controls.TextBox)".
+        /// void Defence(Warrior warrior1, Warrior warrior2, TextBox outputTextBox) - method for handling defense.
+        /// Identifier string: "M:ClashGame.IBattleManager.Defence(ClashGame.Warrior,ClashGame.Warrior,System.Windows.Controls.TextBox)".
         /// </summary>
-        /// <param name="warrior1">Атакующий воин.</param>
-        /// <param name="warrior2">Защитник воин.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о защите.</param>
+        /// <param name="warrior1">Attacking warrior.</param>
+        /// <param name="warrior2">Defending warrior.</param>
+        /// <param name="outputTextBox">TextBox for displaying defense information.</param>
         void Defence(Warrior warrior1, Warrior warrior2, TextBox outputTextBox);
 
         /// <summary>
-        /// void IsDead(Warrior warrior, List<Warrior> army) - метод для проверки, мертв ли воин.
-        /// Строка идентификатора "M:ClashGame.IBattleManager.IsDead(ClashGame.Warrior,System.Collections.Generic.List{ClashGame.Warrior})".
+        /// void IsDead(Warrior warrior, List<Warrior> army) - method to check if a warrior is dead.
+        /// Identifier string: "M:ClashGame.IBattleManager.IsDead(ClashGame.Warrior,System.Collections.Generic.List{ClashGame.Warrior})".
         /// </summary>
-        /// <param name="warrior">Воин для проверки.</param>
-        /// <param name="army">Список армии.</param>
+        /// <param name="warrior">Warrior to check.</param>
+        /// <param name="army">List of warriors.</param>
         void IsDead(Warrior warrior, List<Warrior> army);
 
         /// <summary>
-        /// void TurnComputer(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox) - метод для выполнения хода компьютера.
-        /// Строка идентификатора "M:ClashGame.IBattleManager.TurnComputer(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
+        /// void TurnComputer(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox) - method to execute the computer's turn.
+        /// Identifier string: "M:ClashGame.IBattleManager.TurnComputer(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
         /// </summary>
-        /// <param name="attackers">Список атакующих юнитов.</param>
-        /// <param name="defenders">Список защищающихся юнитов.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе.</param>
+        /// <param name="attackers">List of attacking units.</param>
+        /// <param name="defenders">List of defending units.</param>
+        /// <param name="outputTextBox">TextBox for displaying turn information.</param>
         void TurnComputer(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
 
         /// <summary>
-        /// void WizardTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox) - метод для выполнения хода мага.
-        /// Строка идентификатора "M:ClashGame.IBattleManager.WizardTurn(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
+        /// void WizardTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox) - method to execute the wizard's turn.
+        /// Identifier string: "M:ClashGame.IBattleManager.WizardTurn(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
         /// </summary>
-        /// <param name="attackers">Список атакующих юнитов.</param>
-        /// <param name="defenders">Список защищающихся юнитов.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе мага
+        /// <param name="attackers">List of attacking units.</param>
+        /// <param name="defenders">List of defending units.</param>
+        /// <param name="outputTextBox">TextBox for displaying wizard's turn information.</param>
         void WizardTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
 
         /// <summary>
-        /// void HealerTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox) - метод для выполнения хода лекаря.
-        /// Строка идентификатора "M:ClashGame.IBattleManager.HealerTurn(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
+        /// void HealerTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox) - method to execute the healer's turn.
+        /// Identifier string: "M:ClashGame.IBattleManager.HealerTurn(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе.</param>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="defenders">List of defending warriors.</param>
+        /// <param name="outputTextBox">TextBox for displaying turn information.</param>
         void HealerTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
 
         /// <summary>
-        /// void ImprovedHeavyWarriorTurn(List<Warrior> attackers, Warrior attacker, TextBox outputTextBox) - метод для выполнения хода улучшенного тяжеловооруженного воина.
-        /// Строка идентификатора "M:ClashGame.IBattleManager.ImprovedHeavyWarriorTurn(System.Collections.Generic.List{ClashGame.Warrior},ClashGame.Warrior,System.Windows.Forms.TextBox)".
+        /// void ImprovedHeavyWarriorTurn(List<Warrior> attackers, Warrior attacker, TextBox outputTextBox) - method to execute the improved heavy warrior's turn.
+        /// Identifier string: "M:ClashGame.IBattleManager.ImprovedHeavyWarriorTurn(System.Collections.Generic.List{ClashGame.Warrior},ClashGame.Warrior,System.Windows.Forms.TextBox)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="attacker">Текущий атакующий воин.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе.</param>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="attacker">Current attacking warrior.</param>
+        /// <param name="outputTextBox">TextBox for displaying turn information.</param>
         void ImprovedHeavyWarriorTurn(List<Warrior> attackers, Warrior attacker, TextBox outputTextBox);
 
         /// <summary>
-        /// void ArchersTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox) - метод для выполнения хода лучников.
-        /// Строка идентификатора "M:ClashGame.IBattleManager.ArchersTurn(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
+        /// void ArchersTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox) - method to execute the archers' turn.
+        /// Identifier string: "M:ClashGame.IBattleManager.ArchersTurn(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе.</param>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="defenders">List of defending warriors.</param>
+        /// <param name="outputTextBox">TextBox for displaying turn information.</param>
         void ArchersTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
 
         /// <summary>
-        /// void GulyayGorodTurn(List<Warrior> attackers, TextBox outputTextBox) - метод для выполнения хода гуляй-города.
-        /// Строка идентификатора "M:ClashGame.IBattleManager.GulyayGorodTurn(System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
+        /// void GulyayGorodTurn(List<Warrior> attackers, TextBox outputTextBox) - method to execute the Gulyay-Gorod's turn.
+        /// Identifier string: "M:ClashGame.IBattleManager.GulyayGorodTurn(System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе.</param>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="outputTextBox">TextBox for displaying turn information.</param>
         void GulyayGorodTurn(List<Warrior> attackers, TextBox outputTextBox);
     }
 
     /// <summary>
-    /// Интерфейс ICommand представляет паттерн команду с возможностью выполнения и отмены. Паттерн команда
-    /// Строка идентификатора "T:ClashGame.ICommand".
+    /// The ICommand interface represents the command pattern with the ability to execute and undo. Command Pattern
+    /// Identifier string: "T:ClashGame.ICommand".
     /// </summary>
     public interface ICommand
     {
         /// <summary>
-        /// Выполняет команду.
-        /// Строка идентификатора "M:ClashGame.ICommand.Execute".
+        /// Executes the command.
+        /// Identifier string: "M:ClashGame.ICommand.Execute".
         /// </summary>
         void Execute();
 
         /// <summary>
-        /// Отменяет выполнение команды.
-        /// Строка идентификатора "M:ClashGame.ICommand.Undo".
+        /// Undoes the execution of the command.
+        /// Identifier string: "M:ClashGame.ICommand.Undo".
         /// </summary>
         void Undo();
     }
 
     /// <summary>
-    /// Интерфейс IBattleStrategy представляет стратегию битвы, включающую выполнение битвы и выбор целей. Паттерн стратегия
-    /// Строка идентификатора "T:ClashGame.IBattleStrategy".
+    /// The IBattleStrategy interface represents the battle strategy, including battle execution and target selection. Strategy Pattern
+    /// Identifier string: "T:ClashGame.IBattleStrategy".
     /// </summary>
     public interface IBattleStrategy
     {
         /// <summary>
-        /// Выполняет битву между атакующими и защищающимися воинами.
-        /// Строка идентификатора "M:ClashGame.IBattleStrategy.ExecuteBattle(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
+        /// Executes the battle between attacking and defending warriors.
+        /// Identifier: "M:ClashGame.IBattleStrategy.ExecuteBattle(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе битвы.</param>
+        /// <param name="attackers">The list of attacking warriors.</param>
+        /// <param name="defenders">The list of defending warriors.</param>
+        /// <param name="outputTextBox">The TextBox for displaying battle information.</param>
         public void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox);
 
         /// <summary>
-        /// Получает воина для лечения.
-        /// Строка идентификатора "M:ClashGame.IBattleStrategy.GetWarriorForHeal(System.Collections.Generic.List{ClashGame.Warrior},System.Int32,ClashGame.Healer)".
+        /// Gets a warrior for healing.
+        /// Identifier: "M:ClashGame.IBattleStrategy.GetWarriorForHeal(System.Collections.Generic.List{ClashGame.Warrior},System.Int32,ClashGame.Healer)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="healerIndex">Индекс лекаря.</param>
-        /// <param name="healer">Лекарь.</param>
-        /// <returns>Воин, которого следует лечить.</returns>
+        /// <param name="attackers">The list of attacking warriors.</param>
+        /// <param name="healerIndex">The index of the healer.</param>
+        /// <param name="healer">The healer.</param>
+        /// <returns>The warrior to heal.</returns>
         public Warrior GetWarriorForHeal(List<Warrior> attackers, int healerIndex, Healer healer);
 
         /// <summary>
-        /// Получает врага для атаки лучника.
-        /// Строка идентификатора "M:ClashGame.IBattleStrategy.GetEnemyForArcher(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Int32,ClashGame.Archer)".
+        /// Gets an enemy for archer attack.
+        /// Identifier: "M:ClashGame.IBattleStrategy.GetEnemyForArcher(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Int32,ClashGame.Archer)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <param name="archerIndex">Индекс лучника.</param>
-        /// <param name="archer">Лучник.</param>
-        /// <returns>Враг для атаки.</returns>
+        /// <param name="attackers">The list of attacking warriors.</param>
+        /// <param name="defenders">The list of defending warriors.</param>
+        /// <param name="archerIndex">The index of the archer.</param>
+        /// <param name="archer">The archer.</param>
+        /// <returns>The enemy for attack.</returns>
         public Warrior GetEnemyForArcher(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer);
 
         /// <summary>
-        /// Получает ближайшего легкого воина.
-        /// Строка идентификатора "M:ClashGame.IBattleStrategy.GetNearestLightWarrior(System.Collections.Generic.List{ClashGame.Warrior},System.Int32)".
+        /// Gets the nearest light warrior.
+        /// Identifier: "M:ClashGame.IBattleStrategy.GetNearestLightWarrior(System.Collections.Generic.List{ClashGame.Warrior},System.Int32)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="attackersIndex">Индекс атакующего воина.</param>
-        /// <returns>Ближайший легкий воин.</returns>
+        /// <param name="attackers">The list of attacking warriors.</param>
+        /// <param name="attackersIndex">The index of the attacking warrior.</param>
+        /// <returns>The nearest light warrior.</returns>
         public Warrior GetNearestLightWarrior(List<Warrior> attackers, int attackersIndex);
 
         /// <summary>
-        /// Проверяет, является ли атакующий воин на передовой линии.
-        /// Строка идентификатора "M:ClashGame.IBattleStrategy.IsFrontLine(System.Int32,System.Collections.Generic.List{ClashGame.Warrior})".
+        /// Checks if the attacking warrior is on the front line.
+        /// Identifier: "M:ClashGame.IBattleStrategy.IsFrontLine(System.Int32,System.Collections.Generic.List{ClashGame.Warrior})".
         /// </summary>
-        /// <param name="attackerIndex">Индекс атакующего воина.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <returns>True, если воин находится на передовой линии, иначе false.</returns>
+        /// <param name="attackerIndex">The index of the attacking warrior.</param>
+        /// <param name="defenders">The list of defending warriors.</param>
+        /// <returns>True if the warrior is on the front line, otherwise false.</returns>
         public bool IsFrontLine(int attackerIndex, List<Warrior> defenders);
 
     }

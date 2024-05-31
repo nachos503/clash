@@ -4,22 +4,21 @@ using System.Windows.Controls;
 namespace ClashGame
 {
     /// <summary>
-    /// Класс GameManager, представляющий менеджер игры.
-    /// Используется паттерн синглтон.
-    /// Строка идентификатора "T:ClashGame.GameManager".
+    /// The GameManager class representing the game manager.
+    /// Implements the Singleton pattern.
+    /// Identifier string: "T:ClashGame.GameManager".
     /// </summary>
     sealed class GameManager
     {
-        // синглтон сраный
         /// <summary>
-        /// Единственный экземпляр класса GameManager.
-        /// Строка идентификатора "F:ClashGame.GameManager._instance".
+        /// The single instance of the GameManager class.
+        /// Identifier string: "F:ClashGame.GameManager._instance".
         /// </summary>
         private static GameManager? _instance;
 
         /// <summary>
-        /// Свойство для получения единственного экземпляра класса GameManager.
-        /// Строка идентификатора "P:ClashGame.GameManager.Instance".
+        /// Property to get the single instance of the GameManager class.
+        /// Identifier string: "P:ClashGame.GameManager.Instance".
         /// </summary>
         public static GameManager Instance
         {
@@ -31,8 +30,8 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Приватный конструктор для класса GameManager.
-        /// Строка идентификатора "M:ClashGame.GameManager.#ctor".
+        /// Private constructor for the GameManager class.
+        /// Identifier string: "M:ClashGame.GameManager.#ctor".
         /// </summary>
         private GameManager()
         {

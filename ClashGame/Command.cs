@@ -8,22 +8,22 @@ using System.Windows.Controls;
 namespace ClashGame
 {
     /// <summary>
-    /// Класс CommandManager, управляющий выполнением и отменой команд.
-    /// Строка идентификатора "T:ClashGame.CommandManager".
+    /// CommandManager class that manages the execution and undoing of commands.
+    /// Identifier string "T:ClashGame.CommandManager".
     /// </summary>
     public class CommandManager
     {
         /// <summary>
-        /// Стек выполненных команд.
-        /// Строка идентификатора "F:ClashGame.CommandManager._commands".
+        /// Stack of executed commands.
+        /// Identifier string "F:ClashGame.CommandManager._commands".
         /// </summary>
         private Stack<ICommand> _commands = new Stack<ICommand>();
 
         /// <summary>
-        /// Выполняет команду и добавляет её в стек.
-        /// Строка идентификатора "M:ClashGame.CommandManager.ExecuteCommand(ClashGame.ICommand)".
+        /// Executes a command and adds it to the stack.
+        /// Identifier string "M:ClashGame.CommandManager.ExecuteCommand(ClashGame.ICommand)".
         /// </summary>
-        /// <param name="command">Команда для выполнения.</param>
+        /// <param name="command">The command to execute.</param>
         public void ExecuteCommand(ICommand command)
         {
             command.Execute();
@@ -31,8 +31,8 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Отменяет последнюю выполненную команду.
-        /// Строка идентификатора "M:ClashGame.CommandManager.Undo".
+        /// Undoes the last executed command.
+        /// Identifier string "M:ClashGame.CommandManager.Undo".
         /// </summary>
         public void Undo()
         {
@@ -44,10 +44,10 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Проверяет, можно ли отменить последнюю выполненную команду.
-        /// Строка идентификатора "M:ClashGame.CommandManager.CanUndo".
+        /// Checks if the last executed command can be undone.
+        /// Identifier string "M:ClashGame.CommandManager.CanUndo".
         /// </summary>
-        /// <returns>True, если есть команды для отмены, иначе false.</returns>
+        /// <returns>True if there are commands to undo, otherwise false.</returns>
         public bool CanUndo()
         {
             return _commands.Count > 0;
@@ -55,49 +55,49 @@ namespace ClashGame
     }
 
     /// <summary>
-    /// Класс HealerTurnCommand, представляющий команду хода лекаря.
-    /// Строка идентификатора "T:ClashGame.HealerTurnCommand".
+    /// HealerTurnCommand class representing the healer's turn command.
+    /// Identifier string "T:ClashGame.HealerTurnCommand".
     /// </summary>
     public class HealerTurnCommand : ICommand
     {
         /// <summary>
-        /// Управляющий битвой.
-        /// Строка идентификатора "F:ClashGame.HealerTurnCommand._battleManager".
+        /// Battle manager.
+        /// Identifier string "F:ClashGame.HealerTurnCommand._battleManager".
         /// </summary>
         private IBattleManager _battleManager;
 
         /// <summary>
-        /// Список атакующих воинов.
-        /// Строка идентификатора "F:ClashGame.HealerTurnCommand._attackers".
+        /// List of attacking warriors.
+        /// Identifier string "F:ClashGame.HealerTurnCommand._attackers".
         /// </summary>
         private List<Warrior> _attackers;
 
         /// <summary>
-        /// Список защищающихся воинов.
-        /// Строка идентификатора "F:ClashGame.HealerTurnCommand._defenders".
+        /// List of defending warriors.
+        /// Identifier string "F:ClashGame.HealerTurnCommand._defenders".
         /// </summary>
         private List<Warrior> _defenders;
 
         /// <summary>
-        /// TextBox для вывода информации о ходе битвы.
-        /// Строка идентификатора "F:ClashGame.HealerTurnCommand._outputTextBox".
+        /// TextBox for displaying battle information.
+        /// Identifier string "F:ClashGame.HealerTurnCommand._outputTextBox".
         /// </summary>
         private TextBox _outputTextBox;
 
         /// <summary>
-        /// Список воинов, представляющий их состояние до выполнения команды.
-        /// Строка идентификатора "F:ClashGame.HealerTurnCommand._previousState".
+        /// List of warriors representing their state before the command execution.
+        /// Identifier string "F:ClashGame.HealerTurnCommand._previousState".
         /// </summary>
         private List<Warrior> _previousState;
 
         /// <summary>
-        /// Конструктор для класса HealerTurnCommand.
-        /// Строка идентификатора "M:ClashGame.HealerTurnCommand.#ctor(ClashGame.IBattleManager,System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
+        /// Constructor for the HealerTurnCommand class.
+        /// Identifier string "M:ClashGame.HealerTurnCommand.#ctor(ClashGame.IBattleManager,System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
         /// </summary>
-        /// <param name="battleManager">Управляющий битвой.</param>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе битвы.</param>
+        /// <param name="battleManager">Battle manager.</param>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="defenders">List of defending warriors.</param>
+        /// <param name="outputTextBox">TextBox for displaying battle information.</param>
         public HealerTurnCommand(IBattleManager battleManager, List<Warrior> attackers, List<Warrior> defenders,TextBox outputTextBox)
         {
             _battleManager = battleManager;
@@ -107,8 +107,8 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Выполняет ход лекаря.
-        /// Строка идентификатора "M:ClashGame.HealerTurnCommand.Execute".
+        /// Executes the healer's turn.
+        /// Identifier string "M:ClashGame.HealerTurnCommand.Execute".
         /// </summary>
         public void Execute()
         {
@@ -117,8 +117,8 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Отменяет ход лекаря и восстанавливает состояние атакующих воинов.
-        /// Строка идентификатора "M:ClashGame.HealerTurnCommand.Undo".
+        /// Undoes the healer's turn and restores the state of the attacking warriors.
+        /// Identifier string "M:ClashGame.HealerTurnCommand.Undo".
         /// </summary>
         public void Undo()
         {
@@ -129,49 +129,49 @@ namespace ClashGame
     }
 
     /// <summary>
-    /// Класс WizardTurnCommand, представляющий команду хода мага.
-    /// Строка идентификатора "T:ClashGame.WizardTurnCommand".
+    /// WizardTurnCommand class representing the wizard's turn command.
+    /// Identifier string "T:ClashGame.WizardTurnCommand".
     /// </summary>
     public class WizardTurnCommand : ICommand
     {
         /// <summary>
-        /// Управляющий битвой.
-        /// Строка идентификатора "F:ClashGame.WizardTurnCommand._battleManager".
+        /// Battle manager.
+        /// Identifier string "F:ClashGame.WizardTurnCommand._battleManager".
         /// </summary>
         private IBattleManager _battleManager;
 
         /// <summary>
-        /// Список атакующих воинов.
-        /// Строка идентификатора "F:ClashGame.WizardTurnCommand._attackers".
+        /// List of attacking warriors.
+        /// Identifier string "F:ClashGame.WizardTurnCommand._attackers".
         /// </summary>
         private List<Warrior> _attackers;
 
         /// <summary>
-        /// Список защищающихся воинов.
-        /// Строка идентификатора "F:ClashGame.WizardTurnCommand._defenders".
+        /// List of defending warriors.
+        /// Identifier string "F:ClashGame.WizardTurnCommand._defenders".
         /// </summary>
         private List<Warrior> _defenders;
 
         /// <summary>
-        /// TextBox для вывода информации о ходе битвы.
-        /// Строка идентификатора "F:ClashGame.WizardTurnCommand._outputTextBox".
+        /// TextBox for displaying battle information.
+        /// Identifier string "F:ClashGame.WizardTurnCommand._outputTextBox".
         /// </summary>
         private TextBox _outputTextBox;
 
         /// <summary>
-        /// Список воинов, представляющий их состояние до выполнения команды.
-        /// Строка идентификатора "F:ClashGame.WizardTurnCommand._previousState".
+        /// List of warriors representing their state before the command execution.
+        /// Identifier string "F:ClashGame.WizardTurnCommand._previousState".
         /// </summary>
         private List<Warrior> _previousState;
 
         /// <summary>
-        /// Конструктор для класса WizardTurnCommand.
-        /// Строка идентификатора "M:ClashGame.WizardTurnCommand.#ctor(ClashGame.IBattleManager,System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
+        /// Constructor for the WizardTurnCommand class.
+        /// Identifier string "M:ClashGame.WizardTurnCommand.#ctor(ClashGame.IBattleManager,System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
         /// </summary>
-        /// <param name="battleManager">Управляющий битвой.</param>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе битвы.</param>
+        /// <param name="battleManager">Battle manager.</param>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="defenders">List of defending warriors.</param>
+        /// <param name="outputTextBox">TextBox for displaying battle information.</param>
         public WizardTurnCommand(IBattleManager battleManager, List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             _battleManager = battleManager;
@@ -181,8 +181,8 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Выполняет ход мага.
-        /// Строка идентификатора "M:ClashGame.WizardTurnCommand.Execute".
+        /// Executes the wizard's turn.
+        /// Identifier string "M:ClashGame.WizardTurnCommand.Execute".
         /// </summary>
         public void Execute()
         {
@@ -191,8 +191,8 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Отменяет ход мага и восстанавливает состояние атакующих воинов.
-        /// Строка идентификатора "M:ClashGame.WizardTurnCommand.Undo".
+        /// Undoes the wizard's turn and restores the state of the attacking warriors.
+        /// Identifier string "M:ClashGame.WizardTurnCommand.Undo".
         /// </summary>
         public void Undo()
         {
@@ -209,61 +209,61 @@ namespace ClashGame
     }
 
     /// <summary>
-    /// Класс ArcherTurnCommand, представляющий команду хода лучника.
-    /// Строка идентификатора "T:ClashGame.ArcherTurnCommand".
+    /// ArcherTurnCommand class representing the archer's turn command.
+    /// Identifier string "T:ClashGame.ArcherTurnCommand".
     /// </summary>
     public class ArcherTurnCommand : ICommand
     {
         /// <summary>
-        /// Управляющий битвой.
-        /// Строка идентификатора "F:ClashGame.ArcherTurnCommand._battleManager".
+        /// Battle manager.
+        /// Identifier string "F:ClashGame.ArcherTurnCommand._battleManager".
         /// </summary>
         private IBattleManager _battleManager;
 
         /// <summary>
-        /// Список атакующих воинов.
-        /// Строка идентификатора "F:ClashGame.ArcherTurnCommand._attackers".
+        /// List of attacking warriors.
+        /// Identifier string "F:ClashGame.ArcherTurnCommand._attackers".
         /// </summary>
         private List<Warrior> _attackers;
 
         /// <summary>
-        /// Список защищающихся воинов.
-        /// Строка идентификатора "F:ClashGame.ArcherTurnCommand._defenders".
+        /// List of defending warriors.
+        /// Identifier string "F:ClashGame.ArcherTurnCommand._defenders".
         /// </summary>
         private List<Warrior> _defenders;
 
         /// <summary>
-        /// TextBox для вывода информации о ходе битвы.
-        /// Строка идентификатора "F:ClashGame.ArcherTurnCommand._outputTextBox".
+        /// TextBox for displaying battle information.
+        /// Identifier string "F:ClashGame.ArcherTurnCommand._outputTextBox".
         /// </summary>
         private TextBox _outputTextBox;
 
         /// <summary>
-        /// Список воинов, представляющий их состояние до выполнения команды.
-        /// Строка идентификатора "F:ClashGame.ArcherTurnCommand._previousState".
+        /// List of warriors representing their state before the command execution.
+        /// Identifier string "F:ClashGame.ArcherTurnCommand._previousState".
         /// </summary>
         private List<Warrior> _previousDefenderState;
 
         /// <summary>
-        /// Индекс цели атаки.
-        /// Строка идентификатора "F:ClashGame.ArcherTurnCommand._targetIndex".
+        /// Target attack index.
+        /// Identifier string "F:ClashGame.ArcherTurnCommand._targetIndex".
         /// </summary>
         private int _targetIndex;
 
         /// <summary>
-        /// Предыдущее количество очков здоровья цели.
-        /// Строка идентификатора "F:ClashGame.ArcherTurnCommand._previousHealthPoints".
+        /// Previous health points of the target.
+        /// Identifier string "F:ClashGame.ArcherTurnCommand._previousHealthPoints".
         /// </summary>
         private double _previousHealthPoints;
 
         /// <summary>
-        /// Конструктор для класса ArcherTurnCommand.
-        /// Строка идентификатора "M:ClashGame.ArcherTurnCommand.#ctor(ClashGame.IBattleManager,System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
+        /// Constructor for the ArcherTurnCommand class.
+        /// Identifier string "M:ClashGame.ArcherTurnCommand.#ctor(ClashGame.IBattleManager,System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
         /// </summary>
-        /// <param name="battleManager">Управляющий битвой.</param>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе битвы.</param>
+        /// <param name="battleManager">Battle manager.</param>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="defenders">List of defending warriors.</param>
+        /// <param name="outputTextBox">TextBox for displaying battle information.</param>
         public ArcherTurnCommand(IBattleManager battleManager, List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             _battleManager = battleManager;
@@ -273,8 +273,8 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Выполняет ход лучника.
-        /// Строка идентификатора "M:ClashGame.ArcherTurnCommand.Execute".
+        /// Executes the archer's turn.
+        /// Identifier string "M:ClashGame.ArcherTurnCommand.Execute".
         /// </summary>
         public void Execute()
         {
@@ -285,8 +285,8 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Отменяет ход лучника и восстанавливает состояние защищающихся воинов.
-        /// Строка идентификатора "M:ClashGame.ArcherTurnCommand.Undo".
+        /// Undoes the archer's turn and restores the state of the defending warriors.
+        /// Identifier string "M:ClashGame.ArcherTurnCommand.Undo".
         /// </summary>
         public void Undo()
         {

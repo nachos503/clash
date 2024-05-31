@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\annab\\Source\\Repos\\clash555\\ClashGame\\ClashGame.csproj": {}
+    "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\ClashGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\annab\\Source\\Repos\\clash555\\ClashGame\\ClashGame.csproj": {
+    "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\ClashGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\annab\\Source\\Repos\\clash555\\ClashGame\\ClashGame.csproj",
+        "projectUniqueName": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\ClashGame.csproj",
         "projectName": "ClashGame",
-        "projectPath": "C:\\Users\\annab\\Source\\Repos\\clash555\\ClashGame\\ClashGame.csproj",
+        "projectPath": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\ClashGame.csproj",
         "packagesPath": "C:\\Users\\annab\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\annab\\Source\\Repos\\clash555\\ClashGame\\obj\\",
+        "outputPath": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

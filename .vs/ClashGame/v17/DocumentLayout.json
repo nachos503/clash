@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\annab\\source\\repos\\clash555\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83794B8A-5FA2-43E4-A34B-4707EC2ACDF3}|ClashGame\\ClashGame.csproj|c:\\users\\annab\\source\\repos\\clash555\\clashgame\\battlemanagerproxy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83794B8A-5FA2-43E4-A34B-4707EC2ACDF3}|ClashGame\\ClashGame.csproj|solutionrelative:clashgame\\battlemanagerproxy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83794B8A-5FA2-43E4-A34B-4707EC2ACDF3}|ClashGame\\ClashGame.csproj|c:\\users\\annab\\source\\repos\\clash555\\clashgame\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83794B8A-5FA2-43E4-A34B-4707EC2ACDF3}|ClashGame\\ClashGame.csproj|solutionrelative:clashgame\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{83794B8A-5FA2-43E4-A34B-4707EC2ACDF3}|ClashGame\\ClashGame.csproj|c:\\users\\annab\\source\\repos\\clash555\\clashgame\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83794B8A-5FA2-43E4-A34B-4707EC2ACDF3}|ClashGame\\ClashGame.csproj|solutionrelative:clashgame\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,6 +23,14 @@
       "RelativeMoniker": "D:0:0:{83794B8A-5FA2-43E4-A34B-4707EC2ACDF3}|ClashGame\\ClashGame.csproj|solutionrelative:clashgame\\battlemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{83794B8A-5FA2-43E4-A34B-4707EC2ACDF3}|ClashGame\\ClashGame.csproj|c:\\users\\annab\\source\\repos\\clash555\\clashgame\\battlemanagerproxy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83794B8A-5FA2-43E4-A34B-4707EC2ACDF3}|ClashGame\\ClashGame.csproj|solutionrelative:clashgame\\battlemanagerproxy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83794B8A-5FA2-43E4-A34B-4707EC2ACDF3}|ClashGame\\ClashGame.csproj|c:\\users\\annab\\source\\repos\\clash555\\clashgame\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83794B8A-5FA2-43E4-A34B-4707EC2ACDF3}|ClashGame\\ClashGame.csproj|solutionrelative:clashgame\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{83794B8A-5FA2-43E4-A34B-4707EC2ACDF3}|ClashGame\\ClashGame.csproj|c:\\users\\annab\\source\\repos\\clash555\\clashgame\\armymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83794B8A-5FA2-43E4-A34B-4707EC2ACDF3}|ClashGame\\ClashGame.csproj|solutionrelative:clashgame\\armymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -39,12 +39,12 @@
       "RelativeMoniker": "D:0:0:{83794B8A-5FA2-43E4-A34B-4707EC2ACDF3}|ClashGame\\ClashGame.csproj|solutionrelative:clashgame\\armyunitfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83794B8A-5FA2-43E4-A34B-4707EC2ACDF3}|ClashGame\\ClashGame.csproj|c:\\users\\annab\\source\\repos\\clash555\\clashgame\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83794B8A-5FA2-43E4-A34B-4707EC2ACDF3}|ClashGame\\ClashGame.csproj|solutionrelative:clashgame\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{83794B8A-5FA2-43E4-A34B-4707EC2ACDF3}|ClashGame\\ClashGame.csproj|c:\\users\\annab\\source\\repos\\clash555\\clashgame\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{83794B8A-5FA2-43E4-A34B-4707EC2ACDF3}|ClashGame\\ClashGame.csproj|solutionrelative:clashgame\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83794B8A-5FA2-43E4-A34B-4707EC2ACDF3}|ClashGame\\ClashGame.csproj|c:\\users\\annab\\source\\repos\\clash555\\clashgame\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83794B8A-5FA2-43E4-A34B-4707EC2ACDF3}|ClashGame\\ClashGame.csproj|solutionrelative:clashgame\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,13 +86,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\GameManager.cs",
               "RelativeDocumentMoniker": "ClashGame\\GameManager.cs",
               "ToolTip": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\GameManager.cs",
               "RelativeToolTip": "ClashGame\\GameManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAWAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-31T18:30:27.571Z",
               "EditorCaption": ""
@@ -105,7 +105,7 @@
               "RelativeDocumentMoniker": "ClashGame\\ArmyUnitFactory.cs",
               "ToolTip": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\ArmyUnitFactory.cs",
               "RelativeToolTip": "ClashGame\\ArmyUnitFactory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFEAAAA8AAAA",
+              "ViewState": "AQIAADIAAAAAAAAAAAAgwFEAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-31T16:55:10.312Z",
               "EditorCaption": ""
@@ -118,79 +118,79 @@
               "RelativeDocumentMoniker": "ClashGame\\ArmyManager.cs",
               "ToolTip": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\ArmyManager.cs",
               "RelativeToolTip": "ClashGame\\ArmyManager.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwA8AAAAWAAAA",
+              "ViewState": "AQIAADwAAAAAAAAAAAAYwGEAAAB1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-29T18:57:59.761Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "BattleManager.cs",
               "DocumentMoniker": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\BattleManager.cs",
               "RelativeDocumentMoniker": "ClashGame\\BattleManager.cs",
               "ToolTip": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\BattleManager.cs",
               "RelativeToolTip": "ClashGame\\BattleManager.cs",
-              "ViewState": "AQIAAHEBAAAAAAAAAAAkwIcBAABoAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4BAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-25T08:36:32.787Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Strategy.cs",
               "DocumentMoniker": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\Strategy.cs",
               "RelativeDocumentMoniker": "ClashGame\\Strategy.cs",
               "ToolTip": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\Strategy.cs",
               "RelativeToolTip": "ClashGame\\Strategy.cs",
-              "ViewState": "AQIAAOUBAAAAAAAAAAAswAYCAAA9AAAA",
+              "ViewState": "AQIAAAgCAAAAAAAAAAAAACQCAABZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-25T08:36:32.92Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Interfaces.cs",
               "DocumentMoniker": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\Interfaces.cs",
               "RelativeDocumentMoniker": "ClashGame\\Interfaces.cs",
               "ToolTip": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\Interfaces.cs",
               "RelativeToolTip": "ClashGame\\Interfaces.cs",
-              "ViewState": "AQIAAPEAAAAAAAAAAAAcwBkBAABZAAAA",
+              "ViewState": "AQIAAPgAAAAAAAAAAAAkwBoBAABMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-25T08:36:32.977Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Warriors.cs",
               "DocumentMoniker": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\Warriors.cs",
               "RelativeDocumentMoniker": "ClashGame\\Warriors.cs",
               "ToolTip": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\Warriors.cs",
               "RelativeToolTip": "ClashGame\\Warriors.cs",
-              "ViewState": "AQIAAI0AAAAAAAAAAAAuwCsBAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0BAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-25T08:36:32.996Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "ClashGame\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\MainWindow.xaml.cs",
               "RelativeToolTip": "ClashGame\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAANQCAAAIAAAA",
+              "ViewState": "AQIAAHMDAAAAAAAAAAAAAJcDAABiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-25T08:36:32.939Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\MainWindow.xaml",
               "RelativeDocumentMoniker": "ClashGame\\MainWindow.xaml",
@@ -202,26 +202,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Command.cs",
               "DocumentMoniker": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\Command.cs",
               "RelativeDocumentMoniker": "ClashGame\\Command.cs",
               "ToolTip": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\Command.cs",
               "RelativeToolTip": "ClashGame\\Command.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAP8AAAAWAAAA",
+              "ViewState": "AQIAAP8AAAAAAAAAAAAiwCEBAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-25T08:36:32.949Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "BattleManagerProxy.cs",
               "DocumentMoniker": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\BattleManagerProxy.cs",
               "RelativeDocumentMoniker": "ClashGame\\BattleManagerProxy.cs",
               "ToolTip": "C:\\Users\\annab\\source\\repos\\clash555\\ClashGame\\BattleManagerProxy.cs",
               "RelativeToolTip": "ClashGame\\BattleManagerProxy.cs",
-              "ViewState": "AQIAAKAAAAAAAAAAAADwv8UAAABbAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-25T08:36:32.93Z",
               "EditorCaption": ""

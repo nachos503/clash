@@ -8,29 +8,29 @@ using System.Xml.Serialization;
 namespace ClashGame
 {
     /// <summary>
-    /// Класс BattleManagerProxy, представляющий прокси для управления битвой с логированием.
-    /// Строка идентификатора "T:ClashGame.BattleManagerProxy".
+    /// BattleManagerProxy class representing a proxy for battle management with logging.
+    /// Identifier string "T:ClashGame.BattleManagerProxy".
     /// </summary>
     public class BattleManagerProxy : IBattleManager
     {
         /// <summary>
-        /// Экземпляр BattleManager.
-        /// Строка идентификатора "F:ClashGame.BattleManagerProxy._battleManager".
+        /// Instance of BattleManager.
+        /// Identifier string "F:ClashGame.BattleManagerProxy._battleManager".
         /// </summary>
         BattleManager _battleManager;
 
         /// <summary>
-        /// Путь к файлу логов.
-        /// Строка идентификатора "F:ClashGame.BattleManagerProxy._filePath".
+        /// Path to the log file.
+        /// Identifier string "F:ClashGame.BattleManagerProxy._filePath".
         /// </summary>
         private readonly string _filePath;
 
         /// <summary>
-        /// Конструктор для класса BattleManagerProxy.
-        /// Строка идентификатора "M:ClashGame.BattleManagerProxy.#ctor(ClashGame.BattleManager,System.String)".
+        /// Constructor for the BattleManagerProxy class.
+        /// Identifier string "M:ClashGame.BattleManagerProxy.#ctor(ClashGame.BattleManager,System.String)".
         /// </summary>
-        /// <param name="battleManager">Экземпляр BattleManager.</param>
-        /// <param name="filePath">Путь к файлу логов.</param>
+        /// <param name="battleManager">Instance of BattleManager.</param>
+        /// <param name="filePath">Path to the log file.</param>
         public BattleManagerProxy(BattleManager battleManager, string filePath)
         {
             _filePath = filePath;
@@ -42,10 +42,10 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Функция для записи сообщения в файл логов.
-        /// Строка идентификатора "M:ClashGame.BattleManagerProxy.Log(System.String)".
+        /// Function to write a message to the log file.
+        /// Identifier string "M:ClashGame.BattleManagerProxy.Log(System.String)".
         /// </summary>
-        /// <param name="message">Сообщение для логирования.</param>
+        /// <param name="message">Message to log.</param>
         public void Log(string message)
         {
             try
@@ -62,12 +62,12 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Выполняет ход компьютера, логирует действия.
-        /// Строка идентификатора "M:ClashGame.BattleManagerProxy.TurnComputer(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
+        /// Performs the computer's turn, logs the actions.
+        /// Identifier string "M:ClashGame.BattleManagerProxy.TurnComputer(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе битвы.</param>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="defenders">List of defending warriors.</param>
+        /// <param name="outputTextBox">TextBox for displaying battle information.</param>
         public void TurnComputer(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             Log("Ход начат!");
@@ -87,12 +87,12 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Выполняет ход мага, логирует действие.
-        /// Строка идентификатора "M:ClashGame.BattleManagerProxy.WizardTurn(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
+        /// Performs a wizard's turn, logs the action.
+        /// Identifier string "M:ClashGame.BattleManagerProxy.WizardTurn(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе битвы.</param>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="defenders">List of defending warriors.</param>
+        /// <param name="outputTextBox">TextBox for displaying battle information.</param>
         public void WizardTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             Log($"Клонирование воина {attackers[0].Side} {this}");
@@ -100,12 +100,12 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Выполняет ход лекаря, логирует действие.
-        /// Строка идентификатора "M:ClashGame.BattleManagerProxy.HealerTurn(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
+        /// Performs a healer's turn, logs the action.
+        /// Identifier string "M:ClashGame.BattleManagerProxy.HealerTurn(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе битвы.</param>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="defenders">List of defending warriors.</param>
+        /// <param name="outputTextBox">TextBox for displaying battle information.</param>
         public void HealerTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             Log($"Применение лечения воином {attackers[0].Side} {this}");
@@ -113,12 +113,12 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Выполняет улучшение тяжелого воина, логирует действие.
-        /// Строка идентификатора "M:ClashGame.BattleManagerProxy.ImprovedHeavyWarriorTurn(System.Collections.Generic.List{ClashGame.Warrior},ClashGame.Warrior,System.Windows.Controls.TextBox)".
+        /// Performs an improvement on a heavy warrior, logs the action.
+        /// Identifier string "M:ClashGame.BattleManagerProxy.ImprovedHeavyWarriorTurn(System.Collections.Generic.List{ClashGame.Warrior},ClashGame.Warrior,System.Windows.Controls.TextBox)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="attacker">Улучшаемый воин.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе битвы.</param>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="attacker">The warrior to be improved.</param>
+        /// <param name="outputTextBox">TextBox for displaying battle information.</param>
         public void ImprovedHeavyWarriorTurn(List<Warrior> attackers, Warrior attacker, TextBox outputTextBox)
         {
             Log($"Улучшение воина {attackers[0].Side} {this}");
@@ -126,12 +126,13 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Выполняет атаку лучников, логирует действие.
-        /// Строка идентификатора "M:ClashGame.BattleManagerProxy.ArchersTurn(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
+        /// Performs an archer attack, logs the action.
+        /// Identifier string "M:ClashGame.BattleManagerProxy.ArchersTurn(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе битвы.</param>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="defenders">List of defending warriors.</param>
+        /// <param name="outputTextBox">TextBox for displaying battle information.</param>
+
         public void ArchersTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             Log($"Атака лучниками");
@@ -139,12 +140,12 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Выполняет атаку, логирует действие.
-        /// Строка идентификатора "M:ClashGame.BattleManagerProxy.Attack(ClashGame.Warrior,ClashGame.Warrior,System.Windows.Controls.TextBox)".
+        /// Performs an attack, logs the action.
+        /// Identifier string "M:ClashGame.BattleManagerProxy.Attack(ClashGame.Warrior,ClashGame.Warrior,System.Windows.Controls.TextBox)".
         /// </summary>
-        /// <param name="warrior1">Воин, который атакует.</param>
-        /// <param name="warrior2">Воин, который защищается.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе битвы.</param>
+        /// <param name="warrior1">The warrior who is attacking.</param>
+        /// <param name="warrior2">The warrior who is defending.</param>
+        /// <param name="outputTextBox">TextBox for displaying battle information.</param>
         public void Attack(Warrior warrior1, Warrior warrior2, TextBox outputTextBox)
         {
             Log($"Атака {warrior1.Side} {warrior1} с силой {warrior1.Damage} по {warrior2.Side} {warrior2}");
@@ -152,12 +153,12 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Выполняет защиту, логирует действие.
-        /// Строка идентификатора "M:ClashGame.BattleManagerProxy.Defence(ClashGame.Warrior,ClashGame.Warrior,System.Windows.Controls.TextBox)".
+        /// Performs defense, logs the action.
+        /// Identifier string "M:ClashGame.BattleManagerProxy.Defence(ClashGame.Warrior,ClashGame.Warrior,System.Windows.Controls.TextBox)".
         /// </summary>
-        /// <param name="warrior1">Воин, который защищается.</param>
-        /// <param name="warrior2">Воин, который атакует.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе битвы.</param>
+        /// <param name="warrior1">The warrior who is defending.</param>
+        /// <param name="warrior2">The warrior who is attacking.</param>
+        /// <param name="outputTextBox">TextBox for displaying battle information.</param>
         public void Defence(Warrior warrior1, Warrior warrior2, TextBox outputTextBox)
         {
             Log($"Получена атака {warrior1.Side} {warrior1} с силой {warrior1.Damage} от {warrior2.Side} {warrior2}");
@@ -165,11 +166,11 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Проверяет, мертв ли воин, логирует действие.
-        /// Строка идентификатора "M:ClashGame.BattleManagerProxy.IsDead(ClashGame.Warrior,System.Collections.Generic.List{ClashGame.Warrior})".
+        /// Checks if a warrior is dead, logs the action.
+        /// Identifier string "M:ClashGame.BattleManagerProxy.IsDead(ClashGame.Warrior,System.Collections.Generic.List{ClashGame.Warrior})".
         /// </summary>
-        /// <param name="warrior">Воин для проверки.</param>
-        /// <param name="army">Список армии.</param>
+        /// <param name="warrior">Warrior to check.</param>
+        /// <param name="army">List of the army.</param>
         public void IsDead(Warrior warrior, List<Warrior> army)
         {
             if (warrior.Healthpoints <= 0) Log($"Воин {warrior.Side} {warrior} умер!");
@@ -178,11 +179,11 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Выполняет ход Гуляй-города, логирует действие.
-        /// Строка идентификатора "M:ClashGame.BattleManagerProxy.GulyayGorodTurn(System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
+        /// Executes the Gulyay-Gorod turn, logs the action.
+        /// Identifier string "M:ClashGame.BattleManagerProxy.GulyayGorodTurn(System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе битвы.</param>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="outputTextBox">TextBox for displaying battle information.</param>
         public void GulyayGorodTurn(List<Warrior> attackers, TextBox outputTextBox)
         {
             Log($"Активирован гуляй город у {attackers[0].Side}");
@@ -190,12 +191,12 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Проверяет возможность использования Гуляй-города, логирует действие.
-        /// Строка идентификатора "M:ClashGame.BattleManagerProxy.CheckGulyayGorod(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
+        /// Checks the possibility of using Gulyay-Gorod, logs the action.
+        /// Identifier string "M:ClashGame.BattleManagerProxy.CheckGulyayGorod(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Controls.TextBox)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе битвы.</param>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="defenders">List of defending warriors.</param>
+        /// <param name="outputTextBox">TextBox for displaying battle information.</param>
         public void CheckGulyayGorod(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             Log($"Попытка поставить гуляй город {attackers[0].Side}");

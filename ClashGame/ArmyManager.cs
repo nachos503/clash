@@ -7,12 +7,12 @@ namespace ClashGame
     sealed class ArmyManager
     {
         /// <summary>
-        /// private readonly TextBox outputTextBox; - создаётся переменная outputTextBox типа TextBox для вывода информации.
-        /// IUnitFactory unitFactory - создаётся переменная unitFactory типа IUnitFactory для создания юнитов.
-        /// Dictionary<string, List<Warrior>> armies - создаётся словарь armies, где ключом является строка (название стороны), а значением - список объектов типа Warrior.
-        /// Строка идентификатора "F:ClashGame.ArmyManager.outputTextBox".
-        /// Строка идентификатора "F:ClashGame.ArmyManager.unitFactory".
-        /// Строка идентификатора "F:ClashGame.ArmyManager.armies".
+        /// private readonly TextBox outputTextBox; - creates a variable outputTextBox of type TextBox for displaying information.
+        /// IUnitFactory unitFactory - creates a variable unitFactory of type IUnitFactory for creating units.
+        /// Dictionary<string, List<Warrior>> armies - creates a dictionary armies, where the key is a string (the name of the side), and the value is a list of objects of type Warrior.
+        /// Identifier string: "F:ClashGame.ArmyManager.outputTextBox".
+        /// Identifier string: "F:ClashGame.ArmyManager.unitFactory".
+        /// Identifier string: "F:ClashGame.ArmyManager.armies".
         /// </summary>
         private readonly TextBox outputTextBox;
         private readonly IUnitFactory unitFactory;
@@ -20,12 +20,12 @@ namespace ClashGame
 
 
         /// <summary>
-        /// public ArmyManager(TextBox outputTextBox, IUnitFactory unitFactory) - конструктор класса ArmyManager.
-        /// Инициализирует экземпляр класса ArmyManager с заданными параметрами.
-        /// Строка идентификатора "M:ClashGame.ArmyManager.ArmyManager(System.Windows.Controls.TextBox,ClashGame.IUnitFactory)".
+        /// public ArmyManager(TextBox outputTextBox, IUnitFactory unitFactory) - constructor of the ArmyManager class.
+        /// Initializes an instance of the ArmyManager class with the specified parameters.
+        /// Identifier string: "M:ClashGame.ArmyManager.ArmyManager(System.Windows.Controls.TextBox,ClashGame.IUnitFactory)".
         /// </summary>
-        /// <param name="outputTextBox">TextBox для вывода информации.</param>
-        /// <param name="unitFactory">IUnitFactory для создания юнитов.</param>
+        /// <param name="outputTextBox">TextBox for displaying information.</param>
+        /// <param name="unitFactory">IUnitFactory for creating units.</param>
         public ArmyManager(TextBox outputTextBox, IUnitFactory unitFactory)
         {
             this.outputTextBox = outputTextBox;
@@ -35,13 +35,13 @@ namespace ClashGame
 
 
         /// <summary>
-        /// public List<Warrior> CreateArmy(List<Warrior> warriorList, string side) - метод для создания армии.
-        /// Создаёт армию из различных юнитов для заданной стороны, случайным образом выбирая юниты, пока не достигнет максимальной стоимости армии.
-        /// Строка идентификатора "M:ClashGame.ArmyManager.CreateArmy(System.Collections.Generic.List{ClashGame.Warrior},System.String)".
+        /// public List<Warrior> CreateArmy(List<Warrior> warriorList, string side) - method for creating an army.
+        /// Creates an army of various units for the specified side, randomly selecting units until the maximum army cost is reached.
+        /// Identifier string: "M:ClashGame.ArmyManager.CreateArmy(System.Collections.Generic.List{ClashGame.Warrior},System.String)".
         /// </summary>
-        /// <param name="warriorList">Список, в который добавляются созданные юниты.</param>
-        /// <param name="side">Сторона, для которой создаётся армия.</param>
-        /// <returns>Список созданных юнитов для заданной стороны.</returns>
+        /// <param name="warriorList">The list to which the created units are added.</param>
+        /// <param name="side">The side for which the army is created.</param>
+        /// <returns>The list of created units for the specified side.</returns>
         public List<Warrior> CreateArmy(List<Warrior> warriorList, string side)
         {
             Random random = new Random();
@@ -77,13 +77,12 @@ namespace ClashGame
                 }
                 else break;
 
-                outputTextBox.AppendText(currentArmyCostSum.ToString() + Environment.NewLine); // Добавление информации в TextBox
+                outputTextBox.AppendText(currentArmyCostSum.ToString() + Environment.NewLine); 
             }
 
             for (int i = 0; i < warriorList.Count; i++)
-                outputTextBox.AppendText(warriorList[i].ToString() + Environment.NewLine); // Добавление информации в TextBox
+                outputTextBox.AppendText(warriorList[i].ToString() + Environment.NewLine); 
 
-            //добавление в конце списка стену
             warriorList.Add(unitFactory.CreateGulyayGorod(side));
 
             armies[side] = warriorList;
@@ -91,12 +90,12 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// public List<Warrior> GetArmyByColor(string side) - метод для получения списка юнитов армии по её цвету.
-        /// Возвращает список юнитов для заданной стороны, если такая армия существует; в противном случае возвращает пустой список.
-        /// Строка идентификатора "M:ClashGame.ArmyManager.GetArmyByColor(System.String)".
+        /// public List<Warrior> GetArmyByColor(string side) - method for retrieving the list of warriors in the army by its color.
+        /// Returns the list of warriors for the specified side if such an army exists; otherwise, returns an empty list.
+        /// Identifier string: "M:ClashGame.ArmyManager.GetArmyByColor(System.String)".
         /// </summary>
-        /// <param name="side">Сторона, для которой нужно получить список юнитов.</param>
-        /// <returns>Список юнитов для заданной стороны или пустой список, если армия не найдена.</returns>
+        /// <param name="side">The side for which to retrieve the list of warriors.</param>
+        /// <returns>The list of warriors for the specified side or an empty list if the army is not found.</returns>
         public List<Warrior> GetArmyByColor(string side) => armies.ContainsKey(side) ? armies[side] : new List<Warrior>();
     }
 }

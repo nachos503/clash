@@ -10,70 +10,70 @@ using System.Windows.Controls;
 
 namespace ClashGame
 {
-    /// <summary>
-    /// Класс DefaultStratagy, представляющий стандартную стратегию битвы.
-    /// Строка идентификатора "T:ClashGame.DefaultStratagy".
+    ///<summary>
+    /// /// The Default Strategy class, which represents the standard battle strategy.
+    /// ID string "T:ClashGame.DefaultStratagy".
     /// </summary>
     public class DefaultStratagy : IBattleStrategy
     {
         /// <summary>
-        /// Выполняет битву между атакующими и защищающимися воинами.
-        /// Строка идентификатора "M:ClashGame.DefaultStratagy.ExecuteBattle(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
+        /// Performs a battle between attacking and defending warriors.
+        /// ID string "M:ClashGame.DefaultStratagy.ExecuteBattle(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе битвы.</param>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="defenders">List of defending warriors.</param>
+        /// <param name="outputTextBox">TextBox for displaying information about the progress of the battle.</param>
         public void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
 
         }
 
         /// <summary>
-        /// Получает врага для атаки лучника.
-        /// Строка идентификатора "M:ClashGame.DefaultStratagy.GetEnemyForArcher(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Int32,ClashGame.Archer)".
+        /// Gets an enemy to attack the archer.
+        /// ID string "M:ClashGame.DefaultStratagy.GetEnemyForArcher(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Int32,ClashGame.Archer)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <param name="archerIndex">Индекс лучника.</param>
-        /// <param name="archer">Лучник.</param>
-        /// <returns>Враг для атаки.</returns>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="defenders">List of defending warriors.</param>
+        /// <param name="archer Index">The archer's index.</param>
+        /// <param name="archer">Archer.</param>
+        /// <returns>An enemy to attack.</returns>
         public Warrior GetEnemyForArcher(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
         {
             return null;
         }
 
         /// <summary>
-        /// Получает ближайшего легкого воина.
-        /// Строка идентификатора "M:ClashGame.DefaultStratagy.GetNearestLightWarrior(System.Collections.Generic.List{ClashGame.Warrior},System.Int32)".
-        /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="wizardIndex">Индекс мага.</param>
-        /// <returns>Ближайший легкий воин.</returns>
+        /// Gets the nearest light warrior.
+        /// ID string "M:ClashGame.The default strategy.Get the nearest light source(System.Collections.Generic.List{ClashGame.Warrior},System.Int32)".
+        /// </short description>
+        /// <parameter name="intruders">Spy attacking warriors.</param>
+        /// <parameter name="wizardIndex">The magician's index.</parameter>
+        /// <returns>The best lightweight user.</returns>
         public Warrior GetNearestLightWarrior(List<Warrior> attackers, int wizardIndex)
         {
             return null;
         }
 
         /// <summary>
-        /// Получает воина для лечения.
-        /// Строка идентификатора "M:ClashGame.DefaultStratagy.GetWarriorForHeal(System.Collections.Generic.List{ClashGame.Warrior},System.Int32,ClashGame.Healer)".
+        /// Receives a warrior for treatment.
+        /// ID string "M:ClashGame.DefaultStratagy.GetWarriorForHeal(System.Collections.Generic.List{ClashGame.Warrior},System.Int32,ClashGame.Healer)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="healerIndex">Индекс лекаря.</param>
-        /// <param name="healer">Лекарь.</param>
-        /// <returns>Воин, которого следует лечить.</returns>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="header Index">The index of the healer.</param>
+        /// <param name="healer">The healer.</param>
+        /// <returns>A warrior who should be treated.</returns>
         public Warrior GetWarriorForHeal(List<Warrior> attackers, int healerIndex, Healer healer)
         {
             return null;
         }
 
         /// <summary>
-        /// Проверяет, является ли атакующий воин на передовой линии.
-        /// Строка идентификатора "M:ClashGame.DefaultStratagy.IsFrontLine(System.Int32,System.Collections.Generic.List{ClashGame.Warrior})".
+        /// Checks if the attacking warrior is on the front line.
+        /// ID string "M:ClashGame.DefaultStratagy.IsFrontLine(System.Int32,System.Collections.Generic.List{ClashGame.Warrior})".
         /// </summary>
-        /// <param name="attackerIndex">Индекс атакующего воина.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <returns>True, если воин находится на передовой линии, иначе false.</returns>
+        /// <param name="attackerIndex">The index of the attacking warrior.</param>
+        /// <param name="defenders">List of defending warriors.</param>
+        /// <returns>True if the warrior is on the front line, otherwise false.</returns>
         public bool IsFrontLine(int attackerIndex, List<Warrior> defenders)
         {
             return false;
@@ -81,34 +81,34 @@ namespace ClashGame
     }
 
     /// <summary>
-    /// Класс TwoRowStrategy, представляющий стратегию боя с двумя рядами.
-    /// Строка идентификатора "T:ClashGame.TwoRowStrategy".
+    /// The twowstrategy class, which represents a two-row combat strategy.
+    /// ID string "T:ClashGame.TwoRowStrategy".
     /// </summary>
     public class TwoRowStrategy : IBattleStrategy
     {
         /// <summary>
-        /// Прокси-объект BattleManager.
-        /// Строка идентификатора "F:ClashGame.TwoRowStrategy._battleManagerProxy".
-        /// </summary>
+        /// The BattleManager proxy object.
+        /// Search bar "F:ClashGame.Two main strategies._battleManagerProxy".
+        /// </short description>
         BattleManagerProxy _battleManagerProxy;
 
         /// <summary>
-        /// Конструктор для класса TwoRowStrategy.
-        /// Строка идентификатора "M:ClashGame.TwoRowStrategy.#ctor(ClashGame.BattleManagerProxy)".
+        /// Constructor for the TwoRowStrategy class.
+        /// Identifier: "M:ClashGame.TwoRowStrategy.#ctor(ClashGame.BattleManagerProxy)".
         /// </summary>
-        /// <param name="battleManagerProxy">Прокси-объект BattleManager.</param>
+        /// <param name="battleManagerProxy">The BattleManager proxy object.</param>
         public TwoRowStrategy(BattleManagerProxy battleManagerProxy)
         {
             _battleManagerProxy = battleManagerProxy;
         }
 
         /// <summary>
-        /// Выполняет битву между атакующими и защищающимися воинами.
-        /// Строка идентификатора "M:ClashGame.TwoRowStrategy.ExecuteBattle(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
+        /// Performs a battle between attacking and defending warriors.
+        /// ID string "M:ClashGame.TwoRowStrategy.ExecuteBattle(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе битвы.</param>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="defenders">List of defending warriors.</param>
+        /// <param name="outputTextBox">TextBox for displaying information about the progress of the battle.</param>
         public void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             int rows = Math.Min(2, Math.Min(attackers.Count, defenders.Count));
@@ -124,29 +124,29 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Получает врага для атаки лучника.
-        /// Строка идентификатора "M:ClashGame.TwoRowStrategy.GetEnemyForArcher(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Int32,ClashGame.Archer)".
+        /// Gets an enemy to attack the archer.
+        /// ID string "M:ClashGame.TwoRowStrategy.GetEnemyForArcher(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Int32,ClashGame.Archer)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <param name="archerIndex">Индекс лучника.</param>
-        /// <param name="archer">Лучник.</param>
-        /// <returns>Враг для атаки.</returns>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="defenders">List of defending warriors.</param>
+        /// <param name="archer Index">The archer's index.</param>
+        /// <param name="archer">Archer.</param>
+        /// <returns>An enemy to attack.</returns>
         public Warrior GetEnemyForArcher(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
         {
             var range = archer.Range();
-            //идем с позиции лучника до начала его армии
+            //we go from the archer's position to the beginning of his army
             for (int i = archerIndex; i > 1; i -= 2)
                 range--;
-            //идем с начала армии противника пока не кончится его дальность
-            
+            // we go from the beginning of the enemy's army until its range ends
+
             if (range > 0)
                 for (int i = 0; i < defenders.Count; i += 2)
                 {
                     range--;
                     if (range == 0)
                     {
-                        //проверка в каком ряду стоит лучник (стреляет только вперед)
+                        //checking which row the archer is in (shoots only forward)
                         if (archerIndex % 2 == 0) return defenders[i];
                         else if (defenders.Count > i+1)  return defenders[i + 1];
                     }
@@ -156,17 +156,17 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Получает ближайшего легкого воина.
-        /// Строка идентификатора "M:ClashGame.TwoRowStrategy.GetNearestLightWarrior(System.Collections.Generic.List{ClashGame.Warrior},System.Int32)".
+        /// Gets the nearest light warrior.
+        /// Identifier: "M:ClashGame.TwoRowStrategy.GetNearestLightWarrior(System.Collections.Generic.List{ClashGame.Warrior},System.Int32)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="attackerIndex">Индекс атакующего воина.</param>
-        /// <returns>Ближайший легкий воин.</returns>а
+        /// <param name="attackers">The list of attacking warriors.</param>
+        /// <param name="attackerIndex">The index of the attacking warrior.</param>
+        /// <returns>The nearest light warrior.</returns>
         public Warrior GetNearestLightWarrior (List<Warrior> attackers, int attackerIndex)
         {
             bool isUsed = false;
             Warrior nearestLightWarrior = null;
-            //смотрим вверх вних направо налево
+            //// looking up down right to left
             if (attackerIndex != attackers.Count() - 1)
                 if (attackerIndex % 2 == 0 && attackers[attackerIndex + 1] is LightWarrior)
                 {
@@ -196,18 +196,18 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Получает воина для лечения.
-        /// Строка идентификатора "M:ClashGame.TwoRowStrategy.GetWarriorForHeal(System.Collections.Generic.List{ClashGame.Warrior},System.Int32,ClashGame.Healer)".
+        /// Gets the warrior for healing.
+        /// Identifier: "M:ClashGame.TwoRowStrategy.GetWarriorForHeal(System.Collections.Generic.List{ClashGame.Warrior},System.Int32,ClashGame.Healer)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="healerIndex">Индекс лекаря.</param>
-        /// <param name="healer">Лекарь.</param>
-        /// <returns>Воин, которого следует лечить.</returns>
+        /// <param name="attackers">The list of attacking warriors.</param>
+        /// <param name="healerIndex">The index of the healer.</param>
+        /// <param name="healer">The healer.</param>
+        /// <returns>The warrior to be healed.</returns>
         public Warrior GetWarriorForHeal(List<Warrior> attackers, int healerIndex, Healer healer)
         {
             Warrior warriorForHeal = null;
             var minHealth = double.MaxValue;
-            //смотрим вверх вниз вправо влево
+            
             if (healerIndex + 1 < attackers.Count())
                 if (attackers[healerIndex + 1].Healthpoints < minHealth && healerIndex % 2 == 0 && attackers[healerIndex + 1] is not LightWarrior)
                 {
@@ -237,12 +237,12 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Проверяет, является ли атакующий воин на передовой линии.
-        /// Строка идентификатора "M:ClashGame.TwoRowStrategy.IsFrontLine(System.Int32,System.Collections.Generic.List{ClashGame.Warrior})".
+        /// Checks if the attacking warrior is on the front line.
+        /// Identifier: "M:ClashGame.TwoRowStrategy.IsFrontLine(System.Int32,System.Collections.Generic.List{ClashGame.Warrior})".
         /// </summary>
-        /// <param name="attackerIndex">Индекс атакующего воина.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <returns>True, если воин находится на передовой линии, иначе false.</returns>
+        /// <param name="attackerIndex">The index of the attacking warrior.</param>
+        /// <param name="defenders">The list of defending warriors.</param>
+        /// <returns>True if the warrior is on the front line; otherwise, false.</returns>
         public bool IsFrontLine(int attackerIndex, List<Warrior> defenders)
         {
             if (attackerIndex == 0)  return true;
@@ -256,34 +256,34 @@ namespace ClashGame
     }
 
     /// <summary>
-    /// Класс ThreeRowStrategy, представляющий стратегию боя с тремя рядами.
-    /// Строка идентификатора "T:ClashGame.ThreeRowStrategy".
+    /// The ThreeRowStrategy class, which represents a three-row combat strategy.
+    /// ID string "T:ClashGame.ThreeRowStrategy".
     /// </summary>
     public class ThreeRowStrategy : IBattleStrategy
     {
         /// <summary>
-        /// Прокси-объект BattleManager.
-        /// Строка идентификатора "F:ClashGame.ThreeRowStrategy._battleManagerProxy".
+        /// Proxy object for BattleManager.
+        /// Identifier: "F:ClashGame.ThreeRowStrategy._battleManagerProxy".
         /// </summary>
         BattleManagerProxy _battleManagerProxy;
 
         /// <summary>
-        /// Конструктор для класса ThreeRowStrategy.
-        /// Строка идентификатора "M:ClashGame.ThreeRowStrategy.#ctor(ClashGame.BattleManagerProxy)".
+        /// Constructor for the ThreeRowStrategy class.
+        /// Identifier: "M:ClashGame.ThreeRowStrategy.#ctor(ClashGame.BattleManagerProxy)".
         /// </summary>
-        /// <param name="battleManagerProxy">Прокси-объект BattleManager.</param>
+        /// <param name="battleManagerProxy">Proxy object for BattleManager.</param>
         public ThreeRowStrategy(BattleManagerProxy battleManagerProxy)
         {
             _battleManagerProxy = battleManagerProxy;
         }
 
         /// <summary>
-        /// Выполняет битву между атакующими и защищающимися воинами.
-        /// Строка идентификатора "M:ClashGame.ThreeRowStrategy.ExecuteBattle(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
+        /// Performs a battle between attacking and defending warriors.
+        /// ID string "M:ClashGame.ThreeRowStrategy.ExecuteBattle(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="defenders">List of defending warriors.</param>
+        /// <param name="outputTextBox">TextBox for displaying information about the progress of the battle.</param>
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе битвы.</param>
         public void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             int rows = Math.Min(3, Math.Min(attackers.Count, defenders.Count));
@@ -297,14 +297,14 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Получает врага для атаки лучника.
-        /// Строка идентификатора "M:ClashGame.ThreeRowStrategy.GetEnemyForArcher(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Int32,ClashGame.Archer)".
+        /// Gets an enemy to attack the archer.
+        /// ID string "M:ClashGame.ThreeRowStrategy.GetEnemyForArcher(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Int32,ClashGame.Archer)".
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="defenders">List of defending warriors.</param>
+        /// <param name="archer Index">The archer's index.</param>
+        /// <param name="archer">Archer.</param>
+        /// <returns>An enemy to attack.</returns>
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <param name="archerIndex">Индекс лучника.</param>
-        /// <param name="archer">Лучник.</param>
-        /// <returns>Враг для атаки.</returns>
         public Warrior GetEnemyForArcher(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
         {
             var range = archer.Range();
@@ -327,12 +327,12 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Получает ближайшего легкого воина.
-        /// Строка идентификатора "M:ClashGame.ThreeRowStrategy.GetNearestLightWarrior(System.Collections.Generic.List{ClashGame.Warrior},System.Int32)".
+        /// Retrieves the nearest light warrior.
+        /// Identifier: "M:ClashGame.ThreeRowStrategy.GetNearestLightWarrior(System.Collections.Generic.List{ClashGame.Warrior},System.Int32)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="attackersIndex">Индекс атакующего воина.</param>
-        /// <returns>Ближайший легкий воин.</returns>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="attackersIndex">Index of the attacking warrior.</param>
+        /// <returns>The nearest light warrior.</returns>
         public Warrior GetNearestLightWarrior(List<Warrior> attackers, int attackersIndex)
         {
             bool isUsed = false;
@@ -366,13 +366,14 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Получает воина для лечения.
-        /// Строка идентификатора "M:ClashGame.ThreeRowStrategy.GetWarriorForHeal(System.Collections.Generic.List{ClashGame.Warrior},System.Int32,ClashGame.Healer)".
+        /// Retrieves a warrior for healing.
+        /// Identifier: "M:ClashGame.ThreeRowStrategy.GetWarriorForHeal(System.Collections.Generic.List{ClashGame.Warrior},System.Int32,ClashGame.Healer)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="healerIndex">Индекс лекаря.</param>
-        /// <param name="healer">Лекарь.</param>
-        /// <returns>Воин, которого следует лечить.</returns>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="healerIndex">Index of the healer.</param>
+        /// <param name="healer">The healer.</param>
+        /// <returns>The warrior to be healed.</returns>
+
         public Warrior GetWarriorForHeal(List<Warrior> attackers, int healerIndex, Healer healer)
         {
             Warrior warriorForHeal = null;
@@ -407,12 +408,13 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Проверяет, является ли атакующий воин на передовой линии.
-        /// Строка идентификатора "M:ClashGame.ThreeRowStrategy.IsFrontLine(System.Int32,System.Collections.Generic.List{ClashGame.Warrior})".
+        /// Checks if the attacking warrior is on the front line.
+        /// Identifier: "M:ClashGame.ThreeRowStrategy.IsFrontLine(System.Int32,System.Collections.Generic.List{ClashGame.Warrior})".
         /// </summary>
-        /// <param name="attackerIndex">Индекс атакующего воина.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <returns>True, если воин находится на передовой линии, иначе false.</returns>
+        /// <param name="attackerIndex">Index of the attacking warrior.</param>
+        /// <param name="defenders">List of defending warriors.</param>
+        /// <returns>True if the warrior is on the front line, otherwise false.</returns>
+
         public bool IsFrontLine(int attackerIndex, List<Warrior> defenders)
         {
             if (attackerIndex == 0)  return true;
@@ -429,34 +431,35 @@ namespace ClashGame
     }
 
     /// <summary>
-    /// Класс WallToWallStrategy, представляющий стратегию боя "стенка на стенку".
-    /// Строка идентификатора "T:ClashGame.WallToWallStrategy".
+    /// The WallToWallStrategy class representing the "wall-to-wall" battle strategy.
+    /// Identifier: "T:ClashGame.WallToWallStrategy".
     /// </summary>
+
     public class WallToWallStrategy : IBattleStrategy
     {
         /// <summary>
-        /// Прокси-объект BattleManager.
-        /// Строка идентификатора "F:ClashGame.WallToWallStrategy._battleManagerProxy".
+        /// Proxy object for BattleManager.
+        /// Identifier: "F:ClashGame.WallToWallStrategy._battleManagerProxy".
         /// </summary>
         BattleManagerProxy _battleManagerProxy;
 
         /// <summary>
-        /// Конструктор для класса WallToWallStrategy.
-        /// Строка идентификатора "M:ClashGame.WallToWallStrategy.#ctor(ClashGame.BattleManagerProxy)".
+        /// Constructor for the WallToWallStrategy class.
+        /// Identifier: "M:ClashGame.WallToWallStrategy.#ctor(ClashGame.BattleManagerProxy)".
         /// </summary>
-        /// <param name="battleManagerProxy">Прокси-объект BattleManager.</param>
+        /// <param name="battleManagerProxy">Proxy object for BattleManager.</param>
         public WallToWallStrategy(BattleManagerProxy battleManagerProxy)
         {
             _battleManagerProxy = battleManagerProxy;
         }
 
         /// <summary>
-        /// Выполняет битву между атакующими и защищающимися воинами.
-        /// Строка идентификатора "M:ClashGame.WallToWallStrategy.ExecuteBattle(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
+        /// Executes the battle between attacking and defending warriors.
+        /// Identifier: "M:ClashGame.WallToWallStrategy.ExecuteBattle(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Windows.Forms.TextBox)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <param name="outputTextBox">TextBox для вывода информации о ходе битвы.</param>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="defenders">List of defending warriors.</param>
+        /// <param name="outputTextBox">TextBox for displaying battle information.</param>
         public void ExecuteBattle(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             int rows = Math.Min(attackers.Count, defenders.Count);
@@ -472,14 +475,14 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Получает врага для атаки лучника.
-        /// Строка идентификатора "M:ClashGame.WallToWallStrategy.GetEnemyForArcher(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Int32,ClashGame.Archer)".
+        /// Retrieves the enemy for the archer to attack.
+        /// Identifier: "M:ClashGame.WallToWallStrategy.GetEnemyForArcher(System.Collections.Generic.List{ClashGame.Warrior},System.Collections.Generic.List{ClashGame.Warrior},System.Int32,ClashGame.Archer)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <param name="archerIndex">Индекс лучника.</param>
-        /// <param name="archer">Лучник.</param>
-        /// <returns>Враг для атаки.</returns>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="defenders">List of defending warriors.</param>
+        /// <param name="archerIndex">Index of the archer.</param>
+        /// <param name="archer">The archer.</param>
+        /// <returns>The enemy to attack.</returns>
         public Warrior GetEnemyForArcher(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
         {
             if (defenders.Count() > 0)
@@ -488,12 +491,12 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Получает ближайшего легкого воина.
-        /// Строка идентификатора "M:ClashGame.WallToWallStrategy.GetNearestLightWarrior(System.Collections.Generic.List{ClashGame.Warrior},System.Int32)".
+        /// Retrieves the nearest light warrior.
+        /// Identifier: "M:ClashGame.WallToWallStrategy.GetNearestLightWarrior(System.Collections.Generic.List{ClashGame.Warrior},System.Int32)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="wizardIndex">Индекс мага.</param>
-        /// <returns>Ближайший легкий воин.</returns>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="wizardIndex">Index of the wizard.</param>
+        /// <returns>The nearest light warrior.</returns>
         public Warrior GetNearestLightWarrior(List<Warrior> attackers, int wizardIndex)
         {
             bool isUsed = false;
@@ -510,13 +513,13 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Получает воина для лечения.
-        /// Строка идентификатора "M:ClashGame.WallToWallStrategy.GetWarriorForHeal(System.Collections.Generic.List{ClashGame.Warrior},System.Int32,ClashGame.Healer)".
+        /// Retrieves a warrior for healing.
+        /// Identifier: "M:ClashGame.WallToWallStrategy.GetWarriorForHeal(System.Collections.Generic.List{ClashGame.Warrior},System.Int32,ClashGame.Healer)".
         /// </summary>
-        /// <param name="attackers">Список атакующих воинов.</param>
-        /// <param name="healerIndex">Индекс лекаря.</param>
-        /// <param name="healer">Лекарь.</param>
-        /// <returns>Воин, которого следует лечить.</returns>
+        /// <param name="attackers">List of attacking warriors.</param>
+        /// <param name="healerIndex">Index of the healer.</param>
+        /// <param name="healer">The healer.</param>
+        /// <returns>The warrior to heal.</returns>
         public Warrior GetWarriorForHeal(List<Warrior> attackers, int healerIndex, Healer healer)
         {
             Warrior warriorForHeal = null;
@@ -538,12 +541,12 @@ namespace ClashGame
         }
 
         /// <summary>
-        /// Проверяет, является ли атакующий воин на передовой линии.
-        /// Строка идентификатора "M:ClashGame.WallToWallStrategy.IsFrontLine(System.Int32,System.Collections.Generic.List{ClashGame.Warrior})".
+        /// Checks if the attacking warrior is on the front line.
+        /// Identifier: "M:ClashGame.WallToWallStrategy.IsFrontLine(System.Int32,System.Collections.Generic.List{ClashGame.Warrior})".
         /// </summary>
-        /// <param name="attackerIndex">Индекс атакующего воина.</param>
-        /// <param name="defenders">Список защищающихся воинов.</param>
-        /// <returns>True, если воин находится на передовой линии, иначе false.</returns>
+        /// <param name="attackerIndex">The index of the attacking warrior.</param>
+        /// <param name="defenders">The list of defending warriors.</param>
+        /// <returns>True if the warrior is on the front line, otherwise false.</returns>
         public bool IsFrontLine(int attackerIndex, List<Warrior> defenders)
         {
             if (defenders.Count() - 1 > attackerIndex) return true;

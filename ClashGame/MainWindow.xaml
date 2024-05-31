@@ -4,9 +4,13 @@
         Title="ClashGame"
         WindowStyle="None" ResizeMode="NoResize" WindowState="Maximized">
     <Grid x:Name="MainGrid">
-        
+
         <!-- Canvas для отображения армий -->
-        <Canvas x:Name="battlefieldCanvas" Background="LightGray" Margin="0,0,-41,-58"/>
+        <Canvas x:Name="battlefieldCanvas" Margin="0,0,-41,-58" Opacity="0.55">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/background.png"/>
+            </Canvas.Background>
+        </Canvas>
 
         <!-- Центральная панель для кнопок -->
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
@@ -26,8 +30,8 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,20,0,0">
                 <Button x:Name="ChooseStrategy" Content="Выбрать стратегию" Click="ChooseStrategy_Click" Width="240" Height="60" Background="#FFBCB2B2" FontFamily="Arial Black" FontSize="20"/>
-                    <Button x:Name="ChooseTwoRows" Content="В 2 линии" Click="ChooseTwoRows_Click" Width="200" Height="60" Margin="20,0,0,0" Background="#FFD090F9" FontSize="20" FontFamily="Arial Black" Foreground="#FF240054"/>
-                    <Button x:Name="ChooseThreeRows" Content="В 3 линии" Click="ChooseThreeRows_Click" Width="200" Height="60" Margin="20,0,0,0" Background="#FFD090F9" FontSize="20" FontFamily="Arial Black" Foreground="#FF240054"/>
+                <Button x:Name="ChooseTwoRows" Content="В 2 линии" Click="ChooseTwoRows_Click" Width="200" Height="60" Margin="20,0,0,0" Background="#FFD090F9" FontSize="20" FontFamily="Arial Black" Foreground="#FF240054"/>
+                <Button x:Name="ChooseThreeRows" Content="В 3 линии" Click="ChooseThreeRows_Click" Width="200" Height="60" Margin="20,0,0,0" Background="#FFD090F9" FontSize="20" FontFamily="Arial Black" Foreground="#FF240054"/>
                 <Button x:Name="ChooseWallToWall" Content="Стенка на стенку" Click="ChooseWallToWall_Click" Width="200" Height="60" Margin="20,0,0,0" Background="#FFD090F9" FontFamily="Arial Black" FontSize="20" Foreground="#FF240054"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">

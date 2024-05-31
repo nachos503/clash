@@ -4,6 +4,10 @@ using System.Linq;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media.Animation;
+using System.Windows.Media.Imaging;
+using System.Windows.Media;
+using System.IO;
 
 namespace ClashGame
 {
@@ -23,6 +27,9 @@ namespace ClashGame
         private bool healerUsed = false;
         private bool archerUsed = false;
         private bool isGameOverFlag = false;
+
+        private Color playerColor = Colors.Blue;
+        private Color computerColor = Colors.Red;
 
 
         public MainWindow()
@@ -44,7 +51,7 @@ namespace ClashGame
             UseArcher.Visibility = Visibility.Hidden;
             CanсelTurn.Visibility = Visibility.Hidden;
             ToTheEnd.Visibility = Visibility.Hidden;
-            Turn.Visibility = Visibility.Hidden;
+            StartTurn.Visibility = Visibility.Hidden;
             CanсelTurn.Visibility = Visibility.Hidden;
             UseGulyayGorod.Visibility = Visibility.Hidden;
             EndTurn.Visibility = Visibility.Hidden;
@@ -56,12 +63,12 @@ namespace ClashGame
             ChooseWallToWall.Visibility = Visibility.Hidden;
             ChooseStrategy.Visibility = Visibility.Hidden;
 
-  
+
             battlefieldCanvas = new Canvas();
             battlefieldCanvas.Width = 800;
             battlefieldCanvas.Height = 400;
             MainGrid.Children.Add(battlefieldCanvas);
-           
+
         }
 
         #region ChooseArmyClicks
@@ -95,22 +102,38 @@ namespace ClashGame
             healerUsed = false;
             archerUsed = false;
         }
-        //выбор синих
+        // Метод для установки цветов армий в зависимости от выбора игрока
+        private void SetArmyColors(string playerArmyColor)
+        {
+            if (playerArmyColor == "Blue")
+            {
+                playerColor = Colors.Blue;
+                computerColor = Colors.Red;
+            }
+            else if (playerArmyColor == "Red")
+            {
+                playerColor = Colors.Red;
+                computerColor = Colors.Blue;
+            }
+        }
+
+        // Обновленные методы выбора армии
         private void ChooseBlueArmy_Click(object sender, RoutedEventArgs e)
         {
             playerArmy = armyManager.GetArmyByColor("Blue");
             computerArmy = armyManager.GetArmyByColor("Red");
+            SetArmyColors("Blue");
             InitializeGame();
             ChooseRedArmy.Visibility = Visibility.Collapsed;
             ChooseBlueArmy.IsEnabled = false;
             CreateArmy.Visibility = Visibility.Collapsed;
-
         }
-        //выбор ленина
+
         private void ChooseRedArmy_Click(object sender, RoutedEventArgs e)
         {
             playerArmy = armyManager.GetArmyByColor("Red");
             computerArmy = armyManager.GetArmyByColor("Blue");
+            SetArmyColors("Red");
             InitializeGame();
             ChooseBlueArmy.Visibility = Visibility.Collapsed;
             ChooseRedArmy.IsEnabled = false;
@@ -156,7 +179,7 @@ namespace ClashGame
             ChooseThreeRows.IsEnabled = true;
             ChooseWallToWall.IsEnabled = true;
 
-            //DrawArmies();
+            DrawArmies();
         }
         //3 линии
         private void ChooseThreeRows_Click(object sender, RoutedEventArgs e)
@@ -179,7 +202,7 @@ namespace ClashGame
             ChooseWallToWall.IsEnabled = true;
             ChooseTwoRows.IsEnabled = true;
 
-            //DrawArmies();
+            DrawArmies();
         }
         //стенка на стенку
         private void ChooseWallToWall_Click(object sender, RoutedEventArgs e)
@@ -202,7 +225,7 @@ namespace ClashGame
             ChooseTwoRows.IsEnabled = true;
             ChooseThreeRows.IsEnabled = true;
 
-            //DrawArmies();
+            DrawArmies();
         }
         //показывать кнопки для игры дальше
         private void ShowPlayButtons()
@@ -211,19 +234,19 @@ namespace ClashGame
             UseHealer.Visibility = Visibility.Visible;
             UseArcher.Visibility = Visibility.Visible;
             CanсelTurn.Visibility = Visibility.Visible;
-            Turn.Visibility = Visibility.Visible;
+            StartTurn.Visibility = Visibility.Visible;
             ToTheEnd.Visibility = Visibility.Visible;
             UseGulyayGorod.Visibility = Visibility.Visible;
             EndTurn.Visibility = Visibility.Visible;
             UseGulyayGorod.IsEnabled = true;
             EndTurn.IsEnabled = false;
-            Turn.IsEnabled = true;
+            StartTurn.IsEnabled = true;
             ToTheEnd.IsEnabled = true;
         }
         #endregion
 
         #region SpecialAbilitiesClicks
-       //проверка что бафы есть
+        //проверка что бафы есть
         private void RefreshUI()
         {
             UseWizard.IsEnabled = playerTurn && CheckForWizard(playerArmy, computerArmy) && !wizardUsed;
@@ -247,6 +270,7 @@ namespace ClashGame
             UseWizard.IsEnabled = false;
             CanсelTurn.IsEnabled = true;
             RefreshUI();
+            DrawArmies();
         }
         //применение медсестры
         private void UseHealer_Click(object sender, RoutedEventArgs e)
@@ -264,6 +288,7 @@ namespace ClashGame
             UseHealer.IsEnabled = false;
             CanсelTurn.IsEnabled = true;
             RefreshUI();
+            DrawArmies();
         }
         //асташлепка
         private void UseArcher_Click(object sender, RoutedEventArgs e)
@@ -281,6 +306,7 @@ namespace ClashGame
             UseArcher.IsEnabled = false;
             CanсelTurn.IsEnabled = true;
             RefreshUI();
+            DrawArmies();
         }
         //блядская стена
         private void GulyayGorodr_Click(object sender, RoutedEventArgs e)
@@ -292,6 +318,7 @@ namespace ClashGame
             UseGulyayGorod.IsEnabled = false;
 
             battleManagerProxy.TurnComputer(computerArmy, playerArmy, outputTextBox);
+            DrawArmies();
         }
         #endregion
 
@@ -347,7 +374,7 @@ namespace ClashGame
             EndTurn.IsEnabled = true;
 
             RefreshUI();
-            Turn.IsEnabled = false;
+            StartTurn.IsEnabled = false;
             CanсelTurn.IsEnabled = true;
         }
         //конец хода - конечная атака
@@ -366,6 +393,7 @@ namespace ClashGame
 
             DisableAbilityButtons(); // Деактивировать кнопки способностей
             EndTurn.IsEnabled = false;
+            DrawArmies();
         }
         //ход компьютера после атаки игрока
         private void ComputerTurn()
@@ -377,9 +405,10 @@ namespace ClashGame
                 CheckGameOver();
             }
             playerTurn = true; // Подготовка к началу нового хода игрока
-            Turn.IsEnabled = true; // Позволяем начать новый ход
+            StartTurn.IsEnabled = true; // Позволяем начать новый ход
             CanсelTurn.IsEnabled = true;
             DisableAbilityButtons(); // Деактивировать кнопки до явного начала хода
+            DrawArmies();
         }
         //отмена хода через паттерн команда
         private void CancelTurn_Click(object sender, RoutedEventArgs e)
@@ -387,19 +416,20 @@ namespace ClashGame
             commandManager.Undo();
             RefreshUI();
             CanсelTurn.IsEnabled = false;
+            DrawArmies();
         }
         //доиграть гру до конца
         private void ToTheEnd_Click(object sender, RoutedEventArgs e)
         {
             while (computerArmy.Count > 0 && playerArmy.Count > 0)
-            { 
+            {
                 battleManagerProxy.TurnComputer(playerArmy, computerArmy, outputTextBox);
-                
+
                 CheckGameOver();
                 if (computerArmy.Count > 0)
                 {
                     battleManagerProxy.TurnComputer(computerArmy, playerArmy, outputTextBox);
-                   
+
                     CheckGameOver();
                 }
             }
@@ -407,6 +437,7 @@ namespace ClashGame
 
             UseGulyayGorod.IsEnabled = false;
             EndTurn.IsEnabled = false;
+            DrawArmies();
         }
         //начать игру заново
         private void StartAgain_Click(object sender, RoutedEventArgs e)
@@ -424,7 +455,7 @@ namespace ClashGame
 
             ToTheEnd.Visibility = Visibility.Hidden;
 
-            Turn.Visibility = Visibility.Hidden;
+            StartTurn.Visibility = Visibility.Hidden;
 
             CanсelTurn.Visibility = Visibility.Hidden;
 
@@ -445,7 +476,7 @@ namespace ClashGame
             if (playerArmy.Count == 0 || (playerArmy.Count == 1 && playerArmy[0] is GulyayGorod && !isGameOverFlag))
             {
                 MessageBox.Show("Компьютер победил!");
-                Turn.IsEnabled = false;
+                StartTurn.IsEnabled = false;
                 CanсelTurn.IsEnabled = false;
                 UseWizard.IsEnabled = false;
                 UseHealer.IsEnabled = false;
@@ -455,7 +486,7 @@ namespace ClashGame
             else if (computerArmy.Count == 0 || (computerArmy.Count == 1 && computerArmy[0] is GulyayGorod && !isGameOverFlag))
             {
                 MessageBox.Show("Вы победили!");
-                Turn.IsEnabled = false;
+                StartTurn.IsEnabled = false;
                 CanсelTurn.IsEnabled = false;
                 UseWizard.IsEnabled = false;
                 UseHealer.IsEnabled = false;
@@ -465,5 +496,167 @@ namespace ClashGame
         }
         #endregion
 
+        #region Graphics&Animation
+        private void DrawArmies()
+        {
+            battlefieldCanvas.Children.Clear();
+            DrawArmy(playerArmy, 350, 200, false);  // Левая армия
+            DrawArmy(computerArmy, 700, 200, true); // Правая армия
+        }
+
+        private void DrawArmy(List<Warrior> army, double xOffset, double yOffset, bool isComputerArmy)
+        {
+            if (currentStrategy is TwoRowStrategy)
+            {
+                DrawArmyInRows(army, xOffset, yOffset, 2, isComputerArmy);
+            }
+            else if (currentStrategy is ThreeRowStrategy)
+            {
+                DrawArmyInRows(army, xOffset, yOffset, 3, isComputerArmy);
+            }
+            else if (currentStrategy is WallToWallStrategy)
+            {
+                for (int i = 0; i < army.Count; i++)
+                {
+                    var warrior = army[i];
+                    int row = i;
+                    int column = 1;
+
+                    double xPos = isComputerArmy ? xOffset + column * 64 : xOffset - column * 64;
+                    double yPos = yOffset + row * 64;
+
+                    DrawWarrior(warrior, xPos, yPos, isComputerArmy);
+                }
+            }
+        }
+
+        private void DrawArmyInRows(List<Warrior> army, double xOffset, double yOffset, int rows, bool isComputerArmy)
+        {
+            int warriorsPerRow = (int)Math.Ceiling((double)army.Count / rows);
+
+            for (int i = 0; i < army.Count; i++)
+            {
+                var warrior = army[i];
+                int row = i % rows;
+                int column = i / rows;
+
+                double xPos = isComputerArmy ? xOffset + column * 64 : xOffset - column * 64;
+                double yPos = yOffset + row * 64;
+
+                DrawWarrior(warrior, xPos, yPos, isComputerArmy);
+            }
+        }
+
+        // Метод для изменения оттенка изображения
+        private BitmapSource ChangeImageColor(ImageSource originalImage, Color targetColor)
+        {
+            if (originalImage is BitmapSource bitmapSource)
+            {
+                var formatConvertedBitmap = new FormatConvertedBitmap();
+                formatConvertedBitmap.BeginInit();
+                formatConvertedBitmap.Source = bitmapSource;
+                formatConvertedBitmap.DestinationFormat = PixelFormats.Bgra32;
+                formatConvertedBitmap.EndInit();
+
+                int stride = (int)formatConvertedBitmap.PixelWidth * (formatConvertedBitmap.Format.BitsPerPixel / 8);
+                byte[] pixelData = new byte[(int)formatConvertedBitmap.PixelHeight * stride];
+                formatConvertedBitmap.CopyPixels(pixelData, stride, 0);
+
+                double blendFactor = 0.5; // Коэффициент смешивания, 0.5 означает 50% исходного цвета и 50% целевого цвета
+
+                for (int i = 0; i < pixelData.Length; i += 4)
+                {
+                    byte originalBlue = pixelData[i];
+                    byte originalGreen = pixelData[i + 1];
+                    byte originalRed = pixelData[i + 2];
+
+                    pixelData[i] = (byte)(originalBlue * (1 - blendFactor) + targetColor.B * blendFactor);
+                    pixelData[i + 1] = (byte)(originalGreen * (1 - blendFactor) + targetColor.G * blendFactor);
+                    pixelData[i + 2] = (byte)(originalRed * (1 - blendFactor) + targetColor.R * blendFactor);
+                }
+
+                var newBitmap = BitmapSource.Create(
+                    formatConvertedBitmap.PixelWidth,
+                    formatConvertedBitmap.PixelHeight,
+                    formatConvertedBitmap.DpiX,
+                    formatConvertedBitmap.DpiY,
+                    formatConvertedBitmap.Format,
+                    formatConvertedBitmap.Palette,
+                    pixelData,
+                    stride
+                );
+
+                return newBitmap;
+            }
+
+            throw new InvalidOperationException("The provided ImageSource is not a BitmapSource.");
+        }
+
+
+        private void DrawWarrior(Warrior warrior, double x, double y, bool isComputerArmy)
+        {
+            Image warriorImage = new Image
+            {
+                Width = 64,
+                Height = 64,
+                Source = ChangeImageColor(GetWarriorImage(warrior), isComputerArmy ? computerColor : playerColor),
+                RenderTransformOrigin = new Point(0.5, 0.5),
+                Tag = warrior // Сохранение ссылки на воина
+            };
+
+            if (isComputerArmy)
+            {
+                warriorImage.RenderTransform = new ScaleTransform(-1, 1); // Зеркальное отображение для армии компьютера
+            }
+
+            Canvas.SetLeft(warriorImage, x);
+            Canvas.SetTop(warriorImage, y);
+            battlefieldCanvas.Children.Add(warriorImage);
+
+            // Пример анимации при добавлении воина
+            var fadeIn = new DoubleAnimation(0, 1, TimeSpan.FromSeconds(0.5));
+            warriorImage.BeginAnimation(UIElement.OpacityProperty, fadeIn);
+        }
+
+
+        private ImageSource GetWarriorImage(Warrior warrior)
+        {
+            // Замените пути на реальные пути к вашим изображениям
+            if (warrior is Wizard)
+            {
+                string imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Wizard.png");
+                return new BitmapImage(new Uri(imagePath, UriKind.Absolute));
+            }
+            else if (warrior is Healer)
+            {
+                string imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Healer.png");
+                return new BitmapImage(new Uri(imagePath, UriKind.Absolute));
+            }
+            else if (warrior is Archer)
+            {
+                string imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Archer.png");
+                return new BitmapImage(new Uri(imagePath, UriKind.Absolute));
+            }
+            else if (warrior is ImprovedHeavyWarrior)
+            {
+                string imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ImprovedHeavyWarrior.png");
+                return new BitmapImage(new Uri(imagePath, UriKind.Absolute));
+            }
+            else if (warrior is LightWarrior)
+            {
+                string imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "LightWarrior.png");
+                return new BitmapImage(new Uri(imagePath, UriKind.Absolute));
+            }
+            else if (warrior is HeavyWarrior)
+            {
+                string imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "HeavyWarrior.png");
+                return new BitmapImage(new Uri(imagePath, UriKind.Absolute));
+            }
+
+            string defaultImagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "default.png");
+            return new BitmapImage(new Uri(defaultImagePath, UriKind.Absolute));
+        }
+
+        #endregion
     }
 }

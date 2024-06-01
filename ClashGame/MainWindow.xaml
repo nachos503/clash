@@ -6,9 +6,12 @@
     <Grid x:Name="MainGrid">
 
         <!-- Canvas для отображения армий -->
-        <Canvas x:Name="battlefieldCanvas" Margin="0,0,-41,-58" Opacity="0.55">
+        <Canvas x:Name="battlefieldCanvas">
+            <Canvas.OpacityMask>
+                <ImageBrush ImageSource="/background1.png"/>
+            </Canvas.OpacityMask>
             <Canvas.Background>
-                <ImageBrush ImageSource="/background.png"/>
+                <ImageBrush ImageSource="/background1.png"/>
             </Canvas.Background>
         </Canvas>
 
@@ -40,7 +43,7 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,20,0,0">
                 <TextBox x:Name="outputTextBox" Width="471" Height="438" IsReadOnly="True" VerticalScrollBarVisibility="Auto" Background="{x:Null}" TextAlignment="Center" TextWrapping="Wrap" FontFamily="Arial Black" FontSize="20"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,20,0,0">
                 <Button x:Name="StartAgain" Content="Начать заново" Click="StartAgain_Click" Width="200" Height="60" Background="#FFFFF7A0" Foreground="#FF545805" FontFamily="Arial Black" FontSize="20"/>
             </StackPanel>
         </StackPanel>

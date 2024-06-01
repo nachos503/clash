@@ -762,8 +762,8 @@ namespace ClashGame
         private void DrawArmies()
         {
             battlefieldCanvas.Children.Clear();
-            DrawArmy(playerArmy, 350, 200, false);  
-            DrawArmy(computerArmy, 700, 200, true); 
+            DrawArmy(playerArmy, 450, 200, false);  
+            DrawArmy(computerArmy, 800, 200, true); 
         }
 
         /// <summary>
@@ -776,20 +776,32 @@ namespace ClashGame
         /// <param name="isComputerArmy">Indicates whether the army is the computer's army.</param>
         private void DrawArmy(List<Warrior> army, double xOffset, double yOffset, bool isComputerArmy)
         {
+            // Check if the first element is GulyayGorod and draw it separately
+            if (army.Count > 0 && army[0] is GulyayGorod)
+            {
+                var gulyayGorod = army[0];
+                double xPos = isComputerArmy ? xOffset - 128 : xOffset + 128; // Position it away from the main army
+                double yPos = yOffset;
+                DrawWarrior(gulyayGorod, xPos, yPos, isComputerArmy);
+            }
+
+            int startIndex = (army.Count > 0 && army[0] is GulyayGorod) ? 1 : 0; // Start from 1 if GulyayGorod is the first element
+            int endIndex = (army.Count > 0 && army[army.Count - 1] is GulyayGorod) ? army.Count - 1 : army.Count; // Exclude the last element if it is GulyayGorod
+
             if (currentStrategy is TwoRowStrategy)
             {
-                DrawArmyInRows(army, xOffset, yOffset, 2, isComputerArmy);
+                DrawArmyInRows(army, xOffset, yOffset, 2, isComputerArmy, startIndex, endIndex);
             }
             else if (currentStrategy is ThreeRowStrategy)
             {
-                DrawArmyInRows(army, xOffset, yOffset, 3, isComputerArmy);
+                DrawArmyInRows(army, xOffset, yOffset, 3, isComputerArmy, startIndex, endIndex);
             }
             else if (currentStrategy is WallToWallStrategy)
             {
-                for (int i = 0; i < army.Count; i++)
+                for (int i = startIndex; i < endIndex; i++)
                 {
                     var warrior = army[i];
-                    int row = i;
+                    int row = i - startIndex; // Adjust index to account for the starting index
                     int column = 1;
 
                     double xPos = isComputerArmy ? xOffset + column * 64 : xOffset - column * 64;
@@ -800,6 +812,7 @@ namespace ClashGame
             }
         }
 
+
         /// <summary>
         /// Draws an army in multiple rows.
         /// Method identifier: "M:ClashGame.MainWindow.DrawArmyInRows(System.Collections.Generic.List{ClashGame.Warrior},System.Double,System.Double,System.Int32,System.Boolean)".
@@ -809,23 +822,22 @@ namespace ClashGame
         /// <param name="yOffset">The offset along the Y-axis.</param>
         /// <param name="rows">The number of rows.</param>
         /// <param name="isComputerArmy">Indicates whether the army is the computer's army.</param>
-        private void DrawArmyInRows(List<Warrior> army, double xOffset, double yOffset, int rows, bool isComputerArmy)
+        private void DrawArmyInRows(List<Warrior> army, double xOffset, double yOffset, int rows, bool isComputerArmy, int startIndex, int endIndex)
         {
-            int warriorsPerRow = (int)Math.Ceiling((double)army.Count / rows);
+            int warriorsPerRow = (int)Math.Ceiling((double)(endIndex - startIndex) / rows);
 
-            for (int i = 0; i < army.Count; i++)
+            for (int i = startIndex; i < endIndex; i++)
             {
                 var warrior = army[i];
-                int row = i % rows;
-                int column = i / rows;
+                int row = (i - startIndex) % rows; // Adjust row calculation to start from startIndex
+                int column = (i - startIndex) / rows; // Adjust column calculation to start from startIndex
 
-                double xPos = isComputerArmy ? xOffset + column * 64 : xOffset - column * 64;
-                double yPos = yOffset + row * 64;
+                double xPos = isComputerArmy ? xOffset + column * 128 : xOffset - column * 128; // Увеличиваем расстояние между колонками
+                double yPos = yOffset + row * 128; // Увеличиваем расстояние между рядами
 
                 DrawWarrior(warrior, xPos, yPos, isComputerArmy);
             }
         }
-
 
         /// <summary>
         /// Changes the color tint of an image.
@@ -848,7 +860,7 @@ namespace ClashGame
                 byte[] pixelData = new byte[(int)formatConvertedBitmap.PixelHeight * stride];
                 formatConvertedBitmap.CopyPixels(pixelData, stride, 0);
 
-                double blendFactor = 0.5;// The blending coefficient, where 0.5 means 50% of the original color and 50% of the target color.
+                double blendFactor = 0.3;// The blending coefficient, where 0.5 means 50% of the original color and 50% of the target color.
 
                 for (int i = 0; i < pixelData.Length; i += 4)
                 {
@@ -889,26 +901,26 @@ namespace ClashGame
         {
             Image warriorImage = new Image
             {
-                Width = 64,
-                Height = 64,
+                Width = 128, // Увеличиваем ширину изображения
+                Height = 128, // Увеличиваем высоту изображения
                 Source = ChangeImageColor(GetWarriorImage(warrior), isComputerArmy ? computerColor : playerColor),
                 RenderTransformOrigin = new Point(0.5, 0.5),
-                Tag = warrior 
+                Tag = warrior
             };
 
             if (isComputerArmy)
             {
-                warriorImage.RenderTransform = new ScaleTransform(-1, 1); 
+                warriorImage.RenderTransform = new ScaleTransform(-1, 1);
             }
 
-            Canvas.SetLeft(warriorImage, x);
-            Canvas.SetTop(warriorImage, y);
+            Canvas.SetLeft(warriorImage, x - warriorImage.Width / 2); // Центрируем по X
+            Canvas.SetTop(warriorImage, y - warriorImage.Height / 2); // Центрируем по Y
             battlefieldCanvas.Children.Add(warriorImage);
 
-            
             var fadeIn = new DoubleAnimation(0, 1, TimeSpan.FromSeconds(0.5));
             warriorImage.BeginAnimation(UIElement.OpacityProperty, fadeIn);
         }
+
 
         /// <summary>
         /// Retrieves the image for a warrior.

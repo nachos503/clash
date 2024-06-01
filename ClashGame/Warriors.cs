@@ -46,7 +46,7 @@ namespace ClashGame
         /// Warrior's side.
         /// Identifier string: "P:ClashGame.Warrior.Side".
         /// </summary>
-        public string Side { get; set; }
+        public string Side { get; set; } = string.Empty;
 
         /// <summary>
         /// Default constructor for the Warrior class.
@@ -110,14 +110,14 @@ namespace ClashGame
     }
 
     /// <summary>
-    /// The ImprovedHeavyWarrior class, representing an improved heavy warrior.
+    /// The ImprovedHeavyWarrior class, representing an improved heavy warrior - Decorator.
     /// Identifier string: "T:ClashGame.ImprovedHeavyWarrior".
     /// </summary>
     class ImprovedHeavyWarrior : Warrior
     {
 
-        private HeavyWarrior heavyWarrior;
-        private bool isUpgraded;
+        private readonly HeavyWarrior heavyWarrior;
+        private readonly bool isUpgraded;
 
         /// <summary>
         /// The maximum health points of the improved heavy warrior.
@@ -154,13 +154,13 @@ namespace ClashGame
         /// The side of the attacker.
         /// Identifier string: "P:ClashGame.Archer.attackerSide".
         /// </summary>
-        public string attackerSide { get; set; }
+        public string attackerSide { get; set; } = string.Empty;
 
         /// <summary>
         /// The side of the defender.
         /// Identifier string: "P:ClashGame.Archer.defenderSide".
         /// </summary>
-        public string defenderSide { get; set; }
+        public string defenderSide { get; set; } = string.Empty;
 
         /// <summary>
         /// Constructor for the Archer class.
@@ -285,7 +285,7 @@ namespace ClashGame
         {
             // Клонируем LightWarrior
             if (warrior is LightWarrior) return warrior.Clone();
-            else return null;
+            else return null!;
         }
     }
 

@@ -17,7 +17,7 @@ namespace ClashGame
         /// Stack of executed commands.
         /// Identifier string "F:ClashGame.CommandManager._commands".
         /// </summary>
-        private Stack<ICommand> _commands = new Stack<ICommand>();
+        private readonly Stack<ICommand> _commands = new();
 
         /// <summary>
         /// Executes a command and adds it to the stack.
@@ -64,31 +64,31 @@ namespace ClashGame
         /// Battle manager.
         /// Identifier string "F:ClashGame.HealerTurnCommand._battleManager".
         /// </summary>
-        private IBattleManager _battleManager;
+        private readonly IBattleManager _battleManager;
 
         /// <summary>
         /// List of attacking warriors.
         /// Identifier string "F:ClashGame.HealerTurnCommand._attackers".
         /// </summary>
-        private List<Warrior> _attackers;
+        private readonly List<Warrior> _attackers;
 
         /// <summary>
         /// List of defending warriors.
         /// Identifier string "F:ClashGame.HealerTurnCommand._defenders".
         /// </summary>
-        private List<Warrior> _defenders;
+        private readonly List<Warrior> _defenders;
 
         /// <summary>
         /// TextBox for displaying battle information.
         /// Identifier string "F:ClashGame.HealerTurnCommand._outputTextBox".
         /// </summary>
-        private TextBox _outputTextBox;
+        private readonly TextBox _outputTextBox;
 
         /// <summary>
         /// List of warriors representing their state before the command execution.
         /// Identifier string "F:ClashGame.HealerTurnCommand._previousState".
         /// </summary>
-        private List<Warrior> _previousState;
+        private List<Warrior> _previousState = new();
 
         /// <summary>
         /// Constructor for the HealerTurnCommand class.
@@ -138,31 +138,31 @@ namespace ClashGame
         /// Battle manager.
         /// Identifier string "F:ClashGame.WizardTurnCommand._battleManager".
         /// </summary>
-        private IBattleManager _battleManager;
+        private readonly IBattleManager _battleManager;
 
         /// <summary>
         /// List of attacking warriors.
         /// Identifier string "F:ClashGame.WizardTurnCommand._attackers".
         /// </summary>
-        private List<Warrior> _attackers;
+        private readonly List<Warrior> _attackers;
 
         /// <summary>
         /// List of defending warriors.
         /// Identifier string "F:ClashGame.WizardTurnCommand._defenders".
         /// </summary>
-        private List<Warrior> _defenders;
+        private readonly List<Warrior> _defenders;
 
         /// <summary>
         /// TextBox for displaying battle information.
         /// Identifier string "F:ClashGame.WizardTurnCommand._outputTextBox".
         /// </summary>
-        private TextBox _outputTextBox;
+        private readonly TextBox _outputTextBox;
 
         /// <summary>
         /// List of warriors representing their state before the command execution.
         /// Identifier string "F:ClashGame.WizardTurnCommand._previousState".
         /// </summary>
-        private List<Warrior> _previousState;
+        private List<Warrior>? _previousState;
 
         /// <summary>
         /// Constructor for the WizardTurnCommand class.
@@ -196,13 +196,19 @@ namespace ClashGame
         /// </summary>
         public void Undo()
         {
+            if (_previousState == null)
+            {
+                _outputTextBox.AppendText("Не удалось отменить ход: состояние армии не сохранено." + Environment.NewLine);
+                return;
+            }
+
             for (int i = 0; i < _attackers.Count-1; i++)
                 _attackers[i] = _previousState[i];
             
             if (_attackers.Count == _previousState.Count)
-                _attackers[_attackers.Count - 1] = _previousState[_attackers.Count - 1];
+                _attackers[^1] = _previousState[_attackers.Count - 1];
             else
-                _attackers.Remove(_attackers[_attackers.Count-1]);
+                _attackers.Remove(_attackers[^1]);
        
             _outputTextBox.AppendText("Отмена хода мага, восстановлено состояние армии." + Environment.NewLine);
         }
@@ -218,31 +224,31 @@ namespace ClashGame
         /// Battle manager.
         /// Identifier string "F:ClashGame.ArcherTurnCommand._battleManager".
         /// </summary>
-        private IBattleManager _battleManager;
+        private readonly IBattleManager _battleManager;
 
         /// <summary>
         /// List of attacking warriors.
         /// Identifier string "F:ClashGame.ArcherTurnCommand._attackers".
         /// </summary>
-        private List<Warrior> _attackers;
+        private readonly List<Warrior> _attackers;
 
         /// <summary>
         /// List of defending warriors.
         /// Identifier string "F:ClashGame.ArcherTurnCommand._defenders".
         /// </summary>
-        private List<Warrior> _defenders;
+        private readonly List<Warrior> _defenders;
 
         /// <summary>
         /// TextBox for displaying battle information.
         /// Identifier string "F:ClashGame.ArcherTurnCommand._outputTextBox".
         /// </summary>
-        private TextBox _outputTextBox;
+        private readonly TextBox _outputTextBox;
 
         /// <summary>
         /// List of warriors representing their state before the command execution.
         /// Identifier string "F:ClashGame.ArcherTurnCommand._previousState".
         /// </summary>
-        private List<Warrior> _previousDefenderState;
+        private List<Warrior>? _previousDefenderState;
 
         /// <summary>
         /// Target attack index.
@@ -290,6 +296,11 @@ namespace ClashGame
         /// </summary>
         public void Undo()
         {
+            if (_previousDefenderState == null)
+            {
+                _outputTextBox.AppendText("Не удалось отменить ход: состояние армии не сохранено." + Environment.NewLine);
+                return;
+            }
             for (int i = 0; i < _defenders.Count; i++)
                 _defenders[i] = _previousDefenderState[i];
             _outputTextBox.AppendText($"Отмена атаки лучника, восстановлено HP у {_defenders[_targetIndex].Side} {_defenders[_targetIndex]}" + Environment.NewLine);

@@ -44,7 +44,7 @@ namespace ClashGame
         /// <returns>The list of created units for the specified side.</returns>
         public List<Warrior> CreateArmy(List<Warrior> warriorList, string side)
         {
-            Random random = new Random();
+            Random random = new();
             int maxArmyCost = 100;
             int currentArmyCostSum = 0;
             

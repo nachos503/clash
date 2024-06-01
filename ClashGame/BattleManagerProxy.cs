@@ -17,7 +17,7 @@ namespace ClashGame
         /// Instance of BattleManager.
         /// Identifier string "F:ClashGame.BattleManagerProxy._battleManager".
         /// </summary>
-        BattleManager _battleManager;
+        readonly BattleManager _battleManager;
 
         /// <summary>
         /// Path to the log file.
@@ -35,10 +35,8 @@ namespace ClashGame
         {
             _filePath = filePath;
             _battleManager = battleManager;
-            using (StreamWriter writer = File.AppendText(_filePath))
-            {
-                writer.WriteLine($"{DateTime.Now}: Starting logging...");
-            }
+            using StreamWriter writer = File.AppendText(_filePath);
+            writer.WriteLine($"{DateTime.Now}: Starting logging...");
         }
 
         /// <summary>
@@ -50,14 +48,25 @@ namespace ClashGame
         {
             try
             {
-                using (StreamWriter writer = File.AppendText(_filePath))
-                {
-                    writer.WriteLine($"{DateTime.Now}: {message}");
-                }
+                using StreamWriter writer = File.AppendText(_filePath);
+                writer.WriteLine($"{DateTime.Now}: {message}");
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Ошибка при записи в файл логов: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Checks the log file size and clears it if it exceeds 150 KB.
+        /// Identifier string "M:ClashGame.BattleManagerProxy.CheckAndClearLogFile".
+        /// </summary>
+        public void CheckAndClearLogFile()
+        {
+            FileInfo fileInfo = new FileInfo(_filePath);
+            if (fileInfo.Exists && fileInfo.Length > 150 * 1024)
+            {
+                File.WriteAllText(_filePath, string.Empty);
             }
         }
 

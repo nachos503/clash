@@ -39,7 +39,7 @@ namespace ClashGame
         /// <returns>An enemy to attack.</returns>
         public Warrior GetEnemyForArcher(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
         {
-            return null;
+            return null!;
         }
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace ClashGame
         /// <returns>The best lightweight user.</returns>
         public Warrior GetNearestLightWarrior(List<Warrior> attackers, int wizardIndex)
         {
-            return null;
+            return null!;
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace ClashGame
         /// <returns>A warrior who should be treated.</returns>
         public Warrior GetWarriorForHeal(List<Warrior> attackers, int healerIndex, Healer healer)
         {
-            return null;
+            return null!;
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace ClashGame
         /// The BattleManager proxy object.
         /// Search bar "F:ClashGame.Two main strategies._battleManagerProxy".
         /// </short description>
-        BattleManagerProxy _battleManagerProxy;
+        readonly BattleManagerProxy _battleManagerProxy;
 
         /// <summary>
         /// Constructor for the TwoRowStrategy class.
@@ -152,7 +152,7 @@ namespace ClashGame
                     }
                 }
 
-            return null;
+            return null!;
         }
 
         /// <summary>
@@ -165,15 +165,15 @@ namespace ClashGame
         public Warrior GetNearestLightWarrior (List<Warrior> attackers, int attackerIndex)
         {
             bool isUsed = false;
-            Warrior nearestLightWarrior = null;
+            Warrior? nearestLightWarrior = null;
             //// looking up down right to left
-            if (attackerIndex != attackers.Count() - 1)
+            if (attackerIndex != attackers.Count - 1)
                 if (attackerIndex % 2 == 0 && attackers[attackerIndex + 1] is LightWarrior)
                 {
                     nearestLightWarrior = attackers[attackerIndex + 1];
                     isUsed = true;
                 }
-            if (attackerIndex < attackers.Count() - 2)
+            if (attackerIndex < attackers.Count - 2)
                 if (attackers[attackerIndex + 2] is  LightWarrior && nearestLightWarrior == null && isUsed == false)
                 {
                     nearestLightWarrior = attackers[attackerIndex + 2];
@@ -192,7 +192,7 @@ namespace ClashGame
                     isUsed = true;
                 }
 
-            return nearestLightWarrior;
+            return nearestLightWarrior!;
         }
 
         /// <summary>
@@ -205,16 +205,16 @@ namespace ClashGame
         /// <returns>The warrior to be healed.</returns>
         public Warrior GetWarriorForHeal(List<Warrior> attackers, int healerIndex, Healer healer)
         {
-            Warrior warriorForHeal = null;
+            Warrior? warriorForHeal = null;
             var minHealth = double.MaxValue;
             
-            if (healerIndex + 1 < attackers.Count())
+            if (healerIndex + 1 < attackers.Count)
                 if (attackers[healerIndex + 1].Healthpoints < minHealth && healerIndex % 2 == 0 && attackers[healerIndex + 1] is not LightWarrior)
                 {
                      minHealth = attackers[healerIndex + 1].Healthpoints;
                      warriorForHeal = attackers[healerIndex + 1];
                 }
-            if (healerIndex + 2 < attackers.Count())
+            if (healerIndex + 2 < attackers.Count)
                 if (attackers[healerIndex + 2].Healthpoints < minHealth && attackers[healerIndex + 2] is not LightWarrior)
                 {
                     minHealth = attackers[healerIndex + 2].Healthpoints;
@@ -233,7 +233,7 @@ namespace ClashGame
                     warriorForHeal = attackers[healerIndex - 2];
                 }
             
-            return warriorForHeal;
+            return warriorForHeal!;
         }
 
         /// <summary>
@@ -246,7 +246,7 @@ namespace ClashGame
         public bool IsFrontLine(int attackerIndex, List<Warrior> defenders)
         {
             if (attackerIndex == 0)  return true;
-            else if (defenders.Count() > 0)
+            else if (defenders.Count > 0)
             {
                 if (attackerIndex == 1) return true;
                 else  return false;
@@ -265,7 +265,7 @@ namespace ClashGame
         /// Proxy object for BattleManager.
         /// Identifier: "F:ClashGame.ThreeRowStrategy._battleManagerProxy".
         /// </summary>
-        BattleManagerProxy _battleManagerProxy;
+        readonly BattleManagerProxy _battleManagerProxy;
 
         /// <summary>
         /// Constructor for the ThreeRowStrategy class.
@@ -323,7 +323,7 @@ namespace ClashGame
                     }
                 }
 
-            return null;
+            return null!;
         }
 
         /// <summary>
@@ -336,14 +336,14 @@ namespace ClashGame
         public Warrior GetNearestLightWarrior(List<Warrior> attackers, int attackersIndex)
         {
             bool isUsed = false;
-            Warrior nearestLightWarrior = null;
-            if (attackersIndex != attackers.Count() - 1 )
+            Warrior? nearestLightWarrior = null;
+            if (attackersIndex != attackers.Count - 1 )
                 if (attackersIndex % 2 == 0 && attackers[attackersIndex + 1] is LightWarrior && isUsed == false)
                 {
                     nearestLightWarrior = attackers[attackersIndex + 1];
                     isUsed = true;
                 }
-            if (attackersIndex < attackers.Count() - 3)
+            if (attackersIndex < attackers.Count - 3)
                 if (attackers[attackersIndex + 3] is LightWarrior && nearestLightWarrior == null && isUsed == false)
                 {
                     nearestLightWarrior = attackers[attackersIndex + 3];
@@ -362,7 +362,7 @@ namespace ClashGame
                     isUsed = true;
                 }
                 
-            return nearestLightWarrior;
+            return nearestLightWarrior!;
         }
 
         /// <summary>
@@ -376,16 +376,16 @@ namespace ClashGame
 
         public Warrior GetWarriorForHeal(List<Warrior> attackers, int healerIndex, Healer healer)
         {
-            Warrior warriorForHeal = null;
+            Warrior? warriorForHeal = null;
             var minHealth = double.MaxValue;
 
-            if (healerIndex + 1 < attackers.Count())
+            if (healerIndex + 1 < attackers.Count)
                 if (attackers[healerIndex + 1].Healthpoints < minHealth && healerIndex % 2 == 0 && attackers[healerIndex + 1] is not LightWarrior)
                 {
                     minHealth = attackers[healerIndex + 1].Healthpoints;
                     warriorForHeal = attackers[healerIndex + 1];
                 }
-            if (healerIndex + 3 < attackers.Count())
+            if (healerIndex + 3 < attackers.Count)
                 if (attackers[healerIndex + 3].Healthpoints < minHealth && attackers[healerIndex + 3] is not LightWarrior)
                 {
                     minHealth = attackers[healerIndex + 3].Healthpoints;
@@ -404,7 +404,7 @@ namespace ClashGame
                     warriorForHeal = attackers[healerIndex - 3];
                 }
 
-            return warriorForHeal;
+            return warriorForHeal!;
         }
 
         /// <summary>
@@ -418,10 +418,10 @@ namespace ClashGame
         public bool IsFrontLine(int attackerIndex, List<Warrior> defenders)
         {
             if (attackerIndex == 0)  return true;
-            if (defenders.Count() > 0)
+            if (defenders.Count > 0)
                 if (attackerIndex == 1) return true;
                 
-            if (defenders.Count() > 1)
+            if (defenders.Count > 1)
             { 
                 if (attackerIndex == 2)  return true;
                 else  return false;
@@ -441,7 +441,7 @@ namespace ClashGame
         /// Proxy object for BattleManager.
         /// Identifier: "F:ClashGame.WallToWallStrategy._battleManagerProxy".
         /// </summary>
-        BattleManagerProxy _battleManagerProxy;
+        readonly BattleManagerProxy _battleManagerProxy;
 
         /// <summary>
         /// Constructor for the WallToWallStrategy class.
@@ -485,11 +485,14 @@ namespace ClashGame
         /// <returns>The enemy to attack.</returns>
         public Warrior GetEnemyForArcher(List<Warrior> attackers, List<Warrior> defenders, int archerIndex, Archer archer)
         {
-            if (defenders.Count() > 0)
-                return defenders.Count() - 1 < archerIndex - 3 ? null : defenders[defenders.Count() - 1];
-            return null;
-        }
+            if (defenders.Count == 0)
+                return null!;
 
+            if (defenders.Count - 1 < archerIndex - 3)
+                return null!;
+            else
+                return defenders[^1];
+        }
         /// <summary>
         /// Retrieves the nearest light warrior.
         /// Identifier: "M:ClashGame.WallToWallStrategy.GetNearestLightWarrior(System.Collections.Generic.List{ClashGame.Warrior},System.Int32)".
@@ -500,8 +503,8 @@ namespace ClashGame
         public Warrior GetNearestLightWarrior(List<Warrior> attackers, int wizardIndex)
         {
             bool isUsed = false;
-            Warrior nearestLightWarrior = null;
-            if (wizardIndex != attackers.Count() - 1 && wizardIndex != attackers.Count() - 2)
+            Warrior? nearestLightWarrior = null;
+            if (wizardIndex != attackers.Count - 1 && wizardIndex != attackers.Count - 2)
                 if (attackers[wizardIndex + 1] is LightWarrior && isUsed == false)
                     nearestLightWarrior = attackers[wizardIndex + 1];
                 
@@ -509,7 +512,7 @@ namespace ClashGame
                 if (attackers[wizardIndex - 1] is LightWarrior && nearestLightWarrior == null && isUsed == false)
                     nearestLightWarrior = attackers[wizardIndex - 1];
                 
-            return nearestLightWarrior;
+            return nearestLightWarrior!;
         }
 
         /// <summary>
@@ -522,9 +525,9 @@ namespace ClashGame
         /// <returns>The warrior to heal.</returns>
         public Warrior GetWarriorForHeal(List<Warrior> attackers, int healerIndex, Healer healer)
         {
-            Warrior warriorForHeal = null;
+            Warrior? warriorForHeal = null;
             var minHealth = double.MaxValue;
-            if (healerIndex != attackers.Count() - 1 && healerIndex != attackers.Count() - 2)
+            if (healerIndex != attackers.Count - 1 && healerIndex != attackers.Count - 2)
                 if (attackers[healerIndex + 1].Healthpoints < minHealth && attackers[healerIndex + 1] is not LightWarrior)
                 {
                     minHealth = attackers[healerIndex + 1].Healthpoints;
@@ -537,7 +540,7 @@ namespace ClashGame
                     warriorForHeal = attackers[healerIndex - 1];
                 }
           
-            return warriorForHeal;
+            return warriorForHeal!;
         }
 
         /// <summary>
@@ -549,7 +552,7 @@ namespace ClashGame
         /// <returns>True if the warrior is on the front line, otherwise false.</returns>
         public bool IsFrontLine(int attackerIndex, List<Warrior> defenders)
         {
-            if (defenders.Count() - 1 > attackerIndex) return true;
+            if (defenders.Count - 1 > attackerIndex) return true;
             else return false;
         }
     }

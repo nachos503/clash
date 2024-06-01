@@ -33,13 +33,13 @@ namespace ClashGame
         /// Command manager.
         /// Identifier string "F:ClashGame.MainWindow.commandManager".
         /// </summary>
-        private CommandManager commandManager;
+        private readonly CommandManager commandManager;
 
         /// <summary>
         /// Battle manager.
         /// Identifier string "F:ClashGame.MainWindow.battleManager".
         /// </summary>
-        private BattleManager battleManager;
+        private BattleManager? battleManager;
 
         /// <summary>
         /// Current battle strategy.
@@ -115,10 +115,6 @@ namespace ClashGame
         public MainWindow()
         {
             InitializeComponent();
-            ImageBrush myBrush = new ImageBrush();
-            string imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "background.png");
-            myBrush.ImageSource = new BitmapImage(new Uri(imagePath, UriKind.Absolute));
-            this.Background = myBrush;
             armyManager = new ArmyManager(outputTextBox, new ArmyUnitFactory());
             commandManager = new CommandManager();
             InitializeUI();
@@ -151,9 +147,11 @@ namespace ClashGame
             ChooseStrategy.Visibility = Visibility.Hidden;
 
 
-            battlefieldCanvas = new Canvas();
-            battlefieldCanvas.Width = 800;
-            battlefieldCanvas.Height = 400;
+            battlefieldCanvas = new Canvas
+            {
+                Width = 800,
+                Height = 400
+            };
             MainGrid.Children.Add(battlefieldCanvas);
 
         }
@@ -294,7 +292,7 @@ namespace ClashGame
         /// <param name="e">Event arguments.</param>
         private void ChooseTwoRows_Click(object sender, RoutedEventArgs e)
         {
-            IBattleStrategy initialStrategy = new DefaultStratagy();
+            IBattleStrategy? initialStrategy = new DefaultStratagy();
 
             battleManager = new BattleManager(initialStrategy);
             battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
@@ -323,7 +321,7 @@ namespace ClashGame
         /// <param name="e">Event arguments.</param>
         private void ChooseThreeRows_Click(object sender, RoutedEventArgs e)
         {
-            IBattleStrategy initialStrategy = new DefaultStratagy();
+            IBattleStrategy? initialStrategy = new DefaultStratagy();
 
             battleManager = new BattleManager(initialStrategy);
             battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
@@ -352,7 +350,7 @@ namespace ClashGame
         /// <param name="e">Event arguments.</param>
         private void ChooseWallToWall_Click(object sender, RoutedEventArgs e)
         {
-            IBattleStrategy initialStrategy = new DefaultStratagy();
+            IBattleStrategy? initialStrategy = new DefaultStratagy();
 
             battleManager = new BattleManager(initialStrategy);
             battleManagerProxy = new BattleManagerProxy(battleManager, "1.txt");
@@ -490,7 +488,7 @@ namespace ClashGame
         {
             var temp = playerArmy.First();
             playerArmy[0] = playerArmy.Last();
-            playerArmy[playerArmy.Count() - 1] = temp;
+            playerArmy[^ 1] = temp;
 
             UseGulyayGorod.IsEnabled = false;
 
@@ -751,6 +749,22 @@ namespace ClashGame
             ChooseThreeRows.IsEnabled = false;
             ChooseWallToWall.IsEnabled = false;
         }
+        /// <summary>
+        /// Event handler for the exit game button click event.
+        /// Method identifier: "M:ClashGame.MainWindow.Exit_Click(System.Object,System.Windows.RoutedEventArgs)".
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event arguments.</param>
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Вы точно хотите выйти?", "Выход из игры", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }
+
+            battleManagerProxy.CheckAndClearLogFile();
+        }
         #endregion
 
         #region Graphics&Animation
@@ -786,7 +800,7 @@ namespace ClashGame
             }
 
             int startIndex = (army.Count > 0 && army[0] is GulyayGorod) ? 1 : 0; // Start from 1 if GulyayGorod is the first element
-            int endIndex = (army.Count > 0 && army[army.Count - 1] is GulyayGorod) ? army.Count - 1 : army.Count; // Exclude the last element if it is GulyayGorod
+            int endIndex = (army.Count > 0 && army[^1] is GulyayGorod) ? army.Count - 1 : army.Count; // Exclude the last element if it is GulyayGorod
 
             if (currentStrategy is TwoRowStrategy)
             {
@@ -824,8 +838,6 @@ namespace ClashGame
         /// <param name="isComputerArmy">Indicates whether the army is the computer's army.</param>
         private void DrawArmyInRows(List<Warrior> army, double xOffset, double yOffset, int rows, bool isComputerArmy, int startIndex, int endIndex)
         {
-            int warriorsPerRow = (int)Math.Ceiling((double)(endIndex - startIndex) / rows);
-
             for (int i = startIndex; i < endIndex; i++)
             {
                 var warrior = army[i];
@@ -899,7 +911,7 @@ namespace ClashGame
         /// <param name="isComputerArmy">Specifies whether the army is the computer's army.</param>
         private void DrawWarrior(Warrior warrior, double x, double y, bool isComputerArmy)
         {
-            Image warriorImage = new Image
+            Image? warriorImage = new()
             {
                 Width = 128, // Увеличиваем ширину изображения
                 Height = 128, // Увеличиваем высоту изображения

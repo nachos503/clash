@@ -91,7 +91,7 @@ namespace ClashGame
         /// <param name="outputTextBox">The TextBox for displaying information about the defense.</param>
         virtual public void Defence(Warrior attacker, Warrior defender, TextBox outputTextBox)
         {
-            Random random = new Random();
+            Random random = new();
 
             if (random.Next(0, 101) > defender.Dodge)
             {
@@ -113,7 +113,7 @@ namespace ClashGame
         /// <param name="army">The army to which the warrior belongs.</param>
         virtual public void IsDead(Warrior warrior, List<Warrior> army)
         {
-            for (int i =0; i < army.Count(); i++)
+            for (int i =0; i < army.Count; i++)
             {
                 if (army[i].Healthpoints <= 0) army.Remove(army[i]);
             }
@@ -162,13 +162,11 @@ namespace ClashGame
         /// <param name="outputTextBox">TextBox для вывода информации о ходе волшебника.</param>
         public void WizardTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
-            Wizard wizard = null;
-            int wizardIndex = -1;
             for (int i = 0; i < attackers.Count; i++)
                 if (attackers[i] is Wizard)
                 {
-                    wizard = new Wizard(attackers[i].Side);
-                    wizardIndex = i;
+                    Wizard? wizard = new (attackers[i].Side);
+                    int wizardIndex = i;
                     if (!_strategy.IsFrontLine(wizardIndex, defenders))
                     {
                        if (new Random().Next(0, 5) == 0)
@@ -203,13 +201,11 @@ namespace ClashGame
         /// <param name="outputTextBox">TextBox for displaying healer's turn information.</param>
         public void HealerTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
-            Healer healer = null;
-            int healerIndex = -1;
             for (int i = 0; i < attackers.Count; i++)
                 if (attackers[i] is Healer)
                 {
-                    healer = new Healer(attackers[i].Side);
-                    healerIndex = i;
+                    Healer? healer = new (attackers[i].Side);
+                    int healerIndex = i;
                     if (!_strategy.IsFrontLine(healerIndex, defenders))
                     {
                         if (new Random().Next(0, 10) == 0)
@@ -242,14 +238,14 @@ namespace ClashGame
         public void UpgradeHeavyWarrior(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
             for (int i = 0; i < attackers.Count; i++)
-                if (attackers[i] is HeavyWarrior)
+                if (attackers[i] is HeavyWarrior warrior)
                 {
                     if (!_strategy.IsFrontLine(i, defenders))
                     {
                         Warrior nearestLightWarrior = _strategy.GetNearestLightWarrior(attackers, i);
                         if (nearestLightWarrior != null)
                         {
-                            ImprovedHeavyWarrior improvedHeavyWarrior = new ImprovedHeavyWarrior((HeavyWarrior)attackers[i]);
+                            ImprovedHeavyWarrior improvedHeavyWarrior = new (warrior);
                             attackers[i] = improvedHeavyWarrior;
                             outputTextBox.AppendText($"Улучшение у ImprovedHeavyWarrior прошло, рядом есть LightWarrior." + Environment.NewLine);
                         }
@@ -267,19 +263,19 @@ namespace ClashGame
         /// <param name="outputTextBox">TextBox for displaying information about the turn of the improved heavy warrior.</param>
         public void ImprovedHeavyWarriorTurn(List<Warrior> attackers, Warrior attacker, TextBox outputTextBox)
         {
-            ImprovedHeavyWarrior improvedHeavyWarrior = null;
+            ImprovedHeavyWarrior? improvedHeavyWarrior = null;
             int improvedHeavyWarriorIndex = -1;
             for (int i = 0; i < attackers.Count; i++)
-                if (attackers[i] is ImprovedHeavyWarrior)
+                if (attackers[i] is ImprovedHeavyWarrior warrior)
                 {
-                    improvedHeavyWarrior = (ImprovedHeavyWarrior)attackers[i];
+                    improvedHeavyWarrior = warrior;
                     improvedHeavyWarriorIndex = i;
                     break;
                 }
 
             if (improvedHeavyWarrior != null)
             {
-                Warrior lightWarriorNearby = _strategy.GetNearestLightWarrior(attackers, improvedHeavyWarriorIndex);
+                Warrior? lightWarriorNearby = _strategy.GetNearestLightWarrior(attackers, improvedHeavyWarriorIndex);
 
                 if (lightWarriorNearby == null)
                 {
@@ -309,13 +305,11 @@ namespace ClashGame
         /// <param name="outputTextBox">TextBox for displaying information about the archers' turn.</param>
         public void ArchersTurn(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
-            Archer archer = null;
-            int archerIndex = -1;
             for (int i = 0; i < attackers.Count; i++)
                 if (attackers[i] is Archer)
                 {
-                    archer = new Archer(attackers[i].Side);
-                    archerIndex = i;
+                    Archer? archer = new(attackers[i].Side);
+                    int archerIndex = i;
                     if (!_strategy.IsFrontLine(archerIndex, defenders))
                     {
                         var target = _strategy.GetEnemyForArcher(attackers, defenders, archerIndex, archer); 
@@ -342,7 +336,7 @@ namespace ClashGame
         {
             var temp = attackers.First();
             attackers[0] = attackers.Last();
-            attackers[attackers.Count() - 1] = temp;
+            attackers[^1] = temp;
 
             outputTextBox.AppendText($"Активирован гуляй город у {attackers[0].Side}" + Environment.NewLine);
         }
@@ -373,13 +367,13 @@ namespace ClashGame
         /// <param name="outputTextBox">TextBox for displaying information about the "Gulyay-Gorod" state.</param>
         public void CheckGulyayGorod(List<Warrior> attackers, List<Warrior> defenders, TextBox outputTextBox)
         {
-            Random random = new Random();
+            Random random = new();
             if (flagGulyayGorodBlue < 7)
             {
                 if (attackers[0] is GulyayGorod && triggerGulyayGorodBlue && attackers[0].Side == "Blue")
                     triggerGulyayGorodBlue = false;
 
-                if (defenders.Count() > 0)
+                if (defenders.Count > 0)
                 {
                     if (triggerGulyayGorodBlue && random.Next(0, 5) == 0 && attackers[0].Side == "Blue" && defenders[0] is not GulyayGorod)
                     {
